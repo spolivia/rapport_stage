@@ -1,0 +1,152 @@
+\documentclass[11pt, french]{report}
+\usepackage[utf8]{inputenc}
+
+\title{Rapport de Stage fin de DUT - SuperBeeLive}
+\author{Olivia SERENELLI-PESIN}
+
+\begin{document}
+
+\maketitle
+
+\clearpage
+\newpage 
+
+\section*{Remerciements}
+
+J’adresse mes remerciements aux personnes qui m’ont permis de réaliser ce stage dans l’équipe de SuperBeeLive. \\
+Tout d’abord Matthieu ROUSSET, initiateur du projet SuperBeeLive à l'IBMM (Insitut Biomoléculaire Max Mousseron) 
+qui m’a accueilli au sein de son équipe. \\
+Ensuite, Capucine CARLIER pour ses nombreuses explications biologiques sur les abeilles ainsi que sa disponibilité 
+afin de comprendre au mieux les enjeux et les besoins des biologistes pour mon projet. \\
+Enfin, Sebastien DRUON pour m’avoir encadré, aidé à m’intégrer dans le milieu de la recherche et aidé sur une multitude 
+de sujets, aussi bien du point de vu universitaire que sur les tâches qui m’ont été confiées. \\
+
+\tableofcontents
+\clearpage
+
+\section{Introduction : Présentation du projet de recherche}
+\subsection{La structure d'accueil} 
+
+Le projet étant réalisé par plusieurs laboratoires de recherches, j'ai dû évoluer au seins de différentes organisations. 
+Tout d'abord il y a mon employeur, l'Université de Montpellier, qui englobe d'autres structures où j'ai pu évoluer. 
+L'université a été, pour moi, une entitée administrative. \\ 
+Avec elle, le CNRS (Centre National de Recherche Scientifique) accueille dans ses locaux le rucher expérimental où 
+nous pouvons effectuer nos tests d'installation pour le projet. J'ai pu m'y rendre plusieurs fois afin d'observer les abeilles
+et voir le travail déjà effectué et évoluer au fur et à mesure. C'est également chez eux que nous aurons un serveur d'installé.\\
+Ensuite, l'IBMM est le laboratoire qui a engagé l'argent lié au projet afin de pouvoir me recrutrer lors de ce stage. 
+C'est également une structure qui a été seulement administrative de mon point de vu puisqu'ils m'ont envoyés travailler dans 
+les bureaux du LIRMM (Laboratoire d'informatique, de robotique et de microéléctronique de Montpellier), autre laboratoire de 
+recherche, afin que je puisse être aux côtés de Sébastien DRUON qui m'aura donné la grande majorité de mes tâches à effectuer. 
+J'ai pu y avoir mon bureau en face de M. DRUON, me permettant d'avoir une certaine autonomie mais aussi de pouvoir faire
+appel à lui facilement lorsque j'en avais besoin.\\
+\\
+C'est dans ce contexte de recherche que j'ai pu découvrir et travailler sur le projet SuperBeeLive. \\ 
+
+
+\subsection{Projet SuperBeeLive}
+\subsubsection{Le Global} 
+La santé et le développement des abeilles est aujourd’hui une question de plus en plus étudiée. Les bouleversements
+majeurs de notre planète et de l’activité humaine se traduisant par une augmentation alarmante de la mortalité
+des colonies et une chute de la production du miel dans nos pays développés, il est urgent de se préoccuper de leur futur. 
+La situation des abeilles domestiques alerte le pouvoir public sur l’accélération de la dégradation de la biodiversité des 
+pollinisateurs domestiques et sauvages, et de la flore qui en dépend. Ces dégâts sont dûs, entre autre, à l’apparition 
+et la prolifération d’espèces invasiges pour les abeilles, provoquant maladies et déteriorations. 
+
+Le projet consiste en la structuration de plusieurs collaborations existantes ou nouvelles autours du developpement 
+d’une ruche plate instrumentée destinée au monitorage détaillé de la santé de l’abeille et des écosystèmes. Son but est de
+pouvoir répondre à des questions clés, notamment autours des mécanismes physiopathologiques et des maladies chroniques 
+dûes au parasites ainsi qu’aux altérations de l’écosystèmes et des qualités nutritives des produits des ruches. \\
+Répondre à ces questions permettra de regrouper différentes solutions technologiques systèmatiques, 
+automatiques et non invasives à la collection de données usuelles déterminantes dans chacun des thèmes abordés.
+Les différentes travaux déjà effectués autours de ce sujet ne visaient qu’un seul type de problème à la fois, 
+ne permettant pas une vision globale des difficultées rencontrées par les abeilles. Notre but est de réunir les différentes
+données qui peuvent être utilisés pour étudier l’influence des éléments et événements extérieurs sur leur santé et leur cadre de vie.\\
+
+Concrétement, l'équipe de SuperBeeLive va concevoir une ruche plate afin d'y mettre en place plusieurs type de capteurs
+(hygrométrie, vibrations, température interne et externe, etc) ainsi que des caméras qui filmeront l'intérieur et 
+l'extérieur de la ruche. \\
+
+%Schéma prévisionnel de la ruche, photos TODO
+
+Cette instrumentation nous permettra dans un premier temps d'observer les abeilles afin de visualiser leurs comportements 
+(danse, regroupement, protection, etc) ainsi que les parasites comme les frelons asiatiques ou les varroas. %TODO lien doc varoa/frelon 
+Une fois ces observations faites et documentées, il y aura assez de matière pour pouvoir créer des algorithmes qui reconnaitront 
+automatiquement ces comportements pour en sortir des informations spécifiques.\\
+Par exemple, un des buts et de repérer la danse d'une abeille qui permet aux autre d'indiquer où se trouve du polen et d'en
+extraire les informations qu'elle transmet (la direction à prendre, le temps à parcourir pour y arriver etc).\\
+%lien avec document sur les danses ? TODO
+Avec ces recherches, il serait possible de mettre en place une vitrine web des caméras streamées et commentées 
+automatiquement en temps réel, permettant à d'autres chercheurs d'avoir une ressource permanente pour travailler mais aussi
+au grand public d'avoir un accès plus restreint mais pédagogique sur le comportement des abeilles. \\
+
+\subsubsection{Mon rôle durant le stage}
+Pour ce stage, plusieurs missions m'ont été affectées, une qui est devenue ma principales et d'autres, plus courtes dans le temps.\\
+
+Comme dit plus haut, le but premier de l'installation des caméras sur la ruche est de pouvoir observer et annoter des vidéos manuellement
+pour ensuite rendre cette tâche automatique. Seulement, ces annotations doivent être encadrées afin d'éviter que des données se perdent, 
+et que les outils utilisés pour le faire ne soient par les même d'une personne à une autre nous donnant alors des fichiers non 
+uniformes et plus difficiles et long à traités une fois réunis. \\
+Ainsi, nous avons entreprit de créer un logiciel d'annotation, permettant de regarder en direct les caméras et de sauvegarder des 
+morceaux de vidéos afin de pouvoir dessiner simplement dessus (encercler, mettre une flèche, encadrer, etc) et écrire quelques mots
+sur ce qu'on y observe. Ces vidéos seraient sauvegardées dans un fichier contenant la vidéo et les annotations et pourront être 
+visualisés de nouveau dans ledit logiciel mais aussi dans un lecteur plus classique mais sans les annotations. \\
+Au final, celui-ci alégera le travail des biologiste, qui auront un outils sur mesure pour annoter les vidéos, mais aussi de M. Druon, 
+pour qui il sera plus simple de récupérer les données.\\
+
+Il est évident que dans un tel projet, beaucoup de données seront transmises et stockées. Ainsi, toute une partie d'administration 
+système est à gérer. Dans notre cas, nous avons deux tâches importantes.\\
+D'abord, la question du stockage des données commençait à se poser lors de mon arrivée en stage. Il fallait choisir, acheter, installer
+puis configurer un serveur de stockage dans la salle serveur du CNRS.\\
+Ensuite, le rucher du CNRS où notre ruche expérimentale est installé n'a pas de configuration réseau déjà établie. 
+Une connexion par fibre optique est prévue, mais la suite de l'installation devra être gérée par nous même. Comme pour le serveur, 
+il faudra choisir, installer et configurer un switch dans le rucher.\\
+Pour ces deux tâches, la même problématique est soulevée : il faudra penser au grand nombre de données qui devront transiter sur le 
+réseau et donc prévoir du matériel adapté.\\
+
+D'autres réalisations auraient pû m'être affectées, comme le dimensionnement des caméras ou la construction des cartes éléctroniques
+qui seront installées au centre de la ruche. Seulement, ces sujets s'éloignant de mon DUT Réseaux et Télécommunications et mes 
+compétences et connaissances dans ces deux domaines étant limitées, je n'ai pas eu à travailler dessus.\\
+Cependant, la possibilité d'un apprentissage lors d'école d'ingénieurs en systèmes embarqués a été évoquée, ce qui correspondrait 
+plus à ces tâches.\\
+
+
+\subsection{L'équipe}
+%TODO organigrame 
+
+Brouillon organigrame 
+
+CNRS : Jean-Baptiste THIBAUD 50\%
+IBMM : Matthieu ROUSSET 50\%
+LMGC : Delphine JULIEN
+       Capucine CARLIER
+LIRMM : Jean TRIBOULET 
+        Sébastien DRUON 
+IUT de Béziers : Philiphe PUJAS -> stockage des données 
+Equipe Bee@Wur Université Wegeningen (Néerlandais) -> ouverture internationnalle. 
+
+
+\section{Projet principal}
+
+    \subsection{Analyse du besoin} 
+Dans le cadre de la récolte et de l'analyse des données, il était primordial de réunir des vidéos 
+
+    \subsection{Contraintes} 
+    \subsection{Création de l'interface}
+        \subsubsection{Principe de GTK}
+        \subsubsection{Déclaration}
+        \subsubsection{Placement, cosmétique et affichage}
+        \subsubsection{Signaux et fonctions}
+    \subsection{Traitement vidéo}
+
+\section{Acquis et compétences}
+    \subsection{Missions annexes}
+    \subsection{Compétences développées}
+
+\section{Conclusion}
+
+\section{Références}
+    \subsection{Annexes}
+    \subsection{Biblio}
+    \subsection{Lexique}
+
+\end{document}

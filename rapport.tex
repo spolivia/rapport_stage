@@ -1,5 +1,8 @@
-\documentclass[11pt, french]{report}
+\documentclass[11pt,french,a4paper]{report}
 \usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{a4paper}
 
 \title{Rapport de Stage fin de DUT - SuperBeeLive}
 \author{Olivia SERENELLI-PESIN}
@@ -11,7 +14,7 @@
 \clearpage
 \newpage 
 
-\section*{Remerciements}
+\chapter*{Remerciements}
 
 J’adresse mes remerciements aux personnes qui m’ont permis de réaliser ce stage dans l’équipe de SuperBeeLive. \\
 Tout d’abord Matthieu ROUSSET, initiateur du projet SuperBeeLive à l'IBMM (Insitut Biomoléculaire Max Mousseron) 
@@ -22,10 +25,11 @@ Enfin, Sebastien DRUON pour m’avoir encadré, aidé à m’intégrer dans le m
 de sujets, aussi bien du point de vu universitaire que sur les tâches qui m’ont été confiées. \\
 
 \tableofcontents
+
 \clearpage
 
-\section{Introduction : Présentation du projet de recherche}
-\subsection{La structure d'accueil} 
+\chapter{Introduction : Présentation du projet de recherche}
+\section{La structure d'accueil} 
 
 Le projet étant réalisé par plusieurs laboratoires de recherches, j'ai dû évoluer au seins de différentes organisations. 
 Tout d'abord il y a mon employeur, l'Université de Montpellier, qui englobe d'autres structures où j'ai pu évoluer. 
@@ -43,8 +47,8 @@ appel à lui facilement lorsque j'en avais besoin.\\
 C'est dans ce contexte de recherche que j'ai pu découvrir et travailler sur le projet SuperBeeLive. \\ 
 
 
-\subsection{Projet SuperBeeLive}
-\subsubsection{Le Global} 
+\section{Projet SuperBeeLive}
+\subsection{Le Global} 
 La santé et le développement des abeilles est aujourd’hui une question de plus en plus étudiée. Les bouleversements
 majeurs de notre planète et de l’activité humaine se traduisant par une augmentation alarmante de la mortalité
 des colonies et une chute de la production du miel dans nos pays développés, il est urgent de se préoccuper de leur futur. 
@@ -79,19 +83,19 @@ Avec ces recherches, il serait possible de mettre en place une vitrine web des c
 automatiquement en temps réel, permettant à d'autres chercheurs d'avoir une ressource permanente pour travailler mais aussi
 au grand public d'avoir un accès plus restreint mais pédagogique sur le comportement des abeilles. \\
 
-\subsubsection{Mon rôle durant le stage}
+\subsection{Mon rôle durant le stage}
 Pour ce stage, plusieurs missions m'ont été affectées, une qui est devenue ma principales et d'autres, plus courtes dans le temps.\\
 
 Comme dit plus haut, le but premier de l'installation des caméras sur la ruche est de pouvoir observer et annoter des vidéos manuellement
-pour ensuite rendre cette tâche automatique. Seulement, ces annotations doivent être encadrées afin d'éviter que des données se perdent, 
-et que les outils utilisés pour le faire ne soient par les même d'une personne à une autre nous donnant alors des fichiers non 
-uniformes et plus difficiles et long à traités une fois réunis. \\
+pour ensuite rendre cette tâche automatique. Seulement, ces annotations doivent être encadrées afin d'éviter que des données ne se perdent, 
+et que les outils utilisés pour le faire ne soient pas les même d'une personne à une autre nous donnant alors des fichiers non 
+uniformes et plus difficiles et long à traiter une fois réunis. \\
 Ainsi, nous avons entreprit de créer un logiciel d'annotation, permettant de regarder en direct les caméras et de sauvegarder des 
 morceaux de vidéos afin de pouvoir dessiner simplement dessus (encercler, mettre une flèche, encadrer, etc) et écrire quelques mots
 sur ce qu'on y observe. Ces vidéos seraient sauvegardées dans un fichier contenant la vidéo et les annotations et pourront être 
 visualisés de nouveau dans ledit logiciel mais aussi dans un lecteur plus classique mais sans les annotations. \\
 Au final, celui-ci alégera le travail des biologiste, qui auront un outils sur mesure pour annoter les vidéos, mais aussi de M. Druon, 
-pour qui il sera plus simple de récupérer les données.\\
+pour qui il sera plus simple de récupérer et traiter les données.\\
 
 Il est évident que dans un tel projet, beaucoup de données seront transmises et stockées. Ainsi, toute une partie d'administration 
 système est à gérer. Dans notre cas, nous avons deux tâches importantes.\\
@@ -102,7 +106,6 @@ Une connexion par fibre optique est prévue, mais la suite de l'installation dev
 il faudra choisir, installer et configurer un switch dans le rucher.\\
 Pour ces deux tâches, la même problématique est soulevée : il faudra penser au grand nombre de données qui devront transiter sur le 
 réseau et donc prévoir du matériel adapté.\\
-
 D'autres réalisations auraient pû m'être affectées, comme le dimensionnement des caméras ou la construction des cartes éléctroniques
 qui seront installées au centre de la ruche. Seulement, ces sujets s'éloignant de mon DUT Réseaux et Télécommunications et mes 
 compétences et connaissances dans ces deux domaines étant limitées, je n'ai pas eu à travailler dessus.\\
@@ -110,7 +113,7 @@ Cependant, la possibilité d'un apprentissage lors d'école d'ingénieurs en sys
 plus à ces tâches.\\
 
 
-\subsection{L'équipe}
+\section{L'équipe}
 %TODO organigrame 
 
 Brouillon organigrame 
@@ -125,28 +128,107 @@ IUT de Béziers : Philiphe PUJAS -> stockage des données
 Equipe Bee@Wur Université Wegeningen (Néerlandais) -> ouverture internationnalle. 
 
 
-\section{Projet principal}
+\chapter{Projet principal}
 
-    \subsection{Analyse du besoin} 
-Dans le cadre de la récolte et de l'analyse des données, il était primordial de réunir des vidéos 
+    \section{Analyse du besoin et des fonctionnalités exigées} 
+Dans le cadre de la récolte et de l'analyse des données, il était primmordial pour l'équipe d'avoir l'outils d'annotation décrit plus haut. \\
+Celui-ci devait permettre de : \\
+\begin{itemize}
+    \item Visualiser les caméras en direct
+    \item Démarrer la capture vidéo à tout moment 
+    \item Ajouter un système de tag par mots clés afin de pouvoir trier facilement les vidéos 
+    \item Avoir plusieurs types d'annotations (entourer, marquer, avoir des mouvements etc) 
+    \item Retrouver toutes les mesures de la ruches (température, horaires, numéro de caméra, de ruche, de cadre etc )  
+    \item Avoir un principe d'auteur 
+    \item Pouvoir revisualiser les vidéos 
+    \item Pouvoir remodifier les vidéos 
+\end{itemize} \\
+Afin de répondre à ces besoins, nous avons imaginé l'interface suivante : 
+%TODO Faire le schéma de l'interface
+Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement, nous nous rendions compte
+de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée.  \\
 
-    \subsection{Contraintes} 
-    \subsection{Création de l'interface}
-        \subsubsection{Principe de GTK}
-        \subsubsection{Déclaration}
-        \subsubsection{Placement, cosmétique et affichage}
-        \subsubsection{Signaux et fonctions}
-    \subsection{Traitement vidéo}
+    \section{Contraintes} 
+Le langage de départ pour coder l'interface et ses fonctionnalités, que nous pourrons familiairement nommer partie moteur et partie physique, m'a été imposé. \\
+C'est donc en C que j'ai dû réflechir à comment préparer et lier ces deux parties. Ce langage a été choisit tout simplement parceque c'est 
+le langage que M. DRUON a pour habitute d'utiliser. \\
+La partie moteur peut être développée en C sans trop d'ajout de librairies annexes autres que celles dites basiques (stdlib, stdio). Cependant, 
+nous avons dû utiliser une librairie pour développer la partie physique. Nous avions le choix entre GTK ou QT. QT devant être utilisé en C++, 
+notre choix s'est naturellement dirigé vers GTK 3.0. \\
+Comme dans tout projets collaboratifs, la convergence des données est importante et peut parfois se réveler difficile à mettre en place. 
+Heureusement pour nous, en programmation l'outil GIT est excellent pour travailler à plusieurs. L'ayant déjà vu en cours cette année, j'ai pu l'utiliser 
+concrétement lors de mon stage. Cependant, avant de commencer à utiliser concrètement l'outil, il a été préférable que je me remette à niveau sur celui-ci
+et ai donc entammé la lecture du livre Mastering Git %TODO VERIFIER LE TITRE
+qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub : il est donc accessible au 
+public sous le nom superbeelive. 
 
-\section{Acquis et compétences}
-    \subsection{Missions annexes}
-    \subsection{Compétences développées}
+    \section{Création de l'interface}
+GTK est une boîte à outils constituée d'un ensemble de fonctions, permettant de réaliser des interfaces graphique. On le retrouve
+dans un bon nombre de logiciel connus : de base créé pour GIMP (d'où son nom, "Gimp Toolkit"), il est aussi présent avec LibreOffice, Eclipse, Thunderbird mais aussi
+sur les versions GNU/Linux de Firefox. Codé en C avec une programmation orientée objet, on peut utiliser GTK dans d'autres langages comme le C# Java, Python, Perl, PHP...
+Une fois l'utilisation de GTK décidée, j'ai dû me former à l'utilisation de cette librairie en autodidacte et avec l'aide de mon seigneur et maître DRUON.
+Pour cela, le livre %TODO Integrer ref du livre 
+m'a servi de référence de base quant à la manière de manier les éléments. Je me suis également aidée de divers tutoriels sur internet, mais surtout 
+de la document officielle de GTK. %TODO Lien biblio 
+\\
+Souvent, on a tendance à utiliser Glade, un logiciel permettant de créer une interface GTK avec des outils graphiques. Dans mon cas, je m'en suis surtout servie 
+en tant que bibliothèque pour voir et tester certains Widgets ainsi que leur fonctionnement. Cet utilitaire, certes plus rapide à prendre en mains, est lié 
+au fait qu'il utilise des fichiers XML pour décrire l'interface ce qui, au final, complique la portabilité de l'interface d'une version du logiciel à l'autre. 
+De plus, j'ai préféré apprendre à utiliser GTK en ligne de code "brut". Plus fastidieu au départ, j'ai trouvé cela plus simple à la longue : je maîtrisais vraiment 
+mes outils et apprenais plus rapidement à utiliser un nouvel élément de la librairie.  
+%TODO : intégrer capture d'écran glade ? 
 
-\section{Conclusion}
+        \subsection{Principe de GTK}
+Apprendre à utiliser GTK a été, pour moi, un peu long au début et m'a nécessité beaucoup de temps passé à poser calmement et méthodiquement les choses afin de 
+comprendre sa logique. Si on a déjà fait de la programmation objet, il est évident que l'apprentissage de cette librairie n'en sera que plus simple. \\
+L'idée principale de GTK est que l'on va ranger tous les éléments en fonction d'un autre élément, pour finir avec des sortes de poupées russes qui s'emboîtent 
+et se rangent côte à côte pour donner un résultat final. Il exite une multitude d'éléments utilisables, appelés les Widgets. L'élément de base widgets contient des propriétés de 
+base et, pour créer d'autre type d'élément, les développeurs de GTK y ont ajoutés d'autres propriétés à celles déjà existantes. 
+Au fur et à mesure, ces ajouts de propriétés ont permit de créer toute sorte de Widget : des textes, des labels, des tableaux, des séparateur, des listes, des bouttons... 
+Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements, nous permettant de savoir ce que l'on peut faire avec nos Widgets : 
+%TODO image de la hierarchie
+En effet, si par exemple je veux changer un paramètre d'un élément "GtkSpinButton", et que je ne trouve pas de fonction affectant directement ce type d'élément, 
+alors je vais regarder si chez ses parents je peux trouver le paramètre voulu, à savoir "GtkEntry", et "GtkWidget". \\
 
-\section{Références}
-    \subsection{Annexes}
-    \subsection{Biblio}
-    \subsection{Lexique}
+Chaque paramètre disponible pour les Widgets peut être changé directement à l'aide de fonctions retrouvable dans l'excelente documentation en ligne de GTK 3.0. 
+Il est totalement déconseiller de changer directement la valeur des paramètre à la mains en utilisant, par exemple des pointeurs. Il faut partir du principe que 
+chaque élément a son nombre de fonctions associées et que tout est prévu pour pouvoir faire ce que l'on veut sur notre interface. \\ 
+\\
+
+        \subsection{Des boites, dans des boites...}
+Une fois la manière de créer les éléments comprise, il faut ensuite comprendre comment les ranger. D'abord, on va créer une fenêtre, soit une GtkWindows. Dans celle-ci, on 
+ne peut y poser qu'un seul Widget. C'est pour ça que nous avons les éléments "GtkContainers" : c'est avec eux que nous allons pouvoir structurer et placer tous les autres 
+éléments dans notre fenêtre. Le container de base est la box. A sa création, nous devons simplement indiquer si celle-ci va être horizontale ou verticale, c'est à dire
+si les éléments que nous allons mettre dedans vont être placé de haut en bas ou de droite à gauche. Une fois cette première GtkBox placée, le problème de limitation de place 
+imposée par la GtkWindow n'en est plus un. Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
+nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. Voici le schéma de construction que j'ai fais pour la première fenêtre de 
+l'application : 
+%TODO intégrer schéma de boite de la fenetre n°1
+On peut voir que la GtkBox box\_principale prend toute la place de ma fenêtre GtkWindow. Dans cette box\_principale, j'y ai rangé verticalement box\_up et box\_down. Dans
+box\_down j'ai integré box\_left et box\_right horizontalement, me permettant d'avoir quatre zones délimitées. Ensuite, j'ai créé des box pour mes éléments plus précis :
+dans box left j'ai directement intégré box\_video dans laquelle se trouve la vidéo. Dans box right on va retrouvé box\_info, box\_meta, box\_btn\_cam, box\_btn\_video, 
+box\_info\_time et box\_file. Chacune de ces box m'ont permit de ranger à l'intérieur les éléments que je voulais retrouver : les boutons, les textes, les descriptions etc. 
+A noter qu'en plus de ces boîtes j'ai également parfois ranger des séparateur, les barre horizontale et verticale, permettant d'ajouter un peu de structure visuelement. \\
+Une fois que l'on sait comment ranger les éléments sur une fenêtre et quel est le principe de ces éléments dans l'idée, il ne manque plus qu'à voir comment concretement, 
+dans le code, on applique ces principes. 
+
+        \subsection{Déclaration}
+        \subsection{Placement, cosmétique et affichage}
+        \subsection{Signaux et fonctions}
+    \section{Définition des fonctionnalités} 
+        \subsection{Les structures}
+        \subsection{Les vidéos}
+    
+
+\chapter{Acquis et compétences}
+    \section{Missions annexes}
+    \section{Compétences développées}
+
+\chapter{Conclusion}
+
+\chapter{Références}
+    \section{Annexes}
+    \section{Biblio}
+    \section{Lexique}
 
 \end{document}

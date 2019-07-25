@@ -7,20 +7,19 @@
 \contentsline {chapter}{\numberline {2}Projet principal}{7}
 \contentsline {section}{\numberline {2.1}Analyse du besoin et des fonctionnalit\IeC {\'e}s exig\IeC {\'e}es}{7}
 \contentsline {section}{\numberline {2.2}Contraintes}{8}
-\contentsline {section}{\numberline {2.3}Cr\IeC {\'e}ation de l'interface}{8}
-\contentsline {subsection}{\numberline {2.3.1}Principe de GTK}{9}
-\contentsline {subsection}{\numberline {2.3.2}Des boites, dans des boites...}{9}
-\contentsline {subsection}{\numberline {2.3.3}D\IeC {\'e}claration}{10}
-\contentsline {subsection}{\numberline {2.3.4}Placement, cosm\IeC {\'e}tique et affichage}{10}
-\contentsline {subsection}{\numberline {2.3.5}Signaux et fonctions}{10}
-\contentsline {section}{\numberline {2.4}D\IeC {\'e}finition des fonctionnalit\IeC {\'e}s}{10}
-\contentsline {subsection}{\numberline {2.4.1}Les structures}{10}
-\contentsline {subsection}{\numberline {2.4.2}Les vid\IeC {\'e}os}{10}
-\contentsline {chapter}{\numberline {3}Acquis et comp\IeC {\'e}tences}{11}
-\contentsline {section}{\numberline {3.1}Missions annexes}{11}
-\contentsline {section}{\numberline {3.2}Comp\IeC {\'e}tences d\IeC {\'e}velopp\IeC {\'e}es}{11}
-\contentsline {chapter}{\numberline {4}Conclusion}{12}
-\contentsline {chapter}{\numberline {5}R\IeC {\'e}f\IeC {\'e}rences}{13}
-\contentsline {section}{\numberline {5.1}Annexes}{13}
-\contentsline {section}{\numberline {5.2}Biblio}{13}
-\contentsline {section}{\numberline {5.3}Lexique}{13}
+\contentsline {subsection}{\numberline {2.2.1}Principe de GTK}{8}
+\contentsline {subsection}{\numberline {2.2.2}Des boites, dans des boites...}{9}
+\contentsline {subsection}{\numberline {2.2.3}Cr\IeC {\'e}ation et D\IeC {\'e}finition}{10}
+\contentsline {subsection}{\numberline {2.2.4}Placement, cosm\IeC {\'e}tique et affichage}{11}
+\contentsline {subsection}{\numberline {2.2.5}Signaux et fonctions}{13}
+\contentsline {section}{\numberline {2.3}D\IeC {\'e}finition des fonctionnalit\IeC {\'e}s}{13}
+\contentsline {subsection}{\numberline {2.3.1}Les structures}{13}
+\contentsline {subsection}{\numberline {2.3.2}Les vid\IeC {\'e}os}{13}
+\contentsline {chapter}{\numberline {3}Acquis et comp\IeC {\'e}tences}{14}
+\contentsline {section}{\numberline {3.1}Missions annexes}{14}
+\contentsline {section}{\numberline {3.2}Comp\IeC {\'e}tences d\IeC {\'e}velopp\IeC {\'e}es}{14}
+\contentsline {chapter}{\numberline {4}Conclusion}{15}
+\contentsline {chapter}{\numberline {5}R\IeC {\'e}f\IeC {\'e}rences}{16}
+\contentsline {section}{\numberline {5.1}Annexes}{16}
+\contentsline {section}{\numberline {5.2}Biblio}{16}
+\contentsline {section}{\numberline {5.3}Lexique}{16}

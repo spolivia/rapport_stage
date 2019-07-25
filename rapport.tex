@@ -238,53 +238,171 @@ Les exemples ci-dessus ont tous eu besoin d'une définition précise du Widget, 
 ne nécéssite aucun paramètre, et que des modification doivent être apportées ensuite. Par exemple, si je veux que mon label ai une écriture plus stylisée, je peux
 utiliser :  \\
 gtk\_label\_set\_markup(GTK\_LABEL(tmp->label), "<span foreground=\"black\" font=\"10\"><b>Je suis le label stylisée avec du bold</b></span>"); \\
-Ici, il faut préciser avant le nom de la variable à modifier quel type de widget on compte modifier. En effet, comme lors de la déclaration il est indiqué 
-que label est de type GtkWidget et que la fonction que l'on veut utiliser ne s'applique que sur un GtkLabel, il est donc nécessaire d'indiquer que cette fois-ci, 
-c'est de type un GtkLabel depuis la fonction plus haut à l'aide de "GTK\_LABEL". 
+Ici, il faut préciser avant le nom de la variable à modifier quel type de widget on compte modifier. En effet, comme lors de la déclaration 
+il est indiqué que label est de type GtkWidget et que la fonction que l'on veut utiliser ne s'applique que sur un GtkLabel, il est 
+donc nécessaire d'indiquer 
+que cette fois-ci, c'est de type un GtkLabel depuis la fonction plus haut à l'aide de "GTK\_LABEL". 
 Cette fois ci, mon label ressemblera à ça : 
 %TODO incorporer avant/après du label
 \\
-Ainsi, il existe plein de fonctions différentes permettant de régler ce genre de paramètres sur les widgets, et parfois il est nécessaire de faire appel à elle pour 
+Ainsi, il existe plein de fonctions différentes permettant de régler ce genre de paramètres sur les widgets, et parfois il est nécessaire 
+de faire appel à elle pour 
 avoir un Widget correct. Il est intéressant d'explorer les fonctions existantes afin de personnaliser au mieux notre interface. \\
 
 Une fois les Widgets créés, il faut maintenant les placer et indiquer qu'il faut les afficher. \\ 
  
 \subsection{Placement, cosmétique et affichage} \\
-Maintenant, nous allons appliquer la théorie qui avait été développée au dessus : les poupées russes. On va commencer par dire où va se placer la box : \\ 
+Maintenant, nous allons appliquer la théorie qui avait été développée au dessus : les poupées russes. On va commencer par dire où 
+va se placer la box : \\ 
  gtk\_container\_add (GTK\_CONTAINER (tmp->window), tmp->box) ; \\
-Window est un GtkContainer, nous utilisons donc la fonction qui permet d'affecter un élément à un container. Le premier argument indique le container où nous
+Window est un GtkContainer, nous utilisons donc la fonction qui permet d'affecter un élément à un container. Le premier argument 
+indique le container où nous
 devons insérer un élément. Le second nous indique quel élément est à placer. \\
 
 Ensuite, nous faisons de même pour la box : \\
   gtk\_box\_pack\_start(GTK\_BOX(tmp->box\_principal), tmp->label, FALSE, FALSE, 0) ; \\
-Box étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. Comme pour le Window, il faut indiquer la boîte concernée par 
-l'élément à ajouter, mais cette fois-ci trois autres arguments sont à renseigner concernant la manière dont les Widgets vont se comporter à l'intérieur
-de la box. Mais d'abord, il faut savoir que par défaut (donc que tout est sur FALSE), les box allouent la même place à tous les Widgets qu'ils contiennent
+Box étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. Comme pour le Window, il faut indiquer la 
+boîte concernée par 
+l'élément à ajouter, mais cette fois-ci trois autres arguments sont à renseigner concernant la manière dont les Widgets vont se 
+comporter à l'intérieur
+de la box. Mais d'abord, il faut savoir que par défaut (donc que tout est sur FALSE), les box allouent la même place à tous les 
+Widgets qu'ils contiennent
 sans déborder sur le reste.\\
 \begin{itemize}
     \item Expand : peut être TRUE ou FALSE. Permet aux widgets de prendre plus de place si besoin si réglé sur TRUE. \\ 
-    \item Fill : peut être TRUE ou FALSE. Ne peut être actif que si Expand est aussi TRUE. Alloue la hauteur ou la largeur totale de la box, 
+    \item Fill : peut être TRUE ou FALSE. Ne peut être actif que si Expand est aussi TRUE. Alloue la hauteur ou la largeur totale
+        de la box, 
         celon si la box est une horizontale ou vertical. \\
     \item Padding : valeur numérique. Indique l'espacement en pixel (px) entre les widget que contient la box. \\ 
 \end{itemize}
 
-Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, j'ai appliqué une indentation 
+Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, 
+j'ai appliqué une indentation 
 qui m'est propre mais que je trouve plus lisible, voici l'exemple pour win\_main : \\
 %TODO insérer ex de win_main 
-Ainsi, à chaque fois que je vais dans une sous box, j'indente avec une tabulation. Au final, le rendu me permet de voir qui est à quel niveau. \\
+Ainsi, à chaque fois que je vais dans une sous box, j'indente avec une tabulation. Au final, le rendu me permet de voir qui est
+à quel niveau. \\
 
-Une fois que les éléments sont placés dans les boîtes, ceux-ci ne sont par contre pas arrangés précisements. Il faut maintenant indiquer où il faut appliquer des marges, 
-comment doivent se placer les éléments. Sachant que la première chose à faire pour cette étape est de jouer avec les paramètres EXPAND et FILL des box qui permettent, 
-par exemple, d'autoriser ou non à un élément de s'agrandir en même temps que la fenêtre. \\
+Une fois que les éléments sont placés dans les boîtes, ceux-ci ne sont par contre pas arrangés précisements. Il faut maintenant 
+indiquer où il faut appliquer des marges, 
+comment doivent se placer les éléments. Sachant que la première chose à faire pour cette étape est de jouer avec les paramètres
+EXPAND et FILL des box qui permettent, par exemple, d'autoriser ou non à un élément de s'agrandir en même temps que la fenêtre. \\
 Voici un exemple de ce que donne une fenêtre sans la partie cosmétique et arrangement précis puis avec : \\ 
 %image d'un avant après de main_win
-Comme pour la création et le placement, nous allons utiliser des fonctions pour indiquer ce que l'on veut faire avec le Widget, en voici quelques exemples : \\
+Comme pour la création et le placement, nous allons utiliser des fonctions pour indiquer ce que l'on veut faire avec le Widget.
+Celles-ci sont le plus souvent utilisées sur les éléments considérés en tant que Widget. Donc, 
+comme plus haut, il faut préciser que nous l'appliquons sur un Widget. En voici quelques exemples : \\
+ 
+ gtk\_widget\_set\_margin\_top (GTK\_WIDGET (tmp->label), 5 ) ; \\
+Permet d'appliquer une marge sur le haut. On précise sur quel Widget l'appliquer puis la taille en px de la marge.\\
+Cette fonction existe aussi pour bottom, end et start qui correspondent à la droite et la gauche du Widget.\\
 
+ gtk\_widget\_set\_halign ( GTK\_WIDGET (tmp->label), GTK\_ALIGN\_START ) ;\\
+Les éléments se mettent par défaut au centre de leur place disponible. Cette fonction permet 
+de forcer un Widtget à se placer autrement : ici, on force l'alignement horizontal (halign) à être en début de zone, 
+soit à gauche (START). \\
 
-        \subsection{Signaux et fonctions}
-    \section{Définition des fonctionnalités} 
-        \subsection{Les structures}
-        \subsection{Les vidéos}
+On peut aussi retrouver des fonctions pour préciser le comportement de la fenêtre, comme : \\
+ gtk\_window\_set\_title (GTK\_WINDOW (tmp->window), "BEETERFACE") ; \\
+qui permet de nommer la fenêtre "BEETERFACE". \\
+
+ gtk\_window\_set\_default\_size ( GTK\_WINDOW (tmp->window), 30, 30 ) ; \\
+Définit la taille minimale de la fenêtre, sachant qu'elle prend en compte la place nécessaire aux éléments pour pouvoir 
+être placés et que si la taille indiquée est trop petite, alors la fenêtre prendra la place minimale possible 
+pour afficher les éléments. \\
+
+Avec ces outils et un peu de recherches sur la documentation en ligne, on peut maintenant créer n'importe qu'elle fenêtre 
+comme on le souhaite. Il ne reste plus qu'à lier des fonctions aux différents éléments pour que notre application soit 
+fonctionnelle.\\
+        
+        \subsection{Signaux et fonctions} \\
+Avoir des boutons, c'est bien. Pouvoir les utiliser, c'est encore mieux. Maintenant que tous éléments sont placés, 
+il ne reste plus qu'à les lier aux fonctions qui permettrons de réaliser diverses tâches (mettre en pause la vidéo,
+se déplacer dans le temps de celle-ci, débuter la sauvegarde etc).  C'est ce qui va établir le liens entre le moteur et la carcasse. \\
+Pour le moment, peu de fonctions ont été écrites pour le moteur : toute la partie graphique est prête à les acceuillir 
+mais le développement des fonctionnalités est ce qui prend le plus de temps. En guise d'entraînement et pour 
+pouvoir être prête le jour où il faudra faire tous les liens, j'ai déjà fait quelques tests pour comprendre les principes. \\
+Les liens entre l'interface et les fonctions vont se passer dans le main. Dans notre code, il est présent dans beeterface.c.\\
+Avant tout, il faut noter que quelques fonctions de bases sont obligatoires pour pouvoir lancer notre interface, voici 
+le modèle de base : \\
+int main(int argc, char *argv[])    \\ 
+\{ \\
+ gtk\_init(&argc, &argv); \\
+ [votre code] \\
+ gtk\_main(); \\
+ return 0 ; \\
+\} \\
+Les deux fonctions permettent d'initialiser l'interface et d'indiquer que celle-ci est en attente de signal
+de la part de l'utilisateur pour réagir. \\
+Maintenant que nous avons la base, commençons à intégrer des évenements. \\
+Le but va être d'appeler une fonction qui va lier un éléments à une fonction et d'indiquer en quel circonstance 
+la fonction doit réagir. Voici ladie fonction : \\
+g\_signal\_connect( queen->interface->win\_main->btn \\,
+                   "clicked", \\
+                    G\_CALLBACK(callback\_btn) \\,
+                    queen ) ; \\
+Le premier argument correspond à l'élément qui est visé. Dans notre cas, beaucoup de pointeur sont en jeu,
+pour le moment nous allons passer outre ces pointeurs : ils seront expliqués dans la partie structure. 
+Partons simplement du principe qu'il faut appeler le bouton concerné.  \\
+Le second argument sert à indiquer à quel évenement il faut réagir. Il en existe une liste prédéfinie : ici
+c'est l'événement "clicked". Lorsqu'on cliquera sur le bouton, la connection sera établie. \\
+Le troisième argument correspond à la "callback" appelée, soit la fonction qui doit se déclancher. Nous allons 
+y revenir. \\
+Le dernier argument indique ce qu'on envoit au callback comme information. Ici, c'est "queen", une sorte de 
+gros paquet. Comme pour les pointeurs, ce sera expliqué plus tard. \\
+
+Allons vois la callbak qui est appellée : \\
+void callback\_quit\_tag(GtkWidget* widget, gpointer data) \{ \\                                      
+    queen\_t* tmp ; \\                                                                             
+    tmp = data ; \\                                                                               
+    gtk\_window\_close (GTK\_WINDOW(tmp->interface->win\_main->window)) ; \\
+\} \\
+
+Cette callback contient le strict minimum pour faire fonctionner simplement un bouton.\\
+En arguments, elle reçoit d'abord le widget qui est à la source de son appel : dans notre cas, c'est "btn". \\
+Ensuite, elle reçoit les data que "g\_signal\_connect" a envoyé, c'est à dire "queen". \\
+Les deux premières lignes indiquent que la variable tmp reçoit les informations de data. \\
+Enfin, la fonction utilisée permet d'indiquer qu'on va fermer une fenêtre, ici celle de win\_main, donc là où on
+se trouve. Cet exemple est basique, on peut évidement faire bien plus et toucher à l'interface en elle même. A 
+vous de voir ce que vous désirez faire. \\
+
+Tous les outils principaux pour pouvoir créer une interface GTK ont été présentés. Avec ceux là, beaucoup de recherches
+dans la documentation et le "catalogue" %TODO
+de GTK, on a en mains une infinité de possibilité. Certaines actions graphiques nécessitent plus de reflexion que d'autre, mais 
+au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
+
+    \section{Les fonctionnalités} 
+        \subsection{Structuration du code}
+La première chose que j'ai eu à faire pour la création de l'application a été de réfléchir à comment celle-ci allait fonctionner.
+En étudiant la demande, une chose majeure en ressortait : il y allait avoir beaucoup de données à traiter et sauvegarder. \\
+Si on lit la liste des besoins présentés dans la partie %TODO
+on peut voir qu'il y a une notion d'auteur, de caméra, de vidéo et de ruche qui sont présentées. Afin de pouvoir manipuler de telles informations, 
+j'ai créé une structure pour chacun de ces éléments qui contiendront des informations primmoridales : dates, noms, numéro de téléphone, lieu, 
+référence etc. \\
+Pour chacune des structures, j'ai également préparé des fonctions permettant de manipuler les données. En général, on y retrouve 
+une fonction pour créer un élément, une pour le supprimer et un jeu de fonction pour modifier ou lire toutes les données contenues dans l'élément
+indépendemment. Cette préparation permettra de pouvoir utiliser ces données sans avoir à se soucier des pointeurs : tout est prêt, il n'y
+a plus qu'à choisir comment on voudra modifier les données lors de l'utilisation du logiciel. \\
+Cette préparation a aussi été faite pour toutes les annotations que nous pourrons intégrer sur les vidéos : les cercles, flèches, crois... \\
+Pour le moment, toutes ces annotations ne sont pas prête. Mais les plus basiques, comme la croix, a déjà sa structure de préparée avec un x et un y 
+permettant d'indiquer où elle devra se placer. \\
+Ce travail de préparation m'aura prit environ une semaines. Il a été difficile seulement au début : il fallait réfléchir 
+à comment créer une structure correctement, penser à bien utiliser les pointeurs et gérer leur allocation de
+mémoire. Une fois un premier modèle fait, les autres se faisaient de plus en plus vite. Utilisant l'outil VIM, j'ai 
+énormément utilisé les "rechercher / remplacer" pour travailler. \\
+Ce travail, bien que fastidieux, m'aura permit d'appliquer concrétement l'utilisation des pointeurs, ce qui 
+me manquait lors de mon arrivée en stage. \\ 
+
+        \subsection{Manière de coder}
+N'ayant pas d'habitudes particulières en code, j'ai été consillée quant à la structure de mon code, afin que celui
+ci soit lisible et bien réparti. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
+la déclaration d'une structure et des fonctions ainsi que la définition de celles-ci. \\ 
+%exemple d'un fichier .c et .h
+De plus, nous avons rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois : 
+avec Git, c'est un outil qui me reservivra régulièrement dans d'autres contextes désormais. \\
+En plus de cela,
+        \subsection{Représentation du projet}
+        \subsection{Traitement de la vidéo}
     
 
 \chapter{Acquis et compétences}

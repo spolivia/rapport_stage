@@ -1,9 +1,76 @@
 \documentclass[11pt,french,a4paper]{report}
 \usepackage[utf8]{inputenc}
-
 \usepackage{geometry}
 \geometry{a4paper}
 
+\usepackage{listings}
+
+
+\lstset{
+  aboveskip=3mm,
+  belowskip=-2mm,
+  backgroundcolor=\color{darkWhite},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{red},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  framexleftmargin=16pt,
+  framextopmargin=3pt,
+  framexbottommargin=6pt,
+  frame=tb,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  language=C,
+  literate=
+  {²}{{\textsuperscript{2}}}1
+  {⁴}{{\textsuperscript{4}}}1
+  {⁶}{{\textsuperscript{6}}}1
+  {⁸}{{\textsuperscript{8}}}1
+  {€}{{\euro{}}}1
+  {é}{{\'e}}1
+  {è}{{\`{e}}}1
+  {ê}{{\^{e}}}1
+  {ë}{{\¨{e}}}1
+  {É}{{\'{E}}}1
+  {Ê}{{\^{E}}}1
+  {û}{{\^{u}}}1
+  {ù}{{\`{u}}}1
+  {â}{{\^{a}}}1
+  {à}{{\`{a}}}1
+  {á}{{\'{a}}}1
+  {ã}{{\~{a}}}1
+  {Á}{{\'{A}}}1
+  {Â}{{\^{A}}}1
+  {Ã}{{\~{A}}}1
+  {ç}{{\c{c}}}1
+  {Ç}{{\c{C}}}1
+  {õ}{{\~{o}}}1
+  {ó}{{\'{o}}}1
+  {ô}{{\^{o}}}1
+  {Õ}{{\~{O}}}1
+  {Ó}{{\'{O}}}1
+  {Ô}{{\^{O}}}1
+  {î}{{\^{i}}}1
+  {Î}{{\^{I}}}1
+  {í}{{\'{i}}}1
+  {Í}{{\~{Í}}}1,
+  morekeywords={*,...},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{black},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  title=\lstname,
+} 
 \title{Rapport de Stage fin de DUT - SuperBeeLive}
 \author{Olivia SERENELLI-PESIN}
 
@@ -130,9 +197,53 @@ Equipe Bee@Wur Université Wegeningen (Néerlandais) -> ouverture internationnal
 
 \chapter{Développement d'une application : Beeterface}
 
-    \section{Analyse du besoin et des fonctionnalités exigées} 
-Dans le cadre de la récolte et de l'analyse des données, il était primmordial pour l'équipe d'avoir l'outils d'annotation décrit plus haut. \\
-Celui-ci devait permettre de : \\
+    \section{Analyse du besoin et des fonctionnalités exigées}
+
+Outre les différents capteurs installés sur la ruche (Son, vibration, temperature, hygrométrie, etc.), les biologistes ont égalemet exprimé le
+besoin de pouvoir capturer des comportements particuliers de la colonie. De là vient la nécessitée de pouvoir gérer de nombreuses caméras sur la ruche
+prototype. On pourra distinguer trois localisations distinctes pour ces caméras, correspondant à trois types de traitement d'image différents. \\
+
+%TODO intégrer schéma ruche plate avec description de qui sera où
+
+- Les caméras situées sur la planche d'envol, tout d'abord, servent à surveillers 
+  les alentours de la ruche. Elles permettent avant tout de
+  mesurer le flux d'entrée/sortie des butineuses, mais également de détecter
+  certains comportements, comme par exemple la ventilation forcée (une abeille
+  bat des ailes afin de "pousser" de l'air frais vers l'intérieur de la ruche et faire
+  diminuer la température ). Ces caméras vont aussi servir à mesurer la
+  "pression" des prédateurs sur le rucher, en mesurant le nombre de frelons
+  asiatiques en embuscade (vol stationnaire) et le nombre d'abeilles
+  capturées. Ces caméras sont au nombre de deux, formant une paire
+  stereoscopique afin de pouvoir effectuer des mmesures 3D. \\
+  En annexe, un lien vers une vidéo prise par l'équipe au début du projet est disponible. 
+  On peut y voir une planche d'envol filmée et passée au ralentis. \\ 
+
+- Les caméras situées sur le module d'entrée, quand à elles, servent à étudier
+  les pelotes de pollen ramenées par les butineuses afin de reconnaître les
+  plantes utilisées par les abeilles. Ces caméras sont caractérisées par de
+  fort grossissement et sont associées à des éclairages pilotés par ordinateur
+  (UV, IR) pour mesurer l'autofluorescence des pollens.
+
+- Enfin, les caméras montés sur chaque module ( 1 par face du module ) servent
+  à détecter et surveiller les évenements qui ont lieu sur le couvain et sur
+  les alvéoles. Ces caméras doivent travailler dans des conditions de lumière
+  particulières, car la reine et certaines castes d'abeilles sont sensibles à
+  la lumière visible. Pour ne pas les perturber, le rucher est placé en
+  lumière rouge ou infrarouge, ce qui correspond à des longeurs d'onde que les
+  abeilles ne voient pas. Il est a noté que des caméras supplémentaires,
+  purement infrarouges, seront également utilisées dans le cadre des travausx de
+  l'IES, l'un de nos partenaires.
+
+
+  Les flux d'images générés par ces caméras sont collectésur un réseau privé,
+  puis transférés à un serveur central. En fonction du besoin, ils pourront
+  etre enregistrés, renvoyés vers le site vitrine, renvoyées vers l'application d'annotation
+  ou encore traités par les algorithmes qui sont mis au point par M. Triboulet et M. Druon. 
+  Ces derniers se basent sur des réseaux de neurones afin de reconnaitres des comportements
+  (danse, ventilation, etc) de facon automatique.
+
+
+Au vu de la description générale de l'utilisation des vidéos ainsi qu'après discussion avec l'équipe, le logiciel devrait devoir permettre de : \\
 \begin{itemize}
     \item Visualiser les caméras en direct
     \item Démarrer la capture vidéo à tout moment 
@@ -143,7 +254,7 @@ Celui-ci devait permettre de : \\
     \item Pouvoir revisualiser les vidéos 
     \item Pouvoir remodifier les vidéos 
 \end{itemize} \\
-Afin de répondre à ces besoins, nous avons imaginé l'interface suivante : 
+Afin de répondre à ces besoins, nous avons imaginé l'application suivante : 
 %TODO Faire le schéma de l'interface
 Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement, nous nous rendions compte
 de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée.  \\
@@ -215,12 +326,15 @@ La première partie est la déclaration d'un Widget et sa définition. La créat
 pour toute mon application et que mes exemples viennent directement des fichiers win\_main.c et win\_main.h. La structure et l'explication de ces pointeurs est décrite
 dans la partie "Les structures" de "Définition des fonctionnalités". \\
 Créons une fenêtre, une box et un label : \\
-%TODO trouver latex qui permet de faire des ligne de commandes
+
 --> Dans win\_main.h : 
-GtkWidget* window ; \\ 
-GtkWidget* box ;  \\ 
-GtkWidget* label ; \\ 
-Pour ces trois exemples, ces éléments sont tous du type GtkWidget. Il arrive que, dans de rare cas, il soit nécessaire de déclarer un autre type d'objet. \\ 
+\begin{lslisting}
+GtkWidget* window ; 
+GtkWidget* box ;   
+GtkWidget* label ;  
+\end{lslisting} 
+
+    Pour ces trois exemples, ces éléments sont tous du type GtkWidget. Il arrive que, dans de rare cas, il soit nécessaire de déclarer un autre type d'objet. \\ 
 
 Ces trois éléments existent désormais, maintenant il faut les définir, c'est à dire expliquer de quel type de Widget il seront et leur donner leur propriétés. \\
 --> Dans win\main.c : 
@@ -473,9 +587,19 @@ complète n'était pas une priorité, c'est pourquoi cette tâche a été laiss�
 La partie la plus complexe de ce projet à mon avis est le traitement de la vidéo. Elle s'attaque à des sujets sur lesquels j'ai 
 encore beaucoup à apprendre. C'est pourquoi durant le stage, c'est plus M. DRUON qui s'en est occupé. De mon côté, j'ai surtout
 pris en compte ce qui allait être fait avec et ce que j'allais devoir prévoir au niveau de l'interface pour que cela fonctionne. \\
-Ce travail étant toujours en cours, pour le moment j'ai appliqué tout ce que nous supposions nécessaire : des modifications risquent 
-d'être effectuées.
-%TODO TOPO SUR COMMENT CA VA FONCTIONNER.
+
+Globalement, l'idée de ce travail est dans un premier temps d'afficher la vidéo sur l'application grace à 
+la librairie FFMPEG. Afin de me faciliter
+le travail de lien entre les boutons et la vidéo, M. DRUON a prévu de créer plusieurs fonctions type, comme avancer la vidéo, la 
+mettre en pause, la reculer, pour qu'ensuite elles soient affectées correctement à l'interface. \\
+
+Dans un second temps, il faut pouvoir enregistrer la vidéo une fois qu'elle est annotée. L'idée est de faire en sorte que les annotations
+soient des PNG appliqués au dessus de l'image et qu'ils soient transportés dans les mêmes flux que les flux vidéos. \\
+
+Ce travail, bien qu'il a été commencé, devrait être fini aux alentours de Septembre, c'est pourquoi sa description ici
+est surtout théorique. \\
+
+
         \subsection{Ce qui reste à faire}
 Une application prenant du temps à être développée, il est normal que celle-ci n'ai pas été finie en 3 mois. Pour pouvoir se situer
 dans l'avancement de ce projet, j'ai établi une liste non exhaustive de ce qui, à l'heure actuelle, resterai à faire : \\ 

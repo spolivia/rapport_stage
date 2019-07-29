@@ -21,7 +21,7 @@
 J’adresse mes remerciements aux personnes qui m’ont permis de réaliser ce stage dans l’équipe de SuperBeeLive. \\
 Tout d’abord Matthieu ROUSSET, initiateur du projet SuperBeeLive à l'IBMM (Insitut Biomoléculaire Max Mousseron) 
 qui m’a accueilli au sein de son équipe. \\
-Ensuite, Capucine CARLIER pour ses nombreuses explications biologiques sur les abeilles ainsi que sa disponibilité 
+Ensuite, Capucine CARLIER pour son accueuil, pour ses nombreuses explications biologiques sur les abeilles ainsi que sa disponibilité 
 afin de comprendre au mieux les enjeux et les besoins des biologistes pour mon projet. \\
 Enfin, Sebastien DRUON pour m’avoir encadré, aidé à m’intégrer dans le milieu de la recherche et aidé sur une multitude 
 de sujets, aussi bien du point de vu universitaire que sur les tâches qui m’ont été confiées. \\
@@ -37,20 +37,21 @@ Le projet étant réalisé par plusieurs laboratoires de recherches, j'ai dû é
 Tout d'abord il y a mon employeur, l'Université de Montpellier, qui englobe d'autres structures où j'ai pu évoluer. 
 L'université a été, pour moi, une entitée administrative. \\ 
 Avec elle, le CNRS (Centre National de Recherche Scientifique) accueille dans ses locaux le rucher expérimental où 
-nous pouvons effectuer nos tests d'installation pour le projet. J'ai pu m'y rendre plusieurs fois afin d'observer les abeilles
-et voir le travail déjà effectué et évoluer au fur et à mesure. C'est également chez eux que nous aurons un serveur d'installé.\\
+l'équipe peut effectuer ses tests d'installation pour le projet. J'ai pu m'y rendre plusieurs fois afin d'observer les abeilles
+et voir l'installation évoluer au fur et à mesure. C'est également chez eux que nous aurons un serveur d'installé dans leur salle dédiée.\\
 Ensuite, l'IBMM est le laboratoire qui a engagé l'argent lié au projet afin de pouvoir me recrutrer lors de ce stage. 
-C'est également une structure qui a été seulement administrative de mon point de vu puisqu'ils m'ont envoyés travailler dans 
+C'est également une structure qui a été seulement administrative de mon point de vu puisque j'ai été affectée dans 
 les bureaux du LIRMM (Laboratoire d'informatique, de robotique et de microéléctronique de Montpellier), autre laboratoire de 
 recherche, afin que je puisse être aux côtés de Sébastien DRUON qui m'aura donné la grande majorité de mes tâches à effectuer. 
-J'ai pu y avoir mon bureau en face de M. DRUON, me permettant d'avoir une certaine autonomie mais aussi de pouvoir faire
+J'ai pu y avoir mon bureau en face du siens, me permettant d'être autonome mais aussi de pouvoir faire
 appel à lui facilement lorsque j'en avais besoin.\\
 \\
 C'est dans ce contexte de recherche que j'ai pu découvrir et travailler sur le projet SuperBeeLive. \\ 
 
 
-\section{Projet SuperBeeLive}
-\subsection{Le Global} 
+\section{Le projet SuperBeeLive}
+\subsection{Explication et intentions du projet}
+ 
 La santé et le développement des abeilles est aujourd’hui une question de plus en plus étudiée. Les bouleversements
 majeurs de notre planète et de l’activité humaine se traduisant par une augmentation alarmante de la mortalité
 des colonies et une chute de la production du miel dans nos pays développés, il est urgent de se préoccuper de leur futur. 
@@ -64,31 +65,61 @@ pouvoir répondre à des questions clés, notamment autours des mécanismes phys
 dûes au parasites ainsi qu’aux altérations de l’écosystèmes et des qualités nutritives des produits des ruches. \\
 Répondre à ces questions permettra de regrouper différentes solutions technologiques systèmatiques, 
 automatiques et non invasives à la collection de données usuelles déterminantes dans chacun des thèmes abordés.
-Les différentes travaux déjà effectués autours de ce sujet ne visaient qu’un seul type de problème à la fois, 
+Les différents travaux déjà effectués autours de ce sujet ne visaient qu’un seul type de problème à la fois, 
 ne permettant pas une vision globale des difficultées rencontrées par les abeilles. Notre but est de réunir les différentes
 données qui peuvent être utilisés pour étudier l’influence des éléments et événements extérieurs sur leur santé et leur cadre de vie.\\
 
 Concrétement, l'équipe de SuperBeeLive va concevoir une ruche plate afin d'y mettre en place plusieurs type de capteurs
 (hygrométrie, vibrations, température interne et externe, etc) ainsi que des caméras qui filmeront l'intérieur et 
 l'extérieur de la ruche. \\
+En 2017, une affiche résumant le projet a été présentée lors du salon NUMEV (Solutions, Numériques, Matérielles, et 
+Modélisation pour l'Environnement et le Vivant) (Annexe 1). \\ 
 %TODO mettre lien avec annexe (affiche 2017) 
 
 %Schéma prévisionnel de la ruche, photos TODO
+De plus, voici quelques schéma représentant à quoi la ruche devrait ressembler.
 \includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate1.JPG}
 \includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate.JPG} \\
 
+%TODO ajouter schéma précis placement caméra et capteurs
+
+Et à quoi elle ressemble actuellement : \\
+%ajouter schémas ruche actuelle
 
 
-Cette instrumentation nous permettra dans un premier temps d'observer les abeilles afin de visualiser leurs comportements 
-(danse, regroupement, protection, etc) ainsi que les parasites comme les frelons asiatiques ou les varroas. %TODO lien doc varoa/frelon 
-Une fois ces observations faites et documentées, il y aura assez de matière pour pouvoir créer des algorithmes qui reconnaitront 
-automatiquement ces comportements pour en sortir des informations spécifiques.\\
-Par exemple, un des buts et de repérer la danse d'une abeille qui permet aux autre d'indiquer où se trouve du polen et d'en
-extraire les informations qu'elle transmet (la direction à prendre, le temps à parcourir pour y arriver etc).\\
-%lien avec document sur les danses ? TODO
-Avec ces recherches, il serait possible de mettre en place une vitrine web des caméras streamées et commentées 
-automatiquement en temps réel, permettant à d'autres chercheurs d'avoir une ressource permanente pour travailler mais aussi
-au grand public d'avoir un accès plus restreint mais pédagogique sur le comportement des abeilles. \\
+Dans un premier temps, cette instrumentation nous permettra d'observer en temps réel la ruche et ses habitantes : 
+les caméras nous donnerons une vision globale de ce qu'il s'y passe, aussi bien en intérieur pour observer leur 
+comportement et tenter de repérer des parasites comme le varoa, qu'en extérieur pour y voir les dangers comme le frelon asiatique. %TODO REF ASIATIQUE ET VAROA  
+Couplée aux donnés récoltées à l'aide de la carte éléctronique et ses capteurs installée au centre de la ruche plate, 
+nous pourrons avoir une vision complète et détaillées des événements et leur répercutions ponctuant la vie d'une colonie,
+de sa naissance à sa mort. \\
+Ces observations ont pour but d'être enregistrée, sauvegardées et commentées par les biologistes afin de construire une base
+de donnée contenant plusieurs types de comportements comme le refroidissement de la ruche, les danses frétillante %TODO REF DANSE 
+\\
+Dans un second temps, cette base de donnée pourra être utilisée afin de créer des algorithmes repérant ces différents comportement
+de manière automatisée. Cela nous permettrait, en plus d'avoir des données complètes et utilisables, d'en avoir leur analyse en 
+temps réel. Ces informations seront diffusées de deux façon. D'abord, elles seront partagées pour être étudiées par d'autres scientifiques, 
+notamment les colaborateurs autours du projet SuperBeeLive. Ensuite, Le projet se veut aussi éducatif : une vitrine Web accessible au public 
+sera créée présentant une ruche et ses données numériques et vidéos commentées en live. \\
+
+Ainsi, les ruches plates de SuperBeeLive permetront de fournir des données crutiales pour des futures recherches autours des abeilles, tout en 
+éduquant le grands public à l'importance des abeilles et les risques liées à nos activités humaines pour cette espèces et la biodiversité. 
+
+\section{L'équipe}
+
+\includegraphics[scale=0.3]{../images/dia/organiramme_equipe_projet.png}
+
+Brouillon organigrame 
+
+CNRS : Jean-Baptiste THIBAUD 50\%
+IBMM : Matthieu ROUSSET 50\%
+LMGC : Delphine JULIEN
+       Capucine CARLIER
+LIRMM : Jean TRIBOULET 
+        Sébastien DRUON 
+IUT de Béziers : Philiphe PUJAS -> stockage des données 
+Equipe Bee@Wur Université Wegeningen (Néerlandais) -> ouverture internationnalle. 
+
 
 \subsection{Mon rôle durant le stage}
 Pour ce stage, plusieurs missions m'ont été affectées, une qui est devenue ma principales et d'autres, plus courtes dans le temps.\\
@@ -119,21 +150,6 @@ compétences et connaissances dans ces deux domaines étant limitées, je n'ai p
 Cependant, la possibilité d'un apprentissage lors d'école d'ingénieurs en systèmes embarqués a été évoquée, ce qui correspondrait 
 plus à ces tâches.\\
 
-
-\section{L'équipe}
-
-\includegraphics[scale=0.3]{../images/dia/organiramme_equipe_projet.png}
-
-Brouillon organigrame 
-
-CNRS : Jean-Baptiste THIBAUD 50\%
-IBMM : Matthieu ROUSSET 50\%
-LMGC : Delphine JULIEN
-       Capucine CARLIER
-LIRMM : Jean TRIBOULET 
-        Sébastien DRUON 
-IUT de Béziers : Philiphe PUJAS -> stockage des données 
-Equipe Bee@Wur Université Wegeningen (Néerlandais) -> ouverture internationnalle. 
 
 
 \chapter{Développement d'une application : Beeterface}

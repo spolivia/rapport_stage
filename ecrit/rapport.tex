@@ -106,47 +106,65 @@ Ainsi, les ruches plates de SuperBeeLive permetront de fournir des données crut
 éduquant le grands public à l'importance des abeilles et les risques liées à nos activités humaines pour cette espèces et la biodiversité. 
 
 \section{L'équipe}
-L'équipe de recherche qui constitue le projet SuperBeeLive étant partagée entre plusieurs laboratoires, je n'ai pas eu l'occasion
+L'équipe de recherche qui constitue le projet SuperBeeLive est répartie entre plusieurs laboratoires, je n'ai donc pas eu l'occasion
 d'en rencontrer tous les acteurs, certains se trouvant même à l'étranger. Voici un schéma représentant globalement la structure
-de l'équipe ainsi que les membres que j'ai pu rencontrer. \\
+de l'équipe ainsi que les membres avec qui j'ai pu travailler. \\
 
 \includegraphics[scale=0.3]{../images/dia/organiramme_equipe_projet.png} \\
 
-Le projet est englobé par l'Université de Montpellier. Les laboratoires de recherche principaux sont l'IBMM (Institut Biomoléculaire Max Mousseron) 
-et le CNRS (Centre National de la Recherche Française) représentés ici respectivement par Matthieu ROUSSET et Jean-Baptsite THIBAUD, tous deux chercheurs. \\
-Les autres laboratoires présents actifs dans ce projets sont le LIRMM (Laboratoire d'Informatique, de Robotique, et de Microéléctronique de Montpellier) 
-et le LMGC (Laboratoire de Mécanique et Génie Civil). En plus de ces structures, des partenaires Universitaires comme l'IUT de Béziers et  
-l'Université de Wageningen, ouvrant à l'intérnationnal, permettent d'intégrer des étudiants. \\
-Me concernant, j'ai été recrutée par l'IBMM et ai travaillé au LIRMM.
+Les laboratoires de recherche principaux sont l'IBMM (Institut Biomoléculaire Max Mousseron) 
+et le CNRS (Centre National de la Recherche Française) représentés ici respectivement par Matthieu ROUSSET et Jean-Baptsite THIBAUD, 
+tous deux chercheurs. \\
+Les autres laboratoires présents actifs dans ce projets sont le LIRMM (Laboratoire d'Informatique, de Robotique, 
+et de Microéléctronique de Montpellier) et le LMGC (Laboratoire de Mécanique et Génie Civil). En plus de ces structures, 
+des partenaires universitaires comme l'IUT de Béziers et l'Université de Wageningen, ouvrant à l'internationnal,
+permettent d'intégrer des étudiants. \\
+Me concernant, j'ai été recrutée par l'IBMM et ai travaillé au LIRMM, travaillant principalement avec Mr Druon et 
+Mr Triboulet. Les biologistes avec qui nous avons le plus été en contact sont Matthieu ROUSSET et Capucine CARLIER. \\
+
 
 \subsection{Mon rôle durant le stage}
 Pour ce stage, plusieurs missions m'ont été affectées, une qui est devenue ma principales et d'autres, plus secondaires.\\
 
-Comme dit plus haut, le but premier de l'installation des caméras sur la ruche est de pouvoir observer et annoter des vidéos manuellement
-pour ensuite rendre cette tâche automatique. Seulement, ces annotations doivent être encadrées afin d'éviter que des données ne se perdent, 
-et que les outils utilisés pour le faire ne soient pas les même d'une personne à une autre nous donnant alors des fichiers non 
-uniformes et plus difficiles et long à traiter une fois réunis. \\
-Ainsi, nous avons entreprit de créer un logiciel d'annotation, permettant de regarder en direct les caméras et de sauvegarder des 
-morceaux de vidéos afin de pouvoir dessiner simplement dessus (encercler, mettre une flèche, encadrer, etc) et écrire quelques mots
-sur ce qu'on y observe. Ces vidéos seraient sauvegardées dans un fichier contenant la vidéo et les annotations et pourront être 
+Comme dit plus haut, le but premier de l'installation des caméras sur la ruche est de pouvoir observer et récolter des informations
+quant au comportement de la colonie, pour ensuite rendre cette detection automatique. Cette récolte d'information se fera par le 
+biais d'annotations diverses directement sur des enregistrements vidéos du live : on veut y retrouver des dessins (cercles, 
+flèche, crois) et des descriptions précises. De plus, on veut pouvoir trier les vidéos en fonctions de ce qu'il s'y passe
+à l'aide de tags : si on voit que sur la vidéo il y a la reine et une danse frétillante, alors on appliquera deux tags l'indiquant. \\
+
+Seulement, ce travail d'annotation ne peut pas être fait avec des outils basiques déjà disponible au public, comme Adobe Première Pro, 
+Filmora ou Windows Movie Make. Bien que très utilisés, ils possèdent bien plus de fonctionnalités que nécessaires et il aurait été long
+de former toutes personnes devant faire ce travail d'annotation. De plus, on aurait eu des risques de pertes de données, il vaut mieux
+prévoir un rassemblement du travail effectué sur un seul et même serveur de façon automatisée. \\
+
+Ainsi, nous avons entreprit de créer un logiciel d'annotation, permettant de regarder en direct les caméras tout en connaissant
+les données des capteurs et de sauvegarder des morceaux de vidéos afin de pouvoir dessiner simplement dessus 
+(encercler, mettre une flèche, encadrer, etc) et écrire quelques mots sur ce qui y est observé.
+
+Ces vidéos seraient sauvegardées dans un fichier contenant la vidéo et les annotations et pourront être 
 visualisés de nouveau dans ledit logiciel mais aussi dans un lecteur plus classique mais sans les annotations. \\
 Au final, celui-ci alégera le travail des biologiste, qui auront un outils sur mesure pour annoter les vidéos, mais aussi de M. Druon, 
 pour qui il sera plus simple de récupérer et traiter les données.\\
 
+
 Il est évident que dans un tel projet, beaucoup de données seront transmises et stockées. Ainsi, toute une partie d'administration 
 système est à gérer. Dans notre cas, nous avons deux tâches importantes.\\
+
 D'abord, la question du stockage des données commençait à se poser lors de mon arrivée en stage. Il fallait choisir, acheter, installer
 puis configurer un serveur de stockage dans la salle serveur du CNRS.\\
 Ensuite, le rucher du CNRS où notre ruche expérimentale est installé n'a pas de configuration réseau déjà établie. 
 Une connexion par fibre optique est prévue, mais la suite de l'installation devra être gérée par nous même. Comme pour le serveur, 
 il faudra choisir, installer et configurer un switch dans le rucher.\\
+
 Pour ces deux tâches, la même problématique est soulevée : il faudra penser au grand nombre de données qui devront transiter sur le 
 réseau et donc prévoir du matériel adapté.\\
+
 D'autres réalisations auraient pû m'être affectées, comme le dimensionnement des caméras ou la construction des cartes éléctroniques
 qui seront installées au centre de la ruche. Seulement, ces sujets s'éloignant de mon DUT Réseaux et Télécommunications et mes 
-compétences et connaissances dans ces deux domaines étant limitées, je n'ai pas eu à travailler dessus.\\
+compétences et connaissances dans ces deux domaines étant limitées pour le moment, je n'ai pas eu à travailler dessus.\\
+
 Cependant, la possibilité d'un apprentissage lors d'école d'ingénieurs en systèmes embarqués a été évoquée, ce qui correspondrait 
-plus à ces tâches.\\
+plus à ces tâches qui pourraient m'être confiées plus tard.\\
 
 
 
@@ -154,14 +172,16 @@ plus à ces tâches.\\
 
     \section{Analyse du besoin et des fonctionnalités exigées}
 
-Outre les différents capteurs installés sur la ruche (Son, vibration, temperature, hygrométrie, etc.), les biologistes ont égalemet exprimé le
-besoin de pouvoir capturer des comportements particuliers de la colonie. De là vient la nécessitée de pouvoir gérer de nombreuses caméras sur la ruche
-prototype. On pourra distinguer trois localisations distinctes pour ces caméras, correspondant à trois types de traitement d'image différents. \\
+Outre les différents capteurs installés sur la ruche (Son, vibration, temperature, hygrométrie, etc.), 
+les biologistes ont égalemet exprimé le besoin de pouvoir capturer des comportements particuliers de la colonie. 
+De là vient la nécessitée de pouvoir gérer de nombreuses caméras sur la ruche prototype. 
+On pourra distinguer trois localisations distinctes pour ces caméras, correspondant à trois types de traitement d'image différents. \\
 
 \includegraphics[scale=0.3]{../images/dia/schema_camera.png}
 
+\begin{itemize}
 
-- Les caméras situées sur la planche d'envol, tout d'abord, servent à surveillers 
+  \item Les caméras situées sur la planche d'envol (1), tout d'abord, servent à surveillers 
   les alentours de la ruche. Elles permettent avant tout de
   mesurer le flux d'entrée/sortie des butineuses, mais également de détecter
   certains comportements, comme par exemple la ventilation forcée (une abeille
@@ -173,25 +193,25 @@ prototype. On pourra distinguer trois localisations distinctes pour ces caméras
   stereoscopique afin de pouvoir effectuer des mmesures 3D. \\
   En annexe, un lien vers une vidéo prise par l'équipe au début du projet est disponible. 
   On peut y voir une planche d'envol filmée et passée au ralentis. \\ 
-
-- Les caméras situées sur le module d'entrée, quand à elles, servent à étudier
+ 
+  \item Les caméras situées sur le module d'entrée (2), quand à elles, servent à étudier
   les pelotes de pollen ramenées par les butineuses afin de reconnaître les
   plantes utilisées par les abeilles. Ces caméras sont caractérisées par de
   fort grossissement et sont associées à des éclairages pilotés par ordinateur
   (UV, IR) pour mesurer l'autofluorescence des pollens.
 
-- Enfin, les caméras montés sur chaque module ( 1 par face du module ) servent
+  \item Enfin, les caméras montés sur chaque module (3) (1 par face du module) servent
   à détecter et surveiller les évenements qui ont lieu sur le couvain et sur
   les alvéoles. Ces caméras doivent travailler dans des conditions de lumière
   particulières, car la reine et certaines castes d'abeilles sont sensibles à
   la lumière visible. Pour ne pas les perturber, le rucher est placé en
   lumière rouge ou infrarouge, ce qui correspond à des longeurs d'onde que les
   abeilles ne voient pas. Il est a noté que des caméras supplémentaires,
-  purement infrarouges, seront également utilisées dans le cadre des travausx de
+  purement infrarouges, seront également utilisées dans le cadre des travaux de
   l'IES, l'un de nos partenaires.
+\end{itemize}
 
-
-  Les flux d'images générés par ces caméras sont collectésur un réseau privé,
+  Les flux d'images générés par ces caméras sont collecté sur un réseau privé,
   puis transférés à un serveur central. En fonction du besoin, ils pourront
   etre enregistrés, renvoyés vers le site vitrine, renvoyées vers l'application d'annotation
   ou encore traités par les algorithmes qui sont mis au point par M. Triboulet et M. Druon. 
@@ -199,7 +219,8 @@ prototype. On pourra distinguer trois localisations distinctes pour ces caméras
   (danse, ventilation, etc) de facon automatique.
 
 
-Au vu de la description générale de l'utilisation des vidéos ainsi qu'après discussion avec l'équipe, le logiciel devrait devoir permettre de : \\
+Au vu de la description générale de l'utilisation des vidéos ainsi qu'après discussion avec l'équipe, le logiciel devrait 
+pouvoir permettre de : \\
 \begin{itemize}
     \item Visualiser les caméras en direct
     \item Démarrer la capture vidéo à tout moment 
@@ -212,132 +233,184 @@ Au vu de la description générale de l'utilisation des vidéos ainsi qu'après 
 \end{itemize} \\
 Afin de répondre à ces besoins, nous avons imaginé l'application suivante : 
 %TODO Faire le schéma de l'interface
-Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement, nous nous rendions compte
-de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée.  \\
+Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement,
+nous nous rendions compte de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée. 
+Ainsi, ce schéma correspond à l'application actuelle mais n'avait pas été vu comme tel au début. 
+\\
 
     \section{Contraintes} 
-Le langage de départ pour coder l'interface et ses fonctionnalités, que nous pourrons familiairement nommer partie moteur et partie physique, m'a été imposé. \\
-C'est donc en C que j'ai dû réflechir à comment préparer et lier ces deux parties. Ce langage a été choisit tout simplement parceque c'est 
-le langage que M. DRUON a pour habitute d'utiliser. \\
-La partie moteur peut être développée en C sans trop d'ajout de librairies annexes autres que celles dites basiques (stdlib, stdio). Cependant, 
-nous avons dû utiliser une librairie pour développer la partie physique. Nous avions le choix entre GTK ou QT. QT devant être utilisé en C++, 
-notre choix s'est naturellement dirigé vers GTK 3.0. \\
+Le langage de départ pour coder l'interface et ses fonctionnalités, que nous pourrons familiairement nommer partie moteur 
+et partie physique, m'a été imposé. \\
+C'est donc en C que j'ai dû réflechir à comment préparer et lier ces deux parties. Ce langage a été choisit tout simplement 
+parceque c'est  le langage que M. DRUON a pour habitute d'utiliser pour ce type de projet. \\
+La partie moteur peut être développée en C sans trop d'ajout de librairies annexes autres que celles dites basiques 
+(stdlib, stdio). 
+Cependant, nous avons dû utiliser une librairie pour développer la partie physique. Nous pouvions utiliser GTK ou QT. 
+QT devant être utilisé en C++, notre choix s'est naturellement dirigé vers GTK 3.0. \\
 Comme dans tout projets collaboratifs, la convergence des données est importante et peut parfois se réveler difficile à mettre en place. 
-Heureusement pour nous, en programmation l'outil GIT est excellent pour travailler à plusieurs. L'ayant déjà vu en cours cette année, j'ai pu l'utiliser 
-concrétement lors de mon stage. Cependant, avant de commencer à utiliser concrètement l'outil, il a été préférable que je me remette à niveau sur celui-ci
-et ai donc entammé la lecture du livre Mastering Git %TODO VERIFIER LE TITRE
-qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub : il est donc accessible au 
-public sous le nom superbeelive. 
+Heureusement pour nous, en programmation l'outil GIT est excellent pour travailler à plusieurs. L'ayant déjà vu en cours cette année,
+j'ai pu l'utiliser concrétement lors de mon stage. Cependant, avant de commencer à utiliser l'outil, il a été préférable que 
+je me remette à niveau sur celui-ci et ai donc entammé la lecture du livre Mastering Git %TODO VERIFIER LE TITRE
+qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub : 
+il est donc accessible au public sous le nom "superbeelive". %TODO ANNEXE lien github 
 
 Pour cela, le livre %TODO Integrer ref du livre 
-m'a servi de référence de base quant à la manière de manier les éléments. Je me suis également aidée de divers tutoriels sur internet, mais surtout 
-de la document officielle de GTK. %TODO Lien biblio 
+m'a servi de référence de base quant à la manière de manier les éléments. Je me suis également aidée de divers tutoriels sur internet,
+mais surtout de la document officielle de GTK. %TODO Lien biblio 
 \\
-Souvent, on a tendance à utiliser Glade, un logiciel permettant de créer une interface GTK avec des outils graphiques. Dans mon cas, je m'en suis surtout servie 
-en tant que bibliothèque pour voir et tester certains Widgets ainsi que leur fonctionnement. Cet utilitaire, certes plus rapide à prendre en mains, est lié 
-au fait qu'il utilise des fichiers XML pour décrire l'interface ce qui, au final, complique la portabilité de l'interface d'une version du logiciel à l'autre. 
-De plus, j'ai préféré apprendre à utiliser GTK en ligne de code "brut". Plus fastidieu au départ, j'ai trouvé cela plus simple à la longue : je maîtrisais vraiment 
-mes outils et apprenais plus rapidement à utiliser un nouvel élément de la librairie.  
+Souvent, on a tendance à utiliser Glade, un logiciel permettant de créer une interface GTK avec des outils graphiques. 
+Dans mon cas, je m'en suis surtout servie en tant que bibliothèque pour voir et tester certains Widgets ainsi que leur fonctionnement. 
+
+Cet utilitaire, certes plus rapide à prendre en mains, utilise en sortie des fichiers XML pour décrire l'interface ce qui, 
+au final, complique la portabilité de l'interface d'une version du logiciel à l'autre. \\ 
+De plus, j'ai préféré apprendre à utiliser GTK en ligne de code "brutes". Plus fastidieu au départ, 
+j'ai trouvé cela plus simple à la longue : je maîtrisais vraiment mes outils et apprenais plus rapidement à utiliser 
+un nouvel élément de la librairie.  
 %TODO : intégrer capture d'écran glade ? 
 
         \subsection{Principe de GTK}
-Apprendre à utiliser GTK sera plus long si la programmation objet nous est inconnu. En effet, même si le C n'est pas un langage objet, GTK lui, reprend 
-les principes de la programation objet. Si vous êtes déjà familier avec ce type de langage, alors l'apprentissage sera bien plus rapide.  
-L'idée principale de GTK est que l'on va ranger tous les éléments en fonction d'un autre élément, pour finir avec des sortes de poupées russes qui s'emboîtent 
-et se rangent côte à côte pour donner un résultat final. Il exite une multitude d'éléments utilisables, appelés les Widgets. L'élément de base widgets contient des propriétés de 
-base et, pour créer d'autre type d'élément, les développeurs de GTK y ont ajoutés d'autres propriétés à celles déjà existantes. 
-Au fur et à mesure, ces ajouts de propriétés ont permit de créer toute sorte de Widget : des textes, des labels, des tableaux, des séparateur, des listes, des bouttons... 
-Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements, nous permettant de savoir ce que l'on peut faire avec nos Widgets : 
+Apprendre à utiliser GTK sera plus long si la programmation objet nous est inconnu. En effet, même si le C n'est pas un langage objet,
+GTK lui, reprend les principes de la programation objet. Si vous êtes déjà familier avec ce type de langage, alors l'apprentissage
+sera bien plus rapide.\\
+L'idée principale de GTK est que l'on va ranger tous les éléments en fonction d'un autre élément, pour finir avec des sortes de poupées 
+russes qui s'emboîtent et se rangent côte à côte pour donner un résultat final. Il exite une multitude d'éléments utilisables, 
+appelés les Widgets. L'élément de base "widgets" contient des propriétés, pour créer d'autre type d'élément, les développeurs de GTK 
+en ont ajoutés d'autres. 
+Au fur et à mesure, ces ajouts de propriétés ont permit de créer toute sorte de Widget : des textes, des labels, des tableaux, 
+des séparateur, des listes, des bouttons... 
+Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements, nous permettant de savoir ce que l'on peut 
+faire avec nos Widgets en fonction de qui ils héritent : 
 
 \includegraphics[scale=0.7]{../images/dia/arbo_widget.png} \\
 
 
-En effet, si par exemple je veux changer un paramètre d'un élément "GtkSpinButton", et que je ne trouve pas de fonction affectant directement ce type d'élément, 
-alors je vais regarder si chez ses parents je peux trouver le paramètre voulu, à savoir "GtkEntry", et "GtkWidget". \\
+En effet, si par exemple je veux changer un paramètre d'un élément "GtkSpinButton", et que je ne trouve pas de fonction 
+affectant directement ce type d'élément, par exemple la taille, alors je vais regarder si chez ses parents je peux trouver 
+le paramètre voulu, à savoir "GtkEntry", et "GtkWidget". \\
 
-Chaque paramètre disponible pour les Widgets peut être changé directement à l'aide de fonctions retrouvable dans l'excelente documentation en ligne de GTK 3.0. 
-Il est totalement déconseiller de changer directement la valeur des paramètre à la mains en utilisant, par exemple des pointeurs. Il faut partir du principe que 
-chaque élément a son nombre de fonctions associées et que tout est prévu pour pouvoir faire ce que l'on veut sur notre interface. \\ 
+Chaque paramètre disponible pour les Widgets peut être changé directement à l'aide de fonctions retrouvable dans la très complète 
+documentation en ligne de GTK 3.0. Il est totalement déconseillé de changer directement la valeur des paramètres à la mains 
+en utilisant, par exemple des pointeurs. Il faut partir du principe que chaque élément a son nombre de fonctions associées 
+et que tout est prévu pour pouvoir faire ce que l'on veut sur notre interface. \\ 
 \\
 
         \subsection{Des boites, dans des boites...}
-Une fois la manière de créer les éléments comprise, il faut ensuite comprendre comment les ranger. D'abord, on va créer une fenêtre, soit une GtkWindows. Dans celle-ci, on 
-ne peut y poser qu'un seul Widget. C'est pour ça que nous avons les éléments "GtkContainers" : c'est avec eux que nous allons pouvoir structurer et placer tous les autres 
-éléments dans notre fenêtre. Le container de base est la box. A sa création, nous devons simplement indiquer si celle-ci va être horizontale ou verticale, c'est à dire
-si les éléments que nous allons mettre dedans vont être placé de haut en bas ou de droite à gauche. Une fois cette première GtkBox placée, le problème de limitation de place 
-imposée par la GtkWindow n'en est plus un. Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
-nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. Voici le schéma de construction que j'ai fais pour la première fenêtre de 
-l'application : 
-%TODO intégrer schéma de boite de la fenetre n°1
-On peut voir que la GtkBox box\_principale prend toute la place de ma fenêtre GtkWindow. Dans cette box\_principale, j'y ai rangé verticalement box\_up et box\_down. Dans
-box\_down j'ai integré box\_left et box\_right horizontalement, me permettant d'avoir quatre zones délimitées. Ensuite, j'ai créé des box pour mes éléments plus précis :
-dans box left j'ai directement intégré box\_video dans laquelle se trouve la vidéo. Dans box right on va retrouvé box\_info, box\_meta, box\_btn\_cam, box\_btn\_video, 
-box\_info\_time et box\_file. Chacune de ces box m'ont permit de ranger à l'intérieur les éléments que je voulais retrouver : les boutons, les textes, les descriptions etc. 
-A noter qu'en plus de ces boîtes j'ai également parfois ranger des séparateur, les barre horizontale et verticale, permettant d'ajouter un peu de structure visuelement. \\
-Une fois que l'on sait comment ranger les éléments sur une fenêtre et quel est le principe de ces éléments dans l'idée, il ne manque plus qu'à voir comment concretement, 
-dans le code, on applique ces principes. \\   
-GTK nécessite une organisation rigoureuse si on veut pouvoir s'y retrouver et imaginer facilement comment est construit la fenêtre décrite dans le code. 
-C'est pourquoi j'ai préféré appliquer une manière de classer les éléments qui me permette de retrouver facilement ce avec quoi je veux travailler dans l'instant. \\
-Ainsi, j'ai voulu identifier les différentes étapes de la création d'un Widget et les séparer en trois grandes parties pour m'y retrouver plus facilement. \\
+Une fois la manière de gérer les éléments et leurs paramètres acquise, il faut ensuite pouvoir les ranger. 
+D'abord, on va créer une fenêtre, soit une "GtkWindow". Dans celle-ci, on ne peut y poser qu'un seul Widget. C'est pour ça que nous
+avons les éléments "GtkContainers" : c'est avec eux que nous allons pouvoir structurer et placer tous les autres éléments 
+comme on le veut dans notre fenêtre. \\
+
+Le container de base est la "GtkBox". A sa création, nous devons simplement indiquer si celle-ci va être horizontale ou verticale, 
+c'est à dire si les éléments que nous allons mettre dedans vont être placé de haut en bas ou de droite à gauche. 
+Une fois cette première "GtkBox" placée, le problème de limitation de place imposée par la "GtkWindow" n'en est plus un. 
+Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
+nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. Voici le schéma de construction 
+que j'ai fais pour la première fenêtre de l'application : \\
+
+%TODO intégrer schéma de boite de la fenetre n°1 \\
+
+On peut voir que la GtkBox box\_principale prend toute la place de ma fenêtre GtkWindow. Dans cette box\_principale, j'y ai rangé 
+verticalement box\_up et box\_down. Dans box\_down j'ai integré box\_left et box\_right horizontalement, me permettant d'avoir 
+quatre zones délimitées. \\
+Ensuite, j'ai créé des box pour mes éléments plus précis : dans box left j'ai directement intégré box\_video dans laquelle 
+se trouve la vidéo (pour le moment, une image fixe représentant là où la vidéo se trouvera par la suite). 
+
+Dans box right on va retrouver box\_info, box\_meta, box\_btn\_cam, box\_btn\_video, box\_info\_time et box\_file. 
+Chacune de ces box m'ont permit de ranger à l'intérieur les éléments que je voulais retrouver : 
+les boutons, les textes, les descriptions etc. 
+
+A noter qu'en plus de ces "GtkBox" j'ai également utilisé d'autres type de "GtkContainer", comme des "GtkFrame", l'encadrement
+avec un titre autour de "Informations Capteurs" et "Informations Vidéo" ou des "GtkGrid", permettant de placer les éléments 
+à la maniètre d'un tableau sans les bordures, ici utiliser pour les les lignes dans les deux encadrés "Informations". \\
+Un autre type de Gtkcontainer intéressant que je n'ai pas utilisé ici est le "GtkScrolledWindow". Celui-ci permet d'ajouter
+une barre de défilement afin d'afficher plus d'informations. \\
+
+
+Maintenant que nous avons tous les deux principes de bases en tête, à savoir les éléments et les boîtes, on peut voir comment 
+tout cela se forme dans le code. \\
+
+GTK nécessite une organisation rigoureuse si on veut pouvoir s'y retrouver avec les éléments rapidement nombreux.
+Ainsi, j'ai voulu identifier les différentes étapes de la création d'un Widget et les séparer en 
+trois grandes parties pour m'y retrouver plus facilement. \\
 
         \subsection{Création et Définition}
-La première partie est la déclaration d'un Widget et sa définition. La création est simplement la déclaration de la variable avec son type. A noter que j'utilise des pointeurs
-pour toute mon application et que mes exemples viennent directement des fichiers win\_main.c et win\_main.h. La structure et l'explication de ces pointeurs est décrite
-dans la partie "Les structures" de "Définition des fonctionnalités". \\
+
+La première partie est la déclaration d'un Widget et sa définition. La création est simplement la déclaration de la variable 
+avec son type. A noter que j'utilise des pointeurs pour toute mon application et que mes exemples 
+sont inspirés des fichiers win\_main.c et win\_main.h afin que vous puissiez vous y reporter pour voir des exemples plus complets et
+concrets. 
+La structure en .c/.h et l'explication des pointeurs utilisés est décrite dans la partie "Les structures" de 
+"Définition des fonctionnalités". Pour le moment, ne prenons pas en compte les "tmp" placés devant les noms des éléments. \\
+
 Créons une fenêtre, une box et un label : \\
 %TODO TROUVER COMMENT 
 --> Dans win\_main.h : 
 GtkWidget* window ; 
 GtkWidget* box ;   
 GtkWidget* label ;  
-    Pour ces trois exemples, ces éléments sont tous du type GtkWidget. Il arrive que, dans de rare cas, il soit nécessaire de déclarer un autre type d'objet. \\ 
 
-Ces trois éléments existent désormais, maintenant il faut les définir, c'est à dire expliquer de quel type de Widget il seront et leur donner leur propriétés. \\
---> Dans win\main.c : 
+Pour cet exemple, les éléments sont tous du type GtkWidget, ce sera le cas pour la majorité de nos éléments lors de la 
+déclaration.
+Il arrive que, dans de rare cas, il soit nécessaire de les déclarer autrement : si c'est le cas, la documentation l'indiquera. \\ 
+
+
+Ces trois éléments existent désormais, maintenant il faut les définir, c'est à dire expliquer de quel type de Widget il seront 
+et leur donner leur propriétés. \\
+
+--> Dans win\_main.c : 
 tmp->window = gtk\_window\_new (GTK\_WINDOW\_TOPLEVEL) ;
-Ici, on utilise la fonction "gtk\_window\_new" pour indiquer que "window" est une fenêtre qui s'ouvre en premier plan avec l'argument "GTK\_WINDOW\_TOPLEVEL". \\
+
+Ici, on utilise la fonction "gtk\_window\_new" pour indiquer que "window" est une fenêtre qui s'ouvre en premier plan 
+avec l'argument "GTK\_WINDOW\_TOPLEVEL". \\
 
 tmp->box\_principal = gtk\_box\_new( GTK\_ORIENTATION\_VERTICAL, 0) ;
-Comme dit plus haut, à la création d'une box on indique d'abord si on veut que les éléments soient posés verticalement ou horizontalement. Ensuite, le second
-argument permet de définir le nombre de pixel d'écart par défaut entre les éléments, ici 0px, donc ils seront collés l'un à l'autre.  \\
-%TODO VERIFIER ARGUMENT  !!
-tmp->label = gtk\_label\_new("Je suis le texte du label") ; \\
-Enfin, le label nécessite lui aussi un argument, ici ce sera le texte noté de base. On peut laisser ce texte vide si on ne rempli pas les "".  \\
 
-Les exemples ci-dessus ont tous eu besoin d'une définition précise du Widget, avec à chaque fois au moins un paramètre à régler. Il arrive parfoit que la création
-ne nécéssite aucun paramètre, et que des modification doivent être apportées ensuite. Par exemple, si je veux que mon label ai une écriture plus stylisée, je peux
-utiliser :  \\
+Comme dit plus haut, à la création d'une "GtkBox" on indique d'abord si on veut que les éléments soient ajoutés verticalement 
+ou horizontalement. Ensuite, le second argument permet de définir le nombre de pixel d'écart par défaut entre les éléments, 
+ici 0px, donc ils seront collés l'un à l'autre.  \\
+%TODO VERIFIER ARGUMENT  !!
+
+tmp->label = gtk\_label\_new("Je suis le texte du label") ; \\
+Enfin, le label nécessite lui aussi un argument, ici ce sera le texte noté de base. 
+On peut laisser ce texte vide si on ne rempli pas les "".  \\
+
+
+Les exemples ci-dessus ont tous eu besoin d'une définition précise du Widget, avec à chaque fois au moins un paramètre à régler. 
+Il arrive parfoit que la création ne nécéssite aucun paramètre, et que des modification doivent être apportées ensuite. 
+Par exemple, si je veux que mon label ai une écriture plus stylisée, je peux utiliser :  \\
+
 gtk\_label\_set\_markup(GTK\_LABEL(tmp->label), "<span foreground=\"black\" font=\"10\"><b>Je suis le label stylisée avec du bold</b></span>"); \\
-Ici, il faut préciser avant le nom de la variable à modifier quel type de widget on compte modifier. En effet, comme lors de la déclaration 
-il est indiqué que label est de type GtkWidget et que la fonction que l'on veut utiliser ne s'applique que sur un GtkLabel, il est 
-donc nécessaire d'indiquer 
-que cette fois-ci, c'est de type un GtkLabel depuis la fonction plus haut à l'aide de "GTK\_LABEL". 
-Cette fois ci, mon label ressemblera à ça : 
-%TODO incorporer avant/après du label
-\\
-Ainsi, il existe plein de fonctions différentes permettant de régler ce genre de paramètres sur les widgets, et parfois il est nécessaire 
-de faire appel à elle pour 
-avoir un Widget correct. Il est intéressant d'explorer les fonctions existantes afin de personnaliser au mieux notre interface. \\
+
+Ici, avant d'indiquer quel élément on veut modifier en argument, il faut préciser quel type d'élement c'est.
+En effet, comme lors de la déclaration il est indiqué que label est de type GtkWidget et que la fonction que l'on veut utiliser 
+ne s'applique que sur un GtkLabel, il est donc nécessaire de "forcer" GTK à considérer "tmp->label" comme un label.\\
+
+Il existe plein de fonctions différentes permettant de régler ce genre de paramètres sur les widgets, et parfois il est nécessaire 
+de faire appel à elles pour avoir un Widget correct. 
+Il est intéressant d'explorer les fonctions existantes afin de personnaliser au mieux notre interface. \\
 
 Une fois les Widgets créés, il faut maintenant les placer et indiquer qu'il faut les afficher. \\ 
  
 \subsection{Placement, cosmétique et affichage} \\
 Maintenant, nous allons appliquer la théorie qui avait été développée au dessus : les poupées russes. On va commencer par dire où 
-va se placer la box : \\ 
+va se placer la "GtkBox" : \\
+
  gtk\_container\_add (GTK\_CONTAINER (tmp->window), tmp->box) ; \\
-Window est un GtkContainer, nous utilisons donc la fonction qui permet d'affecter un élément à un container. Le premier argument 
-indique le container où nous
-devons insérer un élément. Le second nous indique quel élément est à placer. \\
+
+GtkWindow hérite de GtkContainer, nous utilisons donc la fonction qui permet d'affecter un élément à un container. Le premier argument 
+indique le container où nous devons insérer un élément. Le second nous indique quel élément est à placer. \\
 
 Ensuite, nous faisons de même pour la box : \\
+
   gtk\_box\_pack\_start(GTK\_BOX(tmp->box\_principal), tmp->label, FALSE, FALSE, 0) ; \\
-Box étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. Comme pour le Window, il faut indiquer la 
-boîte concernée par 
-l'élément à ajouter, mais cette fois-ci trois autres arguments sont à renseigner concernant la manière dont les Widgets vont se 
-comporter à l'intérieur
-de la box. Mais d'abord, il faut savoir que par défaut (donc que tout est sur FALSE), les box allouent la même place à tous les 
-Widgets qu'ils contiennent
+
+"box\_princiapl" étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. 
+Comme pour "window", il faut indiquer la boîte concernée par l'élément à ajouter, mais cette fois-ci trois autres arguments 
+sont à renseigner concernant la manière dont les Widgets vont se comporter à l'intérieur de la box. \\ 
+
+Il faut savoir que par défaut (donc que tout est sur FALSE), les box allouent la même place à tous les Widgets qu'ils contiennent
 sans déborder sur le reste.\\
+
 \begin{itemize}
     \item Expand : peut être TRUE ou FALSE. Permet aux widgets de prendre plus de place si besoin si réglé sur TRUE. \\ 
     \item Fill : peut être TRUE ou FALSE. Ne peut être actif que si Expand est aussi TRUE. Alloue la hauteur ou la largeur totale
@@ -347,36 +420,48 @@ sans déborder sur le reste.\\
 \end{itemize}
 
 Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, 
-j'ai appliqué une indentation 
-qui m'est propre mais que je trouve plus lisible, voici l'exemple pour win\_main : \\
-%TODO insérer ex de win_main 
+j'ai appliqué une indentation  qui m'est propre mais que je trouve plus lisible, voici l'exemple complet pour win\_main.c : \\
+
+%TODO insérer ex de win_main ET UN DIAGRAMME MONTRANT LES CHEMINS  
+
 Ainsi, à chaque fois que je vais dans une sous box, j'indente avec une tabulation. Au final, le rendu me permet de voir qui est
 à quel niveau. \\
+Petite précision, les éléments seront placés dans l'ordre de lecture du document. Ainsi, si votre "GtkBox" est créée en tant
+que box horizontale, l'élément placés en premier sera le plus à gauche, le suivant à sa droite et ainsi de suite. \\ 
 
-Une fois que les éléments sont placés dans les boîtes, ceux-ci ne sont par contre pas arrangés précisements. Il faut maintenant 
-indiquer où il faut appliquer des marges, 
-comment doivent se placer les éléments. Sachant que la première chose à faire pour cette étape est de jouer avec les paramètres
-EXPAND et FILL des box qui permettent, par exemple, d'autoriser ou non à un élément de s'agrandir en même temps que la fenêtre. \\
-Voici un exemple de ce que donne une fenêtre sans la partie cosmétique et arrangement précis puis avec : \\ 
-%image d'un avant après de main_win
-Comme pour la création et le placement, nous allons utiliser des fonctions pour indiquer ce que l'on veut faire avec le Widget.
-Celles-ci sont le plus souvent utilisées sur les éléments considérés en tant que Widget. Donc, 
-comme plus haut, il faut préciser que nous l'appliquons sur un Widget. En voici quelques exemples : \\
- 
+
+Une fois que les éléments sont placés dans les boîtes, ceux-ci sont tous collés les uns aux autres. Il faut indiquer 
+comment ils doivent se placer. Pour mieux comprendre, voici un avant / après l'étape que je vais décrire : \\ 
+
+%TODO image d'un avant après de main_win
+
+Tout d'abord, commençons par jouer avec les paramètres EXPAND et FILL des "GtkBox". Ils permettent de définir quels éléments seront 
+autorisés à s'agrandir en même temps que la fenêtre. Le mieux pour bien comprendre leur comportement, c'est de tester au fur
+et à mesure les différentes combinaisons. \\
+
+Comme pour la création et le placement, nous allons utiliser des fonctions pour indiquer ce que l'on veut faire avec les éléments.
+Ce type de fonction est utilisée sur les éléments de types "GtkWidget", et donc applicable sur tous ceux qui en héritent. Voici les
+deux fonctions et leur variables que j'ai le plus utilisé : \\
+
+
  gtk\_widget\_set\_margin\_top (GTK\_WIDGET (tmp->label), 5 ) ; \\
 Permet d'appliquer une marge sur le haut. On précise sur quel Widget l'appliquer puis la taille en px de la marge.\\
-Cette fonction existe aussi pour bottom, end et start qui correspondent à la droite et la gauche du Widget.\\
+Cette fonction existe aussi pour bottom, end et start qui correspondent au bas, à la droite et la gauche du Widget.\\
+%TODO schéma bottom etc
 
  gtk\_widget\_set\_halign ( GTK\_WIDGET (tmp->label), GTK\_ALIGN\_START ) ;\\
 Les éléments se mettent par défaut au centre de leur place disponible. Cette fonction permet 
-de forcer un Widtget à se placer autrement : ici, on force l'alignement horizontal (halign) à être en début de zone, 
+de forcer un Widget à se placer autrement : ici, on force l'alignement horizontal (halign) à être en début de zone, 
 soit à gauche (START). \\
+%TODO schéma halign etc
+
 
 On peut aussi retrouver des fonctions pour préciser le comportement de la fenêtre, comme : \\
- gtk\_window\_set\_title (GTK\_WINDOW (tmp->window), "BEETERFACE") ; \\
+ 
+gtk\_window\_set\_title (GTK\_WINDOW (tmp->window), "BEETERFACE") ; \\
 qui permet de nommer la fenêtre "BEETERFACE". \\
 
- gtk\_window\_set\_default\_size ( GTK\_WINDOW (tmp->window), 30, 30 ) ; \\
+gtk\_window\_set\_default\_size ( GTK\_WINDOW (tmp->window), 30, 30 ) ; \\
 Définit la taille minimale de la fenêtre, sachant qu'elle prend en compte la place nécessaire aux éléments pour pouvoir 
 être placés et que si la taille indiquée est trop petite, alors la fenêtre prendra la place minimale possible 
 pour afficher les éléments. \\
@@ -384,30 +469,38 @@ pour afficher les éléments. \\
 Avec ces outils et un peu de recherches sur la documentation en ligne, on peut maintenant créer n'importe qu'elle fenêtre 
 comme on le souhaite. 
 
-Attention, jusqu'à nous avons juste définit l'interface. Il ne reste plus qu'une étape simple pour que celle-ci puisse être 
-visible : l'affichage. Si on n'indique pas qu'il faut afficher les éléments, alors notre interface sera vide. \\
+Attention, à cette étape nous avons juste définit l'interface. Il reste encore une étape pour pouvoir afficher les éléments, sinon
+les éléments seront créés, placés... mais pas affichés ! 
+
 Personnelement, j'aime la faire en deux étapes. D'abord l'affichage de la fenêtre avec : \\
 gtk\_widget\_show (tmp->window) ; \\
+
 Puis de la box principale avec tout ce qu'elle contient : \\
 gtk\_widget\_show\_all (tmp->box\_principal) ; \\
+
 Sachant que l'affichage se fera dans l'ordre annoncé, si vous avez peur que le logiciel apparaisse "étape par étape", c'est à 
-dire avec les éléments apparaissant au fur et à mesure et une fenêtre vide restant affichées quelques secondes, préférez
-mettre l'affichage de la box principale avant l'affichage de la fenêtre : ainsi, la box et ses enfants sera déjà générée 
-et n'aura besoin que de son support. \\
+dire avec les éléments apparaissant au fur et à mesure laissant au début une fenêtre vide restant affichées quelques secondes, 
+préférez mettre l'affichage de la box principale avant l'affichage de la fenêtre : ainsi, la box et ses enfants sera déjà générée 
+et n'aura besoin que de son support. Cependant, cette question se pose uniquement si l'application à afficher nécessite beaucoup de 
+ressources. \\
 
 Il ne reste plus qu'à lier des fonctions aux différents éléments pour que notre application soit 
 fonctionnelle.\\
         
         \subsection{Signaux et fonctions} \\
 Avoir des boutons, c'est bien. Pouvoir les utiliser, c'est encore mieux. Maintenant que tous éléments sont placés, 
-il ne reste plus qu'à les lier aux fonctions qui permettrons de réaliser diverses tâches (mettre en pause la vidéo,
-se déplacer dans le temps de celle-ci, débuter la sauvegarde etc).  C'est ce qui va établir le liens entre le moteur et la carcasse. \\
+il ne reste plus qu'à les lier aux fonctions qui permettront de réaliser diverses tâches (mettre en pause la vidéo,
+se déplacer dans le temps de celle-ci, débuter la sauvegarde etc).    
+C'est ce qui va établir le liens entre le moteur et la carcasse. \\
+
 Pour le moment, peu de fonctions ont été écrites pour le moteur : toute la partie graphique est prête à les acceuillir 
 mais le développement des fonctionnalités est ce qui prend le plus de temps. En guise d'entraînement et pour 
 pouvoir être prête le jour où il faudra faire tous les liens, j'ai déjà fait quelques tests pour comprendre les principes. \\
+
 Les liens entre l'interface et les fonctions vont se passer dans le main. Dans notre code, il est présent dans beeterface.c.\\
-Avant tout, il faut noter que quelques fonctions de bases sont obligatoires pour pouvoir lancer notre interface, voici 
-le modèle de base : \\
+
+Avant tout, il faut noter que quelques fonctions de sont obligatoires pour pour le fonctionnement de GTK voici le modèle de base : \\
+
 int main(int argc, char *argv[])    \\ 
 \{ \\
  gtk\_init(&argc, &argv); \\
@@ -415,26 +508,35 @@ int main(int argc, char *argv[])    \\
  gtk\_main(); \\
  return 0 ; \\
 \} \\
+
 Les deux fonctions permettent d'initialiser l'interface et d'indiquer que celle-ci est en attente de signal
 de la part de l'utilisateur pour réagir. \\
+
 Maintenant que nous avons la base, commençons à intégrer des évenements. \\
-Le but va être d'appeler une fonction qui va lier un éléments à une fonction et d'indiquer en quel circonstance 
-la fonction doit réagir. Voici ladie fonction : \\
+Le but va être d'appeler une fonction GTK qui va lier un éléments à une autre fonction que nous avons écrit  (Callback) 
+et d'indiquer en quelles circonstance la fonction doit réagir. Voici ladite fonction : \\
+
 g\_signal\_connect( queen->interface->win\_main->btn \\,
                    "clicked", \\
                     G\_CALLBACK(callback\_btn) \\,
                     queen ) ; \\
+
 Le premier argument correspond à l'élément qui est visé. Dans notre cas, beaucoup de pointeur sont en jeu,
 pour le moment nous allons passer outre ces pointeurs : ils seront expliqués dans la partie structure. 
-Partons simplement du principe qu'il faut appeler le bouton concerné.  \\
+Partons simplement du principe qu'il faut appeler le bouton ou élément concerné.  \\
+
 Le second argument sert à indiquer à quel évenement il faut réagir. Il en existe une liste prédéfinie : ici
 c'est l'événement "clicked". Lorsqu'on cliquera sur le bouton, la connection sera établie. \\
+
 Le troisième argument correspond à la "callback" appelée, soit la fonction qui doit se déclancher. Nous allons 
 y revenir. \\
+
 Le dernier argument indique ce qu'on envoit au callback comme information. Ici, c'est "queen", une sorte de 
 gros paquet. Comme pour les pointeurs, ce sera expliqué plus tard. \\
 
+
 Allons vois la callbak qui est appellée : \\
+
 void callback\_quit\_tag(GtkWidget* widget, gpointer data) \{ \\                                      
     queen\_t* tmp ; \\                                                                             
     tmp = data ; \\                                                                               
@@ -444,31 +546,66 @@ void callback\_quit\_tag(GtkWidget* widget, gpointer data) \{ \\
 Cette callback contient le strict minimum pour faire fonctionner simplement un bouton.\\
 En arguments, elle reçoit d'abord le widget qui est à la source de son appel : dans notre cas, c'est "btn". \\
 Ensuite, elle reçoit les data que "g\_signal\_connect" a envoyé, c'est à dire "queen". \\
+
 Les deux premières lignes indiquent que la variable tmp reçoit les informations de data. \\
 Enfin, la fonction utilisée permet d'indiquer qu'on va fermer une fenêtre, ici celle de win\_main, donc là où on
-se trouve. Cet exemple est basique, on peut évidement faire bien plus et toucher à l'interface en elle même. A 
-vous de voir ce que vous désirez faire. \\
+se trouve. Cet exemple est basique, on peut évidement faire bien plus et toucher à l'interface en elle même, déclancher
+d'autres fonctionnalités, ouvrir de nouvelles fenêtres, modifier des informations...\\
 
 Tous les outils principaux pour pouvoir créer une interface GTK ont été présentés. Avec ceux là, beaucoup de recherches
 dans la documentation et le "catalogue" %TODO
-de GTK, on a en mains une infinité de possibilité. Certaines actions graphiques nécessitent plus de reflexion que d'autre, mais 
+de GTK, on a en mains une infinité de possibilité. Certaines actions nécessitent plus de reflexion que d'autre, mais 
 au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
+
 
     \section{Les fonctionnalités} 
         \subsection{Structuration du code}
+
 La première chose que j'ai eu à faire pour la création de l'application a été de réfléchir à comment celle-ci allait fonctionner.
-En étudiant la demande, une chose majeure en ressortait : il y allait avoir beaucoup de données à traiter et sauvegarder. \\
+
+En étudiant la demande, une chose majeure en ressortait : il y allait avoir beaucoup de type de données à traiter et sauvegarder. \\
 Si on lit la liste des besoins présentés dans la partie %TODO
-on peut voir qu'il y a une notion d'auteur, de caméra, de vidéo et de ruche qui sont présentées. Afin de pouvoir manipuler de telles informations, 
-j'ai créé une structure pour chacun de ces éléments qui contiendront des informations primmoridales : dates, noms, numéro de téléphone, lieu, 
-référence etc. \\
-Pour chacune des structures, j'ai également préparé des fonctions permettant de manipuler les données. En général, on y retrouve 
-une fonction pour créer un élément, une pour le supprimer et un jeu de fonction pour modifier ou lire toutes les données contenues dans l'élément
-indépendemment. Cette préparation permettra de pouvoir utiliser ces données sans avoir à se soucier des pointeurs : tout est prêt, il n'y
+on peut voir qu'il y a, entre autre, une notion d'auteur, de caméra, de vidéo et de ruche. Voici les différentes structures 
+qui seront utilisées : %TODO RECUPERER TRAVAIL DE SEBEUH AVEC DIA
+
+Afin de pouvoir manipuler de telles informations, j'ai créé une structure pour chacun des éléments nécessaires. \\
+Ils contiendront chacuns des informations nécessaires à leur fonctionnement : dates, noms, numéro de téléphone, lieu, référence etc. \\
+
+Par exemple, voici la définition d'une de ces structure : 
+%TODO intégrer une définition de structure (.h)
+
+Pour chacune des structures, j'ai également préparé des fonctions permettant de manipuler les données.
+En général, on y retrouve une fonction pour créer un élément (new\_element), une pour le supprimer (del\_element),
+et un jeu de fonction pour modifier (set\_partie\_element) ou lire les données contenues dans l'élément indépendemment 
+(get\_partie\_element). \\
+Les voici pour la structure présentée en exemple : 
+%TODO INTEGRER EXEMPLE 
+
+
+Cette préparation permettra de pouvoir utiliser ces données sans avoir à se soucier des pointeurs : tout est prêt, il n'y
 a plus qu'à choisir comment on voudra modifier les données lors de l'utilisation du logiciel. \\
-Cette préparation a aussi été faite pour toutes les annotations que nous pourrons intégrer sur les vidéos : les cercles, flèches, crois... \\
-Pour le moment, toutes ces annotations ne sont pas prête. Mais les plus basiques, comme la croix, a déjà sa structure de préparée avec un x et un y 
-permettant d'indiquer où elle devra se placer. \\
+
+Cette préparation a aussi été faite pour toutes les annotations que nous pourrons intégrer sur les vidéos : 
+les cercles, flèches, croix... \\
+
+Pour le moment, toutes ces annotations ne sont pas prête. Mais les plus basiques, comme la croix, ont déjà leur structure de préparées.
+Sa définition se fait avec un simple x et un y. D'autres nécéssitent plus moins d'autres indications, comme un angle pour la flèche
+ou un tableau de coordonées pour la crois mouvante. \\
+
+En plus des description des éléments, tous contiennent un champ nom, auteur, couleur, description, temps de début 
+(quand il apparaît sur la vidéo) et temps de fin (quand il disparaît de la vidéo). 
+On peut aussi faire mention du champ "tag[]" et "tag\_size" qui correspondront à une pile de tag qui sont affectés à l'élément. \\
+
+Ces tags font parti des fonctionnalités les plus difficiles à mettre en place. Certes demandés par les biologistes, ils ne sont 
+pas urgents pour le moment. Ils sont pour l'instant définit sur papier mais pas encore mis en place. \\
+Nous savons que nous voulons une liste de tags disponible, un dictionnaire, dans lequel les biologistes pourront 
+ajouter facilement des nouveaux tags. Les tags pourront être affectés aux différentes annotations appliquées
+à une vidéo, et cette vidéo héritera de ces tags dans sa description, nous permettant de trier et récupérer les vidéos 
+en fonctions de ce qu'il s'y trouve. \\
+Concernant sa définition, un tag sera décrit par une pile. À ce niveau, il reste encore quelques précision à apporter
+avant de la coder. Cette tâche est pour le moment en attente dans notre TO DO LIST. 
+
+
 Ce travail de préparation m'aura prit environ une semaines. Il a été difficile seulement au début : il fallait réfléchir 
 à comment créer une structure correctement, penser à bien utiliser les pointeurs et gérer leur allocation de
 mémoire. Une fois un premier modèle fait, les autres se faisaient de plus en plus vite. Utilisant l'outil VIM, j'ai 

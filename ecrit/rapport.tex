@@ -307,7 +307,7 @@ Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là 
 nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. Voici le schéma de construction 
 que j'ai fais pour la première fenêtre de l'application : \\
 
-%TODO intégrer schéma de boite de la fenetre n°1 \\
+%TODO intégrer schéma de boite win_main \\
 
 On peut voir que la GtkBox box\_principale prend toute la place de ma fenêtre GtkWindow. Dans cette box\_principale, j'y ai rangé 
 verticalement box\_up et box\_down. Dans box\_down j'ai integré box\_left et box\_right horizontalement, me permettant d'avoir 
@@ -589,7 +589,7 @@ Cette préparation a aussi été faite pour toutes les annotations que nous pour
 les cercles, flèches, croix... \\
 
 Pour le moment, toutes ces annotations ne sont pas prête. Mais les plus basiques, comme la croix, ont déjà leur structure de préparées.
-Sa définition se fait avec un simple x et un y. D'autres nécéssitent plus moins d'autres indications, comme un angle pour la flèche
+Sa définition se fait avec un simple x et un y. D'autres nécéssitent d'autres indications, comme un angle pour la flèche
 ou un tableau de coordonées pour la crois mouvante. \\
 
 En plus des description des éléments, tous contiennent un champ nom, auteur, couleur, description, temps de début 
@@ -597,8 +597,9 @@ En plus des description des éléments, tous contiennent un champ nom, auteur, c
 On peut aussi faire mention du champ "tag[]" et "tag\_size" qui correspondront à une pile de tag qui sont affectés à l'élément. \\
 
 Ces tags font parti des fonctionnalités les plus difficiles à mettre en place. Certes demandés par les biologistes, ils ne sont 
-pas urgents pour le moment. Ils sont pour l'instant définit sur papier mais pas encore mis en place. \\
-Nous savons que nous voulons une liste de tags disponible, un dictionnaire, dans lequel les biologistes pourront 
+pas urgents pour le moment. Nous les avons défini sur papier mais pas encore mis en place. \\
+
+Il y aura une liste de tags disponible, un dictionnaire, dans lequel les biologistes pourront 
 ajouter facilement des nouveaux tags. Les tags pourront être affectés aux différentes annotations appliquées
 à une vidéo, et cette vidéo héritera de ces tags dans sa description, nous permettant de trier et récupérer les vidéos 
 en fonctions de ce qu'il s'y trouve. \\
@@ -608,23 +609,29 @@ avant de la coder. Cette tâche est pour le moment en attente dans notre TO DO L
 
 Ce travail de préparation m'aura prit environ une semaines. Il a été difficile seulement au début : il fallait réfléchir 
 à comment créer une structure correctement, penser à bien utiliser les pointeurs et gérer leur allocation de
-mémoire. Une fois un premier modèle fait, les autres se faisaient de plus en plus vite. Utilisant l'outil VIM, j'ai 
+mémoire. Une fois un premier modèle fait, les autres se faisaient de plus en plus vite. Utilisant l'éditeur de texte VIM, j'ai 
 énormément utilisé les "rechercher / remplacer" pour travailler. \\
 Ce travail, bien que fastidieux, m'aura permit d'appliquer concrétement l'utilisation des pointeurs, ce qui 
 me manquait lors de mon arrivée en stage. \\ 
 
+
         \subsection{Manière de coder}\\
-N'ayant pas d'habitudes particulières en code, j'ai été conseillée quant à la structure de mon code, afin que celui
-ci soit lisible et bien réparti. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
+N'ayant pas d'habitudes particulières en code, j'ai été conseillée quant à sa structure, afin qu'il 
+soit lisible et bien réparti. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
 la déclaration d'une structure et des fonctions ainsi que la définition de celles-ci. \\ 
 %exemple d'un fichier .c et .h
+
 De plus, nous avons rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois : 
-avec Git, ce sont des outils qui me reserviront régulièrement dans d'autres contextes désormais. \\
+avec Git, ce sont des outils qui me reserviront régulièrement dans d'autres contextes désormais, personnel ou professionnel. \\
+
 Une fois cette façon de faire mise en place pour la partie moteur, j'ai voulu l'appliquer à la partie
 graphique. Ainsi, un couple de .c et .h a aussi été créé pour chacunes des fenêtres, le .h contenant 
 toutes les déclarations d'éléments sous forme de structure. \\
+
 Dans le .c on retrouve la fonction de création de l'interface avec au début la définition de "tmp" qui correspond donc 
-au "papier cadeau" contenant toutes les déclarations des éléments. C'est pourquoi nous avons vu sur les exemples plus haut 
+au "papier cadeau" contenant toutes les déclarations des éléments. 
+
+C'est pourquoi nous avons vu sur les exemples plus haut 
 que pour appeler un élément nous devions utiliser un pointeur comme "tmp->label". \\
 Notre fichier .c contient alors de quoi créer l'interface, l'afficher et la supprimer, la suppression revenant à appliquer les 
 Free  nécessaires. C'est pour cela que dans notre main on retrouve ces fonctions et que celui-ci est allégé. \\

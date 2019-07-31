@@ -1,6 +1,6 @@
 \documentclass[11pt,french,a4paper]{report}
 \usepackage[utf8]{inputenc}
-\usepackage{geometry}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \geometry{a4paper}
 \usepackage{graphicx}
 \usepackage{listings} 
@@ -177,8 +177,9 @@ les biologistes ont égalemet exprimé le besoin de pouvoir capturer des comport
 De là vient la nécessitée de pouvoir gérer de nombreuses caméras sur la ruche prototype. 
 On pourra distinguer trois localisations distinctes pour ces caméras, correspondant à trois types de traitement d'image différents. \\
 
+\begin{center}
 \includegraphics[scale=0.3]{../images/dia/schema_camera.png}
-
+\end{center}
 \begin{itemize}
 
   \item Les caméras situées sur la planche d'envol (1), tout d'abord, servent à surveillers 
@@ -232,7 +233,11 @@ pouvoir permettre de : \\
     \item Pouvoir remodifier les vidéos 
 \end{itemize} \\
 Afin de répondre à ces besoins, nous avons imaginé l'application suivante : 
-%TODO Faire le schéma de l'interface
+\begin{center}
+\includegraphics[scale=0.21]{../images/dia/schema_interface.png}
+%TODO Intégrer la description bloc par bloc de win_main. Penser à essayer une mise en page par COLONNE 
+\end{center}
+    
 Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement,
 nous nous rendions compte de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée. 
 Ainsi, ce schéma correspond à l'application actuelle mais n'avait pas été vu comme tel au début. 
@@ -280,9 +285,9 @@ Au fur et à mesure, ces ajouts de propriétés ont permit de créer toute sorte
 des séparateur, des listes, des bouttons... 
 Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements, nous permettant de savoir ce que l'on peut 
 faire avec nos Widgets en fonction de qui ils héritent : 
-
+\begin{center}
 \includegraphics[scale=0.7]{../images/dia/arbo_widget.png} \\
-
+\end{center}
 
 En effet, si par exemple je veux changer un paramètre d'un élément "GtkSpinButton", et que je ne trouve pas de fonction 
 affectant directement ce type d'élément, par exemple la taille, alors je vais regarder si chez ses parents je peux trouver 
@@ -296,8 +301,8 @@ et que tout est prévu pour pouvoir faire ce que l'on veut sur notre interface. 
 
         \subsection{Des boites, dans des boites...}
 Une fois la manière de gérer les éléments et leurs paramètres acquise, il faut ensuite pouvoir les ranger. 
-D'abord, on va créer une fenêtre, soit une "GtkWindow". Dans celle-ci, on ne peut y poser qu'un seul Widget. C'est pour ça que nous
-avons les éléments "GtkContainers" : c'est avec eux que nous allons pouvoir structurer et placer tous les autres éléments 
+D'abord, on va créer une fenêtre, soit une "GtkWindow" que l'on va apeler Window. Dans celle-ci, on ne peut y poser qu'un seul Widget. 
+C'est pour ça que nousavons les éléments "GtkContainers" : c'est avec eux que nous allons pouvoir structurer et placer tous les autres éléments 
 comme on le veut dans notre fenêtre. \\
 
 Le container de base est la "GtkBox". A sa création, nous devons simplement indiquer si celle-ci va être horizontale ou verticale, 
@@ -306,8 +311,9 @@ Une fois cette première "GtkBox" placée, le problème de limitation de place i
 Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
 nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. Voici le schéma de construction 
 que j'ai fais pour la première fenêtre de l'application : \\
-
-%TODO intégrer schéma de boite win_main \\
+\begin{center}
+\includegraphics[scale=0.5]{../images/dia/schema_bloc_mainwin.png} \\
+\end{center}
 
 On peut voir que la GtkBox box\_principale prend toute la place de ma fenêtre GtkWindow. Dans cette box\_principale, j'y ai rangé 
 verticalement box\_up et box\_down. Dans box\_down j'ai integré box\_left et box\_right horizontalement, me permettant d'avoir 
@@ -325,6 +331,14 @@ avec un titre autour de "Informations Capteurs" et "Informations Vidéo" ou des 
 Un autre type de Gtkcontainer intéressant que je n'ai pas utilisé ici est le "GtkScrolledWindow". Celui-ci permet d'ajouter
 une barre de défilement afin d'afficher plus d'informations. \\
 
+Le résultat nous donne l'impression de ne pas voir toutes les boites clairement : \\
+
+\begin{center}
+\includegraphics[scale=0.45]{../images/dia/schema_bloc_win_applique.png} \\
+\end{center}
+
+C'est dû au fait que les boite prennent toute la place qu'elle peuvent en fonction des widgets qu'elles contiennent. Ainsi, box principale 
+n'est pas clairement visible : elle ne sert que de support pour celles qu'elle contient. 
 
 Maintenant que nous avons tous les deux principes de bases en tête, à savoir les éléments et les boîtes, on peut voir comment 
 tout cela se forme dans le code. \\
@@ -422,7 +436,11 @@ sans déborder sur le reste.\\
 Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, 
 j'ai appliqué une indentation  qui m'est propre mais que je trouve plus lisible, voici l'exemple complet pour win\_main.c : \\
 
-%TODO insérer ex de win_main ET UN DIAGRAMME MONTRANT LES CHEMINS  
+
+\begin{center}
+\includegraphics[scale=0.5]{../images/dia/diagramme_fenetre.png} \\
+\end{center}
+%TODO insérer ex de win_main   
 
 Ainsi, à chaque fois que je vais dans une sous box, j'indente avec une tabulation. Au final, le rendu me permet de voir qui est
 à quel niveau. \\
@@ -561,7 +579,7 @@ au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
     \section{Les fonctionnalités} 
         \subsection{Structuration du code}
 
-La première chose que j'ai eu à faire pour la création de l'application a été de réfléchir à comment celle-ci allait fonctionner.
+La première chose que j'ai eu à faire pour la création de l'application a été de réfléchir à la façon dont elle allait fonctionner.
 
 En étudiant la demande, une chose majeure en ressortait : il y allait avoir beaucoup de type de données à traiter et sauvegarder. \\
 Si on lit la liste des besoins présentés dans la partie %TODO

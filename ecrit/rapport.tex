@@ -632,33 +632,39 @@ mémoire. Une fois un premier modèle fait, les autres se faisaient de plus en p
 Ce travail, bien que fastidieux, m'aura permit d'appliquer concrétement l'utilisation des pointeurs, ce qui 
 me manquait lors de mon arrivée en stage. \\ 
 
-
+%TODO RELECTURE
         \subsection{Manière de coder}\\
 N'ayant pas d'habitudes particulières en code, j'ai été conseillée quant à sa structure, afin qu'il 
-soit lisible et bien réparti. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
+soit facilement lisible. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
 la déclaration d'une structure et des fonctions ainsi que la définition de celles-ci. \\ 
 %exemple d'un fichier .c et .h
 
-De plus, nous avons rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois : 
-avec Git, ce sont des outils qui me reserviront régulièrement dans d'autres contextes désormais, personnel ou professionnel. \\
+De plus, M. DRUON a rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois, passant 
+ensuite à CMake pour générer le Makefile automatiquement ensuite. \\
+
 
 Une fois cette façon de faire mise en place pour la partie moteur, j'ai voulu l'appliquer à la partie
 graphique. Ainsi, un couple de .c et .h a aussi été créé pour chacunes des fenêtres, le .h contenant 
 toutes les déclarations d'éléments sous forme de structure. \\
+%exemple .c et .h POUR WIN
 
 Dans le .c on retrouve la fonction de création de l'interface avec au début la définition de "tmp" qui correspond donc 
 au "papier cadeau" contenant toutes les déclarations des éléments. 
 
 C'est pourquoi nous avons vu sur les exemples plus haut 
 que pour appeler un élément nous devions utiliser un pointeur comme "tmp->label". \\
+
 Notre fichier .c contient alors de quoi créer l'interface, l'afficher et la supprimer, la suppression revenant à appliquer les 
 Free  nécessaires. C'est pour cela que dans notre main on retrouve ces fonctions et que celui-ci est allégé. \\
 \\
+
 Jusque là, cette technique m'a permit d'avoir une structure de code agréable et ordonnée. Seulement, c'est arrivé au moment de 
 faire les premier liens interface / fonctions qu'un autre problème s'est posé : comment pouvoir accéder à toutes les données
-dont j'ai besoin lorsque j'utilise une callback ? Comme dit dans la partie 2.2.5, lorsqu'on appelle une callback quand 
-événement est détecté, deux informations sont transmises à la callback : l'adresse du Widget et une data qui aura été définie
-avec la fonction "g\_signal\_connect". C'est le choix de cette donnée qui nous a posé problème : quand nous avons commencé
+dont j'ai besoin lorsque j'utilise une callback ? 
+Comme dit dans la partie 2.2.5, lorsqu'on appelle une callback quand événement est détecté, deux informations sont 
+transmises à la callback : l'adresse du Widget et une data qui aura été définie avec la fonction "g\_signal\_connect". \\
+
+C'est le choix de cette donnée qui nous a posé problème : quand nous avons commencé
 à coder les fenêtre permettant la visualisation des données des auteurs, caméras etc, nous avions besoin d'envoyer la structure
 de la fenêtre auteur par exemples mais aussi les informations de l'auteur, ne se trouvant pas dans les mêmes fichiers.  \\
 La solution la plus simple était donc de refaire des "paquets" plus généraux : nous avons créé interface.c/h et projet.c/h, qui seront eux
@@ -667,7 +673,8 @@ Interface contient toutes les fenêtres possibles et a une fonction de création
 permettant de les créer au démarrage de l'application et éviter des chargement. La fonction de suppression nous assure d'éviter toute perte de mémoire.\\
 Même principe pour le Projet : il contient tous les éléments permettant le fonctionnement moteur afin d'avoir la même facilité
 d'utilisation que décrite pour l'interface. \\
-Queen est le paquet général : il contient Interface et Projet. Son nom est en l'honneur de la reine des abeille : un paquet pour les gouverner tous ! \\
+Queen est le paquet général, il contient Interface et Projet. Son nom est en l'honneur de la reine des abeille : 
+un paquet pour les gouverner tous ! \\
 \\
 Voici le schéma général, décrivant qui contient qui :%TODO
 \\
@@ -732,8 +739,7 @@ dans l'avancement de ce projet, j'ai établi une liste non exhaustive de ce qui,
 De manière plus personnelle, j'aurai également aimé pouvoir retravailler la structure interne de beeterface.c qui est, à mon sens,
 un peu brouillon. \\
 \\
-Pour finir cette présentation de l'application, voici quelques screenshots du travail qui a été effectué. En Annexe, une version plus
-détaillée avec quelques schéma indiquant quel bouton fait quoi (pour ceux qui sont actif) est présentée. \\
+Pour finir cette présentation de l'application, voici quelques screenshots du travail qui a été effectué.
 Le travail fu long et n'a cessé d'évoluer : au fur et à mesure, j'aurai appris de nouvelles techniques, de nouvelles façon de faire 
 et aurais profité de nombreux conseils d'un développeur sénior. \\
 
@@ -741,113 +747,201 @@ et aurais profité de nombreux conseils d'un développeur sénior. \\
 \chapter{Acquis et compétences}
     \section{Missions annexes}
         \subsection{Gestion du Réseau du Rucher}
-Le projet étant avant tout du traitement et de la récolte de données, beaucoup de gestion de réseau est à prévoir. Pour le moment,
-nous avons surtout préparé le terrain. Le rucher est l'endroit où la récolte des données va se faire, celle-ci devant être achemniées vers
-le serveur qui sera installé au CNRS. Seulement à mon arrivée il n'était pas encore raccordé au réseau : tout le long de mon stage, 
-nous avons dû attendre que cette tâche soit réalisée par le techniciens devant le faire. \\
-Sans même encore faire les calculs, nous savions que notre projet allait demander beaucoup de bande passante, pour cause :
-sur place, dans le rucher, il n'était prévu que la récolte des données, pas le traitement, celui-ci devant se faire sur le serveur dédié. 
-%TODO SCHEMA DU RESEAU 
-Même si un biologiste voulait visualiser les caméras et les annoter sur place, il récupérerait des données venant du serveur, et donc 
-devra passer par Internet. Un gros flux de données était à prévoir, surtout en envoi. Le technicien devant installer la fibre a 
-donc dû nous demander une approximation de ce qui allait être envoyé. Nous avons donc calculé une prévision. \\
-%TODO intégrer tableau prévisionnel 
-Dans cette prévision, on retrouve les différentes caméras qui sont prévues d'être installées ainsi que les données numériques qui proviendront des 
-futures cartes éléctroniques. De plus, une marge de 20\% est prévue pour l'intégration des en-tête TCP-IP. Une fois ce calcul donné, 
-nous avons pu avoir une estimation du matériel qui arrivera sur place et nous ce que nous devrions prévoir. En l'occurence, 
-un Switch POE  \\ 
+Le projet se basant sur du traitement et de la récolte de données, une infrastructure réseau est à prévoir. Pour le moment,
+nous avons surtout préparé le terrain.  \\
+Les données seront récoltées au rucher, puis acheminées vers le serveur installé au CNRS. Ce serveur les stockera et les traitera, 
+les envoyant à différents endroits celon le besoin : vers les applications Beeterface pour de l'annotation, vers la future vitrine Web
+etc. \\
+Seulement à mon arrivée il n'était pas encore raccordé au réseau : tout le long de mon stage,  nous avons dû attendre que
+le CNRS nous installe la fibre. \\
+
+Voici un schéma, certes basique, de notre infrastructure réseau prévue à ce jour \\.
+%TODO SCHEMA DU RESEAU
+
+Même si un biologiste annotait les vidéos avec Beeterface directement au rucher, les vidéos devront obligatoirement passer une première 
+fois vers le serveur puis revenir au rucher. Ainsi, entre l'envoi de vidéos venant de caméras pouvant atteindre de hautes
+qualités et la réception de ces mêmes vidéos, la bande passante et le matériel réseau installé sur place 
+doivent pouvoir supporter de tels charges. \\
+
+C'est pourquoi le technicien s'occupant de l'installation de la fibre devait connaître quel trafic était prévu de manière un
+peu plus détaillée. Afin de répondre à cette question, nous avons effectué un récapitulatif des caméras prévues. 
+
+
+\includegraphics[scale=0.2]{../images/annexes/camera_bp.png} 
+
+\includegraphics[scale=0.2]{../images/annexes/camera_bp2.png} 
+
+Deux prototypes sont présentés, puisque nous comptons acceuillir deux prototypes de ruches plates : la notre et 
+celle qui sera envoyées à nos partenaires Allemands ensuite. \\
+
+Les caméras pour la planche d'envol et pour le module d'analyse de pollen seront en couleur. Celles pour les cadres de la ruches
+seront monochrome : il avait été prévu des caméras couleurs à la base, mais d'après les biologistes nous en auront pas besoin pour 
+repérer ce que nous voulons. Ainsi, nous gagnons en bande passante, les caméras monochrome étant moins gourmande que les couleurs 
+en données. \\
+
+En plus des caméras, il faut prévoir le poid des données des capteurs de la carte éléctroniques. Ces données sont négligeable par
+rapport au reste mais sont à prévoir. Ces capteurs sont représentés dans le document par une des caméras "Cadres Ruches". 
+
+Enfin, calculs prévoient également l'en-tête TCP-IP nécéssaire à l'envoie des données, cette prévision étant sur évaluée 
+pour avoir de la marge. Ainsi, on ajoute 20\% de données supplémentaire.\\
+
+Maintenant, nous savons un peu plus quels seront les données qui transiteront sur notre réseau. Nous avons aussi
+quelques contraintes pour le choix du matériel réseau qui sera acheté dès que nous pourrons utiliser le réseau au rucher. \\
+Le Switch servira à connecter les caméras, les capteurs, l'ordinateur déjà sur place et notre potentiel matériel supplémentaire
+lorsque nous travaillerons sur place. Il devra être un 24 ports POE (Power Over Ethernet) capable 
+d'alimenter nos caméra avec la norme SFP + requise par le technicien du CNRS. \\
+Le serveur de récolte et de données devra être en double alimentation pour se suppléer l'une et l'autre en cas de panne,
+assurant que le serveur tourne encore grace à la redondance. Il devra avoir un port Ethernet de 20Gb et posseder un CPU multicoeur.
+Ce serveur doit être commandé chez DELL pour un budget de 15k€ maximum. \\
+J'ai déjà fait quelques recherches sur leur site afin d'avoir une idée de ce qui existait mais la commande étant reportée à cause
+du temps d'installation de la fibre au rucher, ces achats sont décalés à plus tard pour le moment.\\ 
+
+
 
         \subsection{Tests pour la vitrine Web}
-En plus de ce travail en d'administration réseau, l'installation du serveur Web devant héberger la vitrine Web de nos travaux m'a été confié. 
-Ce travail étant bien moins urgent que le développement de l'application puisqu'il devait afficher des résultats et que pour avoir ces 
-résultats les biologistes ont besoin de l'application, j'ai donc passé une petite journée à voir ce qui allait être nécessaire pour l'installation
-d'un d'enginX et d'un WordPress, en faisant quelques petits tests sur un serveur de test hébergé chez %TODO ??
-mis en place par M. DRUON. \\
+En plus de l'installation réseau pour la récolte des données, il faudra aussi penser à comment nous allons présenter nos 
+résultats. Ce travail servant de présentation, il est moins urgent que la réalisation des captures de données et à donc été mis de 
+côté pendant mon stage. Cependant, j'ai passé une petite journée à me familiariser avec ce type d'installation en faisant 
+quelques tests sur un serveur de test prêté par M. DRUON. Cette journée a surtout été consacrée à de la documentation en amont,
+avec le lecture de quelques tutoriels sur Internet. J'en ai aussi profité pour relire les cours et 
+TP du DUT en lien avec les serveurs Webs et le développement Web : base de donnée (M2104), langage HTML/CSS (M1106, M2105)
+installation d'apache). 
+
+Pour ce qui est du contenu de cette vitrine Web, je n'ai pas concrètement travaillé dessus mais ai imaginé à quoi celle-ci pourrait
+ressembler. \\
+%TODO schéma structure web simple  
+
+Voici un schéma global de ce à quoi pourrait ressembler le site. Ceci n'est qu'une proposition qui n'a pas encore
+été discutée avec le reste de l'équipe mais que je leur fourni. \\
+Pour moi, le site pourrait être construit en quatre parties : 
+- L'accueil, expliquant ce qu'est notre projet, qui en sont les acteurs
+ce qu'on veut en ressortir etc. 
+- La partie article, contenant des liens vers les publications faites par l'équipe concernant le projet, des articles écrits
+spécifiquement pour le site ou des petit compte rendu d'avancement, avec des photos de nos opérations par exemple. Le but 
+étant de montrer au public ce qui est fait et de rendre le projet attractif. Il faut que ce soit du contenu simple et rapide
+à produire. 
+- La partie Live, avec quelques caméras séléctionnées pour le grands public et la description des événements en temps réel par 
+les algorithme qui seront réalisés par l'équipe. En attendant la réalisation de ces algorithmes, nous pourrions simplement afficher
+le live de quelques caméras sans commentaires. \\
+- La partie "pro", qui serait un portail de connexion pour les collaborateurs à qui nous voulons partager plus d'informations.
+Ils auraient accès à plus de caméras, aux document techniques etc. On pourrait y mettre un drive afin de faciliter le partage de 
+document. Ce serait une plateforme de travail pour le projet.\\
+
+Bien sûr, l'élaboration d'un tel site nécessite des connaissances en web design et en sécurité informatiques. Je me suis penchée
+sur la question parceque j'ai trouvé le sujet interessant et aimerai à l'avenir pouvoir m'y intéresser un peu plus. \\ 
+
 
         \subsection{Aide pour les projets de première année à l'IUT de Béziers}
 
-En plus de mon aide sur les travaux cités si dessus, ma présence en tant que stagiaire a aussi été bénéfique pour aider M. Druon dans une tâche se
-détachant un peu du monde de la Recherche : l'aide durant les projets des étudiants en Réseaux et Télécommunications de première année.
-Même si le sujet s'éloigne quelque peu du sujet de base, il reste en lien avec SuperBeeLive puisque l'IUT de Béziers est partenaire du projet et 
-des étudiants ont fait leur projets sur des sujets liés à de la capture de donnée dans une ruche %TODO chercher le nom des dit sujets. 
-C'est pour cela que durant toute ma durée du stage je me suis déplacée sur l'IUT de Béziers pour travailler les jeudi pour nous rendre disponnible, 
-M. Druon et moi, pour les étudiants de RT1. Pendant ces jeudi ci, je travaillais le matin sur mon application et l'après midi je continuais 
-de coder tout en étant disponible en salle projet pour répondre à d'éventuelles question. J'ai également eu à m'occuper des commandes des étudiants :
-récolter leus liste de demande, préparer les commandes, réceptionner, inventorier et ranger. Ma présence sur l'IUT s'est intensifiée pendant les deux
-semaines où les étudiants étaient à temps plein sur leur projet, du 18 au 30 juin. \\
-Durant ces deux semaines, j'ai été affectée au bureau se trouvant à côté de l'antenne du LIRMM et où j'avais rangé tous le matériel destiné aux projet.
-J'ai donc servit de régie, car même après la première distribution du matériel demandé par les étudiants, beaucoup avaient besoin de pièce de rechange, 
-de nouvelles pièces etc. Cela m'a permit de continuer à travailler sur mon code, de manière moins intensive que lorsque je me trouvais au LIRMM, tout en
-aidant M. Druon en le déchargeant des demandes de matériel. J'ai également aidé à pointer qui était présent ou non, noté quels étudiants me semblaient 
-plus travailler que d'autre et fait un point à la moitié des deux semaines afin d'évaluer où ils en étaient afin de fournir des informations pour leur 
-notation. Etant souvent dans les couloirs où ils travaillaient, j'ai aussi répondu à beaucoup de questions et demandes d'aide : j'essayais de répondre 
-au mieux, de les diriger pour qu'ils trouvent la réponse d'eux même ou de les envoyer voir M. Druon si j'héstimais que la question était 
-plus corriace. \\
-Au moment des soutenances, j'ai participé à un Jury devant normalement se tenir avec deux professeurs mais M. Druon se retrouvant finalement seul dans 
-celui-ci par manque d'effectif, c'est en binome que nous avons écouté le travail des étudiants que nous avons suivi à temps plein pendant deux semaines, 
-d'autres deuxièmes années ou redoublant se trouvant dans les trois autres jury avec d'autres professeurs. L'exercice de notation n'a pas été trop difficile : 
-je savais très bien que la note qui allait être la plus importante serait celle du professeur. Néanmoins, c'était très interessant de se retrouver de 
-l'autre côté et d'évaluer des travaux que, moi même, j'avais dû effectuer il y a un an. \\
+En plus de mon aide sur les travaux cités si dessus, ma présence en tant que stagiaire a aussi été bénéfique pour aider M. Druon 
+dans une tâche se détachant un peu du monde de la Recherche : aider durant les projets des étudiants en Réseaux et Télécommunications 
+de première année. \\
+Ce travail reste en lien avec SuperBeeLive puisque l'IUT de Béziers est partenaire du projet et qu'un des groupe d'étudiants (Groupe 13) 
+a fait son projet sur la température et l'humidité dans la ruche. \\
 
-Ces divers travaux m'auront permit d'appliquer concretement des notions vues pendant le DUT : aussi bien théorique avec le calcul de bande passante
-nécessaire, que pratique avec les recherches pour l'installation d'un WordPress sur un serveur vide. J'ai aussi pu revoir beaucoup de sujets sous un autre 
-angle que lorsque j'étais en cours avec les étudiants de première année : beaucoup de leur question tournaient finalement autours de choses que j'avais
-déjà fait, en cours ou en projet,  mais sur lesquels il me manquait encore quelques connaissances et où, cette fois-ci, j'ai pu apporter un oeil
-différents et me questionner d'une autre manière qu'auparavent. \\
+C'est pour cela que durant toute ma durée du stage je me suis déplacée sur l'IUT de Béziers pour travailler les jeudis pour être
+disponible, M. Druon et moi, pour les étudiants de RT1. Pendant ces jeudi ci, je travaillais le matin sur Beeterface et 
+l'après midi je continuais de coder en salle projet pour répondre à d'éventuelles question. \\
+
+J'ai également eu à m'occuper des commandes des étudiants : récolter leur liste de demande, les regrouper pour faire les commandes
+aux fournisseur, réceptionner, inventorier et ranger. \\
+%TODO Photo du rangement des commandes 
+
+Ma présence sur l'IUT s'est intensifiée pendant les deux semaines où les étudiants étaient à temps plein sur leur projet, du 18 au 30 Juin. \\
+
+Durant ces deux semaines, j'ai été affectée au bureau se trouvant à côté du laboratoire de l'IUT où j'avais rangé tous le matériel 
+destiné aux projet.
+J'ai donc servit de régie, car même après la première distribution du matériel demandé par les étudiants, beaucoup avaient 
+besoin de pièce de rechange, de nouvelles pièces etc. \\
+
+Cela m'a permit de continuer à travailler sur mon code, de manière moins intensive que lorsque je me trouvais au LIRMM, tout en
+aidant M. Druon en le déchargeant des demandes de matériel. 
+J'ai également aidé à noter les présences et ai fait attention au travail fourni par les étudiants afin de donner un avis extérieur pour
+les notation.
+
+Etant souvent dans les couloirs où ils travaillaient, j'ai aussi répondu à beaucoup de questions et demandes d'aide : 
+j'essayai de répondre au mieux, de les diriger pour qu'ils trouvent la réponse d'eux même ou de les envoyer voir M. Druon si 
+j'estimais que la question necessitait un oeil plus expert. \\
+
+Au moment des soutenances, j'ai participé à un Jury devant normalement se tenir avec deux professeurs, mais M. Druon se retrouvant 
+finalement seul dans celui-ci par manque d'effectif, c'est en binome que nous avons écouté le travail des étudiants.
+D'autres deuxièmes années ou redoublant se trouvaient dans les trois autres jury avec d'autres professeurs. 
+
+L'exercice de notation a été un peu difficile : bien qu'ayant un peu peur de noter injustement,
+je savais très bien que la note qui allait être la plus importante serait celle 
+du professeur. Néanmoins, c'était très interessant de se retrouver de l'autre côté et d'évaluer des travaux que, moi même, 
+j'avais dû effectuer il y a un an. \\
+
+
+Ces missions annexes m'auront permit d'appliquer concretement plusieurs notions vues pendant le DUT. \\
+Théorique d'abord, avec les calculs pour la bande passant nécessaire pour le rucher et le questionnement sur le matériel à commander, ainsi
+qu'avec les recherches autours du développement et l'installation web. 
+
+J'ai aussi pu revoir beaucoup de sujets pratiques avec les étudiants de première année : beaucoup de leur question tournaient autours 
+de choses que j'avais déjà fait, en cours ou en projet,  mais sur lesquels il me manquait expériences et connaissances à ces moments là et
+qui ne me posent plus soucis aujourd'hui. \\
 
 
     \section{Compétences développées} \\
-Lors de stage de fin d'étude, j'ai pu appliquer beaucoup de connaissances que j'ai acquises pendant ces deux dernières années, mais aussi
-apprendre beaucoup sur différents niveaux.\\
-Mon rôle dans l'équipe n'étant pas de faire de l'administration réseaux ou systèmes tous les jours, j'ai surtout appris à utiliser
-mes connaissances dans ce domaine d'une autre manière qu'en administrant des infrastructures déjà installées. Là, j'ai pu 
-voir comment se passe une installation d'une fibre optique du point de vu de la personne qui commande et qui prévoit ce dont on va avoir besoin, 
-un travail plutôt orienté ingénieur et que nous avions peu vu. \\
 
-Mes journées de travail se passant en grande majorité sur un ordinateur, j'ai au quotidien fais de l'administration Unix : ayant utilisé ma machine
-personnelle le temps qu'une machine professionelle me soit livrée, j'ai redecouvert beaucoup de choses. Je travaillais déjà chez moi avec mon ordinateur
-sous Gentoo, mais avais peu exploré certaines installation ou personalisation puisque je passais peu de temps dessus après les cours. Là, passant
-mes journée dessus, j'ai voulu rendre plus confortable mon utilisation d'Unix et ai cherché à être plus rapide en apprenant mieux à utiliser mes outils de travail
-(Git, Vim, Gcc) en découvrant beaucoup de fonctionnalités. \\
-De plus, j'ai eu la chance d'avoir un ordinateur fourni par le LIRMM : sur celui-ci, j'ai eu Ubuntu d'installé. Comme cette machine m'était destinée, 
-j'ai pu passer un peu de temps à la configurer comme je le voulais : installation d'une autre interface graphique (i3), configuration de VIM, 
-d'un terminal personnalisé, personnalisation des couleurs sur mon shell, test d'une alternative à bash (fish) etc.  Si je considère cette 
-partie personnalisation, même si elle est, comme son nom l'indique, plutôt personnelle, c'est parceque j'ai eu la chance d'avoir autours de moi
-une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une journée pour travailler là dessus et 
-surtout me fournissant une machine personnelle pour le travail. \\ 
+Lors de stage de fin d'étude, j'ai pu appliquer beaucoup de connaissances que j'ai acquises pendant ces deux dernières années,
+mais aussi apprendre beaucoup à différents niveaux.\\
+
+Mon rôle principal dans l'équipe n'étant pas de faire de l'administration réseaux et systèmes tous les jours, 
+j'ai pu utiliser mes connaissances dans ce domaine d'une autre manière qu'en administrant des infrastructures déjà installées. \\ 
+C'est surtout la théorie qui m'aura été utile, voyant plus le rôle d'un ingénieur que d'un technicien. 
+
+Mes journées de travail se passant en grande majorité sur un ordinateur, j'ai au quotidien fais de l'administration Unix et ai
+utilisé des outils que je ne connaissais que partiellement avant. Ainsi, mon but était d'être plus rapide avec ces outils 
+et j'ai donc appris des raccourcis clavier et des techniques que me conseillaient les personnes autours de moi pour optimiser 
+mon temps. \\
+
+De plus, j'ai ensuite eu la chance d'avoir un ordinateur fourni par le LIRMM, également sous Unix.
+Comme cette machine m'était destinée, j'ai pu passer du temps à la configurer comme je le voulais : 
+installation d'une interface graphique (i3), configuration de VIM, d'un terminal personnalisé, personnalisation des couleurs 
+sur mon shell, test d'une alternative à bash (fish) etc. 
+Si je considère cette partie personnalisation, comme une compétence développée pendant le stage, c'est parceque j'ai eu la chance 
+d'avoir autours une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une 
+journée pour travailler là dessus. \\
 Je pense ainsi avoir aujourd'hui bien plus d'aisance derrière une machine sous Unix qu'il y a 3 mois. \\
 
-Pour continuer dans les taches sortant un peu du cadre de base, j'ai aussi beaucoup appris pendant les deux semaines d'encadrement d'étudiant. Même
-si je n'avais pas le statut de professeur ou de vacataire, ma place en tant que "seconde" de M. Druon auprès des premières années était bien ancrée 
-et m'a permit de voir le nombre de compétences nécessaire pour faire un tel travail : patience, organisation, capacité à expliquer les concepts et surtout 
-endurance ont été de mise. J'ai pu me rendre compte de la difficulté que peut être d'enseigner, surtout dans un tel cadre. \\
 
-Enfin, les compétences que j'ai le plus développées sont bien entendu celles autours de la programmation. À mon arrivée dans l'équipe, je ne pensais
-pas que j'allais autant me consacrer à la programmation : je n'étais pas très à l'aise avec ça pendant mes deux années de DUT et avais un peu peur
-de me lancer dans des projets d'envergures dans ce domaine. Mais une fois sur place et lancée, j'ai appris énormément en peu de temps. Je pense
-même pouvoir dire que j'ai rattrapé le retard que j'avais pris lors de mon DUT avec ces trois mois presque intensif sur le sujet. \\
+J'ai aussi beaucoup appris pendant les deux semaines d'encadrement d'étudiant. Même si je n'avais pas le statut de professeur 
+ou de vacataire, ma place en tant que "seconde" de M. Druon auprès des premières années était bien ancrée 
+et m'a permi de voir le nombre de compétences nécessaire pour faire un tel travail : patience, organisation, 
+capacité à expliquer les concepts et endurance s'ajoutent aux connaissances nécessaire pour aider des étudiants. 
+
+
+Enfin, les compétences que j'ai le plus développées sont bien entendu celles autours de la programmation. 
+À mon arrivée dans l'équipe, je ne pensais pas que j'allais autant me consacrer au code : je n'étais pas très à l'aise avec ça 
+pendant mes deux années de DUT et avais un peu peur de me lancer dans des projets d'envergures dans ce domaine. 
+
+Mais une fois sur place et lancée, j'ai appris énormément en peu de temps. Je pense même pouvoir dire que j'ai rattrapé le retard 
+que j'avais pris lors de mon DUT avec ces trois mois presque intensif sur le sujet. \\
+
 J'ai bien mieux compris comment utiliser les outils de compilations et comment cette étape se déroulait. L'algorithmie m'est bien moins
-effrayante, le langage C est devenu pour moi une référence et je continue d'en apprendre dessus régulièrement. Il ne me reste d'ailleurs 
-plus qu'un pas avant d'attaquer le langage objet grace à GTK : cette partie de la programmation, avec les éléments graphiques, une interface
-utilisateur, me plaît énormément et c'est ce qui, je pense, m'a réconciliée avec la programmation. \\
-Je peux désormais travailler sur un projet de programmation en groupe grace à Git, mais aussi découvrir des projets disponnibles sur GitHub et les 
-utiliser, les tester, aller plus loin et partager les miens. \\
+effrayante, le langage C est devenu pour moi une référence et je continue d'en apprendre dessus régulièrement. 
+Il ne me reste d'ailleurs plus qu'un pas avant d'attaquer le langage objet grace à GTK : cette partie de la programmation très graphique
+me plaît énormément et c'est ce qui, je pense, m'a réconciliée avec la programmation. \\
 
-En soit, j'aurai appris sur beaucoup de sujets différent, plus que ce que je n'aurai pu l'imaginer, comme avec l'administration Unix.
-Même si je savais que j'allais travailler dessus chaque jour, je ne pensais pas autant m'améliorer là dessus. J'ajoute aussi qu'au moment
-où j'écris ces lignes, j'apprend à me servir de Latex, un éditeur de pdf automatique, puisque je rédige mon rapport de stage avec cet outils. 
+Désormais, je travaille beaucoup avec GIT sur GitHub, en découvrant des projets disponibles dessus et en partageant mes scripts,
+mes configurations Unix etc. 
+
+En soit, j'aurai appris sur beaucoup de sujets différent, plus que ce que je n'aurai pu l'imaginer.
+J'ajoute aussi qu'au moment où j'écris ces lignes, j'apprend à me servir de Latex, un langage de composition de document, 
+puisque je rédige mon rapport de stage avec cet outils. 
 
 
 \chapter{Conclusion}
 
 Ces trois mois de stages auront été formateurs pour moi sur plein d'aspects. Ayant déjà connaissance du travail en entreprise depuis un an
-avec un boulot d'été que j'avais eu dans une entreprise de développement logiciel, j'ai pu découvrir un autre milieu de travail : la recherche. \\
-Dans ce cadre, notre équipe de projet était moins souvent réunies, vu que ce sont plusieurs laboratoires qui travaillent ensemble, mais 
-elle n'en reste pas soudée et très agréable. Les trois personnes avec qui j'ai le plus eu de contact, Sébastien Druon, Capucine Carlier et Matthieu Rousset
-étaient tous trois présents à leur niveau pour le projet. Capucine étant plus sur les prototypages de la ruche, nous avions régulièrement des informations 
-sur les nouveaux modèles, sur ce qu'ils comptaient ajouter, ce dont ils auraient besoin. Elle et Matthieu étaient aussi les plus présent au rucher, 
-nous donnant des nouvelles sur la colonies d'abeilles actuellement en place. 
+avec un boulot d'été que j'avais eu dans une entreprise de développement logiciel, j'ai pu découvrir un autre milieu de travail : 
+la recherche. \\
+Dans ce cadre, notre équipe de projet était moins souvent réunies, vu que ce sont plusieurs laboratoires qui travaillent ensemble, 
+mais elle n'en reste pas soudée et très agréable. Les trois personnes avec qui j'ai le plus eu de contact, Sébastien Druon, 
+Capucine Carlier et Matthieu Rousset étaient tous trois présents à leur niveau pendant mon stage.  \\
 
+%TODO FINIR CONCLUSION
 \begin{appendix} 
 \chapter{Annexes}
         \begin{figure}[t]

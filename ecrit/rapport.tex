@@ -1,10 +1,23 @@
 \documentclass[11pt,french,a4paper]{report}
+\usepackage[frenchb]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \geometry{a4paper}
 \usepackage{graphicx}
 \usepackage{listings} 
-\usepackage{appendix} %Annexes
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+}
+
+\lstset{escapechar=@,style=customc}
+
 
 \title{Rapport de Stage fin de DUT - SuperBeeLive}
 \author{Olivia SERENELLI-PESIN}
@@ -76,16 +89,21 @@ En 2017, une affiche résumant le projet a été présentée lors du salon NUMEV
 Modélisation pour l'Environnement et le Vivant) (Annexe 1). \\ 
 %TODO mettre lien avec annexe (affiche 2017) 
 
-%Schéma prévisionnel de la ruche, photos TODO
-De plus, voici quelques schéma représentant à quoi la ruche devrait ressembler.
+\begin{figure}[!h]
+\centering
 \includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate1.JPG}
-\includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate.JPG} \\
+\includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate.JPG} 
+\caption{Schéma de la ruche plate}
+\label{schema_conception}
+\end{figure}
 
-%TODO ajouter schéma précis placement caméra et capteurs
-
-Et à quoi elle ressemble actuellement : \\
-%ajouter schémas ruche actuelle
-
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.05,angle=270]{../images/photo/face_ruche.jpg}
+\includegraphics[scale=0.05,angle=270]{../images/photo/cote_ruche.jpg} \\
+\caption{Photos de la ruche plate à mon arrivée}
+\label{photo_rucher}
+\end{figure}
 
 Dans un premier temps, cette instrumentation nous permettra d'observer en temps réel la ruche et ses habitantes : 
 les caméras nous donnerons une vision globale de ce qu'il s'y passe, aussi bien en intérieur pour observer leur 
@@ -164,8 +182,7 @@ qui seront installées au centre de la ruche. Seulement, ces sujets s'éloignant
 compétences et connaissances dans ces deux domaines étant limitées pour le moment, je n'ai pas eu à travailler dessus.\\
 
 Cependant, la possibilité d'un apprentissage lors d'école d'ingénieurs en systèmes embarqués a été évoquée, ce qui correspondrait 
-plus à ces tâches qui pourraient m'être confiées plus tard.\\
-
+plus à ces tâches qui pourraient m'être confiées plus tard.
 
 
 \chapter{Développement d'une application : Beeterface}
@@ -357,11 +374,13 @@ La structure en .c/.h et l'explication des pointeurs utilisés est décrite dans
 "Définition des fonctionnalités". Pour le moment, ne prenons pas en compte les "tmp" placés devant les noms des éléments. \\
 
 Créons une fenêtre, une box et un label : \\
-%TODO TROUVER COMMENT 
---> Dans win\_main.h : 
+
+Dans win\_main.h : 
+\begin{lstlisting} [frame=single]
 GtkWidget* window ; 
 GtkWidget* box ;   
 GtkWidget* label ;  
+\end{lstlisting}
 
 Pour cet exemple, les éléments sont tous du type GtkWidget, ce sera le cas pour la majorité de nos éléments lors de la 
 déclaration.
@@ -371,20 +390,28 @@ Il arrive que, dans de rare cas, il soit nécessaire de les déclarer autrement 
 Ces trois éléments existent désormais, maintenant il faut les définir, c'est à dire expliquer de quel type de Widget il seront 
 et leur donner leur propriétés. \\
 
---> Dans win\_main.c : 
-tmp->window = gtk\_window\_new (GTK\_WINDOW\_TOPLEVEL) ;
+Dans win\_main.c :
+\begin{lstlisting} [frame=single]
+tmp->window = gtk_window_new (GTK_WINDOW_TOPLEVEL) ;
+\end{lstlisting}
 
 Ici, on utilise la fonction "gtk\_window\_new" pour indiquer que "window" est une fenêtre qui s'ouvre en premier plan 
 avec l'argument "GTK\_WINDOW\_TOPLEVEL". \\
 
-tmp->box\_principal = gtk\_box\_new( GTK\_ORIENTATION\_VERTICAL, 0) ;
+Dans win\_main.c :
+\begin{lstlisting} [frame=single]
+tmp->box_principal = gtk_box_new( GTK_ORIENTATION_VERTICAL, 0) ;
+\end{lstlisting}
 
 Comme dit plus haut, à la création d'une "GtkBox" on indique d'abord si on veut que les éléments soient ajoutés verticalement 
 ou horizontalement. Ensuite, le second argument permet de définir le nombre de pixel d'écart par défaut entre les éléments, 
 ici 0px, donc ils seront collés l'un à l'autre.  \\
 %TODO VERIFIER ARGUMENT  !!
 
-tmp->label = gtk\_label\_new("Je suis le texte du label") ; \\
+Dans win\_main.c :
+\begin{lstlisting} [frame=single]
+tmp->label = gtk_label_new("Je suis le texte du label") ; 
+\end{lstlisting}
 Enfin, le label nécessite lui aussi un argument, ici ce sera le texte noté de base. 
 On peut laisser ce texte vide si on ne rempli pas les "".  \\
 
@@ -393,7 +420,10 @@ Les exemples ci-dessus ont tous eu besoin d'une définition précise du Widget, 
 Il arrive parfoit que la création ne nécéssite aucun paramètre, et que des modification doivent être apportées ensuite. 
 Par exemple, si je veux que mon label ai une écriture plus stylisée, je peux utiliser :  \\
 
-gtk\_label\_set\_markup(GTK\_LABEL(tmp->label), "<span foreground=\"black\" font=\"10\"><b>Je suis le label stylisée avec du bold</b></span>"); \\
+\begin{lstlisting} [frame=single]
+gtk_label_set_markup(GTK_LABEL(tmp->label), 
+                    "<span foreground=\"black\" font=\"10\"><b>Je suis le label stylisée avec du bold</b></span>"); 
+\end{lstlisting}
 
 Ici, avant d'indiquer quel élément on veut modifier en argument, il faut préciser quel type d'élement c'est.
 En effet, comme lors de la déclaration il est indiqué que label est de type GtkWidget et que la fonction que l'on veut utiliser 
@@ -409,16 +439,20 @@ Une fois les Widgets créés, il faut maintenant les placer et indiquer qu'il fa
 Maintenant, nous allons appliquer la théorie qui avait été développée au dessus : les poupées russes. On va commencer par dire où 
 va se placer la "GtkBox" : \\
 
- gtk\_container\_add (GTK\_CONTAINER (tmp->window), tmp->box) ; \\
+\begin{lstlisting} [frame=single]
+ gtk_container_add (GTK_CONTAINER (tmp->window), tmp->box) ; 
+\end{lstlisting}
 
 GtkWindow hérite de GtkContainer, nous utilisons donc la fonction qui permet d'affecter un élément à un container. Le premier argument 
 indique le container où nous devons insérer un élément. Le second nous indique quel élément est à placer. \\
 
 Ensuite, nous faisons de même pour la box : \\
 
-  gtk\_box\_pack\_start(GTK\_BOX(tmp->box\_principal), tmp->label, FALSE, FALSE, 0) ; \\
+\begin{lstlisting} [frame=single]
+gtk_box_pack_start(GTK_BOX(tmp->box_principal), tmp->label, FALSE, FALSE, 0) ; 
+\end{lstlisting}
 
-"box\_princiapl" étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. 
+"box\_principal" étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. 
 Comme pour "window", il faut indiquer la boîte concernée par l'élément à ajouter, mais cette fois-ci trois autres arguments 
 sont à renseigner concernant la manière dont les Widgets vont se comporter à l'intérieur de la box. \\ 
 
@@ -435,7 +469,6 @@ sans déborder sur le reste.\\
 
 Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, 
 j'ai appliqué une indentation  qui m'est propre mais que je trouve plus lisible, voici l'exemple complet pour win\_main.c : \\
-
 
 \begin{center}
 \includegraphics[scale=0.5]{../images/dia/diagramme_fenetre.png} \\
@@ -462,12 +495,17 @@ Ce type de fonction est utilisée sur les éléments de types "GtkWidget", et do
 deux fonctions et leur variables que j'ai le plus utilisé : \\
 
 
- gtk\_widget\_set\_margin\_top (GTK\_WIDGET (tmp->label), 5 ) ; \\
+\begin{lstlisting} [frame=single]
+ gtk_widget_set_margin_top (GTK_WIDGET (tmp->label), 5 ) ; 
+\end{lstlisting}
+
 Permet d'appliquer une marge sur le haut. On précise sur quel Widget l'appliquer puis la taille en px de la marge.\\
 Cette fonction existe aussi pour bottom, end et start qui correspondent au bas, à la droite et la gauche du Widget.\\
 %TODO schéma bottom etc
 
- gtk\_widget\_set\_halign ( GTK\_WIDGET (tmp->label), GTK\_ALIGN\_START ) ;\\
+\begin{lstlisting} [frame=single]
+ gtk_widget_set_halign ( GTK_WIDGET (tmp->label), GTK_ALIGN_START ) ;
+\end{lstlisting}
 Les éléments se mettent par défaut au centre de leur place disponible. Cette fonction permet 
 de forcer un Widget à se placer autrement : ici, on force l'alignement horizontal (halign) à être en début de zone, 
 soit à gauche (START). \\
@@ -476,10 +514,14 @@ soit à gauche (START). \\
 
 On peut aussi retrouver des fonctions pour préciser le comportement de la fenêtre, comme : \\
  
-gtk\_window\_set\_title (GTK\_WINDOW (tmp->window), "BEETERFACE") ; \\
+\begin{lstlisting} [frame=single]
+gtk_window_set_title (GTK_WINDOW (tmp->window), "BEETERFACE") ; 
+\end{lstlisting}
 qui permet de nommer la fenêtre "BEETERFACE". \\
 
-gtk\_window\_set\_default\_size ( GTK\_WINDOW (tmp->window), 30, 30 ) ; \\
+\begin{lstlisting} [frame=single]
+gtk_window_set_default_size ( GTK_WINDOW (tmp->window), 30, 30 ) ; 
+\end{lstlisting}
 Définit la taille minimale de la fenêtre, sachant qu'elle prend en compte la place nécessaire aux éléments pour pouvoir 
 être placés et que si la taille indiquée est trop petite, alors la fenêtre prendra la place minimale possible 
 pour afficher les éléments. \\
@@ -491,10 +533,14 @@ Attention, à cette étape nous avons juste définit l'interface. Il reste encor
 les éléments seront créés, placés... mais pas affichés ! 
 
 Personnelement, j'aime la faire en deux étapes. D'abord l'affichage de la fenêtre avec : \\
-gtk\_widget\_show (tmp->window) ; \\
+\begin{lstlisting} [frame=single]
+gtk_widget_show (tmp->window) ;
+\end{lstlisting}
 
 Puis de la box principale avec tout ce qu'elle contient : \\
-gtk\_widget\_show\_all (tmp->box\_principal) ; \\
+\begin{lstlisting} [frame=single]
+gtk_widget_show_all (tmp->box_principal) ; 
+\end{lstlisting}
 
 Sachant que l'affichage se fera dans l'ordre annoncé, si vous avez peur que le logiciel apparaisse "étape par étape", c'est à 
 dire avec les éléments apparaissant au fur et à mesure laissant au début une fenêtre vide restant affichées quelques secondes, 
@@ -519,14 +565,15 @@ Les liens entre l'interface et les fonctions vont se passer dans le main. Dans n
 
 Avant tout, il faut noter que quelques fonctions de sont obligatoires pour pour le fonctionnement de GTK voici le modèle de base : \\
 
-int main(int argc, char *argv[])    \\ 
-\{ \\
- gtk\_init(&argc, &argv); \\
- [votre code] \\
- gtk\_main(); \\
- return 0 ; \\
-\} \\
-
+\begin{lstlisting} [frame=single]
+int main(int argc, char *argv[])     
+{ 
+ gtk_init(&argc, &argv); 
+ [votre code] 
+ gtk_main();
+ return 0 ;
+} 
+\end{lstlisting}
 Les deux fonctions permettent d'initialiser l'interface et d'indiquer que celle-ci est en attente de signal
 de la part de l'utilisateur pour réagir. \\
 
@@ -534,11 +581,12 @@ Maintenant que nous avons la base, commençons à intégrer des évenements. \\
 Le but va être d'appeler une fonction GTK qui va lier un éléments à une autre fonction que nous avons écrit  (Callback) 
 et d'indiquer en quelles circonstance la fonction doit réagir. Voici ladite fonction : \\
 
-g\_signal\_connect( queen->interface->win\_main->btn \\,
-                   "clicked", \\
-                    G\_CALLBACK(callback\_btn) \\,
-                    queen ) ; \\
-
+\begin{lstlisting} [frame=single]
+g_signal_connect( queen->interface->win_main->btn,
+                   "clicked", 
+                    G\_CALLBACK(callback_btn) ,
+                    queen ) ; 
+\end{lstlisting}
 Le premier argument correspond à l'élément qui est visé. Dans notre cas, beaucoup de pointeur sont en jeu,
 pour le moment nous allons passer outre ces pointeurs : ils seront expliqués dans la partie structure. 
 Partons simplement du principe qu'il faut appeler le bouton ou élément concerné.  \\
@@ -555,11 +603,13 @@ gros paquet. Comme pour les pointeurs, ce sera expliqué plus tard. \\
 
 Allons vois la callbak qui est appellée : \\
 
-void callback\_quit\_tag(GtkWidget* widget, gpointer data) \{ \\                                      
-    queen\_t* tmp ; \\                                                                             
-    tmp = data ; \\                                                                               
-    gtk\_window\_close (GTK\_WINDOW(tmp->interface->win\_main->window)) ; \\
-\} \\
+\begin{lstlisting} [frame=single]
+void callback_quit_tag(GtkWidget* widget, gpointer data) {                                       
+    queen_t* tmp ;                                                                             
+    tmp = data ;                                                                                
+    gtk_window_close (GTK_WINDOW(tmp->interface->win_main->window)) ; 
+} 
+\end{lstlisting}
 
 Cette callback contient le strict minimum pour faire fonctionner simplement un bouton.\\
 En arguments, elle reçoit d'abord le widget qui est à la source de son appel : dans notre cas, c'est "btn". \\
@@ -590,6 +640,8 @@ Afin de pouvoir manipuler de telles informations, j'ai créé une structure pour
 Ils contiendront chacuns des informations nécessaires à leur fonctionnement : dates, noms, numéro de téléphone, lieu, référence etc. \\
 
 Par exemple, voici la définition d'une de ces structure : 
+\begin{lstlisting} [frame=single]
+\end{lstlisting}
 %TODO intégrer une définition de structure (.h)
 
 Pour chacune des structures, j'ai également préparé des fonctions permettant de manipuler les données.
@@ -598,6 +650,8 @@ et un jeu de fonction pour modifier (set\_partie\_element) ou lire les données 
 (get\_partie\_element). \\
 Les voici pour la structure présentée en exemple : 
 %TODO INTEGRER EXEMPLE 
+\begin{lstlisting} [frame=single]
+\end{lstlisting}
 
 
 Cette préparation permettra de pouvoir utiliser ces données sans avoir à se soucier des pointeurs : tout est prêt, il n'y
@@ -942,12 +996,10 @@ mais elle n'en reste pas soudée et très agréable. Les trois personnes avec qu
 Capucine Carlier et Matthieu Rousset étaient tous trois présents à leur niveau pendant mon stage.  \\
 
 %TODO FINIR CONCLUSION
-\begin{appendix} 
 \chapter{Annexes}
-        \begin{figure}[t]
-            \includegraphics[scale=0.7]{../images/annexes/poster_numev.pdf}
-        \end{figure}
-\end{appendix}
+%        \begin{figure}[t]
+%            \includegraphics[scale=0.7]{../images/annexes/poster_numev.pdf}
+%        \end{figure}
 \end{document}
 
 

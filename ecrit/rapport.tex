@@ -1,11 +1,12 @@
 \documentclass[11pt,french,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\geometry{a4paper}
-\usepackage{graphicx}
-\usepackage{listings} 
-\usepackage[french]{babel}
-\lstdefinestyle{customc}{
+\geometry{a4paper} 
+\usepackage{graphicx} %Inclure images 
+\usepackage{listings} %Style code C 
+\usepackage[french]{babel} %Document en FR
+\frenchbsetup{StandardLists=true}
+\lstdefinestyle{customc}{ %Definition style code C
   belowcaptionskip=1\baselineskip,
   breaklines=true,
   frame=L,
@@ -15,12 +16,30 @@
   basicstyle=\footnotesize\ttfamily,
 }
 \lstset{escapechar=@,style=customc}
-\usepackage{pdflscape}
+\usepackage{pdflscape} %Vu Landscape
+\usepackage{multicol} %Colonnes
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
+%En tête / Pied de page
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\includegraphics[scale=0.03]{../images/logo/logo_iutbeziers.png}}
+\fancyhead[C]{Rapport de Stage}
+\fancyhead[R]{\includegraphics[scale=0.3]{../images/logo/logoibmm.jpg}}
+\fancyfoot[L]{\small Olivia SERENELLI-PESIN \normalsize}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\fancyfoot[C]{\includegraphics[scale=0.03]{../images/logo/logo_abeille.png}}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
 
-
-
-
+%Indique qu'il faut appliquer le style sur tout le doc 
+\makeatletter
+\let\ps@plain=\ps@fancy
+\makeatother
 
 
 \title{Rapport de Stage fin de DUT - SuperBeeLive}
@@ -29,6 +48,11 @@
 \begin{document}
 
 \maketitle
+\begin{center}
+\includegraphics[scale=0.03]{../images/logo/logo_iutbeziers.png}
+\includegraphics[scale=0.3]{../images/logo/logoibmm.jpg}
+\includegraphics[scale=0.3]{../images/logo/um_logo.png}
+\end{center}
 
 \clearpage
 \newpage 
@@ -86,19 +110,18 @@ Les différents travaux déjà effectués autours de ce sujet ne visaient qu’u
 ne permettant pas une vision globale des difficultées rencontrées par les abeilles. Notre but est de réunir les différentes
 données qui peuvent être utilisés pour étudier l’influence des éléments et événements extérieurs sur leur santé et leur cadre de vie.\\
 
-Concrétement, l'équipe de SuperBeeLive va concevoir une ruche plate afin d'y mettre en place plusieurs type de capteurs
-(hygrométrie, vibrations, température interne et externe, etc) ainsi que des caméras qui filmeront l'intérieur et 
-l'extérieur de la ruche. \\
+Concrétement, l'équipe de SuperBeeLive va concevoir une ruche plate (figures \ref{rpz_ruche} et \ref{photo_rucher}) afin d'y mettre 
+en place plusieurs type  de capteurs (hygrométrie, vibrations, température interne et externe, etc) ainsi que des caméras qui filmeront 
+l'intérieur et l'extérieur de la ruche. \\
 En 2017, une affiche résumant le projet a été présentée lors du salon NUMEV (Solutions, Numériques, Matérielles, et 
-Modélisation pour l'Environnement et le Vivant) (Annexe 1). \\ 
-%TODO mettre lien avec annexe (affiche 2017) 
+Modélisation pour l'Environnement et le Vivant) ( Voir Annexes, figure \ref{an1} ). \\ 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate1.JPG}
 \includegraphics[scale=0.3]{../images/schema_ruche/supportrucheplate.JPG} 
-\caption{Schéma de la ruche plate}
-\label{schema_conception}
+\caption{Schéma 3D de la ruche plate}
+\label{rpz_ruche}
 \end{figure}
 
 \begin{figure}[!h]
@@ -123,6 +146,7 @@ de manière automatisée. Cela nous permettrait, en plus d'avoir des données co
 temps réel. Ces informations seront diffusées de deux façon. D'abord, elles seront partagées pour être étudiées par d'autres scientifiques, 
 notamment les colaborateurs du projet SuperBeeLive. Le projet se veut aussi éducatif : une vitrine Web accessible au public 
 sera créée présentant une ruche, ses données numériques et les vidéos commentées en direct par les algorithmes. \\
+
 
 Ainsi, les ruches plates de SuperBeeLive permetront de fournir des données crutiales pour des futures recherches autours des 
 abeilles. En plus, elles informeront le grands public sur leur importance et aux risques liées à nos activités humaines pour 
@@ -255,15 +279,248 @@ pouvoir permettre de : \\
     \item Pouvoir remodifier les vidéos 
 \end{itemize} \\
 Afin de répondre à ces besoins, nous avons imaginé l'application suivante : 
+
+\begin{landscape}
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.21]{../images/dia/schema_interface.png}
+\includegraphics[scale=0.32]{../images/dia/schema_interface.png}
 \end{center}
 \end{figure}
-\begin{landscape}
 
-\end{landscapre}
+\Large Légende : \normalsize \\ 
+    \begin{multicols}{2}
+        \begin{itemize}[label=\ding{241}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item Vert : Informations remontées (texte, valeur)
+        \item Bleu : Bouton
+        \item Violet : Choix (Permet de choisir entre plusieurs valeurs prédéfinies)
+        \item Jaune : Vidéo
+        \item Rose : Entrée de texte (Endroit où utilisateur peut écrire)
+        \item Rouge : Lien (Etablir le lien entre un bouton et une nouvelle fenêtre)
+        \item Orange : Boite (Type de boite particulière)
+    \end{itemize}
+    \end{multicols}
+\end{landscape}
+    \setlength{\columnseprule}{0,1}
+    \begin{multicols}{2}
+        \begin{small} 
+\hrulefill 
+\\
+\Large Fenêtre Principale - Beeterface \normalsize \\
+    Première fenêtre ouverte. Permet de visualiser les caméras en direct, d'enregistrer
+    des vidéos. \\
+            \large \textbf{Informations} \normalsize
+     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "En Live" : Indique que la vidéo présentée est en live
+        \item "Informations Capteur" : Remonte les informations en direct des capteurs (date, heure, température etc).
+        \item "Informations de la Vidéo" : Remonte les informations d'où est filmée la vidéo (ruche, caméra, numéro de cadre etc).
+        \item "Status enregistrement" : Indique où en est l'enregistrement par rapport à la limite de temps maximale d'une vidéo à
+               l'aide d'une barre se remplissant au fur et à mesure.
+    \end{itemize}
+            \large \textbf{Boutons} \normalsize
+     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Information" : Ouvre la fenêtre "Informations"
+        \item "Enregistrer" : Permet de lancer l'enregistrement d'une vidéo. Pendant l'enregistrement, change de label et
+    devient "Arrêter". Une fois l'enregistrement arrêté, ouvre la fenêtre "Modifier la vidéo".
+        \item "Ouvrir" : Ouvre la fenêtre ""Fichiers".
+    \end{itemize}
+            \large \textbf{Choix} \normalsize
+     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Séléction de l'auteur" : Permet de séléctionner l'auteur courant parmis une séléction (Capucine, Sébastien, Olivia, Matthieu etc).
+        \item "Choix de la caméra" : Permet de séléctionner la caméra à visualiser.
+    \end{itemize}
+            \large \textbf{Vidéo} \normalsize
+     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Vidéo en direct" = Direct de la caméra séléctionnée.
+    \end{itemize}
 
+\columnbreak
+
+\hrulefill \\
+\Large Fenêtre - Modifier la Vidéo\normalsize \\
+    Fenêtre permettant de modifier une vidéo enregistrée ou de visualiser une vidéo déjà modifiée.
+    C'est là que sont ajoutées les annotations. \\
+            \large \textbf{Informations}\normalsize
+     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Nom de la vidéo" : Indique le nom de la vidéo, généré automatiquement.
+        \item "Barre Placement dans le Temps" : Barre de visualisation du temps de la vidéo, comme sur un player classique.
+        \item "Liste Annotations Appliquées" : Liste des annotations sur la vidéo. Permet de supprimer une annotation, de
+        la cacher.
+        \item "Liste Tags Appliqués" : Liste des Tags appliqués sur la vidéo.
+        \item "Informations Vidéos" : Inforations d'où a été filmée la vidéo au moment de l'enregistrement.
+    \end{itemize}
+    ? IDEE Ajouter "Informations Capteurs"  ?
+    
+            \large \textbf{Boutons}\normalsize
+     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Couper" : Ouvre la fenêtre "Couper la vidéo".
+        \item "Play" : Lance la Vidéo. Le label se change en "stop" pour mettre en pause.
+        \item "Avancer" : Avance la vidéo de 5 secondes.
+        \item "Reculer" : Recule la vidéo de 5 secondes.
+        \item "Croix", "Flèche", "Mesure", "Cercle", "Crois Mouv", "Texte", "Boite", "Croix Mouv.", "Texte", "Boite" : Ouvrent
+        leur fenêtre "Annotation "name\_annotation"" respective.
+        \item "+" : Ouvre la fenêtre "Ajouter un Tag"
+        \item "-" : Supprime un tag à sélectionner dans la liste.
+    \end{itemize}
+    
+            \large \textbf{Vidéo}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Vidéo enregistrée" : Visualisation de la vidéo à modifier avec les annotations dessus.
+    \end{itemize}
+
+\columnbreak
+
+\hrulefill \\
+\Large Fenêtre - Annotation "name\_anotation"\normalsize \\
+    Fenêtre qui permet de placer une nouvelle annotation. Elle change à quelques endroits en fonction
+    du bouton utilisé pour appeler la fenêtre. \\
+\large \textbf{Informations}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Barre Placement dans le Temps" : Barre de visualisation du temps de la vidéo, comme sur un player classique.
+        \item "Description Annotation" : Description de l'annotation : comment l'utiliser, à quoi elle sert, à quoi elle ressemble.
+        \item "Liste Tags Appliqués" : Liste des Tags appliqués sur la vidéo.\item "Informations Vidéos" : Inforations d'où a été filmée la vidéo au moment de l'enregistrement.
+        ? IDEE Ajouter "Informations Capteurs"  ?
+        \item "Timer Début" : Indication du moment de la vidéo où l'annotation va débuter.
+        \item "Timer Fin" : Indication du moment de la vidéo où l'annotation va finir.
+    \end{itemize}
+\large \textbf{Boutons}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Play" : Lance la Vidéo. Le label se change en "stop" pour mettre en pause.
+        \item "Avancer" : Avance la vidéo de 5 secondes.
+        \item "Reculer" : Recule la vidéo de 5 secondes.
+        \item "Modif" : Bouton avec une image de crayon. Quand on appuie dessus, l'image change en "OK" et l'entrée "nom annotation" devient éditable
+        pour y entrer un nom reconnaissable par l'utilisateur. Quand on appuie de nouveau dessus, l'image redevient comme avant et
+        l'information est sauvegardée et l'entrée "nom annotation" redevient non éditable.
+        \item "+" : Ouvre la fenêtre "Ajouter un Tag"
+        \item "-" : Supprime un tag à sélectionner dans la liste.
+        \item "Deb" : Fixe la valeur de "Timer Début" avec la valeur actuelle du timer de la vidéo.
+        \item "Fin" : Fixe la valeur de "Timer Fin" avec la valeur actuelle du timer de la vidéo.
+        \item "Annuler" : Ferme la fenêtre sans enregistrer les modifications.
+        \item "Enregistrer" : Ferme la fenêtre en enregistrant les modifications.
+    \end{itemize}
+\large \textbf{Entrée}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Nom Annotation" : Permet de saisir le nom de l'annotation que l'utilisateur veut lui donner pour le reconnaître.
+        De base pas modifiable. Fonctionne avec le bouton "Modif".
+        Vidéo :
+        \item "Vidéo enregistrée" : Visualisation de la vidéo où mettre l'annotation.
+    \end{itemize}
+
+
+\columnbreak
+
+\hrulefill \\
+\Large Fenêtre - Couper la vidéo\normalsize \\
+    Fenêtre permettant de redécouper la vidéo. \\
+\large \textbf{Informations}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Barre Placement dans le Temps" : Barre de visualisation du temps de la vidéo, comme sur un player classique.
+        \item "Timer Début" : Indication du moment de la vidéo où l'annotation va débuter.
+        \item "Timer Fin" : Indication du moment de la vidéo où l'annotation va finir.
+    \end{itemize}
+\large \textbf{Boutons}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Deb" : Fixe la valeur de "Timer Début" avec la valeur actuelle du timer de la vidéo.
+        \item "Fin" : Fixe la valeur de "Timer Fin" avec la valeur actuelle du timer de la vidéo.
+        \item "Annuler" : Ferme la fenêtre sans enregistrer les modifications.
+        \item "Enregistrer" : Ferme la fenêtre en enregistrant les modifications.
+    \end{itemize}
+\large \textbf{Vidéo}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Vidéo enregistrée" : Visualisation de la vidéo à découper.
+    \end{itemize}
+
+
+\hrulefill \\
+\Large Fenêtre - Ajouter un tag\normalsize \\
+    Fenêtre permettant de visualiser les tags disponnibles pour en sélectionner une liste à ajouter sur la vidéo
+    ou sur une annotation. \\
+\large \textbf{Informations}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Liste Tag Trouvés" : listes des tags trouvés en fonctions des critères de recherche.
+        Affiche tous les tags disponnibles par ordre alphabétique si pas de recherche faite .
+        \item "Liste Tags Ajoutés" : listes les tags sélectionnés pour être ajoutés à la vidéo ou l'annotation.
+    \end{itemize}
+\large \textbf{Boutons} \normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Chercher" : Lance la recherche de tag en fonction de ce qui est écrit dans "Search Tag"
+        \item "Ajouter" : Ouvre la fenêtre  "Créer un Tag"
+        \item "Annuler" : Ferme la fenêtre sans enregistrer les modifications.
+        \item "Enregistrer" : Ferme la fenêtre en enregistrant les modifications.
+    \end{itemize}
+\large \textbf{Entrée}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Search Tag" : Entrée de recherche où on peut entrer un mot clé à chercher pour trouver un tag correspondant.
+    \end{itemize}
+    ? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ?
+
+
+\columnbreak
+
+\hrulefill \\
+\Large Fenêtre - Créer un Tag\normalsize \\
+    Fenêtre permettant de créer un nouveau tag dans le dictionnaire si il n'en existe pas déjà
+    un correspondant à ce que l'utilisateur veut. \\
+\large \textbf{Boutons}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Ajouter" : Ajoute comme nouveau tag ce qui est entrée dans "Nom Tag"
+        \item "Annuler" : Ferme la fenêtre sans enregistrer les modifications.
+        \item "Enregistrer" : Ferme la fenêtre en enregistrant les modifications.
+    \end{itemize}
+    ? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ?
+\large \textbf{Entrée}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Nom Tag" : Entrée où l'utilisateur doit indiquer le nom du nouveau tag qu'il désire.
+    \end{itemize}
+    ? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ?
+    ? IDEE : Ajouter une vérification des tags qui pourraient ressembler au nouveau que l'utilisateur veut ajouter
+    pour éviter les doublons ?
+
+
+
+\hrulefill \\
+\Large Fenêtre - Fichier\normalsize \\
+    Fenere permettant de voir les fichiers vidéo existant et de les trier suivant différents critères. \\
+\large \textbf{Informations}\normalsize 
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Liste des Fichiers" : Liste des fichiers en fonction du critère de tri choisit. Si pas de critère sélectionné,
+        c'est rangé par ordre alphabétique.
+    \end{itemize}
+\large \textbf{Boutons}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Quitter" : Quitte l'explorateur de fichier sans rien ouvrir.
+        \item "Ouvrir" : Ferme l'explorateur de ficher en ouvrant le fichier séléctionné dans la liste de "Liste des Fichiers dans une
+        fenêtre "Modifier la vidéo"
+    \end{itemize}
+\large \textbf{Choix}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Selection Type Tri" : Permet de choisir par quel critère trier les vidéos : par caméra, auteur, date, ruche, lieu, tag etc
+    \end{itemize}
+\large \textbf{Entrée}\normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Search Fichier" : Permet d'entrée un mot clé pour affiner la recherche. Se couple à la recherche en fonction du type de tri
+        choisi.
+    \end{itemize}
+
+
+\columnbreak
+
+\hrulefill \\
+\Large Fenêtre - Informations \\ \normalsize 
+    Fenêtre contenant des informations sur les différentes structures et leur éléments. Permet de retrouver les différentes ruches
+    et leur spécificités, les auteurs, les infos contenues dans vidéos, les caméras etc. Ne permet pas de modification. \\
+\large \textbf{Information} \normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Information sur Auteur, Caméra, Vidéo, Ruche..." : Affiche les informations correspondant à l'onglet sur lequel on se trouve.
+    \end{itemize}
+\large \textbf{Box} \normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Auteur", "Vidéo", "Ruche", "Caméra", etc : Onglets permettant de sélectionner quel type d'information on veut visualiser.
+    \end{itemize}
+    ? IDEE : Ajouter une entrée permettant une recherche rapide ?
+
+
+        \end{small}
+    \end{multicols}
 
 Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement,
 nous nous rendions compte de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée. 
@@ -282,7 +539,7 @@ QT devant être utilisé en C++, notre choix s'est naturellement dirigé vers GT
 Comme dans tout projets collaboratifs, la convergence des données est importante et peut parfois se réveler difficile à mettre en place. 
 Heureusement pour nous, en programmation l'outil GIT est excellent pour travailler à plusieurs. L'ayant déjà vu en cours cette année,
 j'ai pu l'utiliser concrétement lors de mon stage. Cependant, avant de commencer à utiliser l'outil, il a été préférable que 
-je me remette à niveau sur celui-ci et ai donc entammé la lecture du livre Mastering Git %TODO VERIFIER LE TITRE
+je me remette à niveau sur celui-ci et ai donc entammé la lecture du livre \textit{Pro Git} de Scott Chacon. %TODO 
 qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub,
 un service web d'hébergement pour Git, accessible sous le nom "superbeelive". %TODO ANNEXE lien github 
 
@@ -995,11 +1252,32 @@ Dans ce cadre, notre équipe de projet était moins souvent réunies, vu que ce 
 mais elle n'en reste pas soudée et très agréable. Les trois personnes avec qui j'ai le plus eu de contact, Sébastien Druon, 
 Capucine Carlier et Matthieu Rousset étaient tous trois présents à leur niveau pendant mon stage.  \\
 
+)
+
+
 %TODO FINIR CONCLUSION
+\chapter{Bibliographie}
+
+NOM, Prénom (du ou des auteurs). Titre, sous titre. Lieu de publication, Editeur, Année. 
+
+KRAUSE, Andrew. \textbf{Foundations of GTK+ Development, Build sophisticated graphical applications using one of the world's most powerful cross-platform toolkits !.} New York, APRESS, 2007. Broché [EN] \\
+\textbf{GTK+ 3 Reference Manual}. 2014, Consulté d'Avril à Juillet 2019. Disponible sur : <https://developer.gnome.org/gtk3/stable/>. En ligne. [EN] \\
+BODNAR, Jan. \textbf{GTK+ tutorial.} zetcode.com, last modified July 20, 2015. Consulté en Avril 2019. Disponible sur : <http://zetcode.com/gui/gtk2/>. En ligne. [EN] \\
+\textbf{LaTeX, WikiBooks.} Dernière modification 14/06/2017. Consulté en Juillet 2019. Disponible sur : <https://fr.wikibooks.org/wiki/LaTeX>. En ligne. [FR] \\
+KERNIGHAN, Brian W., RITCHIE, Dennis M.. \textbf{Le Langage C, Norme ANSI, 2e édition.} Malakoff, 2014, DUNOD. Broché [FR] \\
+ILIC, Jovica. \textbf{Mastering Vim Quickly, From WTF to OMG in no time.} Berlin, Germany, Jolesoft, 2018. Format Kindle [EN] \\
+CHACON, Scott, STRAUB, Ben. \textbf{Pro Git, Tout ce que vous devez savoir sur Git, Seconde Edition.} APRESS, 2014. Format Kindle [FR] \\
+DELANNOY, Claude. \textbf{Programmer en langage C, 5e édition, Cours et exercices corrigés.} Saint-Germain, EYROLLES, 2009. Broché [FR] \\
+OETIKER, Tobias, PARTL, Hubert, HYNA, Irene, SCHLEGL Elisabeth. \textbf{The Not So Short Introduction To LaTex 2", Or LaTeX 2" in 139 minutes.} German, GNU General Public License, Version 6.2, 28/02/2018.
+LANDGRAF T, ROJAS R, NGUYEN H, KRIEGEL F, STETTIN K. \textbf{Analysis of the waggle dance motion of honeybees for the design of a biomimetic honeybee robot.}, 2011. Disponible sur : <https://www.ncbi.nlm.nih.gov/pubmed/21857906>. En ligne [EN] \\
+\textbf{Varroa}, Wikipedia. Dernière modification 30/04/2019, consulté le 01/05/2019. Disponible sur : <https://fr.wikipedia.org/wiki/Varroa>. En ligne. [FR]\\
+\textbf{Vespa velutina}, Wikipedia. Dernière modifictation 23/06/2019, consulté le 01/05/2019. Disponible sur <https://fr.wikipedia.org/wiki/Vespa\_velutina>. En ligne. [FR] \\
+
 \chapter{Annexes}
-%        \begin{figure}[t]
-%            \includegraphics[scale=0.7]{../images/annexes/poster_numev.pdf}
-%        \end{figure}
+\begin{figure}[t]
+    \includegraphics[scale=0.7]{../images/annexes/poster_numev.pdf}
+    \label{an1}
+\end{figure}
 \end{document}
 
 

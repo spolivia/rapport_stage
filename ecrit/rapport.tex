@@ -28,13 +28,13 @@
 \fancyhead{}
 \fancyfoot{}
 \fancyhead[L]{\includegraphics[scale=0.03]{../images/logo/logo_iutbeziers.png}}
-\fancyhead[C]{Rapport de Stage}
+\fancyhead[C]{Rapport de Stage - SuperBeeLive}
 \fancyhead[R]{\includegraphics[scale=0.3]{../images/logo/logoibmm.jpg}}
 \fancyfoot[L]{\small Olivia SERENELLI-PESIN \normalsize}
 \fancyfoot[R]{\thepage/\pageref{LastPage}}
 \fancyfoot[C]{\includegraphics[scale=0.03]{../images/logo/logo_abeille.png}}
 \renewcommand{\footrulewidth}{0pt}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0,4pt}
 
 %Indique qu'il faut appliquer le style sur tout le doc 
 \makeatletter
@@ -110,7 +110,7 @@ Les différents travaux déjà effectués autours de ce sujet ne visaient qu’u
 ne permettant pas une vision globale des difficultées rencontrées par les abeilles. Notre but est de réunir les différentes
 données qui peuvent être utilisés pour étudier l’influence des éléments et événements extérieurs sur leur santé et leur cadre de vie.\\
 
-Concrétement, l'équipe de SuperBeeLive va concevoir une ruche plate (figures \ref{rpz_ruche} et \ref{photo_rucher}) afin d'y mettre 
+Concrétement, l'équipe de SuperBeeLive va concevoir une ruche plate \footnote{Voir figures \ref{rpz_ruche} et \ref{photo_rucher}} afin d'y mettre 
 en place plusieurs type  de capteurs (hygrométrie, vibrations, température interne et externe, etc) ainsi que des caméras qui filmeront 
 l'intérieur et l'extérieur de la ruche. \\
 En 2017, une affiche résumant le projet a été présentée lors du salon NUMEV (Solutions, Numériques, Matérielles, et 
@@ -268,7 +268,7 @@ On pourra distinguer trois localisations distinctes pour ces caméras, correspon
 
 Au vu de la description générale de l'utilisation des vidéos ainsi qu'après discussion avec l'équipe, le logiciel devrait 
 pouvoir permettre de : \\
-\begin{itemize}
+\begin{itemize}[itemsep=0cm,topsep=0cm]
     \item Visualiser les caméras en direct
     \item Démarrer la capture vidéo à tout moment 
     \item Ajouter un système de tag par mots clés afin de pouvoir trier facilement les vidéos 
@@ -303,8 +303,8 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \setlength{\columnseprule}{0,1}
     \begin{multicols}{2}
         \begin{small} 
-\hrulefill 
-\\
+\dotfill \\
+
 \Large Fenêtre Principale - Beeterface \normalsize \\
     Première fenêtre ouverte. Permet de visualiser les caméras en direct, d'enregistrer
     des vidéos. \\
@@ -320,7 +320,7 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
      \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Information" : Ouvre la fenêtre "Informations"
         \item "Enregistrer" : Permet de lancer l'enregistrement d'une vidéo. Pendant l'enregistrement, change de label et
-    devient "Arrêter". Une fois l'enregistrement arrêté, ouvre la fenêtre "Modifier la vidéo".
+        devient "Arrêter". Une fois l'enregistrement arrêté, ouvre la fenêtre "Modifier la vidéo".
         \item "Ouvrir" : Ouvre la fenêtre ""Fichiers".
     \end{itemize}
             \large \textbf{Choix} \normalsize
@@ -335,22 +335,24 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
 
 \columnbreak
 
-\hrulefill \\
+\dotfill \\
+
 \Large Fenêtre - Modifier la Vidéo\normalsize \\
     Fenêtre permettant de modifier une vidéo enregistrée ou de visualiser une vidéo déjà modifiée.
     C'est là que sont ajoutées les annotations. \\
-            \large \textbf{Informations}\normalsize
+\large \textbf{Informations}\normalsize
      \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Nom de la vidéo" : Indique le nom de la vidéo, généré automatiquement.
         \item "Barre Placement dans le Temps" : Barre de visualisation du temps de la vidéo, comme sur un player classique.
         \item "Liste Annotations Appliquées" : Liste des annotations sur la vidéo. Permet de supprimer une annotation, de
         la cacher.
         \item "Liste Tags Appliqués" : Liste des Tags appliqués sur la vidéo.
-        \item "Informations Vidéos" : Inforations d'où a été filmée la vidéo au moment de l'enregistrement.
+        \item "Informations Vidéos" : Informations d'où a été filmée la vidéo au moment de l'enregistrement.
+        \item \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter "Information Capteurs" :
+            avec les informations sur les capteurs au moment de l'enregistrement 
     \end{itemize}
-    ? IDEE Ajouter "Informations Capteurs"  ?
     
-            \large \textbf{Boutons}\normalsize
+\large \textbf{Boutons}\normalsize
      \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Couper" : Ouvre la fenêtre "Couper la vidéo".
         \item "Play" : Lance la Vidéo. Le label se change en "stop" pour mettre en pause.
@@ -369,7 +371,7 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
 
 \columnbreak
 
-\hrulefill \\
+\dotfill \\
 \Large Fenêtre - Annotation "name\_anotation"\normalsize \\
     Fenêtre qui permet de placer une nouvelle annotation. Elle change à quelques endroits en fonction
     du bouton utilisé pour appeler la fenêtre. \\
@@ -377,8 +379,10 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Barre Placement dans le Temps" : Barre de visualisation du temps de la vidéo, comme sur un player classique.
         \item "Description Annotation" : Description de l'annotation : comment l'utiliser, à quoi elle sert, à quoi elle ressemble.
-        \item "Liste Tags Appliqués" : Liste des Tags appliqués sur la vidéo.\item "Informations Vidéos" : Inforations d'où a été filmée la vidéo au moment de l'enregistrement.
-        ? IDEE Ajouter "Informations Capteurs"  ?
+        \item "Liste Tags Appliqués" : Liste des Tags appliqués sur la vidéo.
+        \item "Informations Vidéos" : Inforations d'où a été filmée la vidéo au moment de l'enregistrement.
+        \item \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter "Information Capteurs" :
+            avec les informations sur les capteurs au moment de l'enregistrement 
         \item "Timer Début" : Indication du moment de la vidéo où l'annotation va débuter.
         \item "Timer Fin" : Indication du moment de la vidéo où l'annotation va finir.
     \end{itemize}
@@ -405,10 +409,25 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "Vidéo enregistrée" : Visualisation de la vidéo où mettre l'annotation.
     \end{itemize}
 
+\dotfill \\
+
+\Large Fenêtre - Informations \\ \normalsize 
+    Fenêtre contenant des informations sur les différentes structures et leur éléments. Permet de retrouver les différentes ruches
+    et leur spécificités, les auteurs, les infos contenues dans vidéos, les caméras etc. Ne permet pas de modification. \\
+\large \textbf{Information} \normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Information sur Auteur, Caméra, Vidéo, Ruche..." : Affiche les informations correspondant à l'onglet sur lequel on se trouve.
+    \end{itemize}
+\large \textbf{Box} \normalsize
+    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item "Auteur", "Vidéo", "Ruche", "Caméra", etc : Onglets permettant de sélectionner quel type d'information on veut visualiser.
+    \end{itemize}
+    \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter une entrée permettant une recherche rapide ? \\
 
 \columnbreak
 
-\hrulefill \\
+\dotfill \\
+
 \Large Fenêtre - Couper la vidéo\normalsize \\
     Fenêtre permettant de redécouper la vidéo. \\
 \large \textbf{Informations}\normalsize
@@ -430,7 +449,8 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \end{itemize}
 
 
-\hrulefill \\
+\dotfill \\
+
 \Large Fenêtre - Ajouter un tag\normalsize \\
     Fenêtre permettant de visualiser les tags disponnibles pour en sélectionner une liste à ajouter sur la vidéo
     ou sur une annotation. \\
@@ -451,12 +471,14 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Search Tag" : Entrée de recherche où on peut entrer un mot clé à chercher pour trouver un tag correspondant.
     \end{itemize}
-    ? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ?
+    \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter la possibilitée de voir les tags ajoutés 
+            les plus récent ? \\ 
 
 
 \columnbreak
 
-\hrulefill \\
+\dotfill \\
+
 \Large Fenêtre - Créer un Tag\normalsize \\
     Fenêtre permettant de créer un nouveau tag dans le dictionnaire si il n'en existe pas déjà
     un correspondant à ce que l'utilisateur veut. \\
@@ -466,18 +488,18 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "Annuler" : Ferme la fenêtre sans enregistrer les modifications.
         \item "Enregistrer" : Ferme la fenêtre en enregistrant les modifications.
     \end{itemize}
-    ? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ?
 \large \textbf{Entrée}\normalsize
     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Nom Tag" : Entrée où l'utilisateur doit indiquer le nom du nouveau tag qu'il désire.
     \end{itemize}
-    ? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ?
-    ? IDEE : Ajouter une vérification des tags qui pourraient ressembler au nouveau que l'utilisateur veut ajouter
-    pour éviter les doublons ?
+    \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter la possibilitée de voir les tags ajoutés 
+            les plus récent ? \\ 
+    \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter une vérification des tags qui pourraient 
+    ressembler au nouveau que l'utilisateur veut ajouter pour éviter les doublons ? \\
 
 
+\dotfill \\
 
-\hrulefill \\
 \Large Fenêtre - Fichier\normalsize \\
     Fenere permettant de voir les fichiers vidéo existant et de les trier suivant différents critères. \\
 \large \textbf{Informations}\normalsize 
@@ -503,20 +525,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
 
 
 \columnbreak
-
-\hrulefill \\
-\Large Fenêtre - Informations \\ \normalsize 
-    Fenêtre contenant des informations sur les différentes structures et leur éléments. Permet de retrouver les différentes ruches
-    et leur spécificités, les auteurs, les infos contenues dans vidéos, les caméras etc. Ne permet pas de modification. \\
-\large \textbf{Information} \normalsize
-    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
-        \item "Information sur Auteur, Caméra, Vidéo, Ruche..." : Affiche les informations correspondant à l'onglet sur lequel on se trouve.
-    \end{itemize}
-\large \textbf{Box} \normalsize
-    \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
-        \item "Auteur", "Vidéo", "Ruche", "Caméra", etc : Onglets permettant de sélectionner quel type d'information on veut visualiser.
-    \end{itemize}
-    ? IDEE : Ajouter une entrée permettant une recherche rapide ?
 
 
         \end{small}
@@ -567,13 +575,13 @@ A ces propriétés en sont ajoutés d'autres pour créer un nouvel élément. \\
 Au fur et à mesure, ces ajouts de propriétés ont permi de créer toute sorte de Widget : des textes, des labels, des tableaux, 
 des séparateur, des listes, des boutons... 
 Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements, nous permettant de savoir ce que l'on peut 
-faire avec nos Widgets en fonction de qui ils héritent : 
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{../images/dia/arbo_widget.png} \\
+faire avec nos Widgets en fonction de qui ils héritent. 
+\begin{figure} [h!]
+    \centering
+        \includegraphics[scale=0.7]{../images/dia/arbo_widget.png} 
+        \caption{Arborescence des Widgets les plus utilisés dans Beeterface}
+        \label{arbo_widg}
 \end{figure}
-
 Par exemple je veux changer un paramètre d'un élément "GtkSpinButton". Malheureusement, je ne trouve pas de fonction 
 affectant directement ce paramètre, par exemple la taille. Alors je vais regarder si chez ses parents je peux trouver 
 le paramètre voulu, à savoir chez "GtkEntry", et "GtkWidget". \\
@@ -593,12 +601,13 @@ Le GtkContainer de base est la "GtkBox". A sa création, nous devons simplement 
 c'est à dire si les éléments que nous allons mettre dedans vont être placé de haut en bas ou de droite à gauche. 
 Une fois cette première "GtkBox" placée, le problème de limitation de place imposée par la "GtkWindow" n'en est plus un. 
 Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
-nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. Voici le schéma de construction 
-que j'ai fais pour la première fenêtre de l'application, win\_main : \\
-
+nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. 
+J'ai fais un schéma de placement de ces boites pour la fenêtre principal, win\_main. 
 \begin{figure}[!h]
     \centering
         \includegraphics[scale=0.5]{../images/dia/schema_bloc_mainwin.png} \\
+        \caption{Schéma de placement des box pour win\_main}
+        \label{sch_box_win_main}
 \end{figure}
 
 On peut voir que la "GtkBox" box\_principale prend toute la place de ma fenêtre "GtkWindow". Dans cette box\_principale, j'y ai rangé 
@@ -616,12 +625,12 @@ avec un titre autour de "Informations Capteurs" et "Informations Vidéo". Des "G
 à la maniètre d'un tableau sans les bordures, ici utilisé pour le texte dans les deux encadrés "Informations". \\
 Un autre type de Gtkcontainer intéressant que je n'ai pas utilisé ici est le "GtkScrolledWindow". Celui-ci permet d'ajouter
 une barre de défilement afin d'afficher plus d'informations. \\
-
-Le résultat nous donne l'impression de ne pas voir toutes les boites clairement : \\
-
-\begin{figure}
+Le résultat nous donne l'impression de ne pas voir toutes les boites clairement. \\
+\begin{figure}[!h]
     \centering
         \includegraphics[scale=0.45]{../images/dia/schema_bloc_win_applique.png} \\
+        \caption{Résultat du placement des box pour win\_main}
+        \label{res_box_win_main}
 \end{figure}
 
 C'est dû au fait que les boites prennent toute la place qu'elle peuvent en fonction des widgets qu'elles contiennent. Ainsi, box principale 
@@ -743,14 +752,13 @@ tabulation. Le rendu me permet de voir qui est à quel niveau. \\
 Petite précision, les éléments seront placés dans l'ordre de lecture du code. Ainsi, si votre "GtkBox" est créée en tant
 que box horizontale, l'élément placés en premier sera le plus à gauche, le suivant à sa droite et ainsi de suite. \\ 
 
-De plus, la figure %TODO 
-représente cette indentation schématiquement pour visualiser ce principe de "poupées russes".
-
+De plus, la figure \ref{org_win_main} représente cette indentation schématiquement pour visualiser ce principe de "poupées russes".
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.5]{../images/dia/diagramme_fenetre.png} \\
+        \caption{Diagramme des Widgets pour win\_main}
+        \label{org_win_main}
 \end{figure}
-
 Une fois que les éléments sont placés dans les boîtes, ceux-ci sont tous collés les uns aux autres ou avec 
 les espaces de bases indiqués lors de la création des box. %TODO Vérifier argument  
 Il faut indiquer comment ils doivent se placer. Pour mieux comprendre ce que nous allons faire, voici un 
@@ -771,9 +779,11 @@ deux fonctions et leur variables que j'ai le plus utilisé : \\
 \end{lstlisting}
 Permet d'appliquer une marge sur le haut. On précise sur quel Widget l'appliquer puis la taille en px de la marge.
 Cette fonction existe aussi pour bottom, end et start qui correspondent au bas, à la droite et la gauche du Widget.\\
-\begin{figure}
+\begin{figure} [!h]
     \centering
         \includegraphics[scale=0.5]{../images/dia/top_bottom_etc.png}
+        \caption{Schéma du placement de start, end, top, bottom}
+        \label{sch_pla_top}
 \end{figure}
 
 

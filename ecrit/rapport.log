@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.2)  6 AUG 2019 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.2)  6 AUG 2019 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,7 +815,7 @@ Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 11
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 113--119
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
 
  []
 
@@ -824,227 +824,263 @@ t>
 File: ../images/schema_ruche/supportrucheplate1.JPG Graphic file (type jpg)
 <use ../images/schema_ruche/supportrucheplate1.JPG>
 Package pdftex.def Info: ../images/schema_ruche/supportrucheplate1.JPG  used on
- input line 122.
+ input line 121.
 (pdftex.def)             Requested size: 177.96625pt x 207.10031pt.
 <../images/schema_ruche/supportrucheplate.JPG, id=32, 661.72218pt x 682.04813pt
 >
 File: ../images/schema_ruche/supportrucheplate.JPG Graphic file (type jpg)
 <use ../images/schema_ruche/supportrucheplate.JPG>
 Package pdftex.def Info: ../images/schema_ruche/supportrucheplate.JPG  used on 
-input line 123.
+input line 122.
 (pdftex.def)             Requested size: 198.51819pt x 204.61601pt.
 <../images/photo/face_ruche.jpg, id=33, 4625.28pt x 3468.96pt>
 File: ../images/photo/face_ruche.jpg Graphic file (type jpg)
 <use ../images/photo/face_ruche.jpg>
-Package pdftex.def Info: ../images/photo/face_ruche.jpg  used on input line 130
+Package pdftex.def Info: ../images/photo/face_ruche.jpg  used on input line 129
 .
 (pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
 <../images/photo/cote_ruche.jpg, id=34, 4625.28pt x 3468.96pt>
 File: ../images/photo/cote_ruche.jpg Graphic file (type jpg)
 <use ../images/photo/cote_ruche.jpg>
-Package pdftex.def Info: ../images/photo/cote_ruche.jpg  used on input line 131
+Package pdftex.def Info: ../images/photo/cote_ruche.jpg  used on input line 130
 .
 (pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--150
+Underfull \hbox (badness 10000) in paragraph at lines 135--149
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 150.
+ 149.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 150.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 149.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 15
-0.
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 14
+9.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [5 <../images/schema_ruche/supportrucheplate1.JPG> <../images/schema_ruche/supp
 ortrucheplate.JPG> <../images/photo/face_ruche.jpg> <../images/photo/cote_ruche
 .jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
 
  []
 
-<../images/dia/organiramme_equipe_projet.png, id=39, 1379.1525pt x 805.0075pt>
+<../images/dia/organiramme_equipe_projet.png, id=41, 1379.1525pt x 805.0075pt>
 File: ../images/dia/organiramme_equipe_projet.png Graphic file (type png)
 <use ../images/dia/organiramme_equipe_projet.png>
 Package pdftex.def Info: ../images/dia/organiramme_equipe_projet.png  used on i
-nput line 164.
+nput line 163.
 (pdftex.def)             Requested size: 413.74895pt x 241.50412pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--178
+Underfull \hbox (badness 10000) in paragraph at lines 168--177
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 178.
+ 177.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 178.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 177.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 17
-8.
+7.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [6 <../images/dia/organiramme_equipe_projet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--189
+Underfull \hbox (badness 10000) in paragraph at lines 182--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--195
+Underfull \hbox (badness 10000) in paragraph at lines 189--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--203
+Underfull \hbox (badness 10000) in paragraph at lines 195--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--213
+Underfull \hbox (badness 10000) in paragraph at lines 203--212
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 221.
+ 220.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 221.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 220.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 22
-1.
+0.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [7]
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 220.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 220.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 22
+0.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+ [8]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
+Underfull \hbox (badness 10000) in paragraph at lines 222--226
 
  []
 
-<../images/dia/schema_camera.png, id=47, 905.5006pt x 531.39706pt>
+<../images/dia/schema_camera.png, id=52, 905.5006pt x 531.39706pt>
 File: ../images/dia/schema_camera.png Graphic file (type png)
 <use ../images/dia/schema_camera.png>
 Package pdftex.def Info: ../images/dia/schema_camera.png  used on input line 22
-9.
+8.
 (pdftex.def)             Requested size: 271.65227pt x 159.42033pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 233.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 232.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 233.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 232.
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--245
+Underfull \hbox (badness 10000) in paragraph at lines 232--244
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 261.
+ 260.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 261.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 260.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 26
-1.
+0.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[8
+[9
 
  <../images/dia/schema_camera.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--269
+Underfull \hbox (badness 10000) in paragraph at lines 262--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--273
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 284.
+ 283.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 284.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 283.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 28
-4.
+3.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[9]
-<../images/dia/schema_interface.png, id=55, 2400.97pt x 998.73125pt>
+[10]
+<../images/dia/schema_interface.png, id=60, 2400.97pt x 998.73125pt>
 File: ../images/dia/schema_interface.png Graphic file (type png)
 <use ../images/dia/schema_interface.png>
 Package pdftex.def Info: ../images/dia/schema_interface.png  used on input line
- 287.
+ 286.
 (pdftex.def)             Requested size: 768.32611pt x 319.60052pt.
 
-Overfull \hbox (37.09027pt too wide) in paragraph at lines 287--288
+Overfull \hbox (37.09027pt too wide) in paragraph at lines 286--287
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
+Underfull \hbox (badness 10000) in paragraph at lines 290--292
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 303.
+ 302.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 303.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 302.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 30
-3.
+2.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[10
+[11
 
  <../images/dia/schema_interface.png>]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.304     \setlength{\columnseprule}{0,1}
+l.303     \setlength{\columnseprule}{0,1}
                                          
 ? 
 
-Overfull \hbox (3.80458pt too wide) in paragraph at lines 373--378
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+<../images/logo/logo_ampoule.png, id=65, 256.96pt x 256.96pt>
+File: ../images/logo/logo_ampoule.png Graphic file (type png)
+<use ../images/logo/logo_ampoule.png>
+Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 35
+1.
+(pdftex.def)             Requested size: 12.84874pt x 12.84874pt.
+
+Overfull \hbox (3.80458pt too wide) in paragraph at lines 374--379
 \OT1/cmr/m/n/14.4 Fen^etre - An-no-ta-tion "name[]anotation" 
  []
 
+File: ../images/logo/logo_ampoule.png Graphic file (type png)
+<use ../images/logo/logo_ampoule.png>
+Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 38
+4.
+(pdftex.def)             Requested size: 12.84874pt x 12.84874pt.
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
@@ -1059,324 +1095,187 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 39
 8.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[11
+[12
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+ <../images/logo/logo_ampoule.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
+
+ []
+
+
+Underfull \hbox (badness 5203) in paragraph at lines 414--418
+\OT1/cmr/m/n/10.95 Fen^etre conte-nant des in-for-ma-tions sur les
+ []
+
+File: ../images/logo/logo_ampoule.png Graphic file (type png)
+<use ../images/logo/logo_ampoule.png>
+Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 42
+5.
+(pdftex.def)             Requested size: 12.84874pt x 12.84874pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 []\OT1/cmr/m/n/10.95 "Liste Tags Ajout^^Ses" : listes les tags
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 467.
+ 462.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 467.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 462.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 46
-7.
+2.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[12]
-Underfull \hbox (badness 5203) in paragraph at lines 508--513
-\OT1/cmr/m/n/10.95 Fen^etre conte-nant des in-for-ma-tions sur les
+[13]
+File: ../images/logo/logo_ampoule.png Graphic file (type png)
+<use ../images/logo/logo_ampoule.png>
+Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 47
+4.
+(pdftex.def)             Requested size: 12.84874pt x 12.84874pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--530
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+File: ../images/logo/logo_ampoule.png Graphic file (type png)
+<use ../images/logo/logo_ampoule.png>
+Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 49
+5.
+(pdftex.def)             Requested size: 12.84874pt x 12.84874pt.
+File: ../images/logo/logo_ampoule.png Graphic file (type png)
+<use ../images/logo/logo_ampoule.png>
+Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 49
+7.
+(pdftex.def)             Requested size: 12.84874pt x 12.84874pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 546.
+ 531.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 546.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 531.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 54
-6.
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 53
+1.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[13]
-<../images/dia/arbo_widget.png, id=70, 561.09625pt x 189.70876pt>
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 553.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 553.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 55
+3.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[15]
+<../images/dia/arbo_widget.png, id=80, 561.09625pt x 189.70876pt>
 File: ../images/dia/arbo_widget.png Graphic file (type png)
 <use ../images/dia/arbo_widget.png>
-Package pdftex.def Info: ../images/dia/arbo_widget.png  used on input line 575.
+Package pdftex.def Info: ../images/dia/arbo_widget.png  used on input line 581.
 
 (pdftex.def)             Requested size: 392.7647pt x 132.79521pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--581
+Underfull \hbox (badness 10000) in paragraph at lines 569--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--586
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--593
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 587.
+ 594.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 587.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 594.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 58
-7.
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 59
+4.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 588--592
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 595--599
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--599
-
- []
-
-<../images/dia/schema_bloc_mainwin.png, id=75, 1036.87375pt x 593.21625pt>
+<../images/dia/schema_bloc_mainwin.png, id=85, 1036.87375pt x 593.21625pt>
 File: ../images/dia/schema_bloc_mainwin.png Graphic file (type png)
 <use ../images/dia/schema_bloc_mainwin.png>
 Package pdftex.def Info: ../images/dia/schema_bloc_mainwin.png  used on input l
-ine 602.
+ine 608.
 (pdftex.def)             Requested size: 518.43561pt x 296.60739pt.
 
-Overfull \hbox (34.73874pt too wide) in paragraph at lines 602--602
+Overfull \hbox (34.73874pt too wide) in paragraph at lines 608--608
  [][] 
  []
 
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 610.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 610.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 61
-0.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[15 <../images/dia/arbo_widget.png> <../images/dia/schema_bloc_mainwin.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 615--620
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 621--622
-
- []
-
-<../images/dia/schema_bloc_win_applique.png, id=79, 1136.245pt x 661.47125pt>
+<../images/dia/schema_bloc_win_applique.png, id=86, 1136.245pt x 661.47125pt>
 File: ../images/dia/schema_bloc_win_applique.png Graphic file (type png)
 <use ../images/dia/schema_bloc_win_applique.png>
 Package pdftex.def Info: ../images/dia/schema_bloc_win_applique.png  used on in
-put line 625.
+put line 631.
 (pdftex.def)             Requested size: 511.30553pt x 297.65932pt.
 
-Overfull \hbox (27.60866pt too wide) in paragraph at lines 625--625
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 631--633
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 634--637
-
- []
-
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 643.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 643.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 64
-3.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[16 <../images/dia/schema_bloc_win_applique.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 643--652
-
- []
-
-
-! Package inputenc Error: Unicode char �\lst@FillFixed@ (U+5A8)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.657 GtkWidget* box ;   
-                          
-? 
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.657 GtkWidget* box ;   
-                          
-? 
-
-! Package inputenc Error: Unicode char �\lst@FillFixed@ (U+5A8)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.658 GtkWidget* label ;  
-                           
-? 
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.658 GtkWidget* label ;  
-                           
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 660--663
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 671--673
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 678--682
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 687--689
-
- []
-
-
-! Package inputenc Error: Unicode char �\expandafter (U+4F1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.697 ...ont=\"10\"><b>Je suis le label stylisée 
-                                                  avec du bold</b></span>");
-? 
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.697 ...ont=\"10\"><b>Je suis le label stylisée 
-                                                  avec du bold</b></span>");
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 699--702
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 703--707
-
- []
-
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 707.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 707.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 70
-7.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[17]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.710 M
-       aintenant, nous allons appliquer ce qui a été expliqué plus haut p...
-
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 710--712
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--719
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 729--731
-
- []
-
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 733.
-
-Underfull \hbox (badness 10000) in paragraph at lines 739--746
-
- []
-
-<../images/dia/diagramme_fenetre.png, id=87, 1056.94875pt x 855.195pt>
-File: ../images/dia/diagramme_fenetre.png Graphic file (type png)
-<use ../images/dia/diagramme_fenetre.png>
-Package pdftex.def Info: ../images/dia/diagramme_fenetre.png  used on input lin
-e 752.
-(pdftex.def)             Requested size: 528.47308pt x 427.59647pt.
-
-Overfull \hbox (44.77621pt too wide) in paragraph at lines 752--752
+Overfull \hbox (27.60866pt too wide) in paragraph at lines 631--631
  [][] 
  []
 
@@ -1384,96 +1283,50 @@ Overfull \hbox (44.77621pt too wide) in paragraph at lines 752--752
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--759
+Underfull \hbox (badness 10000) in paragraph at lines 639--641
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--765
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 766--769
-
- []
-
-<../images/dia/top_bottom_etc.png, id=88, 205.76875pt x 120.45pt>
-File: ../images/dia/top_bottom_etc.png Graphic file (type png)
-<use ../images/dia/top_bottom_etc.png>
-Package pdftex.def Info: ../images/dia/top_bottom_etc.png  used on input line 7
-77.
-(pdftex.def)             Requested size: 102.88411pt x 60.22484pt.
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 779.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 779.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 77
-9.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 792--793
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 797--800
+Underfull \hbox (badness 10000) in paragraph at lines 642--645
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 800.
+ 645.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 800.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 645.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 80
-0.
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 64
+5.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[19 <../images/dia/diagramme_fenetre.png> <../images/dia/top_bottom_etc.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 806--807
+[17 <../images/dia/arbo_widget.png>]
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 651.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 651.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 65
+1.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+ [18 <../images/dia/schema_bloc_mainwin.png> <../images/dia/schema_bloc_win_app
+lique.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 651--660
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 816--821
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 822--823
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 825--834
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 835--836
-
- []
-
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 837.
 
 ! Package inputenc Error: Unicode char �\lst@FillFixed@ (U+5A8)
 (inputenc)                not set up for use with LaTeX.
@@ -1482,8 +1335,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.840  [votre code] 
-                     
+l.665 GtkWidget* box ;   
+                          
 ? 
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -1493,139 +1346,51 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.840  [votre code] 
-                     
+l.665 GtkWidget* box ;   
+                          
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--865
+! Package inputenc Error: Unicode char �\lst@FillFixed@ (U+5A8)
+(inputenc)                not set up for use with LaTeX.
 
- []
-
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 865.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 865.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 86
-5.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 874--877
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 878--882
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 883--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 896--898
-
- []
-
-
-Overfull \hbox (5.55951pt too wide) in paragraph at lines 921--926
-\OT1/cmr/m/n/10 un jeu de fonc-tion pour mo-di-fier (set[]partie[]element) ou l
-ire les donn^^Sees conte-nues dans l'^^Sel^^Sement ind^^Sependemment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 921--926
-
- []
-
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 926.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 926.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 92
-6.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 927--929
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 930--932
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 933--953
-
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
+See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.955 N
-       'ayant pas d'habitudes particulières en code, j'ai été conseillée...
-
+l.666 GtkWidget* label ;  
+                           
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 959--965
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.666 GtkWidget* label ;  
+                           
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--671
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 969--971
+Underfull \hbox (badness 10000) in paragraph at lines 679--681
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--975
+Underfull \hbox (badness 10000) in paragraph at lines 686--690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 976--981
+Underfull \hbox (badness 10000) in paragraph at lines 695--697
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 982--997
-
- []
-
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 997.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 997.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 99
-7.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[22]
 
 ! Package inputenc Error: Unicode char �\expandafter (U+4F1)
 (inputenc)                not set up for use with LaTeX.
@@ -1634,7 +1399,348 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1002      // Remplissage de la fenêtre 
+l.705 ...ont=\"10\"><b>Je suis le label stylisée 
+                                                  avec du bold</b></span>");
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.705 ...ont=\"10\"><b>Je suis le label stylisée 
+                                                  avec du bold</b></span>");
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--715
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 715.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 715.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 71
+5.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[19]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.718 M
+       aintenant, nous allons appliquer ce qui a été expliqué plus haut p...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 718--720
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 725--727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--739
+
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 741.
+
+Underfull \hbox (badness 10000) in paragraph at lines 747--754
+
+ []
+
+<../images/dia/diagramme_fenetre.png, id=98, 1056.94875pt x 855.195pt>
+File: ../images/dia/diagramme_fenetre.png Graphic file (type png)
+<use ../images/dia/diagramme_fenetre.png>
+Package pdftex.def Info: ../images/dia/diagramme_fenetre.png  used on input lin
+e 758.
+(pdftex.def)             Requested size: 528.47308pt x 427.59647pt.
+
+Overfull \hbox (44.77621pt too wide) in paragraph at lines 758--758
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 755--766
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--772
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 773--776
+
+ []
+
+<../images/dia/top_bottom_etc.png, id=99, 205.76875pt x 120.45pt>
+File: ../images/dia/top_bottom_etc.png Graphic file (type png)
+<use ../images/dia/top_bottom_etc.png>
+Package pdftex.def Info: ../images/dia/top_bottom_etc.png  used on input line 7
+84.
+(pdftex.def)             Requested size: 102.88411pt x 60.22484pt.
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 788.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 788.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 78
+8.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 802.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 802.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 80
+2.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[21 <../images/dia/diagramme_fenetre.png> <../images/dia/top_bottom_etc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 806--809
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 820--821
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--832
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--843
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 846.
+
+! Package inputenc Error: Unicode char �\lst@FillFixed@ (U+5A8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.849  [votre code] 
+                     
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.849  [votre code] 
+                     
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--874
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 874.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 874.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 87
+4.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 883--886
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 887--891
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 892--896
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 905--907
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 927.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 927.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 92
+7.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[23]
+Overfull \hbox (5.55951pt too wide) in paragraph at lines 930--935
+\OT1/cmr/m/n/10 un jeu de fonc-tion pour mo-di-fier (set[]partie[]element) ou l
+ire les donn^^Sees conte-nues dans l'^^Sel^^Sement ind^^Sependemment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--935
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 936--938
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 939--941
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 942--962
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.964 N
+       'ayant pas d'habitudes particulières en code, j'ai été conseillée...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 968--974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 978--980
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 981--984
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--990
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 990.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 990.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 99
+0.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 991--1006
+
+ []
+
+
+! Package inputenc Error: Unicode char �\expandafter (U+4F1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1011      // Remplissage de la fenêtre 
                                           avec le contenu de auteur
 ? 
 
@@ -1645,44 +1751,44 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1002      // Remplissage de la fenêtre 
+l.1011      // Remplissage de la fenêtre 
                                           avec le contenu de auteur
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1019
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1028
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1035
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1044
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1043
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1052
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1043.
+ 1052.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1043.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1052.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
-43.
+52.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[23]
+[25]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1690,70 +1796,70 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1051 D
+l.1060 D
         e manière plus personnelle, j'aurai également aimé pouvoir retrav...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1057
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1066
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1057
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1066
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1059.
+ 1068.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1059.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1068.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
-59.
+68.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[24]
+[26]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1086
 
  []
 
-<../images/annexes/camera_bp.png, id=113, 906.38625pt x 438.13687pt>
+<../images/annexes/camera_bp.png, id=123, 906.38625pt x 438.13687pt>
 File: ../images/annexes/camera_bp.png Graphic file (type png)
 <use ../images/annexes/camera_bp.png>
 Package pdftex.def Info: ../images/annexes/camera_bp.png  used on input line 10
-82.
+91.
 (pdftex.def)             Requested size: 181.27403pt x 87.62581pt.
-<../images/annexes/camera_bp2.png, id=114, 873.2625pt x 390.70969pt>
+<../images/annexes/camera_bp2.png, id=124, 873.2625pt x 390.70969pt>
 File: ../images/annexes/camera_bp2.png Graphic file (type png)
 <use ../images/annexes/camera_bp2.png>
 Package pdftex.def Info: ../images/annexes/camera_bp2.png  used on input line 1
-083.
+092.
 (pdftex.def)             Requested size: 174.6494pt x 78.14055pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1096
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1088--1092
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1096--1098
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
 
  []
 
@@ -1765,102 +1871,102 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1106 ...andé chez DELL pour un budget de 15k€
+l.1115 ...andé chez DELL pour un budget de 15k€
                                                    maximum. \\
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1109
+Underfull \hbox (badness 10000) in paragraph at lines 1108--1118
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1109.
+ 1118.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1109.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1118.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 11
-09.
+18.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[25
+[27
 
  <../images/annexes/camera_bp.png (PNG copy)> <../images/annexes/camera_bp2.png
  (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1124
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1136--1139
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1139--1142
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1143--1145
+Underfull \hbox (badness 10000) in paragraph at lines 1152--1154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1157
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1158--1161
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1163.
+ 1172.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1163.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1172.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 11
-63.
+72.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1168
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1174--1177
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1182--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1195
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1204
 
  []
 
@@ -1871,187 +1977,187 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1198 
+l.1207 
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1199--1201
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1210
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1219
-
- []
-
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1230.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1230.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-30.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 1231--1233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1234--1238
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1228
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1247.
+ 1239.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1247.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1239.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-47.
+39.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[28]
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1247
+
+ []
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 1256.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1256.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
+56.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[30]
 Chapitre 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1255
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1264
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1260.
+ 1269.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1260.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1269.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-60.
+69.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[29
+[31
 
 ]
 Chapitre 5.
 
-Overfull \hbox (118.57585pt too wide) in paragraph at lines 1264--1276
+Overfull \hbox (118.57585pt too wide) in paragraph at lines 1273--1285
 \OT1/cmr/bx/n/10 LaTeX, Wi-ki-Books. \OT1/cmr/m/n/10 Derni^^Rere mo-di-fi-ca-ti
 on 14/06/2017. Consult^^Se en Juillet 2019. Dis-po-nible sur : <https ://fr.wik
 ibooks.org/wiki/LaTeX>.
  []
 
 
-Overfull \hbox (100.8597pt too wide) in paragraph at lines 1264--1276
+Overfull \hbox (100.8597pt too wide) in paragraph at lines 1273--1285
 \OT1/cmr/bx/n/10 Varroa\OT1/cmr/m/n/10 , Wi-ki-pe-dia. Derni^^Rere mo-di-fi-ca-
 tion 30/04/2019, consult^^Se le 01/05/2019. Dis-po-nible sur : <https ://fr.wik
 ipedia.org/wiki/Varroa>.
  []
 
 
-Overfull \hbox (172.64844pt too wide) in paragraph at lines 1264--1276
+Overfull \hbox (172.64844pt too wide) in paragraph at lines 1273--1285
 \OT1/cmr/bx/n/10 Vespa ve-lu-tina\OT1/cmr/m/n/10 , Wi-ki-pe-dia. Derni^^Rere mo
 -di-fic-ta-tion 23/06/2019, consult^^Se le 01/05/2019. Dis-po-nible sur <https 
 ://fr.wikipedia.org/wiki/Vespa[]velutina>.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1276
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1285
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1277.
+ 1286.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1277.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1286.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-77.
+86.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[30
+[32
 
 ]
 Chapitre 6.
-<../images/annexes/poster_numev.pdf, id=134, 2393.22108pt x 3383.44055pt>
+<../images/annexes/poster_numev.pdf, id=144, 2393.22108pt x 3383.44055pt>
 File: ../images/annexes/poster_numev.pdf Graphic file (type pdf)
 <use ../images/annexes/poster_numev.pdf>
 Package pdftex.def Info: ../images/annexes/poster_numev.pdf  used on input line
- 1279.
+ 1288.
 (pdftex.def)             Requested size: 1675.24338pt x 2368.3923pt.
 
-Overfull \hbox (1191.54651pt too wide) in paragraph at lines 1279--1281
+Overfull \hbox (1191.54651pt too wide) in paragraph at lines 1288--1290
 [][]
  []
 
 
-LaTeX Warning: Float too large for page by 1650.75647pt on input line 1281.
+LaTeX Warning: Float too large for page by 1650.75647pt on input line 1290.
 
 
 AED: lastpage setting LastPage
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1282.
+ 1291.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1282.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1291.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-82.
+91.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[31
+[33
 
 ]
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1282.
+ 1291.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1282.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1291.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-82.
+91.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
- [32 <../images/annexes/poster_numev.pdf>] (./rapport.aux) ) 
+ [34 <../images/annexes/poster_numev.pdf>] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 6143 strings out of 494894
- 87283 string characters out of 6179474
- 228176 words of memory out of 5000000
- 9341 multiletter control sequences out of 15000+600000
+ 6153 strings out of 494894
+ 87516 string characters out of 6179474
+ 228263 words of memory out of 5000000
+ 9350 multiletter control sequences out of 15000+600000
  12302 words of font info for 43 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,16n,56p,277b,1141s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,16n,56p,277b,1846s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
@@ -2060,13 +2166,15 @@ fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts
 1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rapport.pdf (33 pages, 12525487 bytes).
+cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on rapport.pdf (35 pages, 12556250 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 292 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,29 +1,29 @@
 \babel@toc {french}{}
-\contentsline {chapter}{\numberline {1}Introduction : Pr\IeC {\'e}sentation du projet de recherche}{4}
-\contentsline {section}{\numberline {1.1}La structure d'accueil}{4}
-\contentsline {section}{\numberline {1.2}Le projet SuperBeeLive}{4}
-\contentsline {section}{\numberline {1.3}L'\IeC {\'e}quipe}{6}
-\contentsline {section}{\numberline {1.4}Mon r\IeC {\^o}le durant le stage}{7}
-\contentsline {chapter}{\numberline {2}D\IeC {\'e}veloppement d'une application : Beeterface}{9}
-\contentsline {section}{\numberline {2.1}Analyse du besoin et des fonctionnalit\IeC {\'e}s exig\IeC {\'e}es}{9}
-\contentsline {section}{\numberline {2.2}Contraintes}{16}
-\contentsline {section}{\numberline {2.3}Apprendre GTK}{16}
-\contentsline {subsection}{\numberline {2.3.1}Principes de base}{16}
-\contentsline {subsection}{\numberline {2.3.2}Des boites, dans des boites...}{17}
-\contentsline {subsection}{\numberline {2.3.3}Cr\IeC {\'e}ation et D\IeC {\'e}finition}{19}
-\contentsline {subsection}{\numberline {2.3.4}Placement et affichage}{20}
-\contentsline {subsection}{\numberline {2.3.5}Signaux et fonctions}{22}
-\contentsline {section}{\numberline {2.4}Les fonctionnalit\IeC {\'e}s}{23}
-\contentsline {subsection}{\numberline {2.4.1}Structuration du code}{23}
-\contentsline {subsection}{\numberline {2.4.2}Mani\IeC {\`e}re de coder}{24}
+\contentsline {chapter}{\numberline {1}Introduction : Pr\IeC {\'e}sentation du projet de recherche}{3}
+\contentsline {section}{\numberline {1.1}La structure d'accueil}{3}
+\contentsline {section}{\numberline {1.2}Le projet SuperBeeLive}{3}
+\contentsline {section}{\numberline {1.3}L'\IeC {\'e}quipe}{5}
+\contentsline {section}{\numberline {1.4}Mon r\IeC {\^o}le durant le stage}{6}
+\contentsline {chapter}{\numberline {2}D\IeC {\'e}veloppement d'une application : Beeterface}{8}
+\contentsline {section}{\numberline {2.1}Analyse du besoin et des fonctionnalit\IeC {\'e}s exig\IeC {\'e}es}{8}
+\contentsline {section}{\numberline {2.2}Contraintes}{14}
+\contentsline {section}{\numberline {2.3}Apprendre GTK}{14}
+\contentsline {subsection}{\numberline {2.3.1}Principes de base}{14}
+\contentsline {subsection}{\numberline {2.3.2}Des boites, dans des boites...}{15}
+\contentsline {subsection}{\numberline {2.3.3}Cr\IeC {\'e}ation et D\IeC {\'e}finition}{16}
+\contentsline {subsection}{\numberline {2.3.4}Placement et affichage}{18}
+\contentsline {subsection}{\numberline {2.3.5}Signaux et fonctions}{20}
+\contentsline {section}{\numberline {2.4}Les fonctionnalit\IeC {\'e}s}{21}
+\contentsline {subsection}{\numberline {2.4.1}Structuration du code}{21}
+\contentsline {subsection}{\numberline {2.4.2}Mani\IeC {\`e}re de coder}{22}
 \contentsline {subsection}{\numberline {2.4.3}Traitement de la vid\IeC {\'e}o}{25}
-\contentsline {subsection}{\numberline {2.4.4}Ce qui reste \IeC {\`a} faire}{26}
+\contentsline {subsection}{\numberline {2.4.4}Ce qu'il reste \IeC {\`a} faire}{25}
 \contentsline {chapter}{\numberline {3}Acquis et comp\IeC {\'e}tences}{27}
 \contentsline {section}{\numberline {3.1}Missions annexes}{27}
 \contentsline {subsection}{\numberline {3.1.1}Gestion du R\IeC {\'e}seau du Rucher}{27}
 \contentsline {subsection}{\numberline {3.1.2}Tests pour la vitrine Web}{28}
-\contentsline {subsection}{\numberline {3.1.3}Aide pour les projets de premi\IeC {\`e}re ann\IeC {\'e}e \IeC {\`a} l'IUT de B\IeC {\'e}ziers}{28}
-\contentsline {section}{\numberline {3.2}Comp\IeC {\'e}tences d\IeC {\'e}velopp\IeC {\'e}es}{29}
+\contentsline {subsection}{\numberline {3.1.3}Aide pour les projets de premi\IeC {\`e}re ann\IeC {\'e}e \IeC {\`a} l'IUT de B\IeC {\'e}ziers}{29}
+\contentsline {section}{\numberline {3.2}Comp\IeC {\'e}tences d\IeC {\'e}velopp\IeC {\'e}es}{30}
 \contentsline {chapter}{\numberline {4}Conclusion}{31}
 \contentsline {chapter}{\numberline {5}Bibliographie}{32}
 \contentsline {chapter}{\numberline {6}Annexes}{33}

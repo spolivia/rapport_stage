@@ -42,18 +42,24 @@
 \makeatother
 
 
-\title{Rapport de Stage fin de DUT - SuperBeeLive}
-\author{Olivia SERENELLI-PESIN}
+    \title{\LARGE{Rapport de Stage}}
+    \author{\textsc{SERENELLI-PESIN} Olivia\\DUT Réseaux & Télécommunications\\Année universitaire 2018/2019}
+    \date{\today}
+    \makeatletter
 
 \begin{document}
 
-\maketitle
+%Page de garde
+\begin{titlepage}
 \begin{center}
-\includegraphics[scale=0.03]{../images/logo/logo_iutbeziers.png}
-\includegraphics[scale=0.3]{../images/logo/logoibmm.jpg}
+    \AddToShipoutPicture{
+                \AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{../images/logo/logo_iutbeziers.png}}
+                \AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{../images/logo/logoibmm.jpg}}
+                        } 
 \includegraphics[scale=0.3]{../images/logo/um_logo.png}
 \end{center}
 
+\end{titlepage}
 \clearpage
 \newpage 
 
@@ -64,7 +70,7 @@ Tout d’abord Matthieu ROUSSET, initiateur du projet SuperBeeLive à l'IBMM (In
 qui m’a accueilli au sein de son équipe. \\
 Ensuite, Capucine CARLIER pour son accueuil, pour ses nombreuses explications biologiques sur les abeilles ainsi que sa disponibilité 
 afin de comprendre au mieux les enjeux et les besoins des biologistes pour mon projet. \\
-Enfin, Sebastien DRUON pour m’avoir encadré, aidé à m’intégrer dans le milieu de la recherche et sur une multitude 
+Enfin, Sebastien Druon pour m’avoir encadré, aidé à m’intégrer dans le milieu de la recherche et sur une multitude 
 de sujets, aussi bien du point de vu universitaire que sur les tâches qui m’ont été confiées. \\
 
 \tableofcontents
@@ -85,7 +91,7 @@ d'installé dans leur salle dédiée.\\
 Ensuite, l'IBMM est le laboratoire qui a engagé l'argent lié au projet afin de pouvoir me recrutrer lors de ce stage. 
 C'est également une structure qui a été seulement administrative de mon point de vu puisque j'ai été affectée dans 
 les bureaux du LIRMM (Laboratoire d'Informatique, de Robotique et de Microéléctronique de Montpellier), autre laboratoire de 
-recherche, afin que je puisse être aux côtés de Sébastien DRUON qui m'aura donné la grande majorité de mes tâches à effectuer. 
+recherche, afin que je puisse être aux côtés de Sébastien Druon qui m'aura donné la grande majorité de mes tâches à effectuer. 
 J'ai pu y avoir mon bureau en face du siens, me permettant d'être autonome mais aussi de pouvoir faire
 appel à lui facilement lorsque j'en avais besoin.\\
 C'est dans ce contexte de recherche que j'ai pu découvrir et travailler sur le projet SuperBeeLive. \\ 
@@ -156,13 +162,13 @@ cette espèces et la biodiversité.
 \section{L'équipe}
 L'équipe de recherche qui constitue le projet SuperBeeLive est répartie entre plusieurs laboratoires, je n'ai donc pas eu l'occasion
 d'en rencontrer tous les acteurs, certains se trouvant même à l'étranger. Voici un schéma représentant globalement la structure
-de l'équipe ainsi que les membres avec qui j'ai pu travailler. \\
+de l'équipe ainsi que les membres avec qui j'ai pu travailler \footnote{ Voir figure \ref{orga_sbl} }. \\
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.3]{../images/dia/organiramme_equipe_projet.png} \\
 \caption{Organigramme de l'équipe SuperBeeLive}
-\label{organigramme_equipe_superbeelive}
+\label{orga_sbl}
 \end{figure}
 
 Les laboratoires de recherche principaux sont l'IBMM (Institut Biomoléculaire Max Mousseron) 
@@ -222,13 +228,16 @@ Cependant, la possibilité d'un apprentissage lors d'école d'ingénieurs en sys
 Outre les différents capteurs installés sur la ruche (Son, vibration, temperature, hygrométrie, etc.), 
 les biologistes ont également exprimé le besoin de pouvoir capturer des comportements particuliers de la colonie. 
 De là vient la nécessitée de pouvoir gérer de nombreuses caméras sur la ruche prototype. 
-On pourra distinguer trois localisations distinctes pour ces caméras, correspondant à trois types de traitement d'image différents. \\
+On pourra distinguer trois localisations distinctes pour ces caméras \footnote{ Voir figure \ref{sch_cam} }, 
+correspondant à trois types de traitement d'image différents. \\
 
-\begin{center}
+\begin{figure}[!h]
+\centering
 \includegraphics[scale=0.3]{../images/dia/schema_camera.png}
-\end{center}
+    \caption{Schéma représentant où vont se trouver les différentes caméras}
+    \label{sch_cam}
+\end{figure}
 \begin{itemize}
-
   \item Les caméras situées sur la planche d'envol (1), tout d'abord, servent à surveiller 
   les alentours de la ruche. Elles permettent avant tout de
   mesurer le flux d'entrée/sortie des butineuses, mais également de détecter
@@ -278,12 +287,14 @@ pouvoir permettre de : \\
     \item Pouvoir revisualiser les vidéos 
     \item Pouvoir remodifier les vidéos 
 \end{itemize} \\
-Afin de répondre à ces besoins, nous avons imaginé l'application suivante : 
+Afin de répondre à ces besoins, nous avons imaginé l'application "Beeterface" \footnote{Voir figure \ref{sch_beeterface}}.
 
 \begin{landscape}
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.32]{../images/dia/schema_interface.png}
+\includegraphics[scale=0.3]{../images/dia/schema_interface.png}
+    \caption{Schéma reprenant la structure de Beeterface}
+    \label{sch_beeterface}
 \end{center}
 \end{figure}
 
@@ -301,8 +312,7 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \end{multicols}
 \end{landscape}
     \setlength{\columnseprule}{0,1}
-    \begin{multicols}{2}
-        \begin{small} 
+
 \dotfill \\
 
 \Large Fenêtre Principale - Beeterface \normalsize \\
@@ -333,8 +343,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "Vidéo en direct" = Direct de la caméra séléctionnée.
     \end{itemize}
 
-\columnbreak
-
 \dotfill \\
 
 \Large Fenêtre - Modifier la Vidéo\normalsize \\
@@ -350,8 +358,7 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "Informations Vidéos" : Informations d'où a été filmée la vidéo au moment de l'enregistrement.
         \item \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter "Information Capteurs" :
             avec les informations sur les capteurs au moment de l'enregistrement 
-    \end{itemize}
-    
+    \end{itemize}    
 \large \textbf{Boutons}\normalsize
      \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Couper" : Ouvre la fenêtre "Couper la vidéo".
@@ -363,15 +370,14 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "+" : Ouvre la fenêtre "Ajouter un Tag"
         \item "-" : Supprime un tag à sélectionner dans la liste.
     \end{itemize}
-    
-            \large \textbf{Vidéo}\normalsize
+\large \textbf{Vidéo}\normalsize
     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Vidéo enregistrée" : Visualisation de la vidéo à modifier avec les annotations dessus.
     \end{itemize}
 
-\columnbreak
-
 \dotfill \\
+\clearpage
+
 \Large Fenêtre - Annotation "name\_anotation"\normalsize \\
     Fenêtre qui permet de placer une nouvelle annotation. Elle change à quelques endroits en fonction
     du bouton utilisé pour appeler la fenêtre. \\
@@ -410,7 +416,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \end{itemize}
 
 \dotfill \\
-
 \Large Fenêtre - Informations \\ \normalsize 
     Fenêtre contenant des informations sur les différentes structures et leur éléments. Permet de retrouver les différentes ruches
     et leur spécificités, les auteurs, les infos contenues dans vidéos, les caméras etc. Ne permet pas de modification. \\
@@ -423,8 +428,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "Auteur", "Vidéo", "Ruche", "Caméra", etc : Onglets permettant de sélectionner quel type d'information on veut visualiser.
     \end{itemize}
     \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter une entrée permettant une recherche rapide ? \\
-
-\columnbreak
 
 \dotfill \\
 
@@ -447,7 +450,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \begin{itemize}[label=\ding{238}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
         \item "Vidéo enregistrée" : Visualisation de la vidéo à découper.
     \end{itemize}
-
 
 \dotfill \\
 
@@ -474,9 +476,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
     \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter la possibilitée de voir les tags ajoutés 
             les plus récent ? \\ 
 
-
-\columnbreak
-
 \dotfill \\
 
 \Large Fenêtre - Créer un Tag\normalsize \\
@@ -496,7 +495,6 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
             les plus récent ? \\ 
     \includegraphics[scale=0.05]{../images/logo/logo_ampoule} Ajouter une vérification des tags qui pourraient 
     ressembler au nouveau que l'utilisateur veut ajouter pour éviter les doublons ? \\
-
 
 \dotfill \\
 
@@ -522,24 +520,16 @@ Afin de répondre à ces besoins, nous avons imaginé l'application suivante :
         \item "Search Fichier" : Permet d'entrée un mot clé pour affiner la recherche. Se couple à la recherche en fonction du type de tri
         choisi.
     \end{itemize}
-
-
-\columnbreak
-
-
-        \end{small}
-    \end{multicols}
-
+\dotfill \\
 Bien sûr, celle-ci a connu beaucoup d'évolutions au cours de son développement : au fur et à mesure de l'avancement,
 nous nous rendions compte de certaines éventualités que nous n'avions pas imaginé et que nous avons intégré à la volée. 
 Ainsi, ce schéma correspond à l'application actuelle mais n'avait pas été vu comme tel au début. 
-\\
 
     \section{Contraintes} 
 Le langage de départ pour coder l'interface et ses fonctionnalités, que nous pourrons familiairement nommer partie moteur 
 et partie physique, m'a été imposé. \\
 C'est donc en C que j'ai dû réflechir à comment préparer et lier ces deux parties. Ce langage a été choisit tout simplement 
-parceque c'est  le langage que M. DRUON a pour habitute d'utiliser pour ce type de projet. \\
+parceque c'est  le langage que M. Druon a pour habitute d'utiliser pour ce type de projet. \\
 La partie moteur peut être développée en C sans trop d'ajout de librairies annexes autres que celles dites basiques 
 (stdlib, stdio). 
 Cependant, nous avons dû utiliser une librairie pour développer la partie physique. Nous pouvions utiliser GTK ou QT. 
@@ -549,15 +539,13 @@ Heureusement pour nous, en programmation l'outil GIT est excellent pour travaill
 j'ai pu l'utiliser concrétement lors de mon stage. Cependant, avant de commencer à utiliser l'outil, il a été préférable que 
 je me remette à niveau sur celui-ci et ai donc entammé la lecture du livre \textit{Pro Git} de Scott Chacon. %TODO 
 qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub,
-un service web d'hébergement pour Git, accessible sous le nom "superbeelive". %TODO ANNEXE lien github 
-
+un service web d'hébergement pour Git, accessible sous le nom "superbeelive" \footnote{Disponible sur https://github.com/superbeelive}.
 Le livre "Foundation of GTK+ Development" m'a servi de référence de base quant à la manière de manier les éléments. 
 Je me suis également aidée de divers tutoriels sur internet, mais surtout de la document officielle. %TODO Lien biblio 
 \\
 Glade, un logiciel permettant de créer une interface GTK avec des outils graphiques, est souvent utiliser pour créer une interface
 en GTK.
 Dans mon cas, je m'en suis servie en tant que bibliothèque pour voir et tester certains Widgets ainsi que leur fonctionnement.
-
 Cet utilitaire, certes plus rapide à prendre en mains, utilise en sortie des fichiers XML pour décrire l'interface ce qui, 
 au final, complique la portabilité de l'interface d'une version du logiciel à l'autre. \\ 
 J'ai donc préféré apprendre à utiliser GTK en ligne de code "brutes". Fastidieu au départ, 
@@ -574,8 +562,8 @@ appelés les Widgets. L'élément de base "GtkWidgets" contient quelques propri�
 A ces propriétés en sont ajoutés d'autres pour créer un nouvel élément. \\
 Au fur et à mesure, ces ajouts de propriétés ont permi de créer toute sorte de Widget : des textes, des labels, des tableaux, 
 des séparateur, des listes, des boutons... 
-Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements, nous permettant de savoir ce que l'on peut 
-faire avec nos Widgets en fonction de qui ils héritent. 
+Ces héritage et cette hierarchie des objets va nous construire un arbre d'élements \footnote{Voir figure \ref{arbo_widg}}, 
+nous permettant de savoir ce que l'on peut faire avec nos Widgets en fonction de qui ils héritent. 
 \begin{figure} [h!]
     \centering
         \includegraphics[scale=0.7]{../images/dia/arbo_widget.png} 
@@ -585,7 +573,6 @@ faire avec nos Widgets en fonction de qui ils héritent.
 Par exemple je veux changer un paramètre d'un élément "GtkSpinButton". Malheureusement, je ne trouve pas de fonction 
 affectant directement ce paramètre, par exemple la taille. Alors je vais regarder si chez ses parents je peux trouver 
 le paramètre voulu, à savoir chez "GtkEntry", et "GtkWidget". \\
-
 Chaque paramètre disponible pour les Widgets peut être changé directement à l'aide de fonctions retrouvable dans la très complète 
 documentation en ligne de GTK 3.0. Il est totalement déconseillé de changer directement la valeur des paramètres à la mains 
 en utilisant les pointeurs. Il faut partir du principe que chaque élément a son nombre de fonctions associées 
@@ -596,49 +583,43 @@ Une fois la façon dont les éléments et leurs paramètres sont gérés acquise
 D'abord, on va créer une fenêtre, soit une "GtkWindow" que l'on va appeler Window. Dans celle-ci, on ne peut y poser qu'un seul Widget. 
 C'est pour ça que nous avons les éléments "GtkContainers" : c'est ces containers que nous allons pouvoir structurer et placer tous 
 les autres éléments comme on le veut dans notre fenêtre. \\
-
 Le GtkContainer de base est la "GtkBox". A sa création, nous devons simplement indiquer si celle-ci va être horizontale ou verticale, 
 c'est à dire si les éléments que nous allons mettre dedans vont être placé de haut en bas ou de droite à gauche. 
 Une fois cette première "GtkBox" placée, le problème de limitation de place imposée par la "GtkWindow" n'en est plus un. 
 Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
 nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. 
-J'ai fais un schéma de placement de ces boites pour la fenêtre principal, win\_main. 
+Pour se faire une idée, j'ai réalisé un schéma de placement de ces boites pour la fenêtre principal, win\_main 
+\footnote{Voir Figure \ref{sch_box_win_main}}.
 \begin{figure}[!h]
     \centering
         \includegraphics[scale=0.5]{../images/dia/schema_bloc_mainwin.png} \\
         \caption{Schéma de placement des box pour win\_main}
         \label{sch_box_win_main}
 \end{figure}
-
 On peut voir que la "GtkBox" box\_principale prend toute la place de ma fenêtre "GtkWindow". Dans cette box\_principale, j'y ai rangé 
 verticalement box\_up et box\_down. Dans box\_down j'ai integré box\_left et box\_right horizontalement, me permettant d'avoir 
 quatre zones délimitées. \\
 Ensuite, j'ai créé des box pour mes éléments plus précis : dans box left j'ai directement intégré box\_video dans laquelle 
 se trouve la vidéo (pour le moment, une image fixe représentant là où la vidéo se trouvera par la suite). 
-
 Dans box right on va retrouver box\_info, box\_meta, box\_btn\_cam, box\_btn\_video, box\_info\_time et box\_file. 
 Chacune de ces box m'ont permit de ranger à l'intérieur les éléments que je voulais retrouver : 
 les boutons, les textes, les descriptions etc. 
-
 A noter qu'en plus de ces "GtkBox" j'ai également utilisé d'autres type de "GtkContainer". Des "GtkFrame", l'encadrement
 avec un titre autour de "Informations Capteurs" et "Informations Vidéo". Des "GtkGrid", permettant de placer les éléments 
 à la maniètre d'un tableau sans les bordures, ici utilisé pour le texte dans les deux encadrés "Informations". \\
 Un autre type de Gtkcontainer intéressant que je n'ai pas utilisé ici est le "GtkScrolledWindow". Celui-ci permet d'ajouter
 une barre de défilement afin d'afficher plus d'informations. \\
-Le résultat nous donne l'impression de ne pas voir toutes les boites clairement. \\
+Le résultat nous donne l'impression de ne pas voir toutes les boites clairement \footnote{Voir figure \ref{res_box_win_main}}. \\
 \begin{figure}[!h]
     \centering
         \includegraphics[scale=0.45]{../images/dia/schema_bloc_win_applique.png} \\
         \caption{Résultat du placement des box pour win\_main}
         \label{res_box_win_main}
 \end{figure}
-
 C'est dû au fait que les boites prennent toute la place qu'elle peuvent en fonction des widgets qu'elles contiennent. Ainsi, box principale 
 n'est pas clairement visible : elle ne sert que de support pour les autres "GtkContainers". 
-
 Maintenant que nous avons les deux principes de bases en tête, à savoir les éléments et les boîtes, on peut voir comment 
 tout cela se forme dans le code. \\
-
 GTK nécessite une organisation rigoureuse si on veut pouvoir s'y retrouver avec les éléments rapidement nombreux.
 Ainsi, j'ai voulu identifier les différentes étapes de la création d'un Widget et les séparer en 
 trois grandes parties pour m'y retrouver plus facilement. \\
@@ -647,7 +628,7 @@ trois grandes parties pour m'y retrouver plus facilement. \\
 La première chose à faire est de créer les Widgets et de les définir. La création est simplement la déclaration d'une variable 
 avec son type. 
 
-%Appartée o/
+%Appartée o/ %TODO
 Avant toute chose, notons que j'utilise des pointeurs pour toute mon application et que mes exemples 
 sont inspirés des fichiers win\_main.c et win\_main.h disponnibles en annexes 
 afin que vous puissiez vous y reporter pour voir des exemples plus complets et concrets. 
@@ -657,7 +638,6 @@ Ils permettent juste d'indiquer que nous sommes dans la définition de la fenêt
 De plus, les nom utilisés (label, box et window) n'existent pas dans win\_main. Ils ont été simplifiés ici, 
 mais leur équivalents sont facilements retrouvables dans win\_main.\\
 %Appartée \o
-
 Créons une fenêtre, une box et un label.\\
 \small Dans win\_main.h : 
 \begin{lstlisting} [frame=single]
@@ -668,8 +648,6 @@ GtkWidget* label ;  
 Ici, les éléments sont tous du type "GtkWidget", ce sera le cas pour la majorité de nos éléments lors de la 
 déclaration.
 Il arrive que, dans de rare cas, il soit nécessaire de les déclarer autrement : si c'est le cas, la documentation l'indiquera. \\ 
-
-
 Désormais, ces trois éléments existent. Maintenant il faut les définir, c'est à dire expliquer de quel type de Widget ils sont 
 et leur donner leur propriétés. \\
 \small Dans win\_main.c :
@@ -678,7 +656,6 @@ tmp->window = gtk_window_new (GTK_WINDOW_TOPLEVEL) ;
 \end{lstlisting}
 Ici, on utilise la fonction "gtk\_window\_new" pour indiquer que "window" est une fenêtre qui s'ouvre en premier plan 
 avec l'argument "GTK\_WINDOW\_TOPLEVEL". \\
-
 \small Dans win\_main.c :
 \begin{lstlisting} [frame=single]
 tmp->box_principal = gtk_box_new( GTK_ORIENTATION_VERTICAL, 0) ;
@@ -687,15 +664,12 @@ Comme dit plus haut, à la création d'une "GtkBox" on indique d'abord si on veu
 ou horizontalement. Le second argument permet de définir le nombre de pixel d'écart par défaut entre les éléments, 
 ici 0px, donc ils seront collés l'un à l'autre.  \\
 %TODO VERIFIER ARGUMENT  !!
-
 \small Dans win\_main.c :
 \begin{lstlisting} [frame=single]
 tmp->label = gtk_label_new("Je suis le texte du label") ; 
 \end{lstlisting}
 Le label nécessite lui aussi un argument, ici ce sera le texte qu'il affichera. 
 On peut laisser ce texte vide si on ne rempli pas les "".  \\
-
-
 Les exemples ci-dessus ont tous eu besoin d'une définition précise du Widget, avec à chaque fois au moins un paramètre à régler. 
 Il arrive parfoit que la création ne nécéssite aucun paramètre, et que des modification doivent être apportées ensuite. 
 Par exemple, si je veux que mon label ai une écriture plus stylisée, je peux utiliser :  \\
@@ -707,24 +681,20 @@ gtk_label_set_markup(GTK_LABEL(tmp->label),
 Ici, avant d'indiquer quel élément on veut modifier, il faut préciser quel type d'élement c'est.
 En effet, comme lors de la déclaration il est indiqué que le label est de type GtkWidget et que la fonction que l'on veut utiliser 
 ne s'applique que sur un GtkLabel, il est donc nécessaire de "forcer" GTK à considérer "tmp->label" comme un label.\\
-
 Il existe plein de fonctions différentes permettant de régler ce genre de paramètres sur les widgets, et il est parfois nécessaire 
 de faire appel à elles pour avoir un Widget correct. 
 Il est intéressant d'explorer les fonctions existantes afin de personnaliser au mieux notre interface. \\
 Une fois les Widgets créés, il faut maintenant les placer et indiquer qu'il faut les afficher. \\ 
 
-
     \subsection{Placement et affichage} \\
 Maintenant, nous allons appliquer ce qui a été expliqué plus haut pour placer les éléments. On va commencer par dire où 
 va se placer la box : \\
-
 \small Dans win\_main.c
 \begin{lstlisting} [frame=single]
  gtk_container_add (GTK_CONTAINER (tmp->window), tmp->box) ; 
 \end{lstlisting}
 GtkWindow hérite de GtkContainer, nous utilisons donc la fonction qui permet d'affecter un élément à un container. Le premier argument 
 indique le container où nous devons insérer un élément. Le second nous indique quel élément est à placer. \\
-
 Ensuite, nous faisons de même pour la box : \\
 \small Dans win\_main.c
 \begin{lstlisting} [frame=single]
@@ -733,10 +703,8 @@ gtk_box_pack_start(GTK_BOX(tmp->box_principal), tmp->label, FALSE, FALSE, 0) ;
 "box\_principal" étant de type GtkBox, nous utilisons cette fois la fonction qui lui est associée. 
 Comme pour "window", il faut indiquer la boîte concernée par l'élément à ajouter, mais cette fois-ci trois autres arguments 
 sont à renseigner concernant la manière dont les Widgets vont se comporter à l'intérieur de la box. \\ 
-
 Il faut savoir que par défaut les box allouent la même place à tous les Widgets qu'ils contiennent
 sans déborder sur le reste.\\
-
 \begin{itemize}
     \item Expand : peut être TRUE ou FALSE. Permet aux widgets de prendre plus de place si besoin si réglé sur TRUE. 
     \item Fill : peut être TRUE ou FALSE. Ne peut être actif que si Expand est aussi TRUE. Alloue la hauteur ou la largeur totale
@@ -751,8 +719,8 @@ Ainsi, à chaque fois que je place un élément dans une nouvelle box contenue e
 tabulation. Le rendu me permet de voir qui est à quel niveau. \\
 Petite précision, les éléments seront placés dans l'ordre de lecture du code. Ainsi, si votre "GtkBox" est créée en tant
 que box horizontale, l'élément placés en premier sera le plus à gauche, le suivant à sa droite et ainsi de suite. \\ 
-
-De plus, la figure \ref{org_win_main} représente cette indentation schématiquement pour visualiser ce principe de "poupées russes".
+Le diagramme de placement des Widget \footnote{Voir figure \ref{org_win_main}} permet de voir cette 
+indentation schématiquement pour visualiser ce principe de "poupées russes".
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.5]{../images/dia/diagramme_fenetre.png} \\
@@ -763,71 +731,59 @@ Une fois que les éléments sont placés dans les boîtes, ceux-ci sont tous col
 les espaces de bases indiqués lors de la création des box. %TODO Vérifier argument  
 Il faut indiquer comment ils doivent se placer. Pour mieux comprendre ce que nous allons faire, voici un 
 avant / après les fonctions que je vais présenter : \\ 
-
 %TODO image d'un avant après de main_win
-
 Tout d'abord, commençons par jouer avec les paramètres EXPAND et FILL des "GtkBox". Ils permettent de définir quels éléments seront 
 autorisés à s'agrandir en même temps que la fenêtre. Le mieux pour bien comprendre leur comportement, c'est de tester au fur
 et à mesure les différentes combinaisons expliquées plus haut. \\
-
 Comme pour la création et le placement, nous allons utiliser des fonctions pour indiquer ce que l'on veut faire avec les éléments.
 Ce type de fonction est utilisée sur les éléments de types "GtkWidget", et donc applicable sur tous ceux qui en héritent. Voici les
 deux fonctions et leur variables que j'ai le plus utilisé : \\
-
 \begin{lstlisting} [frame=single]
  gtk_widget_set_margin_top (GTK_WIDGET (tmp->label), 5 ) ; 
 \end{lstlisting}
 Permet d'appliquer une marge sur le haut. On précise sur quel Widget l'appliquer puis la taille en px de la marge.
-Cette fonction existe aussi pour bottom, end et start qui correspondent au bas, à la droite et la gauche du Widget.\\
+Cette fonction existe aussi pour bottom, end et start qui correspondent au bas, à la droite et la gauche du Widget
+\footnote{Voir figure \ref{sch_pla_top}}.\\
 \begin{figure} [!h]
     \centering
         \includegraphics[scale=0.5]{../images/dia/top_bottom_etc.png}
         \caption{Schéma du placement de start, end, top, bottom}
         \label{sch_pla_top}
 \end{figure}
-
-
 \begin{lstlisting} [frame=single]
  gtk_widget_set_halign ( GTK_WIDGET (tmp->label), GTK_ALIGN_START ) ;
 \end{lstlisting}
 Les éléments se mettent par défaut au centre de leur place disponible. Cette fonction permet 
 de forcer un Widget à se placer autrement : ici, on force l'alignement horizontal (halign) à être en début de zone, 
 soit à gauche (START). \
-
 On peut aussi retrouver des fonctions pour préciser le comportement de la fenêtre, comme :
 \begin{lstlisting} [frame=single]
 gtk_window_set_title (GTK_WINDOW (tmp->window), "BEETERFACE") ; 
 \end{lstlisting}
 qui permet de nommer la fenêtre "BEETERFACE". \\
-
 \begin{lstlisting} [frame=single]
 gtk_window_set_default_size ( GTK_WINDOW (tmp->window), 30, 30 ) ; 
 \end{lstlisting}
 Définit la taille minimale de la fenêtre, sachant qu'elle prend en compte la place nécessaire aux éléments pour pouvoir 
 être placés et que si la taille indiquée est trop petite, alors la fenêtre prendra la place minimale possible 
 pour afficher les éléments. \\
-
 Avec ces outils et un peu de recherches sur la documentation en ligne, on peut maintenant créer n'importe qu'elle fenêtre 
 comme on le souhaite. 
 Attention, à cette étape nous avons juste définit l'interface. Il reste encore une étape pour pouvoir afficher les éléments, sinon
 les éléments seront créés, placés... mais invisibles ! 
-
 Personnelement, j'aime la faire en deux étapes. D'abord l'affichage de la fenêtre avec : \\
 \begin{lstlisting} [frame=single]
 gtk_widget_show (tmp->window) ;
 \end{lstlisting}
-
 Puis de la box principale avec tout ce qu'elle contient : \\
 \begin{lstlisting} [frame=single]
 gtk_widget_show_all (tmp->box_principal) ; 
 \end{lstlisting}
-
 Sachant que l'affichage se fera dans l'ordre annoncé, si vous avez peur que le logiciel apparaisse "étape par étape", c'est à 
 dire avec les éléments apparaissant au fur et à mesure laissant au début une fenêtre vide restant affichées quelques secondes, 
 préférez mettre l'affichage de la box principale avant l'affichage de la fenêtre. Ainsi, la box et ses enfants seront déjà générée 
 et n'auront besoin que de leur support, soit la window. Cependant, cette question se pose uniquement si l'application 
 à afficher nécessite beaucoup de ressources. \\
-
 Il ne reste plus qu'à lier des fonctions aux différents éléments pour que notre application soit utilisables.\\
         
         \subsection{Signaux et fonctions} 
@@ -840,7 +796,6 @@ mais le développement des fonctionnalités est ce qui prend le plus de temps. E
 pouvoir être prête le jour où il faudra faire tous les liens, j'ai déjà fait quelques tests pour comprendre les principes.
 Les liens entre l'interface et les fonctions vont se passer dans le main. Dans notre code, il est présent dans beeterface.c.\\
 %TODO A AJOUTER EN ANNEXE 
-
 Avant tout, il faut noter que quelques fonctions sont obligatoires pour le bon fonctionnement de GTK. Les voici : \\
 \begin{lstlisting} [frame=single]
 int main(int argc, char *argv[])     
@@ -965,7 +920,7 @@ N'ayant pas d'habitudes particulières en code, j'ai été conseillée pour le s
 soit facilement lisible. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
 la déclaration d'une structure et de ses fonctions et la définitions des fonctions.
 
-De plus, M. DRUON a rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois, passant 
+De plus, M. Druon a rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois, passant 
 ensuite à CMake pour générer le Makefile automatiquement ensuite. \\
 Une fois cette façon de faire mise en place pour la partie moteur, j'ai voulu l'appliquer à la partie
 graphique. Ainsi, un couple de .c et .h a aussi été créé pour chacunes des fenêtres, le .h contenant 
@@ -999,9 +954,16 @@ Même principe pour le Projet : il contient tous les éléments permettant le fo
 d'utilisation que décrite pour l'interface. \\
 Queen est le paquet général, il contient Interface et Projet. Son nom est en l'honneur de la reine des abeille : 
 un paquet pour les gouverner tous ! \\
-\\
-Voici le schéma général, décrivant qui contient qui :%TODO
-\\
+Afin de vérifier que toute cette structure soit cohérente et pour l'améliorer, Mr Druon a réalisé un diagramme 
+avec toutes les structures \footnote{Voir figure \ref{dia_struct}}.
+\begin{landscape}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.3]{../images/dia/beeterface_structs.png}
+    \caption{Diagramme des structure de Beeterface}
+    \label{dia_struct}
+\end{figure}
+\end{landscape}
 Et voici un bout de code représentant ce qu'on peut faire avec les paquets : 
 \begin{lstlisting}
 callback\_auteur(GtkWidget * widget, gpointer data)
@@ -1025,7 +987,6 @@ callback\_auteur(GtkWidget * widget, gpointer data)
 \end{lstlisting}
 Dans cet exemple on retrouve la fonction "auteur\_win\_fill", fonction écrite dans win\_auteur\_callbacks.c et définie
 dans win\_auteur.h. J'ai séparé les fonctions utilisées dans les callbacks afin de les retrouver facilement. \\
-
 Voici donc comment le projet a été réflechi et construit. Normalement avec ces détails, un développeur qui voudrait reprendre
 le projet pourrait retrouver les données facilement. Dans cette optique, nous avons également prévu d'utiliser %TODO retrouver le nom de l'utilitaire 
 l'utilitaire ????? pour documenter le code, quelques exemples sont d'ailleurs déjà présents, mais la documentation 
@@ -1033,78 +994,71 @@ complète n'était pas une priorité, c'est pourquoi cette tâche a été laiss�
        
         \subsection{Traitement de la vidéo}
 La partie la plus complexe de ce projet à mon avis est le traitement de la vidéo. Elle s'attaque à des sujets sur lesquels j'ai 
-encore beaucoup à apprendre. C'est pourquoi durant le stage, c'est plus M. DRUON qui s'en est occupé. De mon côté, j'ai surtout
+encore beaucoup à apprendre. C'est pourquoi durant le stage, c'est plus M. Druon qui s'en est occupé. De mon côté, j'ai surtout
 pris en compte ce qui allait être fait avec et ce que j'allais devoir prévoir au niveau de l'interface pour que cela fonctionne. \\
 Globalement, l'idée de ce travail est dans un premier temps d'afficher la vidéo sur l'application grace à 
 la librairie FFMPEG. Afin de me faciliter
-le travail de lien entre les boutons et la vidéo, M. DRUON a prévu de créer plusieurs fonctions type, comme avancer la vidéo, la 
+le travail de lien entre les boutons et la vidéo, M. Druon a prévu de créer plusieurs fonctions type, comme avancer la vidéo, la 
 mettre en pause, la reculer, pour qu'ensuite elles soient affectées à l'interface. \\
 Dans un second temps, il faut pouvoir enregistrer la vidéo une fois qu'elle est annotée. L'idée est de faire en sorte que les annotations
 soient des PNG appliqués au dessus de l'image et qu'ils soient transportés dans les mêmes flux que les flux vidéos. \\
 
 Ce travail, bien qu'il a été commencé, devrait être fini aux alentours de Septembre, c'est pourquoi sa description ici
 est surtout théorique. \\
-
-
-        \subsection{Ce qui reste à faire}
+        \subsection{Ce qu'il reste à faire}
 Une application prenant du temps à être développée, il est normal que celle-ci n'ai pas été finie en 3 mois. Pour pouvoir se situer
 dans l'avancement de ce projet, j'ai établi une liste non exhaustive de ce qui, à l'heure actuelle, resterai à faire : \\ 
-
 \begin{itemize}
     \item Etablir le système de sauvegarde des données
     \item Configurer la façon dont les données seront envoyées sur le serveur (fréquence d'envoi, envoi automatique ou manuel etc) 
     \item Coder la façon dont les tags vont être  gérés pour le tri des vidéos 
     \item Continuer l'affichage vidéo
 \end{itemize} 
-\\
 De manière plus personnelle, j'aurai également aimé pouvoir retravailler la structure interne de beeterface.c qui est, à mon sens,
 un peu brouillon. \\
-\\
 Pour finir cette présentation de l'application, voici quelques screenshots du travail qui a été effectué.
 Le travail fu long et n'a cessé d'évoluer : au fur et à mesure, j'aurai appris de nouvelles techniques, de nouvelles façon de faire 
 et aurais profité de nombreux conseils d'un développeur sénior. \\
-
-
 \chapter{Acquis et compétences}
     \section{Missions annexes}
         \subsection{Gestion du Réseau du Rucher}
-Le projet se basant sur du traitement et de la récolte de données, une infrastructure réseau est à prévoir. Pour le moment,
-nous avons surtout préparé le terrain.  \\
+Le projet se basant sur du traitement et de la récolte de données, une infrastructure réseau est à prévoir 
+\footnote{Voir figure \ref{plan_res}}. Pour le moment, nous avons surtout préparé le terrain.  \\
 Les données seront récoltées au rucher, puis acheminées vers le serveur installé au CNRS. Ce serveur les stockera et les traitera, 
 les envoyant à différents endroits celon le besoin : vers les applications Beeterface pour de l'annotation, vers la future vitrine Web
 etc. \\
 Seulement à mon arrivée il n'était pas encore raccordé au réseau : tout le long de mon stage,  nous avons dû attendre que
 le CNRS nous installe la fibre. \\
-
-Voici un schéma, de notre infrastructure réseau prévue à ce jour \\.
-%TODO SCHEMA DU RESEAU
-
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.3]{../images/dia/plan_reseau.png}
+    \caption{Plan prévisionnel du réseau}
+    \label{plan_res}
+\end{figure}
 Même si un biologiste annotait les vidéos avec Beeterface directement au rucher, les vidéos devront obligatoirement passer une première 
 fois vers le serveur puis revenir au rucher. Ainsi, entre l'envoi de vidéos venant de caméras pouvant atteindre de hautes
 qualités et la réception de ces mêmes vidéos, la bande passante et le matériel réseau installé sur place 
 doivent pouvoir supporter de tels charges. \\
-
 C'est pourquoi le technicien s'occupant de l'installation de la fibre devait connaître quel trafic était prévu de manière un
-peu plus détaillée. Afin de répondre à cette question, nous avons effectué un récapitulatif des caméras prévues. 
-
-
-\includegraphics[scale=0.2]{../images/annexes/camera_bp.png} 
-\includegraphics[scale=0.2]{../images/annexes/camera_bp2.png} 
-
+peu plus détaillée. Afin de répondre à cette question, nous avons effectué un récapitulatif des caméras prévues 
+\footnote{Voir figure \ref{tab_recap_cam}}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.25]{../images/annexes/camera_bp.png} 
+    \includegraphics[scale=0.25]{../images/annexes/camera_bp2.png} 
+    \caption{Tableau récapitulatif des futures caméras}
+    \label{tab_recap_cam}
+\end{figure}
 Deux prototypes sont présentés, puisque nous comptons acceuillir deux prototypes de ruches plates : la notre et 
 celle qui sera envoyées à nos partenaires Allemands ensuite. \\
-
 Les caméras pour la planche d'envol et pour le module d'analyse de pollen seront en couleur. Celles pour les cadres de la ruches
 seront monochrome : il avait été prévu des caméras couleurs à la base, mais d'après les biologistes nous en auront pas besoin pour 
 repérer ce que nous voulons. Ainsi, nous gagnons en bande passante, les caméras monochrome étant moins gourmande que les couleurs 
 en données. \\
-
 En plus des caméras, il faut prévoir le poid des données des capteurs de la carte éléctroniques. Ces données sont négligeable par
 rapport au reste mais sont à prévoir. Ces capteurs sont représentés dans le document par une des caméras "Cadres Ruches". 
-
 Enfin, calculs prévoient également l'en-tête TCP-IP nécéssaire à l'envoie des données, cette prévision étant sur évaluée 
 pour avoir de la marge. Ainsi, on ajoute 20\% de données supplémentaire.\\
-
 Maintenant, nous savons un peu plus quels seront les données qui transiteront sur notre réseau. Nous avons aussi
 quelques contraintes pour le choix du matériel réseau qui sera acheté dès que nous pourrons utiliser le réseau au rucher. \\
 Le Switch servira à connecter les caméras, les capteurs, l'ordinateur déjà sur place et notre potentiel matériel supplémentaire
@@ -1116,25 +1070,24 @@ Ce serveur doit être commandé chez DELL pour un budget de 15k€ maximum. \\
 J'ai déjà fait quelques recherches sur leur site afin d'avoir une idée de ce qui existait mais la commande étant reportée à cause
 du temps d'installation de la fibre au rucher, ces achats sont décalés à plus tard pour le moment.\\ 
 
-
-
         \subsection{Tests pour la vitrine Web}
 En plus de l'installation réseau pour la récolte des données, il faudra aussi penser à comment nous allons présenter nos 
 résultats. Ce travail servant de présentation, il est moins urgent que la réalisation des captures de données et à donc été mis de 
 côté pendant mon stage. Cependant, j'ai passé une petite journée à me familiariser avec ce type d'installation en faisant 
-quelques tests sur un serveur de test prêté par M. DRUON. Cette journée a surtout été consacrée à de la documentation en amont,
+quelques tests sur un serveur de test prêté par M. Druon. Cette journée a surtout été consacrée à de la documentation en amont,
 avec le lecture de quelques tutoriels sur Internet. J'en ai aussi profité pour relire les cours et 
 TP du DUT en lien avec les serveurs Webs et le développement Web : base de donnée (M2104), langage HTML/CSS (M1106, M2105)
 installation d'apache). 
-
 Pour ce qui est du contenu de cette vitrine Web, je n'ai pas concrètement travaillé dessus mais ai imaginé à quoi celle-ci pourrait
-ressembler. \\
-%TODO schéma structure web simple  
-
-Voici un schéma global de ce à quoi pourrait ressembler le site. Ceci n'est qu'une proposition qui n'a pas encore
-été discutée avec le reste de l'équipe mais que je leur fourni. \\
+ressembler \footnote{\ref{sch_web}}. \\
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{../images/dia/sch_web.png}
+    \caption{Proposition de schéma pour la vitrine Web}
+    \label{sch_web}
+\end{figure}
+Ce n'est qu'une proposition qui n'a pas encore été discutée avec le reste de l'équipe mais que je leur fourni. \\
 Pour moi, le site pourrait être construit en quatre parties : 
-
 \begin{itemize}
     \item  L'accueil, expliquant ce qu'est notre projet, qui en sont les acteurs
 ce qu'on veut en ressortir etc. 
@@ -1153,70 +1106,53 @@ Bien sûr, l'élaboration d'un tel site nécessite des connaissances en web desi
 sur la question parceque j'ai trouvé le sujet interessant et aimerai à l'avenir pouvoir m'y intéresser un peu plus. \\ 
 
         \subsection{Aide pour les projets de première année à l'IUT de Béziers}
-
 En plus de mon aide sur les travaux cités si dessus, ma présence en tant que stagiaire a aussi été bénéfique pour aider M. Druon 
 dans une tâche se détachant un peu du monde de la Recherche : aider durant les projets des étudiants en Réseaux et Télécommunications 
 de première année. \\
 Ce travail reste en lien avec SuperBeeLive puisque l'IUT de Béziers est partenaire du projet et qu'un des groupe d'étudiants (Groupe 13) 
 a fait son projet sur la température et l'humidité dans la ruche. \\
-
 C'est pour cela que durant toute ma durée du stage je me suis déplacée sur l'IUT de Béziers pour travailler les jeudis pour être
 disponible, M. Druon et moi, pour les étudiants de RT1. Pendant ces jeudi ci, je travaillais le matin sur Beeterface et 
 l'après midi je continuais de coder en salle projet pour répondre à d'éventuelles question. \\
-
 J'ai également eu à m'occuper des commandes des étudiants : récolter leur liste de demande, les regrouper pour faire les commandes
 aux fournisseur, réceptionner, inventorier et ranger. \\
 %TODO Photo du rangement des commandes 
-
 Ma présence sur l'IUT s'est intensifiée pendant les deux semaines où les étudiants étaient à temps plein sur leur projet, du 18 au 30 Juin. \\
-
 Durant ces deux semaines, j'ai été affectée au bureau se trouvant à côté du laboratoire de l'IUT où j'avais rangé tous le matériel 
 destiné aux projet.
 J'ai donc servit de régie, car même après la première distribution du matériel demandé par les étudiants, beaucoup avaient 
 besoin de pièce de rechange, de nouvelles pièces etc. \\
-
 Cela m'a permit de continuer à travailler sur mon code, de manière moins intensive que lorsque je me trouvais au LIRMM, tout en
 aidant M. Druon en le déchargeant des demandes de matériel. 
 J'ai également aidé à noter les présences et ai fait attention au travail fourni par les étudiants afin de donner un avis extérieur pour
 les notation.
-
 Etant souvent dans les couloirs où ils travaillaient, j'ai aussi répondu à beaucoup de questions et demandes d'aide : 
 j'essayai de répondre au mieux, de les diriger pour qu'ils trouvent la réponse d'eux même ou de les envoyer voir M. Druon si 
 j'estimais que la question necessitait un oeil plus expert. \\
-
 Au moment des soutenances, j'ai participé à un Jury devant normalement se tenir avec deux professeurs, mais M. Druon se retrouvant 
 finalement seul dans celui-ci par manque d'effectif, c'est en binome que nous avons écouté le travail des étudiants.
 D'autres deuxièmes années ou redoublant se trouvaient dans les trois autres jury avec d'autres professeurs. 
-
 L'exercice de notation a été un peu difficile : bien qu'ayant un peu peur de noter injustement,
 je savais très bien que la note qui allait être la plus importante serait celle 
 du professeur. Néanmoins, c'était très interessant de se retrouver de l'autre côté et d'évaluer des travaux que, moi même, 
 j'avais dû effectuer il y a un an. \\
-
-
 Ces missions annexes m'auront permit d'appliquer concretement plusieurs notions vues pendant le DUT. \\
 Théorique d'abord, avec les calculs pour la bande passant nécessaire pour le rucher et le questionnement sur le matériel à commander, ainsi
 qu'avec les recherches autours du développement et l'installation web. 
-
 J'ai aussi pu revoir beaucoup de sujets pratiques avec les étudiants de première année : beaucoup de leur question tournaient autours 
 de choses que j'avais déjà fait, en cours ou en projet,  mais sur lesquels il me manquait expériences et connaissances à ces moments là et
 qui ne me posent plus soucis aujourd'hui. \\
 
-
     \section{Compétences développées} \\
-
 Lors de stage de fin d'étude, j'ai pu appliquer beaucoup de connaissances que j'ai acquises pendant ces deux dernières années,
 mais aussi apprendre beaucoup à différents niveaux.\\
-
 Mon rôle principal dans l'équipe n'étant pas de faire de l'administration réseaux et systèmes tous les jours, 
 j'ai pu utiliser mes connaissances dans ce domaine d'une autre manière qu'en administrant des infrastructures déjà installées. \\ 
 C'est surtout la théorie qui m'aura été utile, voyant plus le rôle d'un ingénieur que d'un technicien. 
-
 Mes journées de travail se passant en grande majorité sur un ordinateur, j'ai au quotidien fais de l'administration Unix et ai
 utilisé des outils que je ne connaissais que partiellement avant. Ainsi, mon but était d'être plus rapide avec ces outils 
 et j'ai donc appris des raccourcis clavier et des techniques que me conseillaient les personnes autours de moi pour optimiser 
 mon temps. \\
-
 De plus, j'ai ensuite eu la chance d'avoir un ordinateur fourni par le LIRMM, également sous Unix.
 Comme cette machine m'était destinée, j'ai pu passer du temps à la configurer comme je le voulais : 
 installation d'une interface graphique (i3), configuration de VIM, d'un terminal personnalisé, personnalisation des couleurs 
@@ -1225,47 +1161,34 @@ Si je considère cette partie personnalisation, comme une compétence développ�
 d'avoir autours une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une 
 journée pour travailler là dessus. \\
 Je pense ainsi avoir aujourd'hui bien plus d'aisance derrière une machine sous Unix qu'il y a 3 mois. \\
-
-
 J'ai aussi beaucoup appris pendant les deux semaines d'encadrement d'étudiant. Même si je n'avais pas le statut de professeur 
 ou de vacataire, ma place en tant que "seconde" de M. Druon auprès des premières années était bien ancrée 
 et m'a permi de voir le nombre de compétences nécessaire pour faire un tel travail : patience, organisation, 
 capacité à expliquer les concepts et endurance s'ajoutent aux connaissances nécessaire pour aider des étudiants. 
-
-
 Enfin, les compétences que j'ai le plus développées sont bien entendu celles autours de la programmation. 
 À mon arrivée dans l'équipe, je ne pensais pas que j'allais autant me consacrer au code : je n'étais pas très à l'aise avec ça 
 pendant mes deux années de DUT et avais un peu peur de me lancer dans des projets d'envergures dans ce domaine. 
-
 Mais une fois sur place et lancée, j'ai appris énormément en peu de temps. Je pense même pouvoir dire que j'ai rattrapé le retard 
 que j'avais pris lors de mon DUT avec ces trois mois presque intensif sur le sujet. \\
-
 J'ai bien mieux compris comment utiliser les outils de compilations et comment cette étape se déroulait. L'algorithmie m'est bien moins
 effrayante, le langage C est devenu pour moi une référence et je continue d'en apprendre dessus régulièrement. 
 Il ne me reste d'ailleurs plus qu'un pas avant d'attaquer le langage objet grace à GTK : cette partie de la programmation très graphique
 me plaît énormément et c'est ce qui, je pense, m'a réconciliée avec la programmation. \\
-
 Désormais, je travaille beaucoup avec GIT sur GitHub, en découvrant des projets disponibles dessus et en partageant mes scripts,
 mes configurations Unix etc. 
-
 En soit, j'aurai appris sur beaucoup de sujets différent, plus que ce que je n'aurai pu l'imaginer.
 J'ajoute aussi qu'au moment où j'écris ces lignes, j'apprend à me servir de Latex, un langage de composition de document, 
 puisque je rédige mon rapport de stage avec cet outils. 
 
-
 \chapter{Conclusion}
-
 Ces trois mois de stages auront été formateurs pour moi sur plein d'aspects. Ayant déjà connaissance du travail en entreprise depuis un an
 avec un boulot d'été que j'avais eu dans une entreprise de développement logiciel, j'ai pu découvrir un autre milieu de travail : 
 la recherche. \\
 Dans ce cadre, notre équipe de projet était moins souvent réunies, vu que ce sont plusieurs laboratoires qui travaillent ensemble, 
 mais elle n'en reste pas soudée et très agréable. Les trois personnes avec qui j'ai le plus eu de contact, Sébastien Druon, 
 Capucine Carlier et Matthieu Rousset étaient tous trois présents à leur niveau pendant mon stage.  \\
-
-)
-
-
 %TODO FINIR CONCLUSION
+
 \chapter{Bibliographie}
 
 NOM, Prénom (du ou des auteurs). Titre, sous titre. Lieu de publication, Editeur, Année. 

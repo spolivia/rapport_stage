@@ -66,10 +66,10 @@
 \chapter*{Remerciements}
 
 J’adresse mes remerciements aux personnes qui m’ont permis de réaliser ce stage dans l’équipe de SuperBeeLive. \\
-Tout d’abord Matthieu ROUSSET, initiateur du projet SuperBeeLive à l'IBMM (Institut Biomoléculaire Max Mousseron) 
+Tout d’abord Matthieu Rouseet, initiateur du projet SuperBeeLive à l'IBMM (Institut Biomoléculaire Max Mousseron) 
 qui m’a accueilli au sein de son équipe. \\
 
-Ensuite, Capucine CARLIER pour son accueil, pour ses nombreuses explications biologiques sur les abeilles ainsi que sa disponibilité 
+Ensuite, Capucine Carlier pour son accueil, pour ses nombreuses explications biologiques sur les abeilles ainsi que sa disponibilité 
 afin de comprendre au mieux les enjeux et les besoins des biologistes pour mon projet. \\
 
 Sébastien Druon pour m’avoir encadré, aidé à m’intégrer dans le milieu de la recherche et sur une multitude 
@@ -77,6 +77,10 @@ de sujets, aussi bien du point de vu universitaire que sur les tâches qui m’o
 
 Enfin, toute l'équipe universitaire de l'IUT de Béziers qui m'aura appris sur beaucoup de sujets et rendu l'apprentissage
 de différents domaines très intéressants. 
+
+
+J'insère le premier \cite{ref}, le second \cite{ref2}, le troisième \cite{ref3}, le quatrième \cite{ref4}, le cinquième \cite{ref5} et le sixième \cite{ref6}.
+
 
 \tableofcontent
 
@@ -179,14 +183,14 @@ de l'équipe ainsi que les membres avec qui j'ai pu travailler \footnote{ Voir f
 \end{figure}
 
 Les laboratoires de recherche principaux sont l'IBMM (Institut Biomoléculaire Max Mousseron) 
-et le CNRS (Centre National de la Recherche Française) sont représentés respectivement par Matthieu ROUSSET et Jean-Baptsite THIBAUD, 
+et le CNRS (Centre National de la Recherche Française) sont représentés respectivement par Matthieu Rouseet et Jean-Baptsite Thibaud, 
 tous deux chercheurs. \\
 Les autres laboratoires actifs dans ce projet sont le LIRMM (Laboratoire d'Informatique, de Robotique, 
 et de Microélectronique de Montpellier) et le LMGC (Laboratoire de Mécanique et Génie Civil). En plus de ces structures, 
 des partenaires universitaires comme l'IUT de Béziers et l'Université de Wageningen, ouvrant à l'international,
 permettent d'intégrer des étudiants. \\
 Me concernant, j'ai été recrutée par l'IBMM et ai travaillé au LIRMM, travaillant principalement avec Mr Druon et 
-Mr Triboulet. Les biologistes avec qui nous avons le plus été en contact lors de mon stage sont Matthieu ROUSSET et Capucine CARLIER. \\
+Mr Triboulet. Les biologistes avec qui nous avons le plus été en contact lors de mon stage sont Matthieu Rouseet et Capucine Carlier. \\
 
 
 \section{Mon rôle durant le stage}
@@ -653,13 +657,14 @@ Avant toute chose, notons que j'utilise des pointeurs pour toute mon application
 sont inspirés des fichiers win\_main.c et win\_main.h disponibles en annexes 
 afin que vous puissiez vous y reporter pour voir des exemples plus complets et concrets. 
 La structure en .c/.h et l'explication des pointeurs utilisés sont décrits dans la partie "Les structures" de 
-"Définition des fonctionnalités". Pour le moment, ne prenons pas en compte les "tmp-\>" placés devant les noms des éléments.
+"Définition des fonctionnalités". Pour le moment, ne prenons pas en compte les "tmp->" placés devant les noms des éléments.
 Ils permettent juste d'indiquer que nous sommes dans la définition de la fenêtre win\_main.
 De plus, les noms utilisés (label, box et window) n'existent pas dans win\_main. Ils ont été simplifiés ici, 
 mais leurs équivalents sont facilements retrouvables dans win\_main.\\
 %Appartée \o
+
 Créons une fenêtre, une box et un label.\\
-\small Dans win\_main.h : 
+\small Dans win\_main.h : \normalsize
 \begin{lstlisting} [frame=single]
 GtkWidget* window ; 
 GtkWidget* box ;   
@@ -670,13 +675,13 @@ déclaration.
 Il arrive que, dans de rares cas, il soit nécessaire de les déclarer autrement : si c'est le cas, la documentation l'indiquera. \\ 
 Désormais, ces trois élément existent. Maintenant il faut les définir, c'est-à-dire expliquer de quel type de Widget ils sont 
 et leur donner leurs propriétés. \\
-\small Dans win\_main.c :
+\small Dans win\_main.c : \normalsize
 \begin{lstlisting} [frame=single]
 tmp->window = gtk_window_new (GTK_WINDOW_TOPLEVEL) ;
 \end{lstlisting}
 Ici, on utilise la fonction "gtk\_window\_new" pour indiquer que "window" est une fenêtre qui s'ouvre en premier plan 
 avec l'argument "GTK\_WINDOW\_TOPLEVEL". \\
-\small Dans win\_main.c :
+\small Dans win\_main.c : \normalsize
 \begin{lstlisting} [frame=single]
 tmp->box_principal = gtk_box_new( GTK_ORIENTATION_VERTICAL, 0) ;
 \end{lstlisting}
@@ -684,7 +689,7 @@ Comme dit plus haut, à la création d'une "GtkBox" on indique d'abord si on veu
 ou horizontalement. Le second argument permet de définir le nombre de pixels d'écart par défaut entre les éléments, 
 ici 0px, donc ils seront collés l'un à l'autre.  \\
 %TODO VERIFIER ARGUMENT  !!
-\small Dans win\_main.c :
+\small Dans win\_main.c : \normalsize
 \begin{lstlisting} [frame=single]
 tmp->label = gtk_label_new("Je suis le texte du label") ; 
 \end{lstlisting}
@@ -693,7 +698,7 @@ On peut laisser ce texte vide si on ne remplit pas les "".  \\
 Les exemples ci-dessus ont tous eu besoin d'une définition précise du Widget, avec à chaque fois au moins un paramètre à régler. 
 Il arrive parfois que la création ne nécessite aucun paramètre, et que des modification doivent être apportées ensuite. 
 Par exemple, si je veux que mon label ait une écriture plus stylisée, je peux utiliser :  \\
-\small Dans win\_main.c
+\small Dans win\_main.c \normalsize
 \begin{lstlisting} [frame=single]
 gtk_label_set_markup(GTK_LABEL(tmp->label), 
                     "<span foreground=\"black\" font=\"10\"><b>Je suis le label stylisée avec du bold</b></span>"); 
@@ -709,7 +714,7 @@ Une fois les Widgets créés, il faut maintenant les placer et indiquer qu'il fa
     \subsection{Placement et affichage} \\
 Maintenant, nous allons appliquer ce qui a été expliqué plus haut pour placer les éléments. On va commencer par dire où 
 va se placer la box : \\
-\small Dans win\_main.c
+\small Dans win\_main. \normalsize
 \begin{lstlisting} [frame=single]
  gtk_container_add (GTK_CONTAINER (tmp->window), tmp->box) ; 
 \end{lstlisting}
@@ -1236,22 +1241,8 @@ C'est d'ailleurs avec une grande joie que je rejoins l'équipe de SuperBeeLive p
 Je vais donc encore pouvoir suivre l'évolution du projet et finir ce que j'ai commencé, que ça soit l'application, la mise en place du 
 réseau et pouvoir commencer la vitrine web et les cartes électroniques.  \\
 
-\chapter{Bibliographie}
+\bibliography{biblio}
 
-NOM, Prénom (du ou des auteurs). Titre, sous titre. Lieu de publication, Editeur, Année. 
-
-KRAUSE, Andrew. \textbf{Foundations of GTK+ Development, Build sophisticated graphical applications using one of the world's most powerful cross-platform toolkits !.} New York, APRESS, 2007. Broché [EN] \\
-\textbf{GTK+ 3 Reference Manual}. 2014, Consulté d'Avril à Juillet 2019. Disponible sur : <https://developer.gnome.org/gtk3/stable/>. En ligne. [EN] \\
-BODNAR, Jan. \textbf{GTK+ tutorial.} zetcode.com, last modified July 20, 2015. Consulté en Avril 2019. Disponible sur : <http://zetcode.com/gui/gtk2/>. En ligne. [EN] \\
-\textbf{LaTeX, WikiBooks.} Dernière modification 14/06/2017. Consulté en Juillet 2019. Disponible sur : <https://fr.wikibooks.org/wiki/LaTeX>. En ligne. [FR] \\
-KERNIGHAN, Brian W., RITCHIE, Dennis M.. \textbf{Le Langage C, Norme ANSI, 2e édition.} Malakoff, 2014, DUNOD. Broché [FR] \\
-ILIC, Jovica. \textbf{Mastering Vim Quickly, From WTF to OMG in no time.} Berlin, Germany, Jolesoft, 2018. Format Kindle [EN] \\
-CHACON, Scott, STRAUB, Ben. \textbf{Pro Git, Tout ce que vous devez savoir sur Git, Seconde Edition.} APRESS, 2014. Format Kindle [FR] \\
-DELANNOY, Claude. \textbf{Programmer en langage C, 5e édition, Cours et exercices corrigés.} Saint-Germain, EYROLLES, 2009. Broché [FR] \\
-OETIKER, Tobias, PARTL, Hubert, HYNA, Irene, SCHLEGL Elisabeth. \textbf{The Not So Short Introduction To LaTex 2", Or LaTeX 2" in 139 minutes.} German, GNU General Public License, Version 6.2, 28/02/2018.
-LANDGRAF T, ROJAS R, NGUYEN H, KRIEGEL F, STETTIN K. \textbf{Analysis of the waggle dance motion of honeybees for the design of a biomimetic honeybee robot.}, 2011. Disponible sur : <https://www.ncbi.nlm.nih.gov/pubmed/21857906>. En ligne [EN] \\
-\textbf{Varroa}, Wikipedia. Dernière modification 30/04/2019, consulté le 01/05/2019. Disponible sur : <https://fr.wikipedia.org/wiki/Varroa>. En ligne. [FR]\\
-\textbf{Vespa velutina}, Wikipedia. Dernière modifictation 23/06/2019, consulté le 01/05/2019. Disponible sur <https://fr.wikipedia.org/wiki/Vespa\_velutina>. En ligne. [FR] \\
 
 \chapter{Annexes}
 \begin{figure}[t]

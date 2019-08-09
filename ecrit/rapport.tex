@@ -837,14 +837,14 @@ g_signal_connect( queen->interface->win_main->btn,
                     G\_CALLBACK(callback_btn) ,
                     queen ) ; 
 \end{lstlisting}
-Le premier argument correspond à l'élément qui est visé. Dans notre cas, beaucoup de pointeur sont en jeu,
+Le premier argument correspond à l'élément qui est visé. Dans notre cas, beaucoup de pointeurs sont en jeu,
 pour le moment nous allons passer outre ces pointeurs : ils seront expliqués dans la partie structure. 
 Partons simplement du principe qu'il faut appeler le bouton ou élément concerné, ici btn.  
-Le second argument sert à indiquer à quel évenement il faut réagir. Il en existe une liste prédéfinie : ici
+Le second argument sert à indiquer à quel événement il faut réagir. Il en existe une liste prédéfinie : ici,
 c'est l'événement "clicked". Lorsqu'on cliquera sur le bouton, la callback sera appelée. 
-Le troisième argument correspond à la "callback" appelée, soit la fonction qui doit se déclancher. Nous allons 
+Le troisième argument correspond à la "callback" appelée, soit la fonction qui doit se déclencher. Nous allons 
 y revenir.
-Le dernier argument indique ce qu'on envoit au callback comme information. Ici, c'est "queen", une sorte de 
+Le dernier argument indique ce qu'on envoie aux callbacks comme information. Ici, c'est "queen", une sorte de 
 gros paquet. Comme pour les pointeurs, ce sera expliqué plus tard. \\
 void callback_quit_tag(GtkWidget* widget, gpointer data) {                                       
     queen_t* tmp ;                                                                             
@@ -854,16 +854,16 @@ void callback_quit_tag(GtkWidget* widget, gpointer data) {
 \end{lstlisting}
 Cette callback contient le strict minimum pour faire fonctionner simplement un bouton.
 En arguments, elle reçoit d'abord le widget qui est à la source de son appel : dans notre cas, c'est "btn". 
-Ensuite, elle reçoit les data que "g\_signal\_connect" a envoyé, c'est à dire "queen". \\
+Ensuite, elle reçoit les data que "g\_signal\_connect" a envoyé, c'est-à-dire "queen". \\
 
 Les deux premières lignes indiquent que la variable tmp reçoit les informations de data. 
 Enfin, la fonction utilisée permet d'indiquer qu'on va fermer une fenêtre, ici celle de win\_main, donc là où on
-se trouve. Cet exemple est basique, on peut évidement faire bien plus et toucher à l'interface en elle même, déclancher
+se trouve. Cet exemple est basique, on peut évidemment faire bien plus et toucher à l'interface en elle-même, déclencher
 d'autres fonctionnalités, ouvrir de nouvelles fenêtres, modifier des informations...\\
 
-Tous les outils principaux pour pouvoir créer une interface GTK ont été présentés. Avec ceux là, beaucoup de recherches
+Tous les outils principaux pour pouvoir créer une interface GTK ont été présentés. Avec ceux-là, beaucoup de recherches
 dans la documentation et le "catalogue" %TODO
-de GTK, on a en mains une infinité de possibilité. Certaines actions nécessitent plus de reflexion que d'autre, mais 
+de GTK, on a en mains une infinité de possibilités. Certaines actions nécessitent plus de réflexion que d'autres, mais 
 au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
 
 
@@ -872,12 +872,12 @@ au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
 La première chose que j'ai eu à faire pour la création de l'application a été de réfléchir à la façon dont elle allait fonctionner.
 En étudiant la demande, une chose majeure en ressortait : il y allait avoir beaucoup de type de données à traiter et sauvegarder. \\
 Si on lit la liste des besoins présentés dans la partie %TODO
-on peut voir qu'il y a, entre autre, une notion d'auteur, de caméra, de vidéo et de ruche.
+on peut voir qu'il y a, entre autres, une notion d'auteur, de caméra, de vidéo et de ruche.
 
 Afin de pouvoir manipuler de telles informations, j'ai créé une structure (struct en C) pour chacun des éléments nécessaires. \\
-Ils contiendront chacuns des informations nécessaires à leur fonctionnement : dates, noms, numéro de téléphone, lieu, référence etc. \\
+Ils contiendront chacun des informations nécessaires à leur fonctionnement : dates, noms, numéro de téléphone, lieu, référence, etc. \\
 
-Par exemple, voici la définition de la structure author : 
+Par exemple, voici la définition de la structure "author" : 
 \begin{lstlisting} [frame=single]
 typedef struct {
 char* lastname;
@@ -901,7 +901,7 @@ char* author_get_email ( author_t* ) ;
 
 Pour chacune des structures, j'ai également préparé des fonctions permettant de manipuler les données.
 En général, on y retrouve une fonction pour créer un élément (new\_element), une pour le supprimer (del\_element),
-et un jeu de fonction pour modifier (set\_partie\_element) ou lire les données contenues dans l'élément indépendemment 
+et un jeu de fonction pour modifier (set\_partie\_element) ou lire les données contenues dans l'élément indépendamment 
 (get\_partie\_element). L'exemple pour author.c est en Annexe.\\
 %TODO ANNEXE AUTHOR.C 
 
@@ -911,36 +911,36 @@ a plus qu'à choisir comment on voudra modifier les données lors de l'utilisati
 Ce travail a aussi été fait pour toutes les annotations que nous pourrons intégrer sur les vidéos : 
 les cercles, flèches, croix... \\
 
-Pour le moment, toutes ces annotations ne sont pas prête. Mais les plus basiques, comme la croix, ont déjà leur structure de préparées.
-Sa définition se fait avec un simple x et un y. D'autres nécéssitent d'autres indications, comme un angle pour la flèche
-ou un tableau de coordonées pour la crois mouvante. \\
-En plus des description des éléments, tous contiennent un champ nom, auteur, couleur, description, temps de début 
+Pour le moment, toutes ces annotations ne sont pas prêtes. Mais les plus basiques, comme la croix, ont déjà leur structure de préparées.
+Sa définition se fait avec un simple x et un y. D'autres nécessitent d'autres indications, comme un angle pour la flèche
+ou un tableau de coordonnées pour la croix mouvante. \\
+En plus des descriptions des éléments, tous contiennent un champ nom, auteur, couleur, description, temps de début 
 (quand il apparaît sur la vidéo) et temps de fin (quand il disparaît de la vidéo). 
-On peut aussi faire mention du champ "tag[]" et "tag\_size" qui correspondront à une pile de tag qui sont affectés à l'élément. \\
+On peut aussi faire mention du champ "tag[]" et "tag\_size" qui correspondront à une pile de tag qui est affecté à l'élément. \\
 Ces tags font parti des fonctionnalités les plus difficiles à mettre en place. Certes demandés par les biologistes, ils ne sont 
-pas urgents pour le moment. Nous les avons défini sur papier mais pas encore mis en place. \\
+pas urgents pour le moment. Nous les avons défini sur papier, mais pas encore mis en place. \\
 Il y aura une liste de tags disponible, un dictionnaire, dans lequel les biologistes pourront 
 ajouter facilement des nouveaux tags. Les tags pourront être affectés aux différentes annotations appliquées
 à une vidéo, et cette vidéo héritera de ces tags dans sa description, nous permettant de trier et récupérer les vidéos 
 en fonctions de ce qu'il s'y trouve. \\
-Concernant sa définition, un tag sera décrit par une pile. À ce niveau, il reste encore quelques précision à apporter
+Concernant sa définition, un tag sera décrit par une pile. À ce niveau, il reste encore quelques précisions à apporter
 avant de la coder. Cette tâche est pour le moment en attente dans notre TO DO LIST.\\
-Ce travail de préparation m'aura prit environ une semaines. Il a été difficile seulement au début : il fallait réfléchir 
-à comment créer une structure correctement, penser à bien utiliser les pointeurs et gérer leur allocation de
+Ce travail de préparation m'aura pris environ une semaine. Il a été difficile seulement au début : il fallait réfléchir 
+la manière de créer une structure correctement, penser à bien utiliser les pointeurs et gérer leur allocation de
 mémoire. Une fois un premier modèle fait, les autres se faisaient de plus en plus vite. Utilisant l'éditeur de texte VIM, j'ai 
-énormément utilisé les "rechercher / remplacer" pour travailler. \\
-Ce travail, bien que fastidieux, m'aura permit d'appliquer concrétement l'utilisation des pointeurs, ce qui 
+énormément utilisé les "rechercher/remplacer" pour travailler. \\
+Ce travail, bien que fastidieux, m'aura permis d'appliquer concrètement l'utilisation des pointeurs, ce qui 
 me manquait lors de mon arrivée en stage. \\ 
 
         \subsection{Manière de coder}\\
 N'ayant pas d'habitudes particulières en code, j'ai été conseillée pour le structurer, afin qu'il 
 soit facilement lisible. Ainsi, j'ai utilisé des couples de fichiers .c et .h me permettant de séparer 
-la déclaration d'une structure et de ses fonctions et la définitions des fonctions.
+la déclaration d'une structure et de ses fonctions et la définition des fonctions.
 
 De plus, M. Druon a rapidement intégré un Makefile afin de nous éviter de compiler manuellement à chaque fois, passant 
 ensuite à CMake pour générer le Makefile automatiquement ensuite. \\
-Une fois cette façon de faire mise en place pour la partie moteur, j'ai voulu l'appliquer à la partie
-graphique. Ainsi, un couple de .c et .h a aussi été créé pour chacunes des fenêtres, le .h contenant 
+Une fois cette façon de faire mis en place pour la partie moteur, j'ai voulu l'appliquer à la partie
+graphique. Ainsi, un couple de .c et .h a aussi été créé pour chacune des fenêtres, le .h contenant 
 toutes les déclarations d'éléments sous forme de structure. \\
 %exemple .c et .h POUR WIN
 
@@ -951,25 +951,25 @@ C'est pourquoi nous avons vu sur les exemples plus haut
 que pour appeler un élément nous devions utiliser un pointeur comme "tmp->label". \\
 
 Notre fichier .c contient alors de quoi créer l'interface, l'afficher et la supprimer, la suppression revenant à appliquer les 
-Free  nécessaires. C'est pour cela que dans notre main on retrouve ces fonctions pour définir et afficher les fenêtres 
+Free  nécessaires. C'est pour cela que dans notre "main", on retrouve ces fonctions pour définir et afficher les fenêtres 
 et que celui-ci est allégé. \\
 
-Jusque là, cette technique m'a permit d'avoir une structure de code agréable et ordonnée. Seulement, une fois arrivée au moment de 
-faire les premier liens interface / fonctions qu'un autre problème s'est posé : comment pouvoir accéder à toutes les données
+Jusque-là, cette technique m'a permis d'avoir une structure de code agréable et ordonnée. Seulement, une fois arrivée au moment de 
+faire les premiers liens interface / fonctions qu'un autre problème s'est posé : comment pouvoir accéder à toutes les données
 dont j'ai besoin lorsque j'utilise une callback ? 
 Comme dit dans la partie 2.2.5, lorsqu'on appelle une callback quand événement est détecté, deux informations sont 
 transmises à la callback : l'adresse du Widget et une data qui aura été définie avec la fonction "g\_signal\_connect". \\
 
 C'est le choix de cette donnée qui nous a posé problème : quand nous avons commencé
-à coder les fenêtre permettant la visualisation des données des auteurs, caméras etc, nous avions besoin d'envoyer la structure
+à coder les fenêtres permettant la visualisation des données des auteurs, caméras etc, nous avions besoin d'envoyer la structure
 de la fenêtre auteur par exemples mais aussi les informations de l'auteur, ne se trouvant pas dans les mêmes fichiers.  \\
 La solution la plus simple était donc de refaire des "paquets" plus généraux : nous avons créé interface.c/h et projet.c/h, qui seront eux
 même contenu dans queen.c/h. \\
-Interface contient toutes les fenêtres possibles et a une fonction de créations de toutes celles-ci ainsi qu'une fonction de suppression, 
+"Interface" contient toutes les fenêtres possibles et a une fonction de créations de toutes celles-ci ainsi qu'une fonction de suppression, 
 permettant de les créer au démarrage de l'application et éviter des chargement. La fonction de suppression nous assure d'éviter toute perte de mémoire.\\
 Même principe pour le Projet : il contient tous les éléments permettant le fonctionnement moteur afin d'avoir la même facilité
 d'utilisation que décrite pour l'interface. \\
-Queen est le paquet général, il contient Interface et Projet. Son nom est en l'honneur de la reine des abeille : 
+Queen est le paquet général, il contient Interface et Projet. Son nom est en l'honneur de la reine des abeilles : 
 un paquet pour les gouverner tous ! \\
 Afin de vérifier que toute cette structure soit cohérente et pour l'améliorer, Mr Druon a réalisé un diagramme 
 avec toutes les structures \footnote{Voir figure \ref{dia_struct}}.
@@ -981,7 +981,7 @@ avec toutes les structures \footnote{Voir figure \ref{dia_struct}}.
     \label{dia_struct}
 \end{figure}
 \end{landscape}
-Et voici un bout de code représentant ce qu'on peut faire avec les paquets : 
+Et voici un bout de code représentant ce que l'on peut faire avec les paquets : 
 \begin{lstlisting}
 callback\_auteur(GtkWidget * widget, gpointer data)
  {
@@ -1002,56 +1002,56 @@ callback\_auteur(GtkWidget * widget, gpointer data)
          auteur\_button\_modify\_ok\_name(tmp->interface->win\_auteur, tmp->projet->video->auteur ) ;
    }
 \end{lstlisting}
-Dans cet exemple on retrouve la fonction "auteur\_win\_fill", fonction écrite dans win\_auteur\_callbacks.c et définie
+Dans cet exemple, on retrouve la fonction "auteur\_win\_fill", fonction écrite dans win\_auteur\_callbacks.c et définie
 dans win\_auteur.h. J'ai séparé les fonctions utilisées dans les callbacks afin de les retrouver facilement. \\
-Voici donc comment le projet a été réflechi et construit. Normalement avec ces détails, un développeur qui voudrait reprendre
-le projet pourrait retrouver les données facilement. Dans cette optique, nous avons également prévu d'utiliser %TODO retrouver le nom de l'utilitaire 
-l'utilitaire ????? pour documenter le code, quelques exemples sont d'ailleurs déjà présents, mais la documentation 
+Voici donc comment le projet a été réflechi et construit. Normalement, avec ces détails, un développeur qui voudrait reprendre
+le projet pourrait retrouver les données facilement. Dans cette optique, nous avons également prévu d'utiliser  %TODO Mettre le lien
+l'utilitaire Naturaldocs afin de documenter le code, quelques exemples sont d'ailleurs déjà présents, mais la documentation 
 complète n'était pas une priorité, c'est pourquoi cette tâche a été laissée en suspens. 
        
         \subsection{Traitement de la vidéo}
 La partie la plus complexe de ce projet à mon avis est le traitement de la vidéo. Elle s'attaque à des sujets sur lesquels j'ai 
 encore beaucoup à apprendre. C'est pourquoi durant le stage, c'est plus M. Druon qui s'en est occupé. De mon côté, j'ai surtout
 pris en compte ce qui allait être fait avec et ce que j'allais devoir prévoir au niveau de l'interface pour que cela fonctionne. \\
-Globalement, l'idée de ce travail est dans un premier temps d'afficher la vidéo sur l'application grace à 
+Globalement, l'idée de ce travail est dans un premier temps d'afficher la vidéo sur l'application grâce à 
 la librairie FFMPEG. Afin de me faciliter
 le travail de lien entre les boutons et la vidéo, M. Druon a prévu de créer plusieurs fonctions type, comme avancer la vidéo, la 
 mettre en pause, la reculer, pour qu'ensuite elles soient affectées à l'interface. \\
 Dans un second temps, il faut pouvoir enregistrer la vidéo une fois qu'elle est annotée. L'idée est de faire en sorte que les annotations
-soient des PNG appliqués au dessus de l'image et qu'ils soient transportés dans les mêmes flux que les flux vidéos. \\
+soient des PNG appliqués au-dessus de l'image et qu'ils soient transportés dans les mêmes flux que les flux vidéos. \\
 
-Ce travail, bien qu'il a été commencé, devrait être fini aux alentours de Septembre, c'est pourquoi sa description ici
+Ce travail, bien qu'il a été commencé, devrait être fini aux alentours de septembre, c'est pourquoi sa description ici
 est surtout théorique. \\
         \subsection{Ce qu'il reste à faire}
-Une application prenant du temps à être développée, il est normal que celle-ci n'ai pas été finie en 3 mois. Pour pouvoir se situer
-dans l'avancement de ce projet, j'ai établi une liste non exhaustive de ce qui, à l'heure actuelle, resterai à faire : \\ 
+Une application prenant du temps à être développée, il est normal que celle-ci n'ait pas été finie en 3 mois. Pour pouvoir se situer
+dans l'avancement de ce projet, j'ai établi une liste non-exhaustive de ce qui, à l'heure actuelle, resterai à faire : \\ 
 \begin{itemize}
-    \item Etablir le système de sauvegarde des données
-    \item Configurer la façon dont les données seront envoyées sur le serveur (fréquence d'envoi, envoi automatique ou manuel etc) 
-    \item Coder la façon dont les tags vont être  gérés pour le tri des vidéos 
-    \item Continuer l'affichage vidéo
+    \item Établir le système de sauvegarde des données.
+    \item Configurer la façon dont les données seront envoyées sur le serveur (fréquence d'envoi, envoi automatique ou manuel etc).
+    \item Coder la façon dont les tags vont être gérés pour le tri des vidéos. 
+    \item Continuer l'affichage vidéo.
 \end{itemize} 
-De manière plus personnelle, j'aurai également aimé pouvoir retravailler la structure interne de beeterface.c qui est, à mon sens,
+De manière plus personnelle, j'aurais également aimé pouvoir retravailler la structure interne de beeterface.c qui est, à mon sens,
 un peu brouillon. \\
 Pour finir cette présentation de l'application, voici quelques screenshots du travail qui a été effectué.
-Le travail fu long et n'a cessé d'évoluer : au fur et à mesure, j'aurai appris de nouvelles techniques, de nouvelles façon de faire 
-et aurais profité de nombreux conseils d'un développeur sénior. \\
+Le travail fut long et n'a cessé d'évoluer : au fur et à mesure, j'aurai appris de nouvelles techniques, de nouvelles façon de faire 
+et aurais profité de nombreux conseils d'un développeur senior. \\
 
 \chapter{Acquis et compétences}
-Ce stage m'aura permit d'utiliser mes compétences acquises pendant le DUT mais aussi d'en développer d'autres grace aux activités 
-que j'ai réalisé. Pour chaques missions, que ça soit la principale ou les annexes, j'ai pu apprendre sur une multitude de domaines
-différents : techniques, théoriques, humains, organisationnel etc. 
-Ainsi, la présentation des missions annexes et la liste des domaines où je sens que j'ai évolué semble être un bon moyen 
-de présentés tous ces acquis. 
+Ce stage m'aura permis d'utiliser mes compétences acquises pendant le DUT, mais aussi d'en développer d'autres grâce aux activités 
+que j'ai réalisé. Pour chaque missions, que ça soit la principale ou les annexes, j'ai pu apprendre sur une multitude de domaines
+différents : techniques, théoriques, humains, organisationnel, etc. 
+Ainsi, la présentation des missions annexes et la liste des domaines où je sens que j'ai évolué semblent être un bon moyen 
+de présenter tous ces acquis. 
 \section{Missions annexes}
         
         \subsection{Gestion du Réseau du Rucher}
 Le projet se basant sur du traitement et de la récolte de données, une infrastructure réseau est à prévoir 
 \footnote{Voir figure \ref{plan_res}}. Pour le moment, nous avons surtout préparé le terrain.  \\
 Les données seront récoltées au rucher, puis acheminées vers le serveur installé au CNRS. Ce serveur les stockera et les traitera, 
-les envoyant à différents endroits celon le besoin : vers les applications Beeterface pour de l'annotation, vers la future vitrine Web
+les envoyant à différents endroits selon le besoin : vers les applications Beeterface pour de l'annotation, vers la future vitrine Web
 etc. \\
-Seulement à mon arrivée il n'était pas encore raccordé au réseau : tout le long de mon stage,  nous avons dû attendre que
+Seulement, à mon arrivée, il n'était pas encore raccordé au réseau : tout le long de mon stage,  nous avons dû attendre que
 le CNRS nous installe la fibre. \\
 \begin{figure}[!h]
     \centering
@@ -1062,7 +1062,7 @@ le CNRS nous installe la fibre. \\
 Même si un biologiste annotait les vidéos avec Beeterface directement au rucher, les vidéos devront obligatoirement passer une première 
 fois vers le serveur puis revenir au rucher. Ainsi, entre l'envoi de vidéos venant de caméras pouvant atteindre de hautes
 qualités et la réception de ces mêmes vidéos, la bande passante et le matériel réseau installé sur place 
-doivent pouvoir supporter de tels charges. \\
+doivent pouvoir supporter de telles charges. \\
 C'est pourquoi le technicien s'occupant de l'installation de la fibre devait connaître quel trafic était prévu de manière un
 peu plus détaillée. Afin de répondre à cette question, nous avons effectué un récapitulatif des caméras prévues 
 \footnote{Voir figure \ref{tab_recap_cam}}
@@ -1073,33 +1073,33 @@ peu plus détaillée. Afin de répondre à cette question, nous avons effectué 
     \caption{Tableau récapitulatif des futures caméras}
     \label{tab_recap_cam}
 \end{figure}
-Deux prototypes sont présentés, puisque nous comptons acceuillir deux prototypes de ruches plates : la notre et 
-celle qui sera envoyées à nos partenaires Allemands ensuite. \\
-Les caméras pour la planche d'envol et pour le module d'analyse de pollen seront en couleur. Celles pour les cadres de la ruches
-seront monochrome : il avait été prévu des caméras couleurs à la base, mais d'après les biologistes nous en auront pas besoin pour 
-repérer ce que nous voulons. Ainsi, nous gagnons en bande passante, les caméras monochrome étant moins gourmande que les couleurs 
+Deux prototypes sont présentés, puisque nous comptons accueillir deux prototypes de ruches plates : la nôtre et 
+celle qui sera envoyée à nos partenaires allemands ensuite. \\
+Les caméras pour la planche d'envol et pour le module d'analyse de pollen seront en couleur. Celles pour les cadres de la ruche
+seront monochromes : il avait été prévu des caméras couleurs à la base, mais d'après les biologistes nous en auront pas besoin pour 
+repérer ce que nous voulons. Ainsi, nous gagnons en bande passante, les caméras monochromes étant moins gourmandes que les couleurs 
 en données. \\
-En plus des caméras, il faut prévoir le poid des données des capteurs de la carte éléctroniques. Ces données sont négligeable par
-rapport au reste mais sont à prévoir. Ces capteurs sont représentés dans le document par une des caméras "Cadres Ruches". 
-Enfin, calculs prévoient également l'en-tête TCP-IP nécéssaire à l'envoie des données, cette prévision étant sur évaluée 
+En plus des caméras, il faut prévoir le poids des données des capteurs de la carte électroniques. Ces données sont négligeables par
+rapport au reste, mais sont à prévoir. Ces capteurs sont représentés dans le document par une des caméras "Cadres Ruches". 
+Enfin, les calculs prévoient également l'en-tête TCP-IP nécessaire à l'envoi des données, cette prévision étant sur évaluée 
 pour avoir de la marge. Ainsi, on ajoute 20\% de données supplémentaire.\\
 Maintenant, nous savons un peu plus quels seront les données qui transiteront sur notre réseau. Nous avons aussi
 quelques contraintes pour le choix du matériel réseau qui sera acheté dès que nous pourrons utiliser le réseau au rucher. \\
 Le Switch servira à connecter les caméras, les capteurs, l'ordinateur déjà sur place et notre potentiel matériel supplémentaire
 lorsque nous travaillerons sur place. Il devra être un 24 ports POE (Power Over Ethernet) capable 
-d'alimenter nos caméra avec la norme SFP + requise par le technicien du CNRS. \\
+d'alimenter nos caméras avec la norme SFP + requise par le technicien du CNRS. \\
 Le serveur de récolte et de données devra être en double alimentation pour se suppléer l'une et l'autre en cas de panne,
-assurant que le serveur tourne encore grace à la redondance. Il devra avoir un port Ethernet de 20Gb et posseder un CPU multicoeur.
+assurant que le serveur tourne encore grâce à la redondance. Il devra avoir un port Ethernet de 20Gb et posséder un CPU multicœur.
 Ce serveur doit être commandé chez DELL pour un budget de 15k€ maximum. \\
-J'ai déjà fait quelques recherches sur leur site afin d'avoir une idée de ce qui existait mais la commande étant reportée à cause
+J'ai déjà fait quelques recherches sur leur site afin d'avoir une idée de ce qui existait, mais la commande étant reportée à cause
 du temps d'installation de la fibre au rucher, ces achats sont décalés à plus tard pour le moment.\\ 
 
         \subsection{Tests pour la vitrine Web}
-En plus de l'installation réseau pour la récolte des données, il faudra aussi penser à comment nous allons présenter nos 
-résultats. Ce travail servant de présentation, il est moins urgent que la réalisation des captures de données et à donc été mis de 
+En plus de l'installation réseau pour la récolte des données, il faudra aussi penser à la façon dont nous allons présenter nos 
+résultats. Ce travail servant de présentation, il est moins urgent que la réalisation des captures de données et a été mis de 
 côté pendant mon stage. Cependant, j'ai passé une petite journée à me familiariser avec ce type d'installation en faisant 
 quelques tests sur un serveur de test prêté par M. Druon. Cette journée a surtout été consacrée à de la documentation en amont,
-avec le lecture de quelques tutoriels sur Internet. J'en ai aussi profité pour relire les cours et 
+avec la lecture de quelques tutoriels sur Internet. J'en ai aussi profité pour relire les cours et 
 TP du DUT en lien avec les serveurs Webs et le développement Web : base de donnée (M2104), langage HTML/CSS (M1106, M2105)
 installation d'apache). 
 Pour ce qui est du contenu de cette vitrine Web, je n'ai pas concrètement travaillé dessus mais ai imaginé à quoi celle-ci pourrait
@@ -1110,7 +1110,7 @@ ressembler \footnote{\ref{sch_web}}. \\
     \caption{Proposition de schéma pour la vitrine Web}
     \label{sch_web}
 \end{figure}
-Ce n'est qu'une proposition qui n'a pas encore été discutée avec le reste de l'équipe mais que je leur fourni. \\
+Ce n'est qu'une proposition qui n'a pas encore été discutée avec le reste de l'équipe mais que je leur fournis. \\
 Pour moi, le site pourrait être construit en quatre parties : 
 \begin{itemize}
     \item  L'accueil, expliquant ce qu'est notre projet, qui en sont les acteurs
@@ -1119,97 +1119,97 @@ ce qu'on veut en ressortir etc.
 spécifiquement pour le site ou des petit compte rendu d'avancement, avec des photos de nos opérations par exemple. Le but 
 étant de montrer au public ce qui est fait et de rendre le projet attractif. Il faut que ce soit du contenu simple et rapide
 à produire. 
-    \item  La partie Live, avec quelques caméras séléctionnées pour le grands public et la description des événements en temps réel par 
-les algorithme qui seront réalisés par l'équipe. En attendant la réalisation de ces algorithmes, nous pourrions simplement afficher
-le live de quelques caméras sans commentaires. \\
+    \item  La partie Live, avec quelques caméras sélectionnées pour le grand public et la description des événements en temps réel par 
+        les algorithmes qui seront réalisés par l'équipe. En attendant la réalisation de ces algorithmes, nous pourrions simplement afficher
+        le live de quelques caméras sans commentaires. \\
     \item La partie "pro", qui serait un portail de connexion pour les collaborateurs à qui nous voulons partager plus d'informations.
-Ils auraient accès à plus de caméras, aux document techniques etc. On pourrait y mettre un drive afin de faciliter le partage de 
+Ils auraient accès à plus de caméras, aux documents techniques, etc. On pourrait y mettre un drive afin de faciliter le partage de 
 document. Ce serait une plateforme de travail pour le projet.\\
 \end{itemize}
 Bien sûr, l'élaboration d'un tel site nécessite des connaissances en web design et en sécurité informatiques. Je me suis penchée
-sur la question parceque j'ai trouvé le sujet interessant et aimerai à l'avenir pouvoir m'y intéresser un peu plus. \\ 
+sur la question parce que j'ai trouvé le sujet intéressant et aimerai à l'avenir pouvoir m'y intéresser un peu plus. \\ 
 
         \subsection{Aide pour les projets de première année à l'IUT de Béziers}
 En plus de mon aide sur les travaux cités si dessus, ma présence en tant que stagiaire a aussi été bénéfique pour aider M. Druon 
 dans une tâche se détachant un peu du monde de la Recherche : aider durant les projets des étudiants en Réseaux et Télécommunications 
 de première année. \\
-Ce travail reste en lien avec SuperBeeLive puisque l'IUT de Béziers est partenaire du projet et qu'un des groupe d'étudiants (Groupe 13) 
+Ce travail reste en lien avec SuperBeeLive puisque l'IUT de Béziers est partenaire du projet et qu'un des groupe d'étudiants (groupe 13) 
 a fait son projet sur la température et l'humidité dans la ruche. \\
-C'est pour cela que durant toute ma durée du stage je me suis déplacée sur l'IUT de Béziers pour travailler les jeudis pour être
-disponible, M. Druon et moi, pour les étudiants de RT1. Pendant ces jeudi ci, je travaillais le matin sur Beeterface et 
-l'après midi je continuais de coder en salle projet pour répondre à d'éventuelles question. \\
-J'ai également eu à m'occuper des commandes des étudiants : récolter leur liste de demande, les regrouper pour faire les commandes
-aux fournisseur, réceptionner, inventorier et ranger. \\
+C'est pour cela que durant toute ma durée du stage, je me suis déplacée sur l'IUT de Béziers pour travailler les jeudis pour être
+disponible, M. Druon et moi, pour les étudiants de RT1. Pendant ces jeudis-ci, je travaillais le matin sur Beeterface et 
+l'après midi je continuais de coder en salle projet pour répondre à d'éventuelles questions. \\
+J'ai également eu à m'occuper des commandes des étudiants : récolter leur liste de demandes, les regrouper pour faire les commandes
+aux fournisseurs, réceptionner, inventorier et ranger. \\
 %TODO Photo du rangement des commandes 
-Ma présence sur l'IUT s'est intensifiée pendant les deux semaines où les étudiants étaient à temps plein sur leur projet, du 18 au 30 Juin. \\
+Ma présence sur l'IUT s'est intensifiée pendant les deux semaines où les étudiants étaient à temps plein sur leur projet, du 18 au 30 juin. \\
 Durant ces deux semaines, j'ai été affectée au bureau se trouvant à côté du laboratoire de l'IUT où j'avais rangé tous le matériel 
-destiné aux projet.
+destiné aux projets.
 J'ai donc servit de régie, car même après la première distribution du matériel demandé par les étudiants, beaucoup avaient 
-besoin de pièce de rechange, de nouvelles pièces etc. \\
-Cela m'a permit de continuer à travailler sur mon code, de manière moins intensive que lorsque je me trouvais au LIRMM, tout en
+besoin de pièce de rechange, de nouvelles pièces, etc. \\
+Cela m'a permis de continuer à travailler sur mon code, de manière moins intensive que lorsque je me trouvais au LIRMM, tout en
 aidant M. Druon en le déchargeant des demandes de matériel. 
 J'ai également aidé à noter les présences et ai fait attention au travail fourni par les étudiants afin de donner un avis extérieur pour
-les notation.
-Etant souvent dans les couloirs où ils travaillaient, j'ai aussi répondu à beaucoup de questions et demandes d'aide : 
+les notations.
+Étant souvent dans les couloirs où ils travaillaient, j'ai aussi répondu à beaucoup de questions et demandes d'aide : 
 j'essayai de répondre au mieux, de les diriger pour qu'ils trouvent la réponse d'eux même ou de les envoyer voir M. Druon si 
-j'estimais que la question necessitait un oeil plus expert. \\
+j'estimais que la question nécessitait un œil plus expert. \\
 Au moment des soutenances, j'ai participé à un Jury devant normalement se tenir avec deux professeurs, mais M. Druon se retrouvant 
-finalement seul dans celui-ci par manque d'effectif, c'est en binome que nous avons écouté le travail des étudiants.
-D'autres deuxièmes années ou redoublant se trouvaient dans les trois autres jury avec d'autres professeurs. 
+finalement seul dans celui-ci par manque d'effectif, c'est en binôme que nous avons écouté le travail des étudiants.
+D'autres deuxièmes années ou redoublant se trouvaient dans les trois autres jurys avec d'autres professeurs. 
 L'exercice de notation a été un peu difficile : bien qu'ayant un peu peur de noter injustement,
 je savais très bien que la note qui allait être la plus importante serait celle 
-du professeur. Néanmoins, c'était très interessant de se retrouver de l'autre côté et d'évaluer des travaux que, moi même, 
+du professeur. Néanmoins, c'était très intéressant de se retrouver de l'autre côté et d'évaluer des travaux que, moi-même, 
 j'avais dû effectuer il y a un an. \\
-Ces missions annexes m'auront permit d'appliquer concretement plusieurs notions vues pendant le DUT. \\
+Ces missions annexes m'auront permis d'appliquer concrètement plusieurs notions vues pendant le DUT. \\
 Théorique d'abord, avec les calculs pour la bande passant nécessaire pour le rucher et le questionnement sur le matériel à commander, ainsi
-qu'avec les recherches autours du développement et l'installation web. 
-J'ai aussi pu revoir beaucoup de sujets pratiques avec les étudiants de première année : beaucoup de leur question tournaient autours 
-de choses que j'avais déjà fait, en cours ou en projet,  mais sur lesquels il me manquait expériences et connaissances à ces moments là et
-qui ne me posent plus soucis aujourd'hui. \\
+qu'avec les recherches autour du développement et l'installation web. 
+J'ai aussi pu revoir beaucoup de sujets pratiques avec les étudiants de première année : beaucoup de leur question tournaient autour 
+de choses que j'avais déjà fait, en cours ou en projet,  mais sur lesquels il me manquait expériences et connaissances à ces moments-là et
+qui ne me posent plus problème aujourd'hui. \\
 
     \section{Compétences développées} \\
-Lors de stage de fin d'étude, j'ai pu appliquer beaucoup de connaissances que j'ai acquises pendant ces deux dernières années,
+Lors de stage de fin d'études, j'ai pu appliquer beaucoup de connaissances que j'ai acquises pendant ces deux dernières années,
 mais aussi apprendre beaucoup à différents niveaux.\\
 Mon rôle principal dans l'équipe n'étant pas de faire de l'administration réseaux et systèmes tous les jours, 
 j'ai pu utiliser mes connaissances dans ce domaine d'une autre manière qu'en administrant des infrastructures déjà installées. \\ 
 C'est surtout la théorie qui m'aura été utile, voyant plus le rôle d'un ingénieur que d'un technicien. 
-Mes journées de travail se passant en grande majorité sur un ordinateur, j'ai au quotidien fais de l'administration Unix et ai
+Mes journées de travail se passant en grande majorité sur un ordinateur, j'ai au quotidien fait de l'administration Unix et ai
 utilisé des outils que je ne connaissais que partiellement avant. Ainsi, mon but était d'être plus rapide avec ces outils 
-et j'ai donc appris des raccourcis clavier et des techniques que me conseillaient les personnes autours de moi pour optimiser 
+et j'ai donc appris des raccourcis clavier et des techniques que me conseillaient les personnes autour de moi pour optimiser 
 mon temps. \\
 De plus, j'ai ensuite eu la chance d'avoir un ordinateur fourni par le LIRMM, également sous Unix.
 Comme cette machine m'était destinée, j'ai pu passer du temps à la configurer comme je le voulais : 
 installation d'une interface graphique (i3), configuration de VIM, d'un terminal personnalisé, personnalisation des couleurs 
 sur mon shell, test d'une alternative à bash (fish) etc. 
-Si je considère cette partie personnalisation, comme une compétence développée pendant le stage, c'est parceque j'ai eu la chance 
-d'avoir autours une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une 
-journée pour travailler là dessus. \\
+Si je considère cette partie personnalisation, comme une compétence développée pendant le stage, c'est parce que j'ai eu la chance 
+d'avoir autour de moi une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une 
+journée pour travailler là-dessus. \\
 Je pense ainsi avoir aujourd'hui bien plus d'aisance derrière une machine sous Unix qu'il y a 3 mois. \\
 J'ai aussi beaucoup appris pendant les deux semaines d'encadrement d'étudiant. Même si je n'avais pas le statut de professeur 
 ou de vacataire, ma place en tant que "seconde" de M. Druon auprès des premières années était bien ancrée 
-et m'a permi de voir le nombre de compétences nécessaire pour faire un tel travail : patience, organisation, 
+et m'a permis de voir le nombre de compétences nécessaire pour faire un tel travail : patience, organisation, 
 capacité à expliquer les concepts et endurance s'ajoutent aux connaissances nécessaire pour aider des étudiants. 
-Enfin, les compétences que j'ai le plus développées sont bien entendu celles autours de la programmation. 
+Enfin, les compétences que j'ai les plus développées sont bien entendu celles autour de la programmation. 
 À mon arrivée dans l'équipe, je ne pensais pas que j'allais autant me consacrer au code : je n'étais pas très à l'aise avec ça 
 pendant mes deux années de DUT et avais un peu peur de me lancer dans des projets d'envergures dans ce domaine. 
 Mais une fois sur place et lancée, j'ai appris énormément en peu de temps. Je pense même pouvoir dire que j'ai rattrapé le retard 
 que j'avais pris lors de mon DUT avec ces trois mois presque intensif sur le sujet. \\
 J'ai bien mieux compris comment utiliser les outils de compilations et comment cette étape se déroulait. L'algorithmie m'est bien moins
 effrayante, le langage C est devenu pour moi une référence et je continue d'en apprendre dessus régulièrement. 
-Il ne me reste d'ailleurs plus qu'un pas avant d'attaquer le langage objet grace à GTK : cette partie de la programmation très graphique
+Il ne me reste d'ailleurs plus qu'un pas avant d'attaquer le langage objet grâce à GTK : cette partie de la programmation très graphique
 me plaît énormément et c'est ce qui, je pense, m'a réconciliée avec la programmation. \\
 Désormais, je travaille beaucoup avec GIT sur GitHub, en découvrant des projets disponibles dessus et en partageant mes scripts,
-mes configurations Unix etc. 
+mes configurations Unix, etc. 
 En soit, j'aurai appris sur beaucoup de sujets différent, plus que ce que je n'aurai pu l'imaginer.
-J'ajoute aussi qu'au moment où j'écris ces lignes, j'apprend à me servir de Latex, un langage de composition de document, 
-puisque je rédige mon rapport de stage avec cet outils.\\
+J'ajoute aussi qu'au moment où j'écris ces lignes, j'apprends à me servir de Latex, un langage de composition de document, 
+puisque je rédige mon rapport de stage avec cet outil.\\
 
-Pour conclure, ce stage au sein de l'équipe SuperBeeLive m'aura apporté un bon nombre de choses : des compétences, des connaissances mais 
-aussi de l'aisance. C'est avec les mises en applications de mes connaissances acquises lors du DUT que j'ai pu prendre confiance en celle-ci.
-De plus, j'ai acquis un bon nombre de nouvelles connaissances, aussi bien sur le monde biologique qui entoure les abeilles que sur 
+Pour conclure, ce stage au sein de l'équipe SuperBeeLive m'aura apporté un bon nombre de choses : des compétences, des connaissances, mais 
+aussi de l'aisance. C'est avec les mises en application de mes connaissances acquises lors du DUT que j'ai pu prendre confiance en celle-ci.
+De plus, j'ai acquis un bon nombre de nouvelles connaissances, aussi bien concernant le monde biologique qui entoure les abeilles que sur 
 divers sujets se rapprochant de l'informatiques aux systèmes embarqués. Ces connaissances s'étendent la culture générale à des applications 
 concrètes.\\
-Ainsi, ces trois mois m'auront permit d'apprendre à travailler différement que dans un milieu scolaire. 
+Ainsi, ces trois mois m'auront permis d'apprendre à travailler différemment que dans un milieu scolaire. 
 
 
 \chapter{Conclusion}
@@ -1221,20 +1221,20 @@ mais elle n'en reste pas moins soudée et très agréable. Les trois personnes a
 Capucine Carlier et Matthieu Rousset étaient tous trois présents à leur niveau pendant mon stage.  \\
 Bien que j'avais connaissance de ce que j'allais faire globalement dans l'équipe, j'ai été surprise lorsque j'ai su que j'allais
 devoir concevoir une application et surtout devoir m'occuper entièrement de l'interface de celle-ci. 
-Ayant des difficultées en programmation à mon arrivée dans l'équipe, ce travail me paraissait bien plus difficile que ce qu'il 
-en a été rééelement. Le fait qu'on me laisse du temps pour que je puisse me former convenablement sur le sujet m'aura été 
+Ayant des difficultés en programmation à mon arrivée dans l'équipe, ce travail me paraissait bien plus difficile que ce qu'il 
+en a été réellement. Le fait qu'on me laisse du temps pour que je puisse me former convenablement sur le sujet m'aura été 
 d'une grande aide. Par ailleurs, n'ayant pas de mal à apprendre en autodidacte, j'ai beaucoup travaillé avec des livres et
-des sites internets, tous retrouvables dans la bibliographie. En plus de ces ressources, M. Druon a prit beaucoup de temps
+des sites internet, tous retrouvables dans la bibliographie. En plus de ces ressources, M. Druon a pris beaucoup de temps
 pour répondre à mes questions et m'aider à des endroits où je bloquais, peu importe le domaine. \\
 
-Ma participation lors des projets des premiers années aura été pour moi une expérience nouvelle et très enrichissante. Voir
+Ma participation lors des projets des premières années aura été pour moi une expérience nouvelle et très enrichissante. Voir
 d'autres étudiants à la place que j'avais il y a un an m'a fait prendre conscience du chemin parcouru lors de mes deux années de DUT. 
-Venant d'un Bac Littéraire, ces deux années dans un milieu plus scientifiques n'auront pas été de tout repos. Malgré les difficultées, 
+Venant d'un Bac Littéraire, ces deux années dans un milieu plus scientifiques n'auront pas été de tout repos. Malgré les difficultés, 
 j'ai pu terminer mon DUT sur un stage très intéressant et épanouissant.
-C'est d'ailleurs avec une grande joie que je rejoin l'équipe de SuperBeeLive pour encore trois ans. Ma candidature pour l'école d'ingénieur
+C'est d'ailleurs avec une grande joie que je rejoins l'équipe de SuperBeeLive pour encore trois ans. Ma candidature pour l'école d'ingénieurs
 à Polytech section Systèmes Embarqués en apprentissage ayant été acceptée, j'ai signé mon apprentissage au LIRMM. \\
 Je vais donc encore pouvoir suivre l'évolution du projet et finir ce que j'ai commencé, que ça soit l'application, la mise en place du 
-réseau et pouvoir commencer la vitrine web et les cartes éléctroniques.  \\
+réseau et pouvoir commencer la vitrine web et les cartes électroniques.  \\
 
 \chapter{Bibliographie}
 

@@ -23,6 +23,8 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\usepackage{pdfpages}
+\usepackage[pdftex]{graphicx}
 
 %En tête / Pied de page
 \fancyhead{}
@@ -51,13 +53,13 @@
 
 %Page de garde
 \begin{titlepage}
-\begin{center}
-    \AddToShipoutPicture{
-                \AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{../images/logo/logo_iutbeziers.png}}
-                \AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{../images/logo/logoibmm.jpg}}
+%\begin{center}
+%    \AddToShipoutPicture{
+%                \AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{../images/logo/logo_iutbeziers.png}}
+%                \AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{../images/logo/logoibmm.jpg}}
                         } 
-\includegraphics[scale=0.3]{../images/logo/um_logo.png}
-\end{center}
+%\includegraphics[scale=0.3]{../images/logo/um_logo.png}
+%\end{center}
 
 \end{titlepage}
 \clearpage
@@ -79,7 +81,6 @@ Enfin, toute l'équipe universitaire de l'IUT de Béziers qui m'aura appris sur 
 de différents domaines très intéressants. 
 
 
-J'insère le premier \cite{ref}, le second \cite{ref2}, le troisième \cite{ref3}, le quatrième \cite{ref4}, le cinquième \cite{ref5} et le sixième \cite{ref6}.
 
 
 \tableofcontent
@@ -131,7 +132,7 @@ Concrètement, l'équipe de SuperBeeLive va concevoir une ruche plate \footnote{
 en place plusieurs type  de capteurs (hygrométrie, vibrations, température interne et externe, etc) ainsi que des caméras qui filmeront 
 l'intérieur et l'extérieur de la ruche. \\
 En 2017, une affiche résumant le projet a été présentée lors du salon NUMEV (Solutions, Numériques, Matérielles, et 
-Modélisation pour l'Environnement et le Vivant) ( Voir Annexes, figure \ref{an1} ). \\ 
+Modélisation pour l'Environnement et le Vivant)\footnote{Voir Annexes, figure \ref{an1} }. \\ 
 
 \begin{figure}[!h]
 \centering
@@ -151,12 +152,14 @@ Modélisation pour l'Environnement et le Vivant) ( Voir Annexes, figure \ref{an1
 
 Dans un premier temps, cette instrumentation nous permettra d'observer en temps réel la ruche et ses habitantes : 
 les caméras nous donnerons une vision globale de ce qu'il s'y passe, aussi bien en intérieur pour observer leur 
-comportement et tenter de repérer des parasites comme le varoa, qu'en extérieur pour y voir les dangers comme le frelon asiatique. %TODO REF ASIATIQUE ET VAROA  
+comportement et tenter de repérer des parasites comme le varoa \footnote{Voir référence \cite{ref11}}, 
+qu'en extérieur pour y voir les dangers comme le frelon asiatique \footnote{Voir référence \cite{ref12}}.
 Couplée aux donnés récoltées à l'aide de la carte électronique et ses capteurs installés au centre de la ruche plate, 
 nous pourrons avoir une vision complète et détaillée des événements et leur répercutions ponctuant la vie d'une colonie,
 de sa naissance à sa mort. \\
 Ces observations ont pour but d'être enregistrée, sauvegardées et commentées par les biologistes afin de construire une base
-de donnée contenant plusieurs types de comportements reconnus comme le refroidissement de la ruche, les danses frétillante, etc. %TODO REF DANSE 
+de donnée contenant plusieurs types de comportements reconnus comme le refroidissement de la ruche, les danses frétillante \footnote{Voir référence \cite{ref10}}, 
+etc.  
 \\
 Dans un second temps, cette base de donnée pourra être utilisée afin de créer des algorithmes repérant ces différents comportements
 de manière automatisée. Cela nous permettrait, en plus d'avoir des données complètes, d'en avoir leur analyse en 
@@ -314,27 +317,26 @@ Afin de répondre à ces besoins, nous avons imaginé l'application "Beeterface"
 \begin{landscape}
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.3]{../images/dia/schema_interface.png}
+\includegraphics[scale=0.2]{../images/dia/schema_interface.png}
+    \setlength{\columnseprule}{0,3}
+\begin{multicols}{2}
+    \begin{itemize}[label=\ding{241}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
+        \item Informations remontées : valeurs numériques ou textuelles. 
+        \item Bouton : bouton cliquable.
+        \item Choix : permet de choisir entre plusieurs valeurs prédéfinies.
+        \item Vidéo : image fixe où sera placée la vidéo une fois cette partie codée.
+        \item Entrée de texte : endroit où l'utilisateur peut écrire. 
+        \item Boite : type de contenant particulier. 
+        \item Lien : lien entre un bouton et une fenêtre. 
+    \end{itemize}
+\end{multicols}
     \caption{Schéma reprenant la structure de Beeterface}
     \label{sch_beeterface}
 \end{center}
 \end{figure}
 
-\Large Légende : \normalsize \\ 
-    \begin{multicols}{2}
-        \begin{itemize}[label=\ding{241}, leftmargin=*,parsep=0cm,itemsep=0cm,topsep=0cm]
-        \item Vert : informations remontées (texte, valeur)
-        \item Bleu : bouton
-        \item Violet : choix (permet de choisir entre plusieurs valeurs prédéfinies)
-        \item Jaune : vidéo
-        \item Rose : entrée de texte (endroit où l'utilisateur peut écrire)
-        \item Rouge : lien (établir le lien entre un bouton et une nouvelle fenêtre)
-        \item Orange : boite (type de contenant particulier)
-    \end{itemize}
-    \end{multicols}
 \end{landscape}
-    \setlength{\columnseprule}{0,1}
-
+            
 \dotfill \\
 
 \Large Fenêtre Principale - Beeterface \normalsize \\
@@ -550,7 +552,7 @@ Ainsi, ce schéma correspond à l'application actuelle mais n'avait pas été vu
     \section{Contraintes} 
 Le langage de départ pour coder l'interface et ses fonctionnalités, que nous pourrons familièrement nommer partie moteur 
 et partie physique, m'a été imposé. \\
-C'est donc en C que j'ai dû réfléchir à la façon de préparer et lier ces deux parties. Ce langage a été choisi tout simplement 
+C'est donc en C \footnote{Voir références \cite{ref5} \cite{ref8}} que j'ai dû réfléchir à la façon de préparer et lier ces deux parties. Ce langage a été choisi tout simplement 
 parceque c'est  le langage que M. Druon a pour habitude d'utiliser pour ce type de projet. \\
 La partie "moteur" peut être développée en C sans trop d'ajouts de librairies annexes autres que celles dites basiques 
 (stdlib, stdio). 
@@ -560,11 +562,11 @@ QT devant être utilisé en C++, notre choix s'est naturellement dirigé vers GT
 Comme dans tout projet collaboratif, la convergence des données est importante et peut parfois se révéler difficile à mettre en place. 
 Heureusement pour nous, en programmation l'outil GIT est excellent pour travailler à plusieurs. L'ayant déjà vu en cours cette année,
 j'ai pu l'utiliser concrètement lors de mon stage. Cependant, avant de commencer à utiliser l'outil, il a été préférable que 
-je me remette à niveau sur celui-ci et ai donc entamé la lecture du livre \textit{Pro Git} de Scott Chacon. %TODO 
+je me remette à niveau sur celui-ci et ai donc entamé la lecture du livre \textit{Pro Git} \footnote{Voir référence \cite{ref7}}. 
 qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub,
 un service web d'hébergement pour Git, accessible sous le nom "superbeelive" \footnote{Disponible sur https://github.com/superbeelive}.
-Le livre "Foundation of GTK+ Development" m'a servi de référence de base quant à la manière de manier les éléments. 
-Je me suis également aidée de divers tutoriels sur Internet, mais surtout de la documentation officielle. %TODO Lien biblio 
+Le livre "Foundation of GTK+ Development" \footnote{Voir référence \cite{ref1}}m'a servi de référence de base quant à la manière de manier les éléments. 
+Je me suis également aidée de divers tutoriels sur Internet \footnote{Voir référence \cite{ref3}}, mais surtout de la documentation officielle \footnote{Voir référence \cite{ref2}}. 
 \\
 
 Glade, un logiciel permettant de créer une interface GTK avec des outils graphiques, est souvent utilisé pour créer une interface
@@ -652,7 +654,8 @@ trois grandes parties pour m'y retrouver plus facilement. \\
 La première chose à faire est de créer les Widgets et de les définir. La création est simplement la déclaration d'une variable 
 avec son type. 
 
-%Appartée o/ %TODO
+\dotfill \\
+Appartée
 Avant toute chose, notons que j'utilise des pointeurs pour toute mon application et que mes exemples 
 sont inspirés des fichiers win\_main.c et win\_main.h disponibles en annexes 
 afin que vous puissiez vous y reporter pour voir des exemples plus complets et concrets. 
@@ -661,7 +664,7 @@ La structure en .c/.h et l'explication des pointeurs utilisés sont décrits dan
 Ils permettent juste d'indiquer que nous sommes dans la définition de la fenêtre win\_main.
 De plus, les noms utilisés (label, box et window) n'existent pas dans win\_main. Ils ont été simplifiés ici, 
 mais leurs équivalents sont facilements retrouvables dans win\_main.\\
-%Appartée \o
+\dotfill \\
 
 Créons une fenêtre, une box et un label.\\
 \small Dans win\_main.h : \normalsize
@@ -688,7 +691,6 @@ tmp->box_principal = gtk_box_new( GTK_ORIENTATION_VERTICAL, 0) ;
 Comme dit plus haut, à la création d'une "GtkBox" on indique d'abord si on veut que les éléments soient ajoutés verticalement 
 ou horizontalement. Le second argument permet de définir le nombre de pixels d'écart par défaut entre les éléments, 
 ici 0px, donc ils seront collés l'un à l'autre.  \\
-%TODO VERIFIER ARGUMENT  !!
 \small Dans win\_main.c : \normalsize
 \begin{lstlisting} [frame=single]
 tmp->label = gtk_label_new("Je suis le texte du label") ; 
@@ -739,7 +741,7 @@ sans déborder sur le reste.\\
 \end{itemize}
 Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, 
 j'ai appliqué une indentation  qui m'est propre mais que je trouve plus lisible. L'exemple pour main\_win.c est disponible en annexe. 
-%TODO Renvoi vers annexe avec code win_main.c et les lignes
+%TODO Renvoi vers annexe avec code win_main.c  et .h et les lignes
 Ainsi, à chaque fois que je place un élément dans une nouvelle box contenue elle-même dans une box, j'indente avec une 
 tabulation. Le rendu me permet de voir qui est à quel niveau. \\
 Petite précision, les éléments seront placés dans l'ordre de lecture du code. Ainsi, si votre "GtkBox" est créée en tant
@@ -748,15 +750,22 @@ Le diagramme de placement des Widget \footnote{Voir figure \ref{org_win_main}} p
 indentation schématiquement pour visualiser ce principe de "poupées russes".
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.5]{../images/dia/diagramme_fenetre.png} \\
+\includegraphics[scale=0.5]{../images/dia/diagramme_fenetre.png} 
         \caption{Diagramme des Widgets pour win\_main}
         \label{org_win_main}
 \end{figure}
 Une fois que les éléments sont placés dans les boîtes, ceux-ci sont tous collés les uns aux autres ou avec 
-les espaces de bases indiqués lors de la création des box. %TODO Vérifier argument  
-Il faut indiquer comment ils doivent se placer. Pour mieux comprendre ce que nous allons faire, voici un 
-avant/après les fonctions que je vais présenter : \\ 
-%TODO image d'un avant après de main_win
+les espaces de bases indiqués lors de la création des box. 
+Il faut indiquer comment ils doivent se placer. Pour mieux comprendre ce que nous allons faire, il faut voir un 
+avant/après les fonctions que je vais présenter \footnote{Voir figure \ref{avap}}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.4]{../images/annexes/av_ap.png} 
+    \caption{Avant/Après un meilleur placement}
+    \label{avap}
+\end{figure}
+
 Tout d'abord, commençons par jouer avec les paramètres EXPAND et FILL des "GtkBox". Ils permettent de définir quels éléments seront 
 autorisés à s'agrandir en même temps que la fenêtre. Le mieux pour bien comprendre leur comportement, c'est de tester au fur
 et à mesure les différentes combinaisons expliquées plus haut. \\
@@ -809,7 +818,8 @@ dire avec les éléments apparaissant au fur et à mesure laissant au début une
 préférez mettre l'affichage de la box principale avant l'affichage de la fenêtre. Ainsi, la box et ses enfants seront déjà générés 
 et n'auront besoin que de leur support, soit la window. Cependant, cette question se pose uniquement si l'application 
 à afficher nécessite beaucoup de ressources. \\
-Il ne reste plus qu'à lier des fonctions aux différents éléments pour que notre application soit utilisable.\\
+Notre interface est désormais prête \footnote{Voir Annexe \ref{an2} }
+il ne reste plus qu'à lier des fonctions aux différents éléments pour que notre application soit utilisable.\\
         
         \subsection{Signaux et fonctions} 
 Avoir des boutons, c'est bien. Pouvoir les utiliser, c'est encore mieux. Maintenant que tous éléments sont placés, 
@@ -820,7 +830,7 @@ Pour le moment, peu de fonctions ont été écrites pour le moteur : toute la pa
 mais le développement des fonctionnalités est ce qui prend le plus de temps. En guise d'entraînement et pour 
 pouvoir être prête le jour où il faudra faire tous les liens, j'ai déjà fait quelques tests pour comprendre les principes.
 Les liens entre l'interface et les fonctions vont se passer dans le main. Dans notre code, il est présent dans beeterface.c.\\
-%TODO A AJOUTER EN ANNEXE 
+%TODO A AJOUTER EN ANNEXE BEETERFACE.C 
 Avant tout, il faut noter que quelques fonctions sont obligatoires pour le bon fonctionnement de GTK. Les voici : \\
 \begin{lstlisting} [frame=single]
 int main(int argc, char *argv[])     
@@ -1184,7 +1194,7 @@ et j'ai donc appris des raccourcis clavier et des techniques que me conseillaien
 mon temps. \\
 De plus, j'ai ensuite eu la chance d'avoir un ordinateur fourni par le LIRMM, également sous Unix.
 Comme cette machine m'était destinée, j'ai pu passer du temps à la configurer comme je le voulais : 
-installation d'une interface graphique (i3), configuration de VIM, d'un terminal personnalisé, personnalisation des couleurs 
+installation d'une interface graphique (i3), configuration de VIM \footnote{Voir référence \cite{ref6}}, d'un terminal personnalisé, personnalisation des couleurs 
 sur mon shell, test d'une alternative à bash (fish) etc. 
 Si je considère cette partie personnalisation, comme une compétence développée pendant le stage, c'est parce que j'ai eu la chance 
 d'avoir autour de moi une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une 
@@ -1207,7 +1217,7 @@ Désormais, je travaille beaucoup avec GIT sur GitHub, en découvrant des projet
 mes configurations Unix, etc. 
 En soit, j'aurai appris sur beaucoup de sujets différent, plus que ce que je n'aurai pu l'imaginer.
 J'ajoute aussi qu'au moment où j'écris ces lignes, j'apprends à me servir de Latex, un langage de composition de document, 
-puisque je rédige mon rapport de stage avec cet outil.\\
+puisque je rédige mon rapport de stage avec cet outil \footnote{Voir références \cite{ref4} \cite{ref9}}.\\
 
 Pour conclure, ce stage au sein de l'équipe SuperBeeLive m'aura apporté un bon nombre de choses : des compétences, des connaissances, mais 
 aussi de l'aisance. C'est avec les mises en application de mes connaissances acquises lors du DUT que j'ai pu prendre confiance en celle-ci.
@@ -1241,15 +1251,39 @@ C'est d'ailleurs avec une grande joie que je rejoins l'équipe de SuperBeeLive p
 Je vais donc encore pouvoir suivre l'évolution du projet et finir ce que j'ai commencé, que ça soit l'application, la mise en place du 
 réseau et pouvoir commencer la vitrine web et les cartes électroniques.  \\
 
+\bibliographystyle{plain}
 \bibliography{biblio}
-
 
 \chapter{Annexes}
 \begin{figure}[t]
-    \includegraphics[scale=0.7]{../images/annexes/poster_numev.pdf}
+    \centering
+    \includegraphics[scale=0.2]{../images/annexes/poster_numev.pdf}
+    \caption{Poster NUMEV}
     \label{an1}
 \end{figure}
+
+\begin{landscape}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{../images/annexes/screen_appli.png}
+    \caption{Screenshots de l'application Beeterface}
+    \label{an2}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.85]{../code/beeterface.pdf}
+    \caption{beeterface.c}
+    \label{an3}
+\end{figure}
+\end{landscape}
+
+
 \end{document}
+
+
 
 
 

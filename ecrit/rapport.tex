@@ -43,27 +43,39 @@
 \let\ps@plain=\ps@fancy
 \makeatother
 
-
-    \title{\LARGE{Rapport de Stage}}
-    \author{\textsc{SERENELLI-PESIN} Olivia\\DUT Réseaux & Télécommunications\\Année universitaire 2018/2019}
-    \date{\today}
-    \makeatletter
-
 \begin{document}
 
 %Page de garde
-\begin{titlepage}
-%\begin{center}
-%    \AddToShipoutPicture{
-%                \AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{../images/logo/logo_iutbeziers.png}}
-%                \AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{../images/logo/logoibmm.jpg}}
-                        } 
-%\includegraphics[scale=0.3]{../images/logo/um_logo.png}
-%\end{center}
+    \title{
+        \includegraphics[width=6cm]{../images/logo/logoibmm.jpg}\hspace{2cm} 
+           \includegraphics[width=6cm]{../images/logo/logo_lirmm_trans.png} \\
+           \normalsize\textsc{}
+           \hfill \\
+           \hrulefill \\
+           \hfill \\
+           \LARGE \textbf{\uppercase{Rapport de Stage \\ Projet Superbeelive}} \\
+           \hrulefill \\
+           \hfill \\
+           \Large{07 Avril 2019 - 05 Juillet 2019} \vspace*{5\baselineskip}
+           }
+         
+    \author{
+           \large{Stagiaire : \textbf{Olivia SERENELLI-PESIN}} \\
+           \large{Tuteur : \textbf{Matthieu ROUSSET}} \\
+            \bigskip \\
+           \hfill \\
+           \hfill \\
+           \hfill \\
+            \includegraphics[width=4cm]{../images/logo/logo_iutbeziers.png}\hspace{7cm}
+            \includegraphics[width=5cm]{../images/logo/um_logo.png}
+            \date{}
+            }
+\maketitle
 
-\end{titlepage}
 \clearpage
 \newpage 
+
+
 
 \chapter*{Remerciements}
 
@@ -80,7 +92,16 @@ de sujets, aussi bien du point de vu universitaire que sur les tâches qui m’o
 Enfin, toute l'équipe universitaire de l'IUT de Béziers qui m'aura appris sur beaucoup de sujets et rendu l'apprentissage
 de différents domaines très intéressants. 
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm]{../images/photo/IMG_20171110_154804205_HDR.jpg}
+\caption{Photo avec, de gauche à droite, Matthieu, Sébastien et Capucine au rucher.}
+\label{ruche_pers}
+\end{figure}
 
+%TODO
+%Typo pour %
+%biblio logiciel
 
 
 \tableofcontent
@@ -94,11 +115,17 @@ Mon stage a été réalisé au sein d'un projet de recherche alliant biologie et
 Le projet étant réalisé par plusieurs laboratoires de recherches, j'ai dû évoluer aux seins de différentes organisations. 
 Tout d'abord il y a mon employeur, l'Université de Montpellier, qui englobe d'autres structures où j'ai pu évoluer. 
 L'université a été, pour moi, une entité administrative. \\ 
-Avec elle, le CNRS (Centre National de Recherche Scientifique) accueille dans ses locaux le rucher expérimental où 
-l'équipe peut effectuer ses tests d'installation pour le projet. J'ai pu m'y rendre plusieurs fois afin d'observer les abeilles
+Avec elle, le CNRS (Centre National de Recherche Scientifique) accueille dans ses locaux le rucher expérimental \footnote{Voir figure \ref{ruches_ext}}
+où l'équipe peut effectuer ses tests d'installation pour le projet. 
+J'ai pu m'y rendre plusieurs fois afin d'observer les abeilles
 et voir l'installation expérimentale au fur et à mesure. C'est également dans cette structure que nous aurons un serveur 
 d'installé dans leur salle dédiée.\\
-
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm]{../images/photo/IMG_20180215_123536.jpg}
+\caption{Photo de deux chercheurs sur les ruches extérieures du CNRS}
+\label{ruches_ext}
+\end{figure}
 Ensuite, l'IBMM est le laboratoire qui a engagé l'argent lié au projet afin de pouvoir me recruter lors de ce stage. 
 C'est également une structure qui a été seulement administrative de mon point de vu puisque j'ai été affectée dans 
 les bureaux du LIRMM (Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier), autre laboratoire de 
@@ -152,13 +179,13 @@ Modélisation pour l'Environnement et le Vivant)\footnote{Voir Annexes, figure \
 
 Dans un premier temps, cette instrumentation nous permettra d'observer en temps réel la ruche et ses habitantes : 
 les caméras nous donnerons une vision globale de ce qu'il s'y passe, aussi bien en intérieur pour observer leur 
-comportement et tenter de repérer des parasites comme le varoa \footnote{Voir référence \cite{ref11}}, 
-qu'en extérieur pour y voir les dangers comme le frelon asiatique \footnote{Voir référence \cite{ref12}}.
+comportement et tenter de repérer des parasites comme le varoa \footnote{Voir bibliographie \cite{ref11}}, 
+qu'en extérieur pour y voir les dangers comme le frelon asiatique \footnote{Voir bibliographie \cite{ref12}}.
 Couplée aux donnés récoltées à l'aide de la carte électronique et ses capteurs installés au centre de la ruche plate, 
 nous pourrons avoir une vision complète et détaillée des événements et leur répercutions ponctuant la vie d'une colonie,
 de sa naissance à sa mort. \\
 Ces observations ont pour but d'être enregistrée, sauvegardées et commentées par les biologistes afin de construire une base
-de donnée contenant plusieurs types de comportements reconnus comme le refroidissement de la ruche, les danses frétillante \footnote{Voir référence \cite{ref10}}, 
+de donnée contenant plusieurs types de comportements reconnus comme le refroidissement de la ruche, les danses frétillante \footnote{Voir bibliographie \cite{ref10}}, 
 etc.  
 \\
 Dans un second temps, cette base de donnée pourra être utilisée afin de créer des algorithmes repérant ces différents comportements
@@ -297,7 +324,7 @@ correspondant à trois types de traitement d'image différents. \\
   puis transférés à un serveur central. En fonction du besoin, ils pourront
   être enregistrés, renvoyés vers le site vitrine, renvoyés vers l'application d'annotation
   ou encore traités par les algorithmes qui sont mis au point par M. Triboulet et M. Druon. 
-  Ces derniers se basent sur des réseaux de neurones afin de reconnaitre des comportements
+  Ces derniers se basent sur des réseaux de neurones artificiels afin de reconnaitre des comportements
   (danse, ventilation, etc) de façon automatique. \\
 
 Au vu de la description générale de l'utilisation des vidéos ainsi qu'après une discussion avec l'équipe, le logiciel devrait 
@@ -551,8 +578,8 @@ Ainsi, ce schéma correspond à l'application actuelle mais n'avait pas été vu
 
     \section{Contraintes} 
 Le langage de départ pour coder l'interface et ses fonctionnalités, que nous pourrons familièrement nommer partie moteur 
-et partie physique, m'a été imposé. \\
-C'est donc en C \footnote{Voir références \cite{ref5} \cite{ref8}} que j'ai dû réfléchir à la façon de préparer et lier ces deux parties. Ce langage a été choisi tout simplement 
+et partie graphique, m'a été imposé. \\
+C'est donc en C \footnote{Voir bibliographies \cite{ref5} \cite{ref8}} que j'ai dû réfléchir à la façon de préparer et lier ces deux parties. Ce langage a été choisi tout simplement 
 parceque c'est  le langage que M. Druon a pour habitude d'utiliser pour ce type de projet. \\
 La partie "moteur" peut être développée en C sans trop d'ajouts de librairies annexes autres que celles dites basiques 
 (stdlib, stdio). 
@@ -562,11 +589,11 @@ QT devant être utilisé en C++, notre choix s'est naturellement dirigé vers GT
 Comme dans tout projet collaboratif, la convergence des données est importante et peut parfois se révéler difficile à mettre en place. 
 Heureusement pour nous, en programmation l'outil GIT est excellent pour travailler à plusieurs. L'ayant déjà vu en cours cette année,
 j'ai pu l'utiliser concrètement lors de mon stage. Cependant, avant de commencer à utiliser l'outil, il a été préférable que 
-je me remette à niveau sur celui-ci et ai donc entamé la lecture du livre \textit{Pro Git} \footnote{Voir référence \cite{ref7}}. 
+je me remette à niveau sur celui-ci et ai donc entamé la lecture du livre \textit{Pro Git} \footnote{Voir bibliographie \cite{ref7}}. 
 qui m'a été d'une grande aide pour avoir des bases solides. Pour héberger notre code, nous avons choisi de le déposer sur GitHub,
 un service web d'hébergement pour Git, accessible sous le nom "superbeelive" \footnote{Disponible sur https://github.com/superbeelive}.
-Le livre "Foundation of GTK+ Development" \footnote{Voir référence \cite{ref1}}m'a servi de référence de base quant à la manière de manier les éléments. 
-Je me suis également aidée de divers tutoriels sur Internet \footnote{Voir référence \cite{ref3}}, mais surtout de la documentation officielle \footnote{Voir référence \cite{ref2}}. 
+Le livre "Foundation of GTK+ Development" \footnote{Voir bibliographie \cite{ref1}}m'a servi de référence de base quant à la manière de manier les éléments. 
+Je me suis également aidée de divers tutoriels sur Internet \footnote{Voir bibliographie \cite{ref3}}, mais surtout de la documentation officielle \footnote{Voir bibliographie \cite{ref2}}. 
 \\
 
 Glade, un logiciel permettant de créer une interface GTK avec des outils graphiques, est souvent utilisé pour créer une interface
@@ -610,7 +637,7 @@ D'abord, on va créer une fenêtre, soit une "GtkWindow" que l'on va appeler Win
 C'est pour ça que nous avons les éléments "GtkContainers" : ce sont ces containers que nous allons pouvoir structurer et placer tous 
 les autres éléments comme on le veut dans notre fenêtre. \\
 Le GtkContainer de base est la "GtkBox". À sa création, nous devons simplement indiquer si celle-ci va être horizontale ou verticale, 
-c'est à dire si les éléments que nous allons mettre dedans vont être placés de haut en bas ou de droite à gauche. 
+c'est à dire si les éléments que nous allons mettre dedans vont être placés de haut en bas ou de gauche à droite. 
 Une fois cette première "GtkBox" placée, le problème de limitation de place imposée par la "GtkWindow" n'en est plus un. 
 Maintenant, nous pouvons ranger ce que nous voulons dans cette boite. C'est là que le système de poupée russe prend son sens : 
 nous allons devoir jouer avec les différentes boîtes pour créer les espaces que nous désirons. 
@@ -740,8 +767,8 @@ sans déborder sur le reste.\\
     \item Padding : valeur numérique. Indique l'espacement en pixel (px) entre les widget que contient la box. 
 \end{itemize}
 Les éléments sont maintenant placés. Afin d'avoir une relecture facile et pour savoir qui se trouve dans quelle box ou container, 
-j'ai appliqué une indentation  qui m'est propre mais que je trouve plus lisible. L'exemple pour main\_win.c est disponible en annexe. 
-%TODO Renvoi vers annexe avec code win_main.c  et .h et les lignes
+j'ai appliqué une indentation  qui m'est propre mais que je trouve plus lisible. L'exemple pour main\_win.c est disponible en annexe
+\footnote{Voir Annexes \ref{3} et \ref{4}}. 
 Ainsi, à chaque fois que je place un élément dans une nouvelle box contenue elle-même dans une box, j'indente avec une 
 tabulation. Le rendu me permet de voir qui est à quel niveau. \\
 Petite précision, les éléments seront placés dans l'ordre de lecture du code. Ainsi, si votre "GtkBox" est créée en tant
@@ -829,8 +856,8 @@ C'est ce qui va établir le lien entre le moteur et la carcasse. \\
 Pour le moment, peu de fonctions ont été écrites pour le moteur : toute la partie graphique est prête à les accueillir 
 mais le développement des fonctionnalités est ce qui prend le plus de temps. En guise d'entraînement et pour 
 pouvoir être prête le jour où il faudra faire tous les liens, j'ai déjà fait quelques tests pour comprendre les principes.
-Les liens entre l'interface et les fonctions vont se passer dans le main. Dans notre code, il est présent dans beeterface.c.\\
-%TODO A AJOUTER EN ANNEXE BEETERFACE.C 
+Les liens entre l'interface et les fonctions vont se passer dans le main. Dans notre code, il est présent dans beeterface.c 
+\footnote{Voir en Annexe \ref{an3}}.\\
 Avant tout, il faut noter que quelques fonctions sont obligatoires pour le bon fonctionnement de GTK. Les voici : \\
 \begin{lstlisting} [frame=single]
 int main(int argc, char *argv[])     
@@ -877,7 +904,7 @@ se trouve. Cet exemple est basique, on peut évidemment faire bien plus et touch
 d'autres fonctionnalités, ouvrir de nouvelles fenêtres, modifier des informations...\\
 
 Tous les outils principaux pour pouvoir créer une interface GTK ont été présentés. Avec ceux-là, beaucoup de recherches
-dans la documentation et le "catalogue" %TODO
+dans la documentation et le "catalogue"
 de GTK, on a en mains une infinité de possibilités. Certaines actions nécessitent plus de réflexion que d'autres, mais 
 au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
 
@@ -886,7 +913,7 @@ au final ça n'est que de l'algorithmie ; toute la syntaxe est là. \\
         \subsection{Structuration du code}
 La première chose que j'ai eu à faire pour la création de l'application a été de réfléchir à la façon dont elle allait fonctionner.
 En étudiant la demande, une chose majeure en ressortait : il y allait avoir beaucoup de type de données à traiter et sauvegarder. \\
-Si on lit la liste des besoins présentés dans la partie %TODO
+Si on lit la liste des besoins présentés dans la partie 2.1
 on peut voir qu'il y a, entre autres, une notion d'auteur, de caméra, de vidéo et de ruche.
 
 Afin de pouvoir manipuler de telles informations, j'ai créé une structure (struct en C) pour chacun des éléments nécessaires. \\
@@ -917,8 +944,7 @@ char* author_get_email ( author_t* ) ;
 Pour chacune des structures, j'ai également préparé des fonctions permettant de manipuler les données.
 En général, on y retrouve une fonction pour créer un élément (new\_element), une pour le supprimer (del\_element),
 et un jeu de fonction pour modifier (set\_partie\_element) ou lire les données contenues dans l'élément indépendamment 
-(get\_partie\_element). L'exemple pour author.c est en Annexe.\\
-%TODO ANNEXE AUTHOR.C 
+(get\_partie\_element). L'exemple pour author.c est en Annexe \footnote{Voir Annexe \ref{an6}}.\\
 
 Cette préparation permettra de pouvoir utiliser ces données sans avoir à se soucier des pointeurs : tout est prêt, il n'y
 a plus qu'à choisir comment on voudra modifier les données lors de l'utilisation du logiciel. \\
@@ -932,9 +958,7 @@ ou un tableau de coordonnées pour la croix mouvante. \\
 En plus des descriptions des éléments, tous contiennent un champ nom, auteur, couleur, description, temps de début 
 (quand il apparaît sur la vidéo) et temps de fin (quand il disparaît de la vidéo). 
 On peut aussi faire mention du champ "tag[]" et "tag\_size" qui correspondront à une pile de tag qui est affecté à l'élément. \\
-Ces tags font parti des fonctionnalités les plus difficiles à mettre en place. Certes demandés par les biologistes, ils ne sont 
-pas urgents pour le moment. Nous les avons défini sur papier, mais pas encore mis en place. \\
-Il y aura une liste de tags disponible, un dictionnaire, dans lequel les biologistes pourront 
+C
 ajouter facilement des nouveaux tags. Les tags pourront être affectés aux différentes annotations appliquées
 à une vidéo, et cette vidéo héritera de ces tags dans sa description, nous permettant de trier et récupérer les vidéos 
 en fonctions de ce qu'il s'y trouve. \\
@@ -956,8 +980,7 @@ De plus, M. Druon a rapidement intégré un Makefile afin de nous éviter de com
 ensuite à CMake pour générer le Makefile automatiquement ensuite. \\
 Une fois cette façon de faire mis en place pour la partie moteur, j'ai voulu l'appliquer à la partie
 graphique. Ainsi, un couple de .c et .h a aussi été créé pour chacune des fenêtres, le .h contenant 
-toutes les déclarations d'éléments sous forme de structure. \\
-%exemple .c et .h POUR WIN
+toutes les déclarations d'éléments sous forme de structure \footnote{Voir Annexes \ref{3} et \ref{4}}. \\
 
 Dans le .c on retrouve la fonction de création de l'interface avec au début la définition de "tmp" qui correspond donc 
 au "papier cadeau" contenant toutes les déclarations des éléments. 
@@ -1020,7 +1043,7 @@ callback\_auteur(GtkWidget * widget, gpointer data)
 Dans cet exemple, on retrouve la fonction "auteur\_win\_fill", fonction écrite dans win\_auteur\_callbacks.c et définie
 dans win\_auteur.h. J'ai séparé les fonctions utilisées dans les callbacks afin de les retrouver facilement. \\
 Voici donc comment le projet a été réflechi et construit. Normalement, avec ces détails, un développeur qui voudrait reprendre
-le projet pourrait retrouver les données facilement. Dans cette optique, nous avons également prévu d'utiliser  %TODO Mettre le lien
+le projet pourrait retrouver les données facilement. Dans cette optique, nous avons également prévu d'utiliser
 l'utilitaire Naturaldocs afin de documenter le code, quelques exemples sont d'ailleurs déjà présents, mais la documentation 
 complète n'était pas une priorité, c'est pourquoi cette tâche a été laissée en suspens. 
        
@@ -1035,7 +1058,7 @@ mettre en pause, la reculer, pour qu'ensuite elles soient affectées à l'interf
 Dans un second temps, il faut pouvoir enregistrer la vidéo une fois qu'elle est annotée. L'idée est de faire en sorte que les annotations
 soient des PNG appliqués au-dessus de l'image et qu'ils soient transportés dans les mêmes flux que les flux vidéos. \\
 
-Ce travail, bien qu'il a été commencé, devrait être fini aux alentours de septembre, c'est pourquoi sa description ici
+Ce travail a été commencé durant mon stage et devrait être fini aux alentours de septembre. C'est pourquoi sa description ici
 est surtout théorique. \\
         \subsection{Ce qu'il reste à faire}
 Une application prenant du temps à être développée, il est normal que celle-ci n'ait pas été finie en 3 mois. Pour pouvoir se situer
@@ -1150,11 +1173,20 @@ dans une tâche se détachant un peu du monde de la Recherche : aider durant les
 de première année. \\
 Ce travail reste en lien avec SuperBeeLive puisque l'IUT de Béziers est partenaire du projet et qu'un des groupe d'étudiants (groupe 13) 
 a fait son projet sur la température et l'humidité dans la ruche. \\
-C'est pour cela que durant toute ma durée du stage, je me suis déplacée sur l'IUT de Béziers pour travailler les jeudis pour être
-disponible, M. Druon et moi, pour les étudiants de RT1. Pendant ces jeudis-ci, je travaillais le matin sur Beeterface et 
+C'est pour cela que tous les jeudis je me suis déplacée à l'IUT de Béziers pour être disponible avec M. Druon pour les étudiants de premières
+années.
+Pendant ces jeudis-ci, je travaillais le matin sur Beeterface et 
 l'après midi je continuais de coder en salle projet pour répondre à d'éventuelles questions. \\
 J'ai également eu à m'occuper des commandes des étudiants : récolter leur liste de demandes, les regrouper pour faire les commandes
-aux fournisseurs, réceptionner, inventorier et ranger. \\
+aux fournisseurs, réceptionner, inventorier et ranger \footnote{Voir Figure \ref{photo_bureau}}.\\
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{../images/photos.png}
+    \caption{Photo du rangement des commandes}
+    \label{photo_bureau}
+\end{figure}
+    
+
 %TODO Photo du rangement des commandes 
 Ma présence sur l'IUT s'est intensifiée pendant les deux semaines où les étudiants étaient à temps plein sur leur projet, du 18 au 30 juin. \\
 Durant ces deux semaines, j'ai été affectée au bureau se trouvant à côté du laboratoire de l'IUT où j'avais rangé tous le matériel 
@@ -1194,7 +1226,7 @@ et j'ai donc appris des raccourcis clavier et des techniques que me conseillaien
 mon temps. \\
 De plus, j'ai ensuite eu la chance d'avoir un ordinateur fourni par le LIRMM, également sous Unix.
 Comme cette machine m'était destinée, j'ai pu passer du temps à la configurer comme je le voulais : 
-installation d'une interface graphique (i3), configuration de VIM \footnote{Voir référence \cite{ref6}}, d'un terminal personnalisé, personnalisation des couleurs 
+installation d'une interface graphique (i3), configuration de VIM \footnote{Voir bibliographie \cite{ref6}}, d'un terminal personnalisé, personnalisation des couleurs 
 sur mon shell, test d'une alternative à bash (fish) etc. 
 Si je considère cette partie personnalisation, comme une compétence développée pendant le stage, c'est parce que j'ai eu la chance 
 d'avoir autour de moi une équipe pour qui il était important que je sois à l'aise avec mes outils de travails, me laissant une 
@@ -1217,7 +1249,7 @@ Désormais, je travaille beaucoup avec GIT sur GitHub, en découvrant des projet
 mes configurations Unix, etc. 
 En soit, j'aurai appris sur beaucoup de sujets différent, plus que ce que je n'aurai pu l'imaginer.
 J'ajoute aussi qu'au moment où j'écris ces lignes, j'apprends à me servir de Latex, un langage de composition de document, 
-puisque je rédige mon rapport de stage avec cet outil \footnote{Voir références \cite{ref4} \cite{ref9}}.\\
+puisque je rédige mon rapport de stage avec cet outil \footnote{Voir bibliographie \cite{ref4} \cite{ref9}}.\\
 
 Pour conclure, ce stage au sein de l'équipe SuperBeeLive m'aura apporté un bon nombre de choses : des compétences, des connaissances, mais 
 aussi de l'aisance. C'est avec les mises en application de mes connaissances acquises lors du DUT que j'ai pu prendre confiance en celle-ci.
@@ -1263,24 +1295,62 @@ réseau et pouvoir commencer la vitrine web et les cartes électroniques.  \\
 \end{figure}
 
 \begin{landscape}
-\begin{figure}
+    \begin{figure}[h]
     \centering
     \includegraphics[scale=0.6]{../images/annexes/screen_appli.png}
     \caption{Screenshots de l'application Beeterface}
     \label{an2}
 \end{figure}
-\end{landscape}
-
-\begin{landscape}
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[scale=0.85]{../code/beeterface.pdf}
+    \includegraphics[page=1,scale=0.8]{../code/beeterface.pdf}
     \caption{beeterface.c}
     \label{an3}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=2,scale=0.9]{../code/beeterface.pdf}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=3,scale=0.9]{../code/beeterface.pdf}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=4,scale=0.9]{../code/beeterface.pdf}
 \end{figure}
 \end{landscape}
 
 
+\begin{landscape}
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=1,scale=0.85]{../code/win_main_h.pdf}
+    \caption{win\_main.h}
+    \label{an4}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=1,scale=0.85]{../code/win_main_c.pdf}
+    \caption{win\_main.c}
+    \label{an5}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=1,scale=0.85]{../code/author.pdf}
+    \caption{win\_main.c}
+    \label{an6}
+\end{figure}
+\end{landscape}
 \end{document}
 
 

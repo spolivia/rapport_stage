@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.2)  12 AUG 2019 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.2)  14 AUG 2019 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,7 +785,39 @@ Package pdftex.def Info: ../images/logo/um_logo.png  used on input line 73.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/logo/logoibmm.jp
 g> <../images/logo/logo_lirmm_trans.png> <../images/logo/logo_iutbeziers.png> <
-../images/logo/um_logo.png>]
+../images/logo/um_logo.png>] (./rapport.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `rapport.toc'.
+
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 80.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 80.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 26.7007pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+<../images/logo/logo_abeille.png, id=16, 1275.93932pt x 775.03345pt>
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 80
+.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[1
+
+
+ <../images/logo/logo_abeille.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
@@ -800,7 +832,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
-<../images/photo/IMG_20171110_154804205_HDR.jpg, id=16, 3276.24pt x 1842.885pt>
+<../images/photo/IMG_20171110_154804205_HDR.jpg, id=23, 3276.24pt x 1842.885pt>
 
 File: ../images/photo/IMG_20171110_154804205_HDR.jpg Graphic file (type jpg)
 <use ../images/photo/IMG_20171110_154804205_HDR.jpg>
@@ -826,21 +858,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<../images/logo/logo_abeille.png, id=17, 1275.93932pt x 775.03345pt>
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
 9.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[1
+[2
 
-
- <../images/photo/IMG_20171110_154804205_HDR.jpg> <../images/logo/logo_abeille.
-png>]
+ <../images/photo/IMG_20171110_154804205_HDR.jpg>]
 Chapitre 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 118.
-<../images/photo/IMG_20180215_123536.jpg, id=24, 1951.29pt x 2601.72pt>
+<../images/photo/IMG_20180215_123536.jpg, id=28, 1951.29pt x 2601.72pt>
 File: ../images/photo/IMG_20180215_123536.jpg Graphic file (type jpg)
 <use ../images/photo/IMG_20180215_123536.jpg>
 Package pdftex.def Info: ../images/photo/IMG_20180215_123536.jpg  used on input
@@ -889,7 +916,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 15
 7.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[2
+[3
 
 
 ]
@@ -897,14 +924,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--163
 
  []
 
-<../images/schema_ruche/supportrucheplate1.JPG, id=30, 593.21625pt x 690.32906p
+<../images/schema_ruche/supportrucheplate1.JPG, id=34, 593.21625pt x 690.32906p
 t>
 File: ../images/schema_ruche/supportrucheplate1.JPG Graphic file (type jpg)
 <use ../images/schema_ruche/supportrucheplate1.JPG>
 Package pdftex.def Info: ../images/schema_ruche/supportrucheplate1.JPG  used on
  input line 166.
 (pdftex.def)             Requested size: 177.96625pt x 207.10031pt.
-<../images/schema_ruche/supportrucheplate.JPG, id=31, 661.72218pt x 682.04813pt
+<../images/schema_ruche/supportrucheplate.JPG, id=35, 661.72218pt x 682.04813pt
 >
 File: ../images/schema_ruche/supportrucheplate.JPG Graphic file (type jpg)
 <use ../images/schema_ruche/supportrucheplate.JPG>
@@ -914,13 +941,13 @@ input line 167.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../images/photo/face_ruche.jpg, id=32, 4625.28pt x 3468.96pt>
+<../images/photo/face_ruche.jpg, id=36, 4625.28pt x 3468.96pt>
 File: ../images/photo/face_ruche.jpg Graphic file (type jpg)
 <use ../images/photo/face_ruche.jpg>
 Package pdftex.def Info: ../images/photo/face_ruche.jpg  used on input line 174
 .
 (pdftex.def)             Requested size: 231.27754pt x 173.45816pt.
-<../images/photo/cote_ruche.jpg, id=33, 4625.28pt x 3468.96pt>
+<../images/photo/cote_ruche.jpg, id=37, 4625.28pt x 3468.96pt>
 File: ../images/photo/cote_ruche.jpg Graphic file (type jpg)
 <use ../images/photo/cote_ruche.jpg>
 Package pdftex.def Info: ../images/photo/cote_ruche.jpg  used on input line 175
@@ -954,7 +981,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 19
 6.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[3 <../images/photo/IMG_20180215_123536.jpg>]
+[4 <../images/photo/IMG_20180215_123536.jpg>]
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
@@ -976,14 +1003,14 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 20
 1.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[4 <../images/schema_ruche/supportrucheplate1.JPG> <../images/schema_ruche/supp
+[5 <../images/schema_ruche/supportrucheplate1.JPG> <../images/schema_ruche/supp
 ortrucheplate.JPG> <../images/photo/face_ruche.jpg> <../images/photo/cote_ruche
 .jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 204--207
 
  []
 
-<../images/dia/organiramme_equipe_projet.png, id=40, 1379.1525pt x 805.0075pt>
+<../images/dia/organiramme_equipe_projet.png, id=44, 1379.1525pt x 805.0075pt>
 File: ../images/dia/organiramme_equipe_projet.png Graphic file (type png)
 <use ../images/dia/organiramme_equipe_projet.png>
 Package pdftex.def Info: ../images/dia/organiramme_equipe_projet.png  used on i
@@ -1024,7 +1051,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 23
 5.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[5 <../images/dia/organiramme_equipe_projet.png>]
+[6 <../images/dia/organiramme_equipe_projet.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 236--241
 
  []
@@ -1059,14 +1086,14 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 26
 7.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[6]
+[7]
 Chapitre 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 280--285
 
  []
 
-<../images/dia/schema_camera.png, id=48, 905.5006pt x 531.39706pt>
+<../images/dia/schema_camera.png, id=52, 905.5006pt x 531.39706pt>
 File: ../images/dia/schema_camera.png Graphic file (type png)
 <use ../images/dia/schema_camera.png>
 Package pdftex.def Info: ../images/dia/schema_camera.png  used on input line 28
@@ -1080,9 +1107,12 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 293.
 
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 304.
-
+! Misplaced alignment tab character &.
+<argument> ...ww.youtube.com/watch?v=jGhwq3n\_6mw&
+                                                  t=353s\@finalstrut \strutbox 
+l.304 ....youtube.com/watch?v=jGhwq3n\_6mw&t=353s}
+                                                  . \\
+? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 293--305
 
@@ -1108,7 +1138,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 30
 5.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[7
+[8
 
  <../images/dia/schema_camera.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 323--329
@@ -1140,8 +1170,8 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 34
 4.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[8]
-<../images/dia/schema_interface.png, id=57, 2567.5925pt x 1108.14pt>
+[9]
+<../images/dia/schema_interface.png, id=60, 2567.5925pt x 1108.14pt>
 File: ../images/dia/schema_interface.png Graphic file (type png)
 <use ../images/dia/schema_interface.png>
 Package pdftex.def Info: ../images/dia/schema_interface.png  used on input line
@@ -1174,7 +1204,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 36
 5.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[9
+[10
 
  <../images/dia/schema_interface.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 367--368
@@ -1186,7 +1216,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
-<../images/logo/logo_ampoule.png, id=62, 256.96pt x 256.96pt>
+<../images/logo/logo_ampoule.png, id=65, 256.96pt x 256.96pt>
 File: ../images/logo/logo_ampoule.png Graphic file (type png)
 <use ../images/logo/logo_ampoule.png>
 Package pdftex.def Info: ../images/logo/logo_ampoule.png  used on input line 41
@@ -1217,7 +1247,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 43
 0.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[10
+[11
 
  <../images/logo/logo_ampoule.png>]
 File: ../images/logo/logo_ampoule.png Graphic file (type png)
@@ -1260,7 +1290,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 49
 2.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[11
+[12
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 505--506
@@ -1322,7 +1352,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 56
 7.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 579--588
 
  []
@@ -1332,7 +1362,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 589--598
 
  []
 
-<../images/dia/arbo_widget.png, id=74, 561.09625pt x 189.70876pt>
+<../images/dia/arbo_widget.png, id=77, 561.09625pt x 189.70876pt>
 File: ../images/dia/arbo_widget.png Graphic file (type png)
 <use ../images/dia/arbo_widget.png>
 Package pdftex.def Info: ../images/dia/arbo_widget.png  used on input line 622.
@@ -1363,8 +1393,8 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 63
 3.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[13]
-<../images/dia/schema_bloc_mainwin.png, id=79, 1036.87375pt x 593.21625pt>
+[14]
+<../images/dia/schema_bloc_mainwin.png, id=82, 1036.87375pt x 593.21625pt>
 File: ../images/dia/schema_bloc_mainwin.png Graphic file (type png)
 <use ../images/dia/schema_bloc_mainwin.png>
 Package pdftex.def Info: ../images/dia/schema_bloc_mainwin.png  used on input l
@@ -1375,7 +1405,7 @@ Overfull \hbox (34.73874pt too wide) in paragraph at lines 648--648
  [][] 
  []
 
-<../images/dia/schema_bloc_win_applique.png, id=80, 1136.245pt x 661.47125pt>
+<../images/dia/schema_bloc_win_applique.png, id=83, 1136.245pt x 661.47125pt>
 File: ../images/dia/schema_bloc_win_applique.png Graphic file (type png)
 <use ../images/dia/schema_bloc_win_applique.png>
 Package pdftex.def Info: ../images/dia/schema_bloc_win_applique.png  used on in
@@ -1414,7 +1444,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 67
 9.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[14 <../images/dia/arbo_widget.png>]
+[15 <../images/dia/arbo_widget.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1438,7 +1468,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 68
 4.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[15 <../images/dia/schema_bloc_mainwin.png>]
+[16 <../images/dia/schema_bloc_mainwin.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 684--695
 
  []
@@ -1512,7 +1542,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 71
 5.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[16 <../images/dia/schema_bloc_win_applique.png>]
+[17 <../images/dia/schema_bloc_win_applique.png>]
 
 ! Package inputenc Error: Unicode char Ã\expandafter (U+4F1)
 (inputenc)                not set up for use with LaTeX.
@@ -1563,12 +1593,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 771.
 
-LaTeX Warning: Reference `3' on page 17 undefined on input line 771.
+LaTeX Warning: Reference `3' on page 18 undefined on input line 771.
 
 
-LaTeX Warning: Reference `4' on page 17 undefined on input line 771.
+LaTeX Warning: Reference `4' on page 18 undefined on input line 771.
 
-<../images/dia/diagramme_fenetre.png, id=91, 1056.94875pt x 855.195pt>
+<../images/dia/diagramme_fenetre.png, id=94, 1056.94875pt x 855.195pt>
 File: ../images/dia/diagramme_fenetre.png Graphic file (type png)
 <use ../images/dia/diagramme_fenetre.png>
 Package pdftex.def Info: ../images/dia/diagramme_fenetre.png  used on input lin
@@ -1599,8 +1629,8 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 78
 8.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[17]
-<../images/annexes/av_ap.png, id=95, 1236.62pt x 396.48125pt>
+[18]
+<../images/annexes/av_ap.png, id=99, 1236.62pt x 396.48125pt>
 File: ../images/annexes/av_ap.png Graphic file (type png)
 <use ../images/annexes/av_ap.png>
 Package pdftex.def Info: ../images/annexes/av_ap.png  used on input line 791.
@@ -1638,8 +1668,8 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 80
 2.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[18 <../images/dia/diagramme_fenetre.png>]
-<../images/dia/top_bottom_etc.png, id=101, 205.76875pt x 120.45pt>
+[19 <../images/dia/diagramme_fenetre.png>]
+<../images/dia/top_bottom_etc.png, id=105, 205.76875pt x 120.45pt>
 File: ../images/dia/top_bottom_etc.png Graphic file (type png)
 <use ../images/dia/top_bottom_etc.png>
 Package pdftex.def Info: ../images/dia/top_bottom_etc.png  used on input line 8
@@ -1680,7 +1710,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 84
 2.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[19 <../images/annexes/av_ap.png> <../images/dia/top_bottom_etc.png>]
+[20 <../images/annexes/av_ap.png> <../images/dia/top_bottom_etc.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 843--850
 
  []
@@ -1795,7 +1825,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 90
 5.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[20]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 906--910
 
  []
@@ -1851,7 +1881,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 97
 3.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[21]
+[22]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1864,10 +1894,10 @@ l.975 N
 
 ? 
 
-LaTeX Warning: Reference `3' on page 22 undefined on input line 983.
+LaTeX Warning: Reference `3' on page 23 undefined on input line 983.
 
 
-LaTeX Warning: Reference `4' on page 22 undefined on input line 983.
+LaTeX Warning: Reference `4' on page 23 undefined on input line 983.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 979--984
@@ -1909,8 +1939,8 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
 14.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[22]
-<../images/dia/beeterface_structs.png, id=116, 2020.54875pt x 1539.7525pt>
+[23]
+<../images/dia/beeterface_structs.png, id=120, 2020.54875pt x 1539.7525pt>
 File: ../images/dia/beeterface_structs.png Graphic file (type png)
 <use ../images/dia/beeterface_structs.png>
 Package pdftex.def Info: ../images/dia/beeterface_structs.png  used on input li
@@ -1943,7 +1973,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
 21.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[23 <../images/dia/beeterface_structs.png>]
+[24 <../images/dia/beeterface_structs.png>]
 
 ! Package inputenc Error: Unicode char Ã\expandafter (U+4F1)
 (inputenc)                not set up for use with LaTeX.
@@ -2006,7 +2036,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
 77.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[24
+[25
 
 
 ]
@@ -2031,21 +2061,21 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 10
 78.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[25]
+[26]
 Chapitre 3.
-<../images/dia/plan_reseau.png, id=128, 848.16875pt x 726.715pt>
+<../images/dia/plan_reseau.png, id=132, 848.16875pt x 726.715pt>
 File: ../images/dia/plan_reseau.png Graphic file (type png)
 <use ../images/dia/plan_reseau.png>
 Package pdftex.def Info: ../images/dia/plan_reseau.png  used on input line 1096
 .
 (pdftex.def)             Requested size: 254.45258pt x 218.01617pt.
-<../images/annexes/camera_bp.png, id=129, 906.38625pt x 438.13687pt>
+<../images/annexes/camera_bp.png, id=133, 906.38625pt x 438.13687pt>
 File: ../images/annexes/camera_bp.png Graphic file (type png)
 <use ../images/annexes/camera_bp.png>
 Package pdftex.def Info: ../images/annexes/camera_bp.png  used on input line 11
 09.
 (pdftex.def)             Requested size: 226.59601pt x 109.53394pt.
-<../images/annexes/camera_bp2.png, id=130, 873.2625pt x 390.70969pt>
+<../images/annexes/camera_bp2.png, id=134, 873.2625pt x 390.70969pt>
 File: ../images/annexes/camera_bp2.png Graphic file (type png)
 <use ../images/annexes/camera_bp2.png>
 Package pdftex.def Info: ../images/annexes/camera_bp2.png  used on input line 1
@@ -2087,10 +2117,10 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 11
 34.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[26
+[27
 
  <../images/dia/plan_reseau.png>]
-<../images/dia/sch_web.png, id=134, 917.4275pt x 530.98375pt>
+<../images/dia/sch_web.png, id=138, 917.4275pt x 530.98375pt>
 File: ../images/dia/sch_web.png Graphic file (type png)
 <use ../images/dia/sch_web.png>
 Package pdftex.def Info: ../images/dia/sch_web.png  used on input line 1147.
@@ -2124,7 +2154,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 11
 63.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[27 <../images/annexes/camera_bp.png (PNG copy)> <../images/annexes/camera_bp2.
+[28 <../images/annexes/camera_bp.png (PNG copy)> <../images/annexes/camera_bp2.
 png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 1163--1166
 
@@ -2149,19 +2179,14 @@ Type  H <return>  for immediate help.
 l.1184 ...raphics[scale=0.5]{../images/photos.png}
                                                   
 ? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1216
-
- []
-
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1216.
+ 1200.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1216.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1200.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2172,9 +2197,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-16.
+00.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[28 <../images/dia/sch_web.png>]
+[29 <../images/dia/sch_web.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1218
+
+ []
+
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2182,23 +2216,33 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1218 L
+l.1220 L
         ors de stage de fin d'Ã©tudes, j'ai pu appliquer beaucoup de connais...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1253
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1238
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1258
 
  []
 
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1253.
+ 1258.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1253.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1258.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2209,39 +2253,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-53.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[29]
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1262.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1262.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 26.7007pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-62.
+58.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [30]
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 1267.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1267.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 26.7007pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
+67.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[31]
 Chapitre 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1276
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1282--1290
 
  []
 
@@ -2267,7 +2311,7 @@ File: ../images/logo/logo_abeille.png Graphic file (type png)
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 1.
 
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[31
+[32
 
 ]
 Underfull \hbox (badness 5893) in paragraph at lines 47--51
@@ -2326,11 +2370,11 @@ l.67
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1289.
+ 1294.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1289.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1294.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 
@@ -2342,49 +2386,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-89.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[32
-
-]
-Chapitre 5.
-<../images/annexes/poster_numev.pdf, id=155, 2393.22108pt x 3383.44055pt>
-File: ../images/annexes/poster_numev.pdf Graphic file (type pdf)
-<use ../images/annexes/poster_numev.pdf>
-Package pdftex.def Info: ../images/annexes/poster_numev.pdf  used on input line
- 1292.
-(pdftex.def)             Requested size: 478.63574pt x 676.67613pt.
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1297.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1297.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 26.7007pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-97.
+94.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [33
 
 ]
+Chapitre 5.
+<../images/annexes/poster_numev.pdf, id=159, 2393.22108pt x 3383.44055pt>
+File: ../images/annexes/poster_numev.pdf Graphic file (type pdf)
+<use ../images/annexes/poster_numev.pdf>
+Package pdftex.def Info: ../images/annexes/poster_numev.pdf  used on input line
+ 1297.
+(pdftex.def)             Requested size: 478.63574pt x 676.67613pt.
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1297.
+ 1302.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1297.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1302.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 26.7007pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
+02.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[34
+
+]
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 1302.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1302.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 
@@ -2395,56 +2439,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 12
-97.
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
+02.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[34 <../images/annexes/poster_numev.pdf>]
-<../images/annexes/screen_appli.png, id=261, 1117.17375pt x 834.11626pt>
+[35 <../images/annexes/poster_numev.pdf>]
+<../images/annexes/screen_appli.png, id=265, 1117.17375pt x 834.11626pt>
 File: ../images/annexes/screen_appli.png Graphic file (type png)
 <use ../images/annexes/screen_appli.png>
 Package pdftex.def Info: ../images/annexes/screen_appli.png  used on input line
- 1300.
+ 1305.
 (pdftex.def)             Requested size: 670.30943pt x 500.47362pt.
 
 
-LaTeX Warning: Float too large for page by 42.50592pt on input line 1303.
+LaTeX Warning: Float too large for page by 42.50592pt on input line 1308.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../code/beeterface.pdf, id=262, page=1, 845.1575pt x 597.23125pt>
+<../code/beeterface.pdf, id=266, page=1, 845.1575pt x 597.23125pt>
 File: ../code/beeterface.pdf Graphic file (type pdf)
 <use ../code/beeterface.pdf, page 1>
-Package pdftex.def Info: ../code/beeterface.pdf , page1 used on input line 1306
+Package pdftex.def Info: ../code/beeterface.pdf , page1 used on input line 1311
 .
 (pdftex.def)             Requested size: 676.12692pt x 477.78564pt.
 
-LaTeX Warning: Float too large for page by 17.68878pt on input line 1309.
+LaTeX Warning: Float too large for page by 17.68878pt on input line 1314.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../code/beeterface.pdf, id=263, page=2, 845.1575pt x 597.23125pt>
+<../code/beeterface.pdf, id=267, page=2, 845.1575pt x 597.23125pt>
 File: ../code/beeterface.pdf Graphic file (type pdf)
 <use ../code/beeterface.pdf, page 2>
-Package pdftex.def Info: ../code/beeterface.pdf , page2 used on input line 1313
-.
-(pdftex.def)             Requested size: 760.63474pt x 537.50316pt.
-
-Overfull \hbox (29.3989pt too wide) in paragraph at lines 1313--1314
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 53.80629pt on input line 1314.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../code/beeterface.pdf, id=264, page=3, 845.1575pt x 597.23125pt>
-File: ../code/beeterface.pdf Graphic file (type pdf)
-<use ../code/beeterface.pdf, page 3>
-Package pdftex.def Info: ../code/beeterface.pdf , page3 used on input line 1318
+Package pdftex.def Info: ../code/beeterface.pdf , page2 used on input line 1318
 .
 (pdftex.def)             Requested size: 760.63474pt x 537.50316pt.
 
@@ -2458,10 +2485,10 @@ LaTeX Warning: Float too large for page by 53.80629pt on input line 1319.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../code/beeterface.pdf, id=265, page=4, 845.1575pt x 597.23125pt>
+<../code/beeterface.pdf, id=268, page=3, 845.1575pt x 597.23125pt>
 File: ../code/beeterface.pdf Graphic file (type pdf)
-<use ../code/beeterface.pdf, page 4>
-Package pdftex.def Info: ../code/beeterface.pdf , page4 used on input line 1323
+<use ../code/beeterface.pdf, page 3>
+Package pdftex.def Info: ../code/beeterface.pdf , page3 used on input line 1323
 .
 (pdftex.def)             Requested size: 760.63474pt x 537.50316pt.
 
@@ -2475,14 +2502,31 @@ LaTeX Warning: Float too large for page by 53.80629pt on input line 1324.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<../code/beeterface.pdf, id=269, page=4, 845.1575pt x 597.23125pt>
+File: ../code/beeterface.pdf Graphic file (type pdf)
+<use ../code/beeterface.pdf, page 4>
+Package pdftex.def Info: ../code/beeterface.pdf , page4 used on input line 1328
+.
+(pdftex.def)             Requested size: 760.63474pt x 537.50316pt.
+
+Overfull \hbox (29.3989pt too wide) in paragraph at lines 1328--1329
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 53.80629pt on input line 1329.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1325.
+ 1330.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1325.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1330.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2493,17 +2537,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-25.
+30.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[35 <../images/annexes/screen_appli.png>]
+[36 <../images/annexes/screen_appli.png>]
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1325.
+ 1330.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1325.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1330.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 
@@ -2515,39 +2559,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-25.
-(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[36 <../code/beeterface.pdf, page is rotated 90 degrees>]
-File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
-<use ../images/logo/logo_iutbeziers.png>
-Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1325.
-(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
-File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
-<use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1325.
-(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 26.7007pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-File: ../images/logo/logo_abeille.png Graphic file (type png)
-<use ../images/logo/logo_abeille.png>
-Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-25.
+30.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [37 <../code/beeterface.pdf, page is rotated 90 degrees>]
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1325.
+ 1330.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1325.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1330.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 
@@ -2559,17 +2581,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-25.
+30.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [38 <../code/beeterface.pdf, page is rotated 90 degrees>]
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1325.
+ 1330.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1325.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1330.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 
@@ -2581,18 +2603,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-25.
+30.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
 [39 <../code/beeterface.pdf, page is rotated 90 degrees>]
-<../code/win_main_h.pdf, id=303, page=1, 845.1575pt x 597.23125pt>
+File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
+<use ../images/logo/logo_iutbeziers.png>
+Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
+ 1330.
+(pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
+File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
+<use ../images/logo/logoibmm.jpg>
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1330.
+(pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 26.7007pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+File: ../images/logo/logo_abeille.png Graphic file (type png)
+<use ../images/logo/logo_abeille.png>
+Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
+30.
+(pdftex.def)             Requested size: 38.27652pt x 23.25pt.
+[40 <../code/beeterface.pdf, page is rotated 90 degrees>]
+<../code/win_main_h.pdf, id=307, page=1, 845.1575pt x 597.23125pt>
 File: ../code/win_main_h.pdf Graphic file (type pdf)
 <use ../code/win_main_h.pdf, page 1>
-Package pdftex.def Info: ../code/win_main_h.pdf , page1 used on input line 1331
+Package pdftex.def Info: ../code/win_main_h.pdf , page1 used on input line 1336
 .
 (pdftex.def)             Requested size: 718.38728pt x 507.64896pt.
 
 
-LaTeX Warning: Float too large for page by 47.5521pt on input line 1334.
+LaTeX Warning: Float too large for page by 47.5521pt on input line 1339.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2600,11 +2644,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1335.
+ 1340.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1335.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1340.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2615,18 +2659,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-35.
+40.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[40 <../code/win_main_h.pdf, page is rotated 90 degrees>]
-<../code/win_main_c.pdf, id=324, page=1, 845.1575pt x 597.23125pt>
+[41 <../code/win_main_h.pdf, page is rotated 90 degrees>]
+<../code/win_main_c.pdf, id=328, page=1, 845.1575pt x 597.23125pt>
 File: ../code/win_main_c.pdf Graphic file (type pdf)
 <use ../code/win_main_c.pdf, page 1>
-Package pdftex.def Info: ../code/win_main_c.pdf , page1 used on input line 1340
+Package pdftex.def Info: ../code/win_main_c.pdf , page1 used on input line 1345
 .
 (pdftex.def)             Requested size: 718.38728pt x 507.64896pt.
 
 
-LaTeX Warning: Float too large for page by 47.5521pt on input line 1343.
+LaTeX Warning: Float too large for page by 47.5521pt on input line 1348.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2634,11 +2678,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1344.
+ 1349.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1344.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1349.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2649,17 +2693,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-44.
+49.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[41 <../code/win_main_c.pdf, page is rotated 90 degrees>]
-<../code/author.pdf, id=350, page=1, 845.1575pt x 597.23125pt>
+[42 <../code/win_main_c.pdf, page is rotated 90 degrees>]
+<../code/author.pdf, id=355, page=1, 845.1575pt x 597.23125pt>
 File: ../code/author.pdf Graphic file (type pdf)
 <use ../code/author.pdf, page 1>
-Package pdftex.def Info: ../code/author.pdf , page1 used on input line 1349.
+Package pdftex.def Info: ../code/author.pdf , page1 used on input line 1354.
 (pdftex.def)             Requested size: 718.38728pt x 507.64896pt.
 
 
-LaTeX Warning: Float too large for page by 47.5521pt on input line 1352.
+LaTeX Warning: Float too large for page by 47.5521pt on input line 1357.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2667,11 +2711,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../images/logo/logo_iutbeziers.png Graphic file (type png)
 <use ../images/logo/logo_iutbeziers.png>
 Package pdftex.def Info: ../images/logo/logo_iutbeziers.png  used on input line
- 1353.
+ 1358.
 (pdftex.def)             Requested size: 38.54233pt x 19.27116pt.
 File: ../images/logo/logoibmm.jpg Graphic file (type jpg)
 <use ../images/logo/logoibmm.jpg>
-Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1353.
+Package pdftex.def Info: ../images/logo/logoibmm.jpg  used on input line 1358.
 (pdftex.def)             Requested size: 52.68523pt x 22.62067pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2682,9 +2726,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../images/logo/logo_abeille.png Graphic file (type png)
 <use ../images/logo/logo_abeille.png>
 Package pdftex.def Info: ../images/logo/logo_abeille.png  used on input line 13
-53.
+58.
 (pdftex.def)             Requested size: 38.27652pt x 23.25pt.
-[42 <../code/author.pdf, page is rotated 90 degrees>]
+[43 <../code/author.pdf, page is rotated 90 degrees>]
 
 AED: lastpage setting LastPage
 (./rapport.aux)
@@ -2696,32 +2740,33 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7519 strings out of 494894
- 108022 string characters out of 6179474
- 254665 words of memory out of 5000000
+ 7523 strings out of 494894
+ 108072 string characters out of 6179474
+ 254664 words of memory out of 5000000
  10674 multiletter control sequences out of 15000+600000
- 12815 words of font info for 45 fonts, out of 8000000 for 9000
+ 13123 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,17n,56p,274b,1140s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rapport.pdf (43 pages, 17526231 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on rapport.pdf (44 pages, 17545280 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
+ 438 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

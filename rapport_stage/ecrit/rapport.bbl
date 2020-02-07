@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{ref2}
+Gtk+ 3 reference manual, 2014.
+\newblock https://developer.gnome.org/gtk3/stable/, consulté de 04/19 à
+  07/19.
+
+\bibitem{ref4}
+Latex, wikibooks, Jun 2017.
+\newblock https://fr.wikibooks.org/wiki/LaTeX, consulté en 07/19.
+
+\bibitem{ref1}
+KRAUSE Andrew.
+\newblock {\em Foundation of GTK+ Development, Build sophisticated graphical
+  applications using one of the world's most powerful cross-platform toolkits
+  !}
+\newblock APRESS, 2007.
+
+\bibitem{ref7}
+STRAUB~Ben CHACON~Scott.
+\newblock {\em Pro Git, Tout ce que vous devez savoir sur Git, Seconde
+  Edition.}
+\newblock APRESS, 2014.
+
+\bibitem{ref8}
+DELANNOY Claude.
+\newblock {\em Programmer en langage C, 5e édition, Cours et exercices
+  corrigés.}
+\newblock EYROLLES, 2009.
+
+\bibitem{ref3}
+BODNAR Jan.
+\newblock Gtk+ tutorial, July 2015.
+\newblock http://zetcode.com/gui/gtk2/, consulté en 04/19.
+
+\bibitem{ref6}
+ILIC Jovica.
+\newblock {\em Mastering Vim Quickly, From WTF to OMG in no time.}
+\newblock Jolesoft, 2018.
+
+\bibitem{ref5}
+RITCHIE Dennis~M. KERNIGHAN Brian~W.
+\newblock {\em Le Langage C, Norme ANSI, 2e édition.}
+\newblock DUNOD, 2014.
+
+\bibitem{ref10}
+NGUYEN H KRIEGEL F STETTIN~K. LANDGRAF~T, ROJAS~R.
+\newblock Analysis of the waggle dance motion of honeybees for the design of a
+  biomimetic honeybee robot., 2011.
+\newblock https://www.ncbi.nlm.nih.gov/pubmed/21857906.
+
+\bibitem{ref9}
+HYNA Irene SCHLEGL~Elisabeth OETIKER~Tobias, PARTL~Hubert.
+\newblock The not so short introduction to latex 2", or latex 2" in 139
+  minutes., February 2018.
+\newblock Version 6.2, GNU General Public License.
+
+\bibitem{ref11}
+Wikipedia.
+\newblock Varroa, April 2019.
+\newblock https://fr.wikipedia.org/wiki/Varroa, consulté le 01/05/19.
+
+\bibitem{ref12}
+Wikipedia.
+\newblock Vespa velutina, Jun 2019.
+\newblock https://fr.wikipedia.org/wiki/Vespa_velutina, consulté le 01/05/19.
+
+\end{thebibliography}

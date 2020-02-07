@@ -1,0 +1,203 @@
+Légende : 
+
+Vert = Informations remontées (texte, valeur) 
+Bleu = Bouton 
+Violet = Choix (Permet de choisir entre plusieurs valeurs prédéfinies)
+Jaune = Vidéo 
+Rose = Entrée de texte (Endroit où utilisateur peut écrire) 
+Rouge = Lien (Etablir le lien entre un bouton et une nouvelle fenêtre) 
+Orange = Boite (Type de boite particulière)
+
+-----------------
+
+Beeterface
+Description : 
+Première fenêtre ouverte. Permet de visualiser les caméras en direct, d'enregistrer
+des vidéos. 
+
+Informations :
+- "En Live" = Indique que la vidéo présentée est en live
+- "Informations Capteur" = Remonte les informations en direct des capteurs (date, heure, température etc).
+- "Informations de la Vidéo" = Remonte les informations d'où est filmée la vidéo (ruche, caméra, numéro de cadre etc).
+- "Status enregistrement" = Indique où en est l'enregistrement par rapport à la limite de temps maximale d'une vidéo à 
+l'aide d'une barre se remplissant au fur et à mesure. 
+
+Boutons : 
+- "Information" = Ouvre la fenêtre "Informations"
+- "Enregistrer" = Permet de lancer l'enregistrement d'une vidéo. Pendant l'enregistrement, change de label et 
+devient "Arrêter". Une fois l'enregistrement arrêté, ouvre la fenêtre "Modifier la vidéo".
+- "Ouvrir" = Ouvre la fenêtre ""Fichiers".
+
+Choix : 
+- "Séléction de l'auteur" = Permet de séléctionner l'auteur courant parmis une séléction (Capucine, Sébastien, Olivia, Matthieu etc).
+- "Choix de la caméra" = Permet de séléctionner la caméra à visualiser. 
+
+Vidéo : 
+- "Vidéo en direct" = Direct de la caméra séléctionnée. 
+
+------------------
+
+Modifier la Vidéo 
+Description : 
+Fenêtre permettant de modifier une vidéo enregistrée ou de visualiser une vidéo déjà modifiée.
+C'est là que sont ajoutées les annotations. 
+
+Informations : 
+- "Nom de la vidéo" = Indique le nom de la vidéo, généré automatiquement. 
+- "Barre Placement dans le Temps" = Barre de visualisation du temps de la vidéo, comme sur un player classique.
+- "Liste Annotations Appliquées" = Liste des annotations sur la vidéo. Permet de supprimer une annotation, de 
+la cacher.
+- "Liste Tags Appliqués" = Liste des Tags appliqués sur la vidéo. 
+- "Informations Vidéos" = Inforations d'où a été filmée la vidéo au moment de l'enregistrement. 
+? IDEE Ajouter "Informations Capteurs"  ?
+
+Boutons : 
+- "Couper" = Ouvre la fenêtre "Couper la vidéo".
+- "Play" = Lance la Vidéo. Le label se change en "stop" pour mettre en pause. 
+- "Avancer" = Avance la vidéo de 5 secondes. 
+- "Reculer" = Recule la vidéo de 5 secondes. 
+- "Croix", "Flèche", "Mesure", "Cercle", "Crois Mouv", "Texte", "Boite", "Croix Mouv.", "Texte", "Boite" = Ouvrent 
+leur fenêtre "Annotation "name_annotation"" respective. 
+- "+" = Ouvre la fenêtre "Ajouter un Tag"
+- "-" = Supprime un tag à sélectionner dans la liste. 
+
+Vidéo :
+- "Vidéo enregistrée" = Visualisation de la vidéo à modifier avec les annotations dessus. 
+
+--------------------
+
+Annotation "name_anotation"
+Description :
+Fenêtre qui permet de placer une nouvelle annotation. Elle change à quelques endroits en fonction
+du bouton utilisé pour appeler la fenêtre. 
+
+Informations : 
+- "Barre Placement dans le Temps" = Barre de visualisation du temps de la vidéo, comme sur un player classique.
+- "Description Annotation" = Description de l'annotation : comment l'utiliser, à quoi elle sert, à quoi elle ressemble.
+- "Liste Tags Appliqués" = Liste des Tags appliqués sur la vidéo.- "Informations Vidéos" = Inforations d'où a été filmée la vidéo au moment de l'enregistrement.
+? IDEE Ajouter "Informations Capteurs"  ?
+- "Timer Début" = Indication du moment de la vidéo où l'annotation va débuter.
+- "Timer Fin" = Indication du moment de la vidéo où l'annotation va finir.
+
+Boutons : 
+- "Play" = Lance la Vidéo. Le label se change en "stop" pour mettre en pause.
+- "Avancer" = Avance la vidéo de 5 secondes.
+- "Reculer" = Recule la vidéo de 5 secondes.
+- "Modif" = Bouton avec une image de crayon. Quand on appuie dessus, l'image change en "OK" et l'entrée "nom annotation" devient éditable
+pour y entrer un nom reconnaissable par l'utilisateur. Quand on appuie de nouveau dessus, l'image redevient comme avant et 
+l'information est sauvegardée et l'entrée "nom annotation" redevient non éditable. 
+- "+" = Ouvre la fenêtre "Ajouter un Tag"
+- "-" = Supprime un tag à sélectionner dans la liste. 
+- "Deb" = Fixe la valeur de "Timer Début" avec la valeur actuelle du timer de la vidéo.
+- "Fin" = Fixe la valeur de "Timer Fin" avec la valeur actuelle du timer de la vidéo.
+- "Annuler" = Ferme la fenêtre sans enregistrer les modifications.
+- "Enregistrer" = Ferme la fenêtre en enregistrant les modifications. 
+
+Entrée : 
+- "Nom Annotation" = Permet de saisir le nom de l'annotation que l'utilisateur veut lui donner pour le reconnaître.
+De base pas modifiable. Fonctionne avec le bouton "Modif". 
+
+Vidéo : 
+- "Vidéo enregistrée" = Visualisation de la vidéo où mettre l'annotation. 
+
+-----------  
+
+Couper la vidéo 
+Description : 
+Fenêtre permettant de redécouper la vidéo. 
+
+Informations : 
+- "Barre Placement dans le Temps" = Barre de visualisation du temps de la vidéo, comme sur un player classique.
+- "Timer Début" = Indication du moment de la vidéo où l'annotation va débuter.
+- "Timer Fin" = Indication du moment de la vidéo où l'annotation va finir.
+
+Boutons : 
+- "Deb" = Fixe la valeur de "Timer Début" avec la valeur actuelle du timer de la vidéo.
+- "Fin" = Fixe la valeur de "Timer Fin" avec la valeur actuelle du timer de la vidéo.
+- "Annuler" = Ferme la fenêtre sans enregistrer les modifications.
+- "Enregistrer" = Ferme la fenêtre en enregistrant les modifications. 
+
+Vidéo : 
+- "Vidéo enregistrée" = Visualisation de la vidéo à découper. 
+
+-----------
+
+Ajouter un tag
+Description :
+Fenêtre permettant de visualiser les tags disponnibles pour en sélectionner une liste à ajouter sur la vidéo
+ou sur une annotation. 
+
+Informations : 
+- "Liste Tag Trouvés" = listes des tags trouvés en fonctions des critères de recherche. 
+Affiche tous les tags disponnibles par ordre alphabétique si pas de recherche faite . 
+- "Liste Tags Ajoutés" = listes les tags sélectionnés pour être ajoutés à la vidéo ou l'annotation.
+
+Boutons : 
+- "Chercher" = Lance la recherche de tag en fonction de ce qui est écrit dans "Search Tag"
+- "Ajouter" = Ouvre la fenêtre  "Créer un Tag"
+- "Annuler" = Ferme la fenêtre sans enregistrer les modifications.
+- "Enregistrer" = Ferme la fenêtre en enregistrant les modifications. 
+
+Entrée : 
+- "Search Tag" = Entrée de recherche où on peut entrer un mot clé à chercher pour trouver un tag correspondant.
+
+? IDEE : Ajouter la possibilité de voir les tags ajoutés les plus récent ? 
+
+-------------
+
+Créer un Tag
+Description : 
+Fenêtre permettant de créer un nouveau tag dans le dictionnaire si il n'en existe pas déjà
+un correspondant à ce que l'utilisateur veut. 
+
+Boutons :
+- "Ajouter" = Ajoute comme nouveau tag ce qui est entrée dans "Nom Tag" 
+- "Annuler" = Ferme la fenêtre sans enregistrer les modifications.
+- "Enregistrer" = Ferme la fenêtre en enregistrant les modifications. 
+
+Entrée : 
+- "Nom Tag" = Entrée où l'utilisateur doit indiquer le nom du nouveau tag qu'il désire. 
+
+? IDEE : Ajouter une vérification des tags qui pourraient ressembler au nouveau que l'utilisateur veut ajouter
+pour éviter les doublons ? 
+
+--------------
+
+Fichier 
+Description : 
+Fenere permettant de voir les fichiers vidéo existant et de les trier suivant différents critères. 
+
+Informations : 
+- "Liste des Fichiers" = Liste des fichiers en fonction du critère de tri choisit. Si pas de critère sélectionné, 
+c'est rangé par ordre alphabétique.
+
+Boutons : 
+- "Quitter" = Quitte l'explorateur de fichier sans rien ouvrir.
+- "Ouvrir" = Ferme l'explorateur de ficher en ouvrant le fichier séléctionné dans la liste de "Liste des Fichiers dans une 
+fenêtre "Modifier la vidéo"
+
+Choix :
+- "Selection Type Tri" = Permet de choisir par quel critère trier les vidéos : par caméra, auteur, date, ruche, lieu, tag etc
+
+Entrée : 
+- "Search Fichier" = Permet d'entrée un mot clé pour affiner la recherche. Se couple à la recherche en fonction du type de tri
+choisi.
+
+---------------
+
+Informations 
+Description : 
+Fenêtre contenant des informations sur les différentes structures et leur éléments. Permet de retrouver les différentes ruches
+et leur spécificités, les auteurs, les infos contenues dans vidéos, les caméras etc. Ne permet pas de modification. 
+
+Informations : 
+- "Information sur Auteur, Caméra, Vidéo, Ruche..." = Affiche les informations correspondant à l'onglet sur lequel on se trouve.
+ 
+Box :
+- "Auteur", "Vidéo", "Ruche", "Caméra", etc = Onglets permettant de sélectionner quel type d'information on veut visualiser. 
+
+? IDEE : Ajouter une entrée permettant une recherche rapide ? 
+
+
+
+
